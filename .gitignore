@@ -1,4 +1,4 @@
-.bundle
+vendor/
 .bundle
 .cache
 .DS_Store
