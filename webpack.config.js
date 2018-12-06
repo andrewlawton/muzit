@@ -2,7 +2,7 @@
 
 var path = require('path')
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -17,28 +17,36 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            'css-loader',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: function() {
-                  return [
-                    require('autoprefixer'),
-                    require('postcss-flexbugs-fixes')
-                  ]
-                }
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function() {
+                return [
+                  require('autoprefixer'),
+                  require('postcss-flexbugs-fixes')
+                ]
               }
             },
-            'sass-loader'
-          ]
-        })
-      }
+          },
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(eof|svg|ttf|woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: "fonts/[name].[ext]",
+          },
+        },
+      },
     ]
   },
   plugins: [
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: 'assets/stylesheets/[name].css'
     })
   ]
