@@ -7,14 +7,12 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Muzit" %></title>
     <%= stylesheet_link_tag 'site' %>
-
-
   </head>
   <body>
     <%= partial "partials/navigation" %>
-    <div class="container-fluid">
+    <main class="container-fluid" role="main">
       <%= yield %>
-    </div>
+    </main>
     <%= partial "partials/footer" %>
     <%= javascript_include_tag "site" %>
   </body>
