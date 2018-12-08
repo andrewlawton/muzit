@@ -9,6 +9,10 @@ main {
   margin-top: 5rem;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
 .artist-thumbnail  {
   width: 100%;
   height: 100%;
@@ -21,11 +25,14 @@ main {
   padding: 0;
   border-radius: 0;
   border: 1px solid #000;
-  position: relative
+  position: relative;
+  height: 75%;
 }
 
 .img-thumbnail img  {
   -webkit-transition: all 0.5s ease;
+  width: 100%;
+  object-fit: cover;
 }
 
 .img-thumbnail img:hover {
@@ -65,15 +72,29 @@ main {
   width: calc(100% - 10px);
 }
 
-footer {
+footer[role=contentinfo] {
   color: #fff;
-   padding: 1rem;
-  a {
-    color: #fff;
+  li.list-inline-item {
     border-right: 1px solid #ccc;
-    padding: 0 1rem;
     &:last-of-type {
       border-right: none;
+    }
+  }
+  li.list-inline-item a {
+    display: block;
+    color: #fff;
+    font-size: .90rem;
+    padding-right: 1rem;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  footer[role=contentinfo]  {
+    li.list-inline-item {
+      display: block;
+      text-align: left;
+      border-right: none !important;
+      margin-bottom: .75rem;
     }
   }
 }
