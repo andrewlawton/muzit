@@ -1,27 +1,29 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" role="navigation">
   <% link_to "#", class:"navbar-brand" do %>
     <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="oi oi-person" title="Account" aria-hidden="true"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-<!--     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul> -->
-    <div class="input-group  ml-auto">
-        <input type="text" class="form-control" placeholder="Search artists and bands..." aria-label="Search" aria-describedby="basic-addon">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button">Search</button>
-        </div>
+  <% link_to "#", class: "navbar-toggler ml-auto", "data-toggle" => "collapse", "data-target" => "#search", "aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation" do %>
+    <span class="oi oi-magnifying-glass text-white"></span>
+  <% end %>
+  <% link_to "#", class: "navbar-toggler", "data-toggle" => "collapse", "data-target" => "#account", "aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation" do %>
+    <span class="oi oi-person text-white" title="Account" aria-hidden="true"></span>
+  <% end %>
+  <div class="collapse navbar-collapse" id="search">
+    <div class="input-group ml-auto">
+      <%= text_field_tag :search, :value => "", :class => "form-control", :placeholder => "Search artists and bands...", "aria-label" => "Search" %>
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button">Search</button>
+      </div>
     </div>
+  </div>
+  <div class="collapse navbar-collapse" id="account">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to "Register", "#", :class => "nav-link text-white" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign In", "#", :class => "nav-link text-white" %>
+      </li>
+    </ul>
   </div>
 </nav>
