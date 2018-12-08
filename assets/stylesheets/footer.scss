@@ -1,0 +1,26 @@
+footer[role=contentinfo] {
+  color: #fff;
+  li.list-inline-item {
+    border-right: 1px solid #ccc;
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+  li.list-inline-item a {
+    display: block;
+    color: #fff;
+    font-size: .90rem;
+    padding-right: 1rem;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  footer[role=contentinfo]  {
+    li.list-inline-item {
+      display: block;
+      text-align: left;
+      border-right: none !important;
+      margin-bottom: .75rem;
+    }
+  }
+}

@@ -7,39 +7,33 @@ body {
 main {
   flex: 1;
   margin-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 .navbar-toggler {
   border: none;
 }
 
-.artist-thumbnail  {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid #000;
-}
-
-.img-thumbnail  {
+.artist-thumbnail {
+  border-radius: 0;
+  border: 1px solid #C0C0C0;
+  height: 75%;
   overflow: hidden;
   padding: 0;
-  border-radius: 0;
-  border: 1px solid #000;
   position: relative;
-  height: 75%;
 }
 
-.img-thumbnail img  {
-  -webkit-transition: all 0.5s ease;
-  width: 100%;
+.artist-thumbnail img  {
   object-fit: cover;
+  width: 100%;
+  transition: all 0.5s ease;
 }
 
-.img-thumbnail img:hover {
+.artist-thumbnail img:hover {
   transform: scale(1.4);
 }
 
-.img-thumbnail > .overlay {
+.artist-thumbnail > .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -47,7 +41,7 @@ main {
   opacity: 0.3;
 }
 
-.img-thumbnail > .image-footer {
+.artist-thumbnail > .image-footer {
   width: 100%;
   bottom: 0;
   height: 35px;
@@ -56,46 +50,45 @@ main {
   opacity: 0.5;
 }
 
-.img-thumbnail > .author-title {
+.artist-thumbnail > .artist-name {
   margin-left: 3%;
   bottom: 0;
   position: absolute;
   color: #fff;
   font-weight: 700;
   line-height: 2;
+  text-shadow: 0px 1px 2px #333;
 }
 
-.img-thumbnail .author-title {
+.artist-thumbnail .artist-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 10px);
 }
 
-footer[role=contentinfo] {
-  color: #fff;
-  li.list-inline-item {
-    border-right: 1px solid #ccc;
-    &:last-of-type {
-      border-right: none;
-    }
-  }
-  li.list-inline-item a {
-    display: block;
-    color: #fff;
-    font-size: .90rem;
-    padding-right: 1rem;
-  }
-}
+// increase height for small devised
 
 @include media-breakpoint-down(xs) {
-  footer[role=contentinfo]  {
-    li.list-inline-item {
-      display: block;
-      text-align: left;
-      border-right: none !important;
-      margin-bottom: .75rem;
-    }
+  .artist-thumbnail  {
+    height: 300px !important;
+    margin-bottom: 4rem;
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .artist-thumbnail  {
+    height: 300px !important;
+    margin-bottom: 4rem;
+  }
+}
+
+// make load more button full width
+
+@include media-breakpoint-down(sm) {
+  .artists {
+    .btn-outline-primary {
+      width: 100%;
+    }
+  }
+}
