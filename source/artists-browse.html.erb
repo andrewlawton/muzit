@@ -1,68 +1,125 @@
 ---
 title: Browse Artists - Muzit
+bodyClass: artists
 ---
-<h1 class="my-4 text-center text-lg-left">
-  Browse Artists
+<h1 class="my-4 text-center text-md-left">
+  Artists
 </h1>
+<h5 class="font-weight-light mb-4">
+  0-10
+</h5>
 <div class="row">
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <div class="img-thumbnail mb-4">
-      <% link_to "#", title: "Phish" do %>
-        <%= image_tag("phish.jpg", class: "img-fluid", alt: "Phish Image") %>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "10,000 Maniacs" do %>
+        <%= image_tag("10000-maniacs.jpg", class: "img-fluid h-100", alt: "10,000 Maniacs") %>
       <% end %>
-      <div class="overlay"></div>
       <div class="image-footer"></div>
-      <span class="author-title">Phish</span>
+      <span class="artist-name">10,000 Maniacs</span>
     </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "10 Years" do %>
+        <%= image_tag("10-years.jpg", class: "img-fluid h-100", alt: "10 Years") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">10 Years</span>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "No Image" do %>
+        <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">2002</span>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-4 col-xs-6">
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "2 Chainz" do %>
+        <%= image_tag("2Chainz.jpg", class: "img-fluid h-100", alt: "2 Chainz") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">2 Chainz</span>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "2Pac" do %>
+        <%= image_tag("tupac.jpg", class: "img-fluid h-100", alt: "2Pac") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">2Pac</span>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "30 Seconds To Mars" do %>
+        <%= image_tag("30-seconds-to-mars.jpg", class: "img-fluid h-100", alt: "30 Seconds To Mars") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">30 Seconds To Mars</span>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "50 Cent" do %>
+        <%= image_tag("50-cent.jpg", class: "img-fluid h-100", alt: "50 Cent Image") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">50 Cent</span>
+    </div>
+  </div>
+</div>
+<!-- // end row -->
+<h5 class="font-weight-light mb-4">
+  A-Z
+</h5>
+<div class="row">
+   <div class="col-lg-3 col-md-4 col-xs-6">
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "Phish" do %>
+        <%= image_tag("phish.jpg", class: "img-fluid h-100", alt: "Phish Image") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">Phish</span>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "No Image" do %>
+        <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">Artist Name</span>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "No Image" do %>
+        <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">Artist Name</span>
+    </div>
   </div>
+
   <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+    <div class="artist-thumbnail">
+      <% link_to "#", title: "No Image" do %>
+        <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
+      <% end %>
+      <div class="image-footer"></div>
+      <span class="artist-name">Artist Name</span>
+    </div>
   </div>
-  <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
-  </div>
-  <div class="col-lg-3 col-md-4 col-xs-6">
-    <a href="#" class="d-block mb-4 h-100">
-      <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-    </a>
+</div>
+<!-- // end row -->
+<div class="row">
+  <div class="col-12 text-center">
+    <button type="button" class="btn btn-outline-primary btn-lg">Load More</button>
   </div>
 </div>
