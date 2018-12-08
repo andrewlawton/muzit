@@ -9,10 +9,12 @@
     <span class="oi oi-person text-white" title="Account" aria-hidden="true"></span>
   <% end %>
   <div class="collapse navbar-collapse" id="search">
-    <div class="input-group ml-auto">
+    <div class="input-group">
       <%= text_field_tag :search, :value => "", :class => "form-control", :placeholder => "Search artists and bands...", "aria-label" => "Search" %>
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button">Search</button>
+        <button class="btn btn-primary" type="button">
+          <span class="oi oi-magnifying-glass text-white"></span>
+        </button>
       </div>
     </div>
   </div>
