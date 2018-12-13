@@ -4,7 +4,13 @@
 @import 'assets/stylesheets/footer.scss';
 @import 'assets/stylesheets/open-iconic-bootstrap.scss';
 
-$fa-font-path: "/fonts/";
-@import '~font-awesome/scss/font-awesome.scss';
+// $fa-font-path: "/fonts/";
+// @import '~font-awesome/scss/font-awesome.scss';
+
+$fa-font-path : "~@fortawesome/fontawesome-free-webfonts/webfonts";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands.scss";
 
 
