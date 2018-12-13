@@ -1,7 +1,6 @@
-import 'jquery'
+import $ from 'jquery';
 import 'popper.js'
 import 'bootstrap'
-import $ from 'jquery';
 
 $(function() {
   $('[data-toggle="tooltip"]').tooltip()
