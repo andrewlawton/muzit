@@ -85,62 +85,64 @@ bodyClass: artist-details
 
 
 <div class="container-fluid bg-light border-bottom p-3 d-block d-md-none ">
-
-<div class="row">
-
-   <div class="col-md-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title text-muted h6">Downloaded Songs</h5>
-          <span class="mr-2 h5 font-weight-bold mb-0 text-nowrap"> 18,250,300</span>
+  <div class="row">
+     <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-muted h6">Downloaded Songs</h5>
+            <span class="mr-2 h5 font-weight-bold mb-0 text-nowrap"> 18,250,300</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title text-muted h6">Potential Reach</h5>
-          <span class="mr-2 h5 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-muted h6">Potential Reach</h5>
+            <span class="mr-2 h5 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title text-muted h6">Torrent Files</h5>
-          <span class="mr-2 h6 font-weight-bold mb-0"> 439</span>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-muted h6">Torrent Files</h5>
+            <span class="mr-2 h6 font-weight-bold mb-0"> 439</span>
+          </div>
         </div>
       </div>
-    </div>
-
+      <!-- // end column -->
+  </div>
+  <!-- // end row -->
 </div>
+<!-- // end container-fluid -->
 
-
+<div class="container-fluid bg-light border-bottom p-3">
   <div class="row mb-3">
-     <div class="col">
+    <div class="col">
       <h4 class="text-truncate pt-1">
-        Phish Worldwide
+         Phish Worldwide
       </h4>
     </div>
+    <!-- // end column -->
     <div class="col text-sm-right">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Week
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Week</a>
-        <a class="dropdown-item" href="#">Past Two Weeks</a>
-        <a class="dropdown-item" href="#">Past Month</a>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Week</a>
+          <a class="dropdown-item" href="#">Past Two Weeks</a>
+          <a class="dropdown-item" href="#">Past Month</a>
+        </div>
       </div>
+      <!-- // end dropdown -->
     </div>
-    <!-- // end dropdown -->
+    <!-- // end column -->
   </div>
-  <!-- // end column -->
-</div>
-<!-- // end row -->
+  <!-- // end row -->
   <div class="row">
     <div class="col-12">
-      <div class="card-stats card-raised card">
+      <div class="card-stats card">
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-sm-3">
@@ -176,56 +178,57 @@ bodyClass: artist-details
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-
-
-<div class="container-fluid">
-
-      <div class="card bg-light mb-3" style="width: 100%">
-        <div class="card-header">Traffic Origins</div>
-        <div class="card-body bg-white">
-          <div Class="container">
-            <div class="row">
-              <div class="col-md-8 col-sm-8 col-xs-12">
-                <%= image_tag("map.png", class: "img-fluid", alt: "Map Image") %>
-              </div>
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                <h4> Top Countries</h4>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Country</th>
-                      <th>Traffic</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>United States</td>
-                      <td>1340</td>
-                    </tr>
-                    <tr>
-                      <td>Mary</td>
-                      <td>Moe</td>
-                    </tr>
-                    <tr>
-                      <td>July</td>
-                      <td>Dooley</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-        </div>
-      </div>
-      <!-- // end card -->
-    </div>
     <!-- // end column -->
-
   </div>
-  <!-- // end container-fluid -->
+  <!-- // end row -->
+</div>
+<!-- // end container-fluid -->
+<div class="container-fluid">
+  <div class="card bg-light mb-3" style="width: 100%">
+    <div class="card-header">Traffic Origins</div>
+    <div class="card-body bg-white">
+      <div Class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
+          </div>
+          <!-- // end column -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <h4> Top Countries</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Traffic</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>United States</td>
+                  <td>1340</td>
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Moe</td>
+                </tr>
+                <tr>
+                  <td>July</td>
+                  <td>Dooley</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // end column -->
+        </div>
+        <!-- // end row -->
+      </div>
+      <!-- // end container -->
+    </div>
+    <!-- // end card-body -->
+  </div>
+  <!-- // end card -->
+</div>
+<!-- // end container-fluid -->
 
 
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top </button>
