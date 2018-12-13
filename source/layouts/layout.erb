@@ -9,7 +9,7 @@
     <%= favicon_tag 'favicon.ico' %>
     <%= stylesheet_link_tag 'site' %>
   </head>
-  <body class="<%= current_page.data.bodyClass %>">
+  <body class="<%= current_page.data.bodyClass %> bg-light">
     <%= partial "partials/navigation" %>
     <main role="main">
       <%= yield %>
