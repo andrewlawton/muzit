@@ -142,3 +142,42 @@ main {
   box-shadow: none;
   outline: none;
 }
+
+table.download-origins {
+  font-size: 12px;
+}
+
+table.download-origins th {
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: .5rem
+}
+
+table.download-origins th:last-of-type {
+  text-align: right;
+}
+
+table.download-origins td {
+  font-size: .75rem;
+  padding: .5rem
+}
+
+table.download-origins td {
+  font-size: .75rem;
+  padding: .5rem
+}
+
+table.download-origins td:last-of-type {
+  text-align: right;
+}
+
+table.download-origins tr:last-of-type {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.artist-details .card-header {
+  background: white;
+  text-transform: uppercase;
+  font-size: .85rem;
+  padding: .55rem 1rem;
+}

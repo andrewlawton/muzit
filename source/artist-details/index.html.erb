@@ -315,45 +315,66 @@ bodyClass: artist-details
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid">
-  <div class="card bg-light mb-3" style="width: 100%">
-    <div class="card-header">Traffic Origins</div>
+  <div class="card bg-light mb-3">
+    <div class="card-header">Download Origins</div>
     <div class="card-body bg-white">
-      <div Class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-8 col-xs-12">
-            <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
-          </div>
-          <!-- // end column -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <h4> Top Countries</h4>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Country</th>
-                  <th>Traffic</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>United States</td>
-                  <td>1340</td>
-                </tr>
-                <tr>
-                  <td>Mary</td>
-                  <td>Moe</td>
-                </tr>
-                <tr>
-                  <td>July</td>
-                  <td>Dooley</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- // end column -->
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
         </div>
-        <!-- // end row -->
+        <!-- // end column -->
+        <div class="col-md-4">
+          <h6> Top Countries</h6>
+          <table class="table download-origins">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Traffic</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>United States</td>
+                <td>1340</td>
+              </tr>
+              <tr>
+                <td>China</td>
+                <td>445</td>
+              </tr>
+              <tr>
+                <td>Russian Federation</td>
+                <td>367</td>
+              </tr>
+              <tr>
+                <td>Korea</td>
+                <td>228</td>
+              </tr>
+              <tr>
+                <td>Italy</td>
+                <td>165</td>
+              </tr>
+              <tr>
+                <td>Brazil</td>
+                <td>157</td>
+              </tr>
+              <tr>
+                <td>Japan</td>
+                <td>141</td>
+              </tr>
+              <tr>
+                <td>Canada</td>
+                <td>110</td>
+              </tr>
+              <tr>
+                <td>Germany</td>
+                <td>104</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- // end column -->
       </div>
-      <!-- // end container -->
+      <!-- // end row -->
     </div>
     <!-- // end card-body -->
   </div>
