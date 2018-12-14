@@ -119,12 +119,26 @@ main {
   flex-grow: 1;
 }
 
-// @include media-breakpoint-down(sm) {
-//   .col {
-//     flex-flow: column wrap;
-//   }
-// }
-
 .artist-details .card {
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.search input.form-control {
+  border: none;
+  border-radius: 30px;
+}
+
+.search .input-group-append button {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.search input.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none;
 }
