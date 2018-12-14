@@ -122,38 +122,47 @@ bodyClass: artist-details
   <!-- // end row -->
 </div>
 <!-- // end container-fluid -->
-<div class="container-fluid p-3">
-  <div class="row mb-3">
-    <div class="col">
-      <h4 class="text-truncate pt-1">
-         Phish Worldwide
-      </h4>
-    </div>
-    <!-- // end column -->
-    <div class="col text-right">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Week
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Week</a>
-          <a class="dropdown-item" href="#">Past Two Weeks</a>
-          <a class="dropdown-item" href="#">Past Month</a>
-        </div>
+<div class="container-fluid">
+  <div class="header-block">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-truncate">
+           Phish Worldwide
+        </h2>
       </div>
-      <!-- // end dropdown -->
+      <!-- // end column -->
+      <div class="col text-right">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Week
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Week</a>
+            <a class="dropdown-item" href="#">Past Two Weeks</a>
+            <a class="dropdown-item" href="#">Past Month</a>
+          </div>
+        </div>
+        <!-- // end dropdown -->
+      </div>
+      <!-- // end column -->
     </div>
-    <!-- // end column -->
+    <!-- // end row -->
   </div>
-  <!-- // end row -->
+  <!-- // end text-header -->
+</div>
+<!-- // end container-fluid -->
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <div class="card mb-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Downloads <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
+          </h5>
+        </div>
+        <!-- // end card-header -->
         <div class="card-body p-0">
-          <h6 class="font-weight-light border-bottom px-3 py-2 mb-0 text-uppercase">
-            <small>Downloads</small> <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
-          </h6>
           <div class="stats px-3 py-2">
             <div class="mb-1">
               <span class="h3 text-nowrap">
@@ -182,14 +191,16 @@ bodyClass: artist-details
     </div>
     <!-- // end column -->
     <div class="col-md-4">
-      <div class="card mb-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Potential Reach <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+          </h5>
+        </div>
         <div class="card-body p-0">
-          <h6 class="font-weight-light border-bottom px-3 py-2 mb-0 text-uppercase">
-            <small>Potential Reach</small> <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
-          </h6>
           <div class="stats px-3 py-2">
             <div class="mb-1">
-              <span class="h4 text-nowrap">
+              <span class="h3 text-nowrap">
                 115,798
               </span>
             </div>
@@ -215,14 +226,16 @@ bodyClass: artist-details
     </div>
     <!-- // end column -->
     <div class="col-md-4">
-      <div class="card mb-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Traffic <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Difference in the amount of torrent files from this artist downloaded in the last 7 days compared to the previous period."></i>
+          </h5>
+        </div>
         <div class="card-body p-0">
-          <h6 class="font-weight-light border-bottom px-3 py-2 mb-0 text-uppercase">
-            <small>Traffic</small> <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Difference in the amount of torrent files from this artist downloaded in the last 7 days compared to the previous period."></i>
-          </h6>
           <div class="stats px-3 py-2">
             <div class="mb-1">
-              <span class="h4 text-nowrap">
+              <span class="h3 text-nowrap">
                 29.2%
               </span>
             </div>
@@ -251,11 +264,13 @@ bodyClass: artist-details
   <!-- // end row -->
   <div class="row">
     <div class="col-md-6">
-      <div class="card mb-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Fastest Growing <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
+          </h5>
+        </div>
         <div class="card-body p-0">
-          <h6 class="font-weight-light border-bottom px-3 py-2 mb-0 text-uppercase">
-            <small>Fastest Growing</small> <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
-          </h6>
           <div class="stats px-3 py-2">
             <div class="mb-1 text-truncate">
               <span class="h4">
@@ -284,11 +299,13 @@ bodyClass: artist-details
     </div>
     <!-- // end column -->
     <div class="col-md-6">
-      <div class="card mb-3">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Most Engaged <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
+          </h5>
+        </div>
         <div class="card-body p-0">
-          <h6 class="font-weight-light border-bottom px-3 py-2 mb-0 text-uppercase">
-            <small>Most Engaged</small> <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
-          </h6>
           <div class="stats px-3 py-2">
             <div class="mb-1 text-truncate">
               <span class="h4">
@@ -315,8 +332,12 @@ bodyClass: artist-details
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid">
-  <div class="card mb-3">
-    <div class="card-header">Download Origins</div>
+  <div class="card">
+    <div class="card-header">
+      <h5>
+        Download Origins
+      </h5>
+    </div>
     <div class="card-body">
       <div class="row">
         <div class="col-md-8 mb-4">
@@ -384,7 +405,30 @@ bodyClass: artist-details
 <div class="container-fluid">
   <div class="card">
     <div class="card-header">
-      <h5>Active Years: 1983 - 2004</h5>
+      <h5>
+        Activity Timeline
+      </h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <%=image_tag( "activity-timeline.png", class: "img-fluid", alt: "Activity Timeline Image") %>
+        </div>
+        <!-- // end column -->
+      </div>
+      <!-- // end row -->
+    </div>
+    <!-- // end card-body -->
+  </div>
+  <!-- // end card -->
+</div>
+<!-- // end container-fluid -->
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header">
+      <h5>
+        Active Years: 1983 - 2004
+      </h5>
     </div>
     <div class="card-body">
       <div class="row">
@@ -404,7 +448,7 @@ bodyClass: artist-details
           <dl>
             <dt>Keywords</dt>
             <dd>
-              <span class="badge badge-secondary">rock</span>
+              <span class="badge badge-light">rock</span>
               <span class="badge badge-light"> jam band</span>
               <span class="badge badge-light"> classic rock</span>
               <span class="badge badge-light"> bluegrass</span>

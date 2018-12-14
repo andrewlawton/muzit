@@ -119,10 +119,6 @@ main {
   flex-grow: 1;
 }
 
-.artist-details .card {
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-}
-
 .search input.form-control {
   border: none;
   border-radius: 30px;
@@ -175,9 +171,27 @@ table.download-origins tr:last-of-type {
   border-bottom: 1px solid #dee2e6;
 }
 
-.artist-details .card-header {
+.header-block {
+  padding: 2rem 0;
+}
+
+.header-block h2 {
+  margin: 0;
+}
+
+.card {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
   background: white;
-  text-transform: uppercase;
+  padding: .65rem 1rem;
+}
+
+.card-header h5 {
   font-size: .85rem;
-  padding: .55rem 1rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
 }
