@@ -1,13 +1,22 @@
 body {
   display: flex;
   flex-direction: column;
+  margin-top: 4rem !important;
   min-height: 100vh;
 }
 
 main {
   flex: 1;
-  margin-top: 4rem !important;
   padding-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+dt {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .header-dropdown {
@@ -15,13 +24,42 @@ main {
 }
 
 .header-dropdown h2 {
-  font-size: 1.25rem;
   margin: 0;
 }
 
 .navbar-toggler {
   border: none;
 }
+
+// nav
+
+nav .search input.form-control {
+  border: none;
+  border-radius: 30px;
+}
+
+nav .search .input-group-append button {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+nav .search input.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none;
+}
+
+@include media-breakpoint-down(sm) {
+  nav .search {
+    padding: .55rem 0 .35rem 0;
+  }
+}
+
+// browse artists
 
 .artist-thumbnail {
   border-radius: 0;
@@ -94,6 +132,8 @@ main {
   }
 }
 
+// artist details
+
 .artist-details .hero {
   height: 300px;
   background: url('/images/phish.jpg') no-repeat center center;
@@ -117,7 +157,6 @@ main {
 .artist-details .hero h1 {
   position: relative;
 }
-
 
 .artist-details .hero h1,
 .artist-details .hero .data,
@@ -146,26 +185,6 @@ main {
   flex-direction: column;
   flex-grow: 1;
   min-height: 100vh;
-}
-
-.search input.form-control {
-  border: none;
-  border-radius: 30px;
-}
-
-.search .input-group-append button {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border: none;
-  background: white;
-  cursor: pointer;
-  padding-right: 10px;
-}
-
-.search input.form-control:focus {
-  border-color: none;
-  box-shadow: none;
-  outline: none;
 }
 
 table.download-origins {
