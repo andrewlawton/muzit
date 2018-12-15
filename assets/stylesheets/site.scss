@@ -10,6 +10,15 @@ main {
   padding-bottom: 3rem;
 }
 
+.header-dropdown {
+  padding: 1.5rem 0;
+}
+
+.header-dropdown h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -189,14 +198,6 @@ table.download-origins td:last-of-type {
 
 table.download-origins tr:last-of-type {
   border-bottom: 1px solid #dee2e6;
-}
-
-.header-block {
-  padding: 2rem 0;
-}
-
-.header-block h2 {
-  margin: 0;
 }
 
 .card {

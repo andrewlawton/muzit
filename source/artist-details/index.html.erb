@@ -123,21 +123,18 @@ bodyClass: artist-details
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid">
-  <div class="header-block">
+  <header class="header-dropdown">
     <div class="row">
-      <div class="col">
-        <h2 class="text-truncate">
-           Phish Worldwide
+      <div class="col text-truncate my-auto">
+        <h2>
+           Worldwide Stats
         </h2>
       </div>
       <!-- // end column -->
       <div class="col text-right">
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Week
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" id="artist-stats-filter"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Week</button>
+          <div class="dropdown-menu" aria-labelledby="artist-stats-filter">
             <a class="dropdown-item" href="#">Week</a>
             <a class="dropdown-item" href="#">Past Two Weeks</a>
             <a class="dropdown-item" href="#">Past Month</a>
@@ -148,8 +145,8 @@ bodyClass: artist-details
       <!-- // end column -->
     </div>
     <!-- // end row -->
-  </div>
-  <!-- // end text-header -->
+  </header>
+  <!-- // end header -->
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid">
