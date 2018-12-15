@@ -110,7 +110,10 @@ main {
 }
 
 
-.artist-details .hero h1, .hero .data, .hero .label, .hero .oi {
+.artist-details .hero h1,
+.artist-details .hero .data,
+.artist-details .hero .label,
+.artist-details .hero .oi {
   text-shadow: 1px 1px #333;
 }
 
@@ -131,9 +134,9 @@ main {
 }
 
 .artist-details .hero-container  {
-  min-height: 100vh;
   flex-direction: column;
   flex-grow: 1;
+  min-height: 100vh;
 }
 
 .search input.form-control {
