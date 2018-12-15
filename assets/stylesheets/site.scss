@@ -33,6 +33,11 @@ dt {
 
 // nav
 
+nav[role=navigation] {
+  background-color: $nav-bg-color !important;
+  opacity: 0.95;
+}
+
 nav .search input.form-control {
   border: none;
   border-radius: 30px;
