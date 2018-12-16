@@ -133,7 +133,7 @@ bodyClass: artist-details
       <!-- // end column -->
       <div class="col text-right">
         <div class="dropdown">
-          <button class="btn btn-outline-primary btn-sm dropdown-toggle" id="artist-stats-filter"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Week</button>
+          <button class="btn btn-outline-primary btn-md dropdown-toggle" id="artist-stats-filter"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Week</button>
           <div class="dropdown-menu" aria-labelledby="artist-stats-filter">
             <a class="dropdown-item" href="#">Week</a>
             <a class="dropdown-item" href="#">Past Two Weeks</a>
@@ -337,12 +337,12 @@ bodyClass: artist-details
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-md-8 mb-4">
+        <div class="col-md-8 mb-4 d-none d-md-block">
           <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
         </div>
         <!-- // end column -->
         <div class="col-md-4">
-          <h6> Top Countries</h6>
+          <h6 class="d-none d-md-block"> Top Countries</h6>
           <table class="table download-origins">
             <thead>
               <tr>
