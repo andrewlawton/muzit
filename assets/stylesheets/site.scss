@@ -139,31 +139,44 @@ nav .search input.form-control:focus {
 
 // artist details
 
-.artist-details .hero {
+.artist-details .hero img.object-fit-cover {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.artist-details .hero .hero-container {
   height: 300px;
-  background: url('/images/phish.jpg') no-repeat center center;
-  background-size: cover;
+  overflow: hidden;
   position: relative;
+  width: 100%;
+}
+
+.artist-details .hero .hero-container:before {
+  background-color: #323232;
+  content: "";
+  display: block;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.artist-details .hero .hero-artist-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 15px;
   width: 100%;
 }
 
 .artist-details .hero.image-none {
-  height: 200px;
   background: #222;
+  height: 200px;
   position: relative;
   width: 100%;
-}
-
-.artist-details .hero:before {
-  background-color: #323232;
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
 }
 
 .artist-details .hero h1 {
@@ -193,11 +206,11 @@ nav .search input.form-control:focus {
   font-size: 1.35rem;
 }
 
-.artist-details .hero-container  {
-  flex-direction: column;
-  flex-grow: 1;
-  min-height: 100vh;
-}
+// .artist-details .hero-container  {
+//   flex-direction: column;
+//   flex-grow: 1;
+//   min-height: 100vh;
+// }
 
 table.download-origins {
   font-size: 12px;

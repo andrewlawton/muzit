@@ -2,83 +2,87 @@
 title: Artist Details - Muzit
 bodyClass: artist-details
 ---
-<section class="hero d-flex">
-  <div class="container-fluid mt-auto">
-    <h1 class="text-white mb-4">Phish</h1>
-    <div class="row pb-3">
-      <div class="col-lg-12">
-        <div class="container-fluid d-none d-md-block">
-          <div class="row">
-            <div class="col-md-4 col-lg-4">
+<section class="hero">
+  <div class="hero-container">
+    <%= image_tag("phish.jpg", class: "object-fit-cover img-fluid", alt: "Phish Image") %>
+    <div class="hero-artist-stats">
+        <h1 class="text-white mb-4">Phish</h1>
+        <div class="row pb-3">
+          <div class="col-lg-12">
+            <div class="container-fluid d-none d-md-block">
               <div class="row">
-                <div class="col-md-1 p-0">
-                  <span class="oi oi-data-transfer-download text-white"></span>
+                <div class="col-md-4 col-lg-4">
+                  <div class="row">
+                    <div class="col-md-1 p-0">
+                      <span class="oi oi-data-transfer-download text-white"></span>
+                    </div>
+                    <!-- end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        18,250,300
+                      </span>
+                      <span class="label text-white text-nowrap">
+                        Downloaded Songs
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
                 </div>
-                <!-- end column -->
-                <div class="col-md-6 p-0">
-                  <span class="data text-white">
-                    18,250,300
-                  </span>
-                  <span class="label text-white text-nowrap">
-                    Downloaded Songs
-                    <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
-                  </span>
+                <!-- // end column -->
+                <div class="col-md-4 col-lg-4">
+                  <div class="row">
+                    <div class="col-md-1 p-0">
+                      <span class="oi oi-target text-white"></span>
+                    </div>
+                    <!-- // end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        1,495,573
+                      </span>
+                      <span class="label text-white text-nowrap">
+                        Potential Reach
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
+                </div>
+                <!-- // end column -->
+                <div class="col-md-4 col-lg-4">
+                  <div class="row">
+                    <div class="col-md-1 p-0">
+                      <span class="oi oi-link-intact text-white"></span>
+                    </div>
+                    <!-- // end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        439
+                      </span>
+                      <span class="label d-block text-white text-nowrap">
+                        Torrents
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="The amount of Torrent Files we are currently tracking for this artist"></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
                 </div>
                 <!-- // end column -->
               </div>
               <!-- // end row -->
             </div>
-            <!-- // end column -->
-            <div class="col-md-4 col-lg-4">
-              <div class="row">
-                <div class="col-md-1 p-0">
-                  <span class="oi oi-target text-white"></span>
-                </div>
-                <!-- // end column -->
-                <div class="col-md-6 p-0">
-                  <span class="data text-white">
-                    1,495,573
-                  </span>
-                  <span class="label text-white text-nowrap">
-                    Potential Reach
-                    <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
-                  </span>
-                </div>
-                <!-- // end column -->
-              </div>
-              <!-- // end row -->
-            </div>
-            <!-- // end column -->
-            <div class="col-md-4 col-lg-4">
-              <div class="row">
-                <div class="col-md-1 p-0">
-                  <span class="oi oi-link-intact text-white"></span>
-                </div>
-                <!-- // end column -->
-                <div class="col-md-6 p-0">
-                  <span class="data text-white">
-                    439
-                  </span>
-                  <span class="label d-block text-white text-nowrap">
-                    Torrents
-                    <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="The amount of Torrent Files we are currently tracking for this artist"></i>
-                  </span>
-                </div>
-                <!-- // end column -->
-              </div>
-              <!-- // end row -->
-            </div>
-            <!-- // end column -->
+            <!-- // end container-fluid -->
           </div>
-          <!-- // end row -->
+          <!-- // end column -->
         </div>
-        <!-- // end container-fluid -->
-      </div>
-      <!-- // end column -->
+        <!-- // end row -->
     </div>
-    <!-- // end row -->
+    <!-- // end artist-details -->
   </div>
-  <!-- // end container-fluid -->
+  <!-- // end hero-container -->
 </section>
 <!-- // end hero -->
 <section class="container-fluid">
