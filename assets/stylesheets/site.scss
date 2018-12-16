@@ -203,33 +203,37 @@ table.download-origins {
   font-size: 12px;
 }
 
-table.download-origins th {
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: .5rem
-}
-
 table.download-origins th:last-of-type {
   text-align: right;
-}
-
-table.download-origins td {
-  font-size: .75rem;
-  padding: .5rem
-}
-
-table.download-origins td {
-  font-size: .75rem;
-  padding: .5rem
 }
 
 table.download-origins td:last-of-type {
   text-align: right;
 }
 
-table.download-origins tr:last-of-type {
-  border-bottom: 1px solid #dee2e6;
+table.torrents .name {
+ width: 64%;
 }
+
+table.torrents .size {
+ text-align: right;
+ width: 12%;
+}
+
+table.torrents .percent {
+ text-align: right;
+ width: 12%;
+}
+
+table.torrents .downloads {
+ text-align: right;
+ width: 12%;
+}
+
+table.torrents td:nth-last-child(-n+3) {
+  text-align: right;
+}
+
 
 // boostrap overrides
 
@@ -253,4 +257,20 @@ table.download-origins tr:last-of-type {
 .dropdown-item {
   font-size: .85rem;
   padding: .25rem 1rem;
+}
+
+table {
+  font-size: 12px;
+}
+
+table th {
+  border-top: none !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .5rem;
+}
+
+table td {
+  font-size: .75rem;
+  padding: .5rem
 }

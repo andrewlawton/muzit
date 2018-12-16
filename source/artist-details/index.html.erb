@@ -2,7 +2,7 @@
 title: Artist Details - Muzit
 bodyClass: artist-details
 ---
-<div class="hero d-flex">
+<section class="hero d-flex">
   <div class="container-fluid mt-auto">
     <h1 class="text-white mb-4">Phish</h1>
     <div class="row pb-3">
@@ -79,7 +79,7 @@ bodyClass: artist-details
     <!-- // end row -->
   </div>
   <!-- // end container-fluid -->
-</div>
+</section>
 <!-- // end hero -->
 <section class="container-fluid">
   <div class="mobile-stats d-md-none bg-dark">
@@ -400,6 +400,42 @@ bodyClass: artist-details
         <!-- // end column -->
       </div>
       <!-- // end row -->
+    </div>
+    <!-- // end card-body -->
+  </div>
+  <!-- // end card -->
+
+  <div class="card">
+    <div class="card-header">
+      <h5>
+        Torrents
+      </h5>
+    </div>
+    <div class="card-body">
+      <table class="table torrents">
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="size">Size</th>
+            <th class="percent">% Changed</th>
+            <th class="downloads">Downloads</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= link_to 'United States', '#' %></td>
+            <td>25 MB</td>
+            <td>+10%</td>
+            <td>120K</td>
+          </tr>
+          <tr>
+            <td><%= link_to 'United States', '#' %></td>
+            <td>25 MB</td>
+            <td>+10%</td>
+            <td>120K</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <!-- // end card-body -->
   </div>
