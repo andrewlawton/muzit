@@ -15,8 +15,12 @@ h2 {
 }
 
 dt {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: .80rem;
+  font-weight: 700;
+}
+
+dd {
+  font-size: .85rem;
 }
 
 .header-dropdown {
@@ -314,4 +318,8 @@ table th {
 table th,
 table td {
   padding: .55rem .25rem .55rem 0 !important;
+}
+
+.badge {
+  font-size: .85rem;
 }
