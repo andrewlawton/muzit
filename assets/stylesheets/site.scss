@@ -206,47 +206,71 @@ nav .search input.form-control:focus {
   font-size: 1.35rem;
 }
 
-// .artist-details .hero-container  {
-//   flex-direction: column;
-//   flex-grow: 1;
-//   min-height: 100vh;
-// }
+// download origins table
 
-table.download-origins {
-  font-size: 12px;
-}
-
-table.download-origins th:last-of-type {
-  text-align: right;
-}
-
+table.download-origins th:last-of-type,
 table.download-origins td:last-of-type {
   text-align: right;
 }
 
-table.torrents .name {
- width: 64%;
+table.download-origins th:last-of-type {
+  white-space: nowrap;
 }
 
-table.torrents .size {
- text-align: right;
- width: 12%;
+table.download-origins th:first-of-type,
+table.download-origins td:first-of-type {
+  width: 80%;
 }
 
-table.torrents .percent {
- text-align: right;
- width: 12%;
+table.download-origins th:last-of-type,
+table.download-origins td:last-of-type {
+  width: 20%;
 }
 
-table.torrents .downloads {
- text-align: right;
- width: 12%;
+// torrents table
+
+.table-scroll {
+  height: 320px;
+  overflow-y: scroll;
 }
 
+table.torrents th {
+  white-space: nowrap;
+}
+
+table.torrents th:first-of-type,
+table.torrents td:first-of-type {
+  width: 64%;
+}
+
+table.torrents th:nth-last-child(-n+3),
 table.torrents td:nth-last-child(-n+3) {
   text-align: right;
+  width: 12%;
 }
 
+table.torrents td span.oi {
+  margin-left: .25rem;
+}
+
+table.torrents .table-scroll {
+  overflow-y: scroll;
+}
+
+
+// adjust torrents table cell sizes on small devices to prevent wrapping
+
+@include media-breakpoint-down(sm) {
+  table.torrents th:first-of-type,
+  table.torrents td:first-of-type {
+    width: 40%;
+  }
+  table.torrents th:nth-last-child(-n+3),
+  table.torrents td:nth-last-child(-n+3) {
+    text-align: right;
+    width: 60%;
+  }
+}
 
 // boostrap overrides
 
@@ -267,23 +291,27 @@ table.torrents td:nth-last-child(-n+3) {
   text-transform: uppercase;
 }
 
+.card-body {
+  padding: .5rem 1rem;
+}
+
 .dropdown-item {
   font-size: .85rem;
   padding: .25rem 1rem;
 }
 
 table {
-  font-size: 12px;
+  font-size: .80rem;
+  table-layout: fixed; // allow truncated text
 }
 
 table th {
   border-top: none !important;
   font-weight: bold;
   text-transform: uppercase;
-  padding: .5rem;
 }
 
+table th,
 table td {
-  font-size: .75rem;
-  padding: .5rem
+  padding: .55rem .25rem .55rem 0 !important;
 }

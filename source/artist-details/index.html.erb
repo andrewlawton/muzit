@@ -289,58 +289,64 @@ bodyClass: artist-details
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-md-8 mb-4 d-none d-md-block">
+        <div class="col-md-7 mb-4 d-none d-md-block">
           <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
         </div>
         <!-- // end column -->
-        <div class="col-md-4">
-          <h6 class="d-none d-md-block"> Top Countries</h6>
-          <table class="table download-origins">
-            <thead>
-              <tr>
-                <th>Country</th>
-                <th>Traffic</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>United States</td>
-                <td>1340</td>
-              </tr>
-              <tr>
-                <td>China</td>
-                <td>445</td>
-              </tr>
-              <tr>
-                <td>Russian Federation</td>
-                <td>367</td>
-              </tr>
-              <tr>
-                <td>Korea</td>
-                <td>228</td>
-              </tr>
-              <tr>
-                <td>Italy</td>
-                <td>165</td>
-              </tr>
-              <tr>
-                <td>Brazil</td>
-                <td>157</td>
-              </tr>
-              <tr>
-                <td>Japan</td>
-                <td>141</td>
-              </tr>
-              <tr>
-                <td>Canada</td>
-                <td>110</td>
-              </tr>
-              <tr>
-                <td>Germany</td>
-                <td>104</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-md-5">
+          <h6 class="d-none d-md-block">
+            Top Countries
+          </h6>
+          <div class="table-responsive-sm">
+            <table class="table download-origins">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Traffic</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-truncate">
+                    United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States </td>
+                  <td >1340</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">China</td>
+                  <td>445</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Russian Federation</td>
+                  <td>367</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Korea</td>
+                  <td>228</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Italy</td>
+                  <td>165</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Brazil</td>
+                  <td>157</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Japan</td>
+                  <td>141</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Canada</td>
+                  <td>110</td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">Germany</td>
+                  <td>104</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- // end table-responsive -->
         </div>
         <!-- // end column -->
       </div>
@@ -349,7 +355,6 @@ bodyClass: artist-details
     <!-- // end card-body -->
   </div>
   <!-- // end card -->
-
   <div class="card">
     <div class="card-header">
       <h5>
@@ -357,30 +362,131 @@ bodyClass: artist-details
       </h5>
     </div>
     <div class="card-body">
-      <table class="table torrents">
-        <thead>
-          <tr>
-            <th class="name">Name</th>
-            <th class="size">Size</th>
-            <th class="percent">% Changed</th>
-            <th class="downloads">Downloads</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><%= link_to 'United States', '#' %></td>
-            <td>25 MB</td>
-            <td>+10%</td>
-            <td>120K</td>
-          </tr>
-          <tr>
-            <td><%= link_to 'United States', '#' %></td>
-            <td>25 MB</td>
-            <td>+10%</td>
-            <td>120K</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive-sm table-scroll">
+        <table class="table table-hover torrents">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Size</th>
+              <th>% Changed</th>
+              <th>Downloads</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Big Boat (2016)', '#' %>
+              </td>
+              <td>322 MB</td>
+              <td class="text-success">
+                +10%
+                <span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span>
+              </td>
+              <td>120K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '3786a72f6bc4fc56bd2ecddbefc0908c23af472c', '#' %>
+              </td>
+              <td>321 MB</td>
+              <td class="text-danger">
+                -2%
+                <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span>
+              </td>
+              <td>97K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '36291be5f076ef3c15daaaf5ac35d3fd762ef36b', '#' %>
+              </td>
+              <td>303 MB</td>
+              <td class="text-danger">
+                -3%
+                <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span>
+              </td>
+              <td>19K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '3786a72f6bc4fc56bd2ecddbefc0908c23af472c', '#' %>
+              </td>
+              <td>356 MB</td>
+              <td class="text-success">
+                +1%
+                <span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span>
+              </td>
+              <td>28K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '38017ea258367e6716a92d28ff548be5347528aa', '#' %>
+              </td>
+              <td>360 MB</td>
+              <td class="text-success">
+                +4%
+                <span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span>
+              </td>
+              <td>75K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '3f0401dbbb1aa193578f04074eebcb4cbeab137c', '#' %>
+              </td>
+              <td>490 MB</td>
+              <td class="text-danger">
+                +13%
+                <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span>
+              </td>
+              <td>39K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '4005c1ae76136ad4dd6ebf2113341ce741a2f024', '#' %>
+              </td>
+              <td>377 MB</td>
+              <td class="text-success">
+                +10%
+                <span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span>
+              </td>
+              <td>50K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '413c5336e548b3576fe974db1525e9fe1ee8267e', '#' %>
+              </td>
+              <td>490 MB</td>
+              <td class="text-danger">
+                -3%
+                <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span>
+              </td>
+              <td>100K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '4220a2e0011d7361aa95ec6ecda060ca1590a66d', '#' %>
+              </td>
+              <td>762 MB</td>
+              <td class="text-success">
+                +7%
+                <span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span>
+              </td>
+              <td>20K</td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to '42b09f1e86409d01c2ed683dc676b6d52cd6dcd6', '#' %>
+              </td>
+              <td>800 MB</td>
+              <td class="text-success">
+                +10%
+                <span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span>
+              </td>
+              <td>32K</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- // end table-responsive -->
     </div>
     <!-- // end card-body -->
   </div>
