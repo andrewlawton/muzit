@@ -228,7 +228,7 @@ nav .search input.form-control:focus {
 }
 
 .artist-details .mobile-stats {
-  background: #222;
+  background: #24292e;
 }
 
 // download origins table
@@ -254,12 +254,18 @@ table.download-origins td:last-of-type {
 
 // torrents table
 
+table.torrents {
+  width: 100%;
+  //display: table;
+}
+
 .table-scroll {
   height: 320px;
   overflow-y: scroll;
 }
 
-table.torrents th {
+table.torrents th,
+table.torrents td {
   white-space: nowrap;
 }
 
@@ -281,7 +287,6 @@ table.torrents td span.oi {
 table.torrents .table-scroll {
   overflow-y: scroll;
 }
-
 
 // adjust torrents table cell sizes on small devices to prevent wrapping
 
@@ -325,6 +330,10 @@ table.torrents .table-scroll {
   padding: .25rem 1rem;
 }
 
+.table-responsive {
+  display: inline-block !important;
+}
+
 table {
   font-size: .80rem;
   table-layout: fixed; // allow truncated text
@@ -343,4 +352,10 @@ table td {
 
 .badge {
   font-size: .85rem;
+  font-weight: normal;
+}
+
+.badge {
+  display: inline-block;
+  margin: .25rem .25rem .45rem 0;
 }
