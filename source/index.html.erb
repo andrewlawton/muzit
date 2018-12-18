@@ -10,70 +10,90 @@ bodyClass: artists
     0-10
   </h5>
   <div class="row">
+    <div class="col-lg-3 col-md-4">
+      <div class="artist-thumbnail">
+        <% link_to "#", class: "h-100", title: "10,000 Maniacs" do %>
+          <%= image_tag("10000-maniacs.jpg", class: "img-fluid", alt: "10,000 Maniacs") %>
+        <% end %>
+        <div class="artist-name">
+          10,000 Maniacs
+        </div>
+      </div>
+      <!-- // end artist-thumbnail -->
+    </div>
+    <!-- // end column -->
+    <div class="col-lg-3 col-md-4">
+      <div class="artist-thumbnail">
+        <% link_to "#", class: "h-100", title: "10-years" do %>
+          <%= image_tag("10-years.jpg", class: "img-fluid", alt: "10-years") %>
+        <% end %>
+        <div class="artist-name">
+          10-years
+        </div>
+      </div>
+      <!-- // end artist-thumbnail -->
+    </div>
+    <!-- // end column -->
+    <div class="col-lg-3 col-md-4">
+      <div class="artist-thumbnail">
+        <% link_to "#", class: "h-100", title: "2002" do %>
+          <%= image_tag("no-image.png", class: "img-fluid", alt: "No Artist Image") %>
+        <% end %>
+        <div class="artist-name">
+          2002
+        </div>
+      </div>
+      <!-- // end artist-thumbnail -->
+    </div>
+    <!-- // end column -->
+    <div class="col-lg-3 col-md-4">
+      <div class="artist-thumbnail">
+        <% link_to "#", class: "h-100", title: "2 Chainz" do %>
+          <%= image_tag("2 Chainz.jpg", class: "img-fluid", alt: "2 Chainz") %>
+        <% end %>
+        <div class="artist-name">
+          2 Chainz
+        </div>
+      </div>
+      <!-- // end artist-thumbnail -->
+    </div>
+    <!-- // end column -->
+    <div class="col-lg-3 col-md-4">
+      <div class="artist-thumbnail">
+        <% link_to "#", class: "h-100", title: "2Pac" do %>
+          <%= image_tag("tupac.jpg", class: "img-fluid", alt: "2Pac") %>
+        <% end %>
+        <div class="artist-name">
+          2Pac
+        </div>
+      </div>
+      <!-- // end artist-thumbnail -->
+    </div>
+    <!-- // end column -->
     <div class="col-lg-3 col-md-4 col-xs-6">
       <div class="artist-thumbnail">
-        <% link_to "#", title: "10,000 Maniacs" do %>
-          <%= image_tag("10000-maniacs.jpg", class: "img-fluid h-100", alt: "10,000 Maniacs") %>
+        <% link_to "#", class: "h-100", title: "30 Seconds To Mars" do %>
+          <%= image_tag("30-seconds-to-mars.jpg", class: "img-fluid", alt: "30 Seconds To Mars") %>
         <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">10,000 Maniacs</span>
+        <div class="artist-name">
+          30 Seconds To Mars
+        </div>
       </div>
+      <!-- // end artist-thumbnail -->
     </div>
+    <!-- // end column -->
     <div class="col-lg-3 col-md-4 col-xs-6">
       <div class="artist-thumbnail">
-        <% link_to "#", title: "10 Years" do %>
-          <%= image_tag("10-years.jpg", class: "img-fluid h-100", alt: "10 Years") %>
+        <% link_to "#", class: "h-100", title: "50 Cent" do %>
+          <%= image_tag("50-cent.jpg", class: "img-fluid", alt: "50 Cent") %>
         <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">10 Years</span>
+        <div class="artist-name">
+          50 Cent
+        </div>
       </div>
+      <!-- // end artist-thumbnail -->
     </div>
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "No Image" do %>
-          <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">2002</span>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "2 Chainz" do %>
-          <%= image_tag("2Chainz.jpg", class: "img-fluid h-100", alt: "2 Chainz") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">2 Chainz</span>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "2Pac" do %>
-          <%= image_tag("tupac.jpg", class: "img-fluid h-100", alt: "2Pac") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">2Pac</span>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "30 Seconds To Mars" do %>
-          <%= image_tag("30-seconds-to-mars.jpg", class: "img-fluid h-100", alt: "30 Seconds To Mars") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">30 Seconds To Mars</span>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "50 Cent" do %>
-          <%= image_tag("50-cent.jpg", class: "img-fluid h-100", alt: "50 Cent Image") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">50 Cent</span>
-      </div>
-    </div>
+    <!-- // end column -->
   </div>
   <!-- // end row -->
   <h5 class="font-weight-light mb-4">
@@ -81,42 +101,18 @@ bodyClass: artists
   </h5>
   <div class="row">
      <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "artist-details/", title: "Phish" do %>
-          <%= image_tag("phish.jpg", class: "img-fluid h-100", alt: "Phish Image") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">Phish</span>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "No Image" do %>
-          <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">Artist Name</span>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6">
-      <div class="artist-thumbnail">
-        <% link_to "#", title: "No Image" do %>
-          <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
-        <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">Artist Name</span>
-      </div>
-    </div>
 
-    <div class="col-lg-3 col-md-4 col-xs-6">
       <div class="artist-thumbnail">
-        <% link_to "#", title: "No Image" do %>
-          <%= image_tag("no-image.png", class: "img-fluid h-100", alt: "No Artist Image") %>
+        <% link_to "artist-details/", class: "h-100", title: "Phish" do %>
+          <%= image_tag("phish.jpg", class: "img-fluid", alt: "Phish") %>
         <% end %>
-        <div class="image-footer"></div>
-        <span class="artist-name">Artist Name</span>
+        <div class="artist-name">
+          Phish
+        </div>
       </div>
+      <!-- // end artist-thumbnail -->
     </div>
+    <!-- // end column -->
   </div>
   <!-- // end row -->
   <div class="row">

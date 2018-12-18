@@ -72,62 +72,79 @@ nav .search input.form-control:focus {
 
 .artist-thumbnail {
   border-radius: 0;
-  border: 1px solid #C0C0C0;
-  height: 75%;
+  border: 1px solid #222;
   overflow: hidden;
   padding: 0;
   position: relative;
+  margin-bottom: 3rem;
+}
+
+.artist-thumbnail a  {
+  display: block;
+  position: relative;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.artist-thumbnail a:hover {
+  transform: scale(1.4);
+}
+
+.artist-thumbnail a:before {
+  background-color: #323232;
+  content: "";
+  display: block;
+  opacity: 0.2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 .artist-thumbnail img  {
   object-fit: cover;
   width: 100%;
-  transition: all 0.5s ease;
-}
-
-.artist-thumbnail img:hover {
-  transform: scale(1.4);
-}
-
-.artist-thumbnail > .image-footer {
-  width: 100%;
-  bottom: 0;
-  height: 35px;
-  position: absolute;
-  background-color: #000;
-  opacity: 0.5;
-}
-
-.artist-thumbnail > .artist-name {
-  margin-left: 3%;
-  bottom: 0;
-  position: absolute;
-  color: #fff;
-  font-weight: 700;
-  line-height: 2;
-  text-shadow: 0px 1px 2px #333;
+  height: 100%;
 }
 
 .artist-thumbnail .artist-name {
-  white-space: nowrap;
+  bottom: 0;
+  color: #fff;
+  height: auto;
   overflow: hidden;
+  padding: .35rem;
+  pointer-events: none;
+  position: absolute;
   text-overflow: ellipsis;
-  width: calc(100% - 10px);
+  text-shadow: 0px 1px 2px #333;
+  white-space: nowrap;
+  width: 100%;
 }
 
-// increase height for small devised
-
-@include media-breakpoint-down(xs) {
-  .artist-thumbnail  {
-    height: 300px !important;
-    margin-bottom: 4rem;
-  }
-}
+// set height for images to maintain height accross devices
 
 @include media-breakpoint-down(sm) {
   .artist-thumbnail  {
-    height: 300px !important;
-    margin-bottom: 4rem;
+    height: 250px !important;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .artist-thumbnail  {
+    height: 300px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .artist-thumbnail  {
+    height: 200px;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .artist-thumbnail  {
+    height: 200px;
   }
 }
 
