@@ -122,7 +122,7 @@ nav .search input.form-control:focus {
   width: 100%;
 }
 
-// set height for images to maintain height accross devices
+// set fixed height for artist images to maintain consistency accross device breakpoints
 
 @include media-breakpoint-down(sm) {
   .artist-thumbnail  {
