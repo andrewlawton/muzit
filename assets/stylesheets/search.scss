@@ -63,11 +63,11 @@
   }
 }
 
-// commented out search-result--current to prevent default color
-// .search-result--current {
-//   background-color: #000;
-//   color: #fff !important;
-// }
+
+.search-result--current {
+  background-color: #000;
+  color: #fff;
+}
 
 .search-result--empty {
   padding: 10px;
