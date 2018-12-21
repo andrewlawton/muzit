@@ -10,12 +10,26 @@
   <% end %>
   <div class="collapse navbar-collapse align-center" id="nav-search">
     <div class="search w-100">
-      <div class="input-group">
-        <%= text_field_tag :search, :value => "", :class => "form-control", :placeholder => "Search artists and bands...", "aria-label" => "Search" %>
+      <div class="input-group search" data-controller="search">
+        <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults", target: "search.query" } %>
         <div class="input-group-append">
-          <button class="" type="button">
+          <button class="" type="button" data-action="click->search#fetchResults">
             <span class="oi oi-magnifying-glass text-primary"></span>
           </button>
+        </div>
+        <div data-target="search.results">
+          <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList">
+            <li class="search-result" data-target="search-results.result"><a href="#">Steve Perry</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Tom Petty</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Tom Petty and the Heartbreakers</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Liz Phair</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Phantogram</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="/artist-details/index.html">Phish</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Phonte</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Édith Piaf</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Pia Mia</a></li>
+            <li class="search-result" data-target="search-results.result"><a href="#">Pierce the Veil</a></li>
+          </ul>
         </div>
       </div>
       <!-- // end input-group -->
