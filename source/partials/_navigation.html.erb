@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse align-center" id="nav-search">
     <div class="search w-100">
       <div class="input-group search" data-controller="search">
-        <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults", target: "search.query" } %>
+        <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults blur->search#hideResults focus->search#fetchResults", target: "search.query" } %>
         <div class="input-group-append">
           <button class="" type="button" data-action="click->search#fetchResults">
             <span class="oi oi-magnifying-glass text-primary"></span>

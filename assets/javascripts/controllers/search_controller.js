@@ -13,17 +13,17 @@ export default class extends Controller {
       return
     }
 
-    if (this.query == this.previousQuery) {
-      return
-    }
-
     this.previousQuery = this.query
     this.resultsListTarget.classList.remove('hide-search-results')
   }
 
   reset() {
-    this.resultsListTarget.classList.add('hide-search-results')
+    this.hideResults()
     this.queryTarget.value = ""
+  }
+
+  hideResults() {
+    this.resultsListTarget.classList.add('hide-search-results')
   }
 
   navigateResults(event) {
