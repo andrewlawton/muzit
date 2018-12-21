@@ -38,8 +38,7 @@ dd {
 // nav
 
 nav[role=navigation] {
-  background-color: $nav-bg-color !important;
-  opacity: 0.95;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 nav .search input.form-control {
