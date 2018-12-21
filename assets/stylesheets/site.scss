@@ -287,17 +287,16 @@ table.torrents .table-scroll {
   overflow-y: scroll;
 }
 
-// adjust torrents table cell sizes on small devices to prevent wrapping
+// hide torrents table size, % changed and downloads columns on small devices
 
 @include media-breakpoint-down(sm) {
   table.torrents th:first-of-type,
   table.torrents td:first-of-type {
-    width: 40%;
+    width: 100%;
   }
   table.torrents th:nth-last-child(-n+3),
   table.torrents td:nth-last-child(-n+3) {
-    text-align: right;
-    width: 60%;
+    display: none
   }
 }
 
