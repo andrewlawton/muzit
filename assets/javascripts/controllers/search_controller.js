@@ -3,8 +3,14 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "query", "results", "resultsList" ]
 
+  connect() {
+    this.hideResultsListener = event => this.hideResults(event)
+    document.addEventListener('click', this.hideResultsListener)
+  }
+
   disconnect() {
     this.reset()
+    document.removeEventListener('click', this.hideResultsListener)
   }
 
   fetchResults() {
@@ -22,8 +28,10 @@ export default class extends Controller {
     this.queryTarget.value = ""
   }
 
-  hideResults() {
-    this.resultsListTarget.classList.add('hide-search-results')
+  hideResults(event) {
+    if (event && event.target != this.queryTarget) {
+      this.resultsListTarget.classList.add('hide-search-results')
+    }
   }
 
   navigateResults(event) {
