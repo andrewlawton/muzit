@@ -50,10 +50,6 @@
     color: black;
     padding: .5rem .75rem;
     display: block;
-    &:hover {
-      background: #ff161f;
-      color: #fff;
-    }
   }
   &:first-of-type {
     margin-top: .25rem;
@@ -62,7 +58,6 @@
     margin-bottom: .25rem;
   }
 }
-
 
 .search-result--current a {
   background-color: #ff161f;

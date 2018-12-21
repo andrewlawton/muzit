@@ -22,18 +22,24 @@ export default class extends Controller {
 
     switch(event.keyCode) {
       case downKey:
-        console.log("down arrow")
         this.selectNextResult()
         break;
       case upKey:
-        console.log("up arrow")
         this.selectPreviousResult()
         break;
       case enterKey:
-        console.log("enter key")
         this.goToSelectedResult()
         break;
     }
+  }
+
+  setFocus(event) {
+    this.resultTargets.forEach((element, index) => {
+      element.classList.toggle("search-result--current", element.firstElementChild == event.target)
+      if (element.firstElementChild == event.target) {
+        this.currentResultIndex = index
+      }
+    })
   }
 
   // private
