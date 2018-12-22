@@ -491,25 +491,22 @@ bodyClass: artist-details
     <!-- // end card-body -->
   </div>
   <!-- // end card -->
-  <div class="card">
+<div class="card">
     <div class="card-header">
-      <h5>
-        Activity Timeline
-      </h5>
+      <h5>Activity Timeline - Last 30 Days</h5>
     </div>
     <div class="card-body">
       <div class="row">
         <div class="col">
-          <%=image_tag( "activity-timeline.png", class: "img-fluid", alt:
-          "Activity Timeline Image") %>
+          <!-- <img class="img-fluid" alt="Activity Timeline Image" src="/assets/activity-timeline-46423f05bb7868c0f33126da122b40604d22354858be4ed61ad4f06526410cd8.png" /> -->
+          <div class="activity-timeline-container" data-controller="activity-timeline" data-activity-timeline-downloads="[2091, 493, 1610, 824, 3428, 6115, 363, 1813, 3122, 1775, 4416, 622, 3355, 403, 2021, 1042, 3129, 6272, 3897, 3538, 419, 1702, 1004, 1569, 1298, 865, 1070, 611, 3699, 3266]" data-activity-timeline-reach="[576, 202, 392, 294, 661, 586, 138, 276, 455, 385, 457, 177, 421, 129, 311, 306, 489, 1041, 312, 426, 136, 412, 170, 213, 336, 252, 240, 219, 491, 411]">
+            <canvas class="activity-timeline chartjs-render-monitor" data-target="activity-timeline.canvas"></canvas>
+          </div>
         </div>
-        <!-- // end column -->
       </div>
-      <!-- // end row -->
     </div>
-    <!-- // end card-body -->
   </div>
-  <!-- // end card -->
+
   <div class="card">
     <div class="card-header">
       <h5>
