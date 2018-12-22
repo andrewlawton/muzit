@@ -302,17 +302,20 @@ table.torrents .table-scroll {
 
 // torrent details
 
-
-// @include media-breakpoint-down(sm) {
-//   .torrent-meta-data {
-//     dt, dd {
-//       display: block;
-//     }
-//   }
-// }
-
-.torrent-meta-data dl {
-  margin-bottom: 0;
+.torrent-meta-data {
+  dl {
+    margin-bottom: 0;
+  }
+  .associated-artists {
+    span {
+      &::after {
+        content: ', ';
+      }
+      &:last-of-type::after {
+        content: '';
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
@@ -323,12 +326,13 @@ table.torrents .table-scroll {
   }
 }
 
-.torrent-files th:last-of-type,
-.torrent-files td:last-of-type {
-  text-align: right;
-  white-space: nowrap;
-  width: 15%;
-
+.torrent-files {
+  th:last-of-type,
+  td:last-of-type {
+    text-align: right;
+    white-space: nowrap;
+    width: 15%;
+  }
 }
 
 // boostrap overrides
