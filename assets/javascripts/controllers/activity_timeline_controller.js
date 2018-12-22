@@ -6,10 +6,13 @@ export default class extends Controller {
   static targets = [ "canvas" ]
 
   connect() {
-    this.downloadData = eval(this.data.get('downloads'))
-    this.reachData = eval(this.data.get('reach'))
+    this.timelineDates = eval(this.data.get('dates'))
+    this.timelineDownloads = eval(this.data.get('downloads'))
+    this.timelineReach = eval(this.data.get('reach'))
 
     this.canvasTarget.height = 250;
+
+    var controller = this
 
     new Chart(this.canvasTarget, {
       type: 'bar',
@@ -20,18 +23,19 @@ export default class extends Controller {
             label: 'Downloads',
             backgroundColor: 'rgba(122, 190, 225, 0.6)',
             borderColor: 'rgba(122, 190, 225, 0.9)',
-            data: this.downloadData,
+            data: this.timelineDownloads,
           },
           {
             label: 'Potential Reach',
             type: 'line',
             backgroundColor: 'rgba(348, 203, 52, 0.2)',
             borderColor: 'rgba(348, 203, 52, 0.4)',
-            data: this.reachData,
+            data: this.timelineReach,
           },
         ],
       },
       options: {
+        barThickness: 'flex',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -45,9 +49,14 @@ export default class extends Controller {
           yAxes: [{ display: false }],
         },
         tooltips: {
-          position: 'nearest',
-          mode: 'index',
+          callbacks: {
+            title: function(tooltipItem, data) {
+              return controller.timelineDates[tooltipItem[0].index]
+            }
+          },
           intersect: false,
+          mode: 'index',
+          position: 'nearest',
         },
       },
     })
