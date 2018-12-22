@@ -288,69 +288,155 @@ bodyClass: artist-details
       </h5>
     </div>
     <div class="card-body">
-      <div class="row">
-        <div class="col-md-7 mb-4 d-none d-md-block">
-          <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
-        </div>
-        <!-- // end column -->
-        <div class="col-md-5">
-          <h6 class="d-none d-md-block">
-            Top Countries
-          </h6>
-          <div class="table-responsive-sm">
-            <table class="table download-origins">
-              <thead>
-                <tr>
-                  <th>Country</th>
-                  <th>Traffic</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-truncate">
-                    United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States </td>
-                  <td >1340</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">China</td>
-                  <td>445</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Russian Federation</td>
-                  <td>367</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Korea</td>
-                  <td>228</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Italy</td>
-                  <td>165</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Brazil</td>
-                  <td>157</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Japan</td>
-                  <td>141</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Canada</td>
-                  <td>110</td>
-                </tr>
-                <tr>
-                  <td class="text-truncate">Germany</td>
-                  <td>104</td>
-                </tr>
-              </tbody>
-            </table>
+        <div id="map-countries">
+          <div class="row">
+            <div class="col-md-7 mb-4 d-none d-md-block">
+              <%=image_tag( "map.png", class: "img-fluid", alt: "Map Image") %>
+            </div>
+            <!-- // end column -->
+            <div class="col-md-5">
+              <h6 class="d-none d-md-block">
+                Top Countries
+              </h6>
+              <div class="table-responsive-sm">
+                <table class="table download-origins">
+                  <thead>
+                    <tr>
+                      <th>Country</th>
+                      <th>Traffic</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-truncate">
+                        United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States </td>
+                      <td >1340</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">China</td>
+                      <td>445</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Russian Federation</td>
+                      <td>367</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Korea</td>
+                      <td>228</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Italy</td>
+                      <td>165</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Brazil</td>
+                      <td>157</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Japan</td>
+                      <td>141</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Canada</td>
+                      <td>110</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Germany</td>
+                      <td>104</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // end table-responsive -->
+            </div>
+            <!-- // end column -->
           </div>
-          <!-- // end table-responsive -->
+          <!-- // end row -->
         </div>
-        <!-- // end column -->
-      </div>
-      <!-- // end row -->
+        <!-- // end map-countries -->
+        <div id="map-states" style="display: none;">
+          <div class="row">
+            <div class="col-md-7 mb-4 d-none d-md-block">
+              <%=image_tag( "map-states.png", class: "img-fluid", alt: "Map Image") %>
+            </div>
+            <!-- // end column -->
+            <div class="col-md-5">
+              <h6 class="d-none d-md-block">
+                Top States from United States
+              </h6>
+              <div class="table-responsive-sm">
+                <table class="table download-origins">
+                  <thead>
+                    <tr>
+                      <th>State</th>
+                      <th>Traffic</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-truncate">
+                        California
+                      </td>
+                      <td>242</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Ohio
+                      </td>
+                      <td>195</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        New York
+                      </td>
+                      <td>102</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Texas
+                      </td>
+                      <td>78</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Illinois
+                      </td>
+                      <td>72</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        New Jersey
+                      </td>
+                      <td>71</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Virginia
+                      </td>
+                      <td>69</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        North Carolina
+                      </td>
+                      <td>55</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Washington
+                      </td>
+                      <td>44</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // end table-responsive -->
+            </div>
+            <!-- // end column -->
+          </div>
+          <!-- // end row -->
+        </div>
+        <!-- // end map-states -->
     </div>
     <!-- // end card-body -->
   </div>
