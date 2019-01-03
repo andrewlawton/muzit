@@ -1,0 +1,1 @@
+{"type":"Topology","objects":{"states":{"type":"GeometryCollection","geometries":[{"type":"Polygon","properties":{"name":"Saint Barthélemy"},"id":"BL-X00~","arcs":[[0]]}]}},"arcs":[[[3661,0],[-3661,9999],[9999,-2899],[-2481,-4917],[-3857,-2183]]],"transform":{"scale":[0.000007447033703370999,0.00000471645464546437],"translate":[-62.866118943999936,17.881984768000052]}}

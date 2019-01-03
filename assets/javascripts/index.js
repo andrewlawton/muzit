@@ -11,13 +11,3 @@ application.load(definitionsFromContext(context))
 $(function() {
   $('[data-toggle="tooltip"]').tooltip()
 })
-
-// show download origins country
-
-$(function() {
-   $("#map-countries").on("click",function(){
-      $('#map-countries').hide();
-      $('#map-states').show();
-   })
-})
-
