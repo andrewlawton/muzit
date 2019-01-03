@@ -1,0 +1,86 @@
+.traffic-map {
+  position: relative;
+  font-size: 0.85em;
+
+  svg {
+    border: 1px solid #ccc;
+
+    .background {
+      fill: none;
+      pointer-events: all;
+    }
+
+    .country {
+      fill: #efefef;
+      stroke: #333;
+      stroke-width: 0.1;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
+    .region {
+      fill: none;
+      stroke: #999;
+      stroke-width: 0.05;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
+    // make sure this stays 'path.active' so that it has more specificty
+    path.active {
+      // this is the currently selected country (if any)
+    }
+
+    .selected {
+      // hover over a country
+      // stroke: #000;
+    }
+  }
+
+  .zoom-control {
+    position: absolute;
+    display: block;
+    top: 1em;
+    left: 1em;
+
+    button {
+      display: block;
+      height: 30px;
+      width: 30px;
+      background-color: #efefef;
+      border-radius: 0;
+      font-weight: bold;
+      font-size: 18px;
+      border: 1px solid #ccc;
+
+      &.zoom-in-control {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .country-tooltip {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    background: #fff;
+    padding: .25em;
+    text-align: left;
+    border: solid #ccc 1px;
+    border-radius: 3px;
+    color: #666;
+    font-size: 14px;
+    font-family: sans-serif;
+    z-index: 999;
+
+    .title {
+      display: block;
+      font-weight: bold;
+    }
+
+    .data {
+      display: block;
+    }
+  }
+}
+

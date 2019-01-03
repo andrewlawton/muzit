@@ -1,0 +1,1 @@
+{"type":"Topology","objects":{"states":{"type":"GeometryCollection","geometries":[{"type":"Polygon","properties":{"name":"Gibraltar"},"id":"GI-X01~","arcs":[[0]]}]}},"arcs":[[[0,9996],[9999,3],[-1660,-9999],[-8339,9996]]],"transform":{"scale":[0.0000019615236742469214,0.0000030622341233988122],"translate":[-5.358386758461411,36.11050039300005]}}
