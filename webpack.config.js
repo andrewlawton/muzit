@@ -12,7 +12,12 @@ module.exports = {
     filename: 'assets/javascripts/[name].js',
     path: path.resolve(__dirname, '.tmp/dist')
   },
-
+  resolve: {
+    alias: {
+      'jquery-ui': 'jquery-ui-dist/jquery-ui.js',
+      'jquery-tageditor': 'jquery-tageditor/jquery.tag-editor.js',
+    },
+  },
   module: {
     rules: [
       {
@@ -61,7 +66,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'assets/stylesheets/[name].css'
-    })
-  ]
+      filename: 'assets/stylesheets/[name].css',
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+  ],
 }
