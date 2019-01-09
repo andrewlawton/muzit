@@ -296,7 +296,7 @@ export default class extends Controller {
 
   loadAndDisplayRegions(d) {
     if (d3.select(`#regions_${d.id}`).empty()) {
-      d3.json(`/topojson/states_${d.id}.topo.json`)
+      d3.json(`/muzit/topojson/states_${d.id}.topo.json`)
         .then((data) => this.addRegions(d, data))
     } else {
       this.showRegions(d)
