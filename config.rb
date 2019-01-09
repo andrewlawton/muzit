@@ -19,6 +19,9 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
+page "/signin.html", :layout => "signin"
+page "/admin/torrent-mapping.html", :layout => "admin"
+
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
