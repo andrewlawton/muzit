@@ -1,6 +1,8 @@
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
-import $ from 'jquery';
+
+import 'jquery-ui'
+import 'jquery-tageditor'
 import 'popper.js'
 import 'bootstrap'
 
