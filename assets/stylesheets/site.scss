@@ -31,6 +31,23 @@ dd {
   margin: 0;
 }
 
+.signin {
+  form {
+    border-radius: 4px;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+  }
+  img.logo {
+    margin-bottom: 2rem;
+  }
+  input {
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.5s;
+  }
+}
+
 .navbar-toggler {
   border: none;
 }
