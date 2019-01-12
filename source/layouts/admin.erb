@@ -15,21 +15,5 @@
       <%= yield %>
     </main>
     <%= javascript_include_tag "site" %>
-
-    <script>
-
-    $(function() {
-      $('#demo2').tagEditor({
-          autocomplete: {
-              delay: 0, // show suggestions immediately
-              position: { collision: 'flip' }, // automatic menu position up/down
-              source: ['ActionScript', 'AppleScript', 'Asp', ... 'Python', 'Ruby']
-          },
-          forceLowercase: false,
-          placeholder: 'Programming languages ...'
-      });
-    })
-    </script>
-
   </body>
 </html>
