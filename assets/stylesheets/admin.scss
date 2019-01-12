@@ -1,0 +1,21 @@
+// admin torrent mapping tag editor
+
+.tag-editor {
+  border-radius: 4px;
+  margin-top: .5rem !important;
+  padding: .25rem 0 !important;
+}
+
+.ui-autocomplete {
+  border-radius: 2px;
+}
+
+.ui-autocomplete li {
+  cursor: pointer;
+  padding: 0 .5rem;
+}
+
+.ui-autocomplete li:hover {
+  background: #f00;
+  color: #fff;
+}
