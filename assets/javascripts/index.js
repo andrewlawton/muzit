@@ -91,3 +91,19 @@ $(function(){
       $(this).prev("label").removeClass(onClass);
   }).trigger("checkval");
 });
+
+// reports countries autocomplete js
+
+$(function() {
+    var availableTags = [
+    "United States",
+    "Russia",
+    "United Kingdom",
+    "Jordan",
+    "Micheal",
+    "Peter"
+    ];
+    $( "#countries" ).autocomplete({
+      source: availableTags
+    });
+});
