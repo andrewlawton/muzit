@@ -1,61 +1,59 @@
 ---
 title: Sign In - Muzit
-bodyClass: signin
 layout: signin
+bodyClass: sign-in
 ---
 
 <div class="container">
   <div class="row justify-content-center align-items-center">
-      <div class="col-md-6">
-          <%= image_tag("logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
-          <form id="login-form" action="" method="" class="form needs-validation" novalidate>
-
-              <h3 class="text-center">Sign In</h3>
+    <div class="col-md-6">
+      <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
+      <form id="login-form" action="" method="" class="form needs-validation" novalidate>
+        <h3 class="text-center">Sign In</h3>
         <div class="form-group">
-      <label for="validationCustom01">Email</label>
-      <input type="text" class="form-control" id="email" placeholder="Email" alt="Second Placeholder Label"  value="" required>
-      <div class="invalid-feedback">
-        Please provide a vaild email address.
-      </div>
-    </div>
-    <!-- // end form-group -->
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Password" value="" required>
-      <div class="invalid-feedback">
-        Password is required.
-      </div>
-    </div>
-    <!-- // end form-group -->
-    <div class="row">
-      <div class="col">
-        <div class="form-group">
-          <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
-            <label class="custom-control-label" for="rememberSignin">
-              Remember me
-            </label>
+          <label class="floating" for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="name@domain" required>
+          <div class="invalid-feedback">
+            Please provide a vaild email address.
           </div>
-          <!-- // end custom-control -->
         </div>
         <!-- // end form-group -->
-        </div>
-        <!-- // end column -->
-        <div class="col text-right">
-          <a href="#" class="">Forgot password?</a>
-        </div>
-        <!-- // end column -->
-      </div>
-      <!-- // end row -->
-
-              <button class="btn btn-primary" type="submit">Sign In</button>
-          </form>
-           <div id="register-link" class="text-center my-3">
-              <a href="#" class="">Register to create an account</a>
+        <div class="form-group">
+          <label class="floating" for="password">Password</label>
+          <input type="password" class="form-control" id="password"
+          value="" placeholder="Password" required>
+          <div class="invalid-feedback">
+            Password is required.
           </div>
+        </div>
+        <!-- // end form-group -->
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
+                <label class="custom-control-label" for="rememberSignin">
+                  Remember me
+                </label>
+              </div>
+              <!-- // end custom-control -->
+            </div>
+            <!-- // end form-group -->
+          </div>
+          <!-- // end column -->
+          <div class="col text-right">
+            <a href="#" class="">Forgot password?</a>
+          </div>
+          <!-- // end column -->
+        </div>
+        <!-- // end row -->
+        <button class="btn btn-primary" type="submit">Sign In</button>
+      </form>
+      <div id="register-link" class="text-center my-3">
+        <a href="#" class="">Register to create an account</a>
       </div>
-      <!-- // end column -->
-
+    </div>
+    <!-- // end column -->
   </div>
   <!-- // end row -->
 </div>
