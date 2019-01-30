@@ -9,7 +9,7 @@ bodyClass: sign-in
     <div class="col-md-6">
       <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
       <form id="login-form" action="" method="" class="form needs-validation" novalidate>
-        <h3 class="text-center">Sign In</h3>
+        <h1 class="text-center">Sign In</h1>
         <div class="form-group">
           <label class="floating" for="email">Email</label>
           <input type="email" class="form-control" id="email" placeholder="name@domain" required>
@@ -42,7 +42,7 @@ bodyClass: sign-in
           </div>
           <!-- // end column -->
           <div class="col text-right">
-            <a href="#" class="">Forgot password?</a>
+            <%= link_to 'Forgot password?', 'forgot-password.html' %>
           </div>
           <!-- // end column -->
         </div>
