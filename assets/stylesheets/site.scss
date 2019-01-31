@@ -31,15 +31,16 @@ dd {
   margin: 0;
 }
 
+.form-container {
+  border-radius: 4px;
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+}
+
 .sign-in {
   h1 {
     margin-bottom: 2rem;
-  }
-  .sign-in-container {
-    border-radius: 4px;
-    background: #fff;
-    padding: 2rem;
-    border: 1px solid #ddd;
   }
   img.logo {
     margin-bottom: 2rem;
@@ -47,31 +48,31 @@ dd {
   input {
     transition: all 0.5s;
   }
-}
-
-// floating labels
-
-.sign-in .form-group {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.sign-in label.floating {
-  position: absolute;
-  top: -13px;
-  left: 0;
-  color: #333;
-  transition: all 0.1s linear;
-  opacity: 0;
-}
-
-.sign-in label.floating.on {
-  color: #333;
-}
-
-.sign-in label.floating.show {
-  top: -25px;
-  opacity: 1;
+  p {
+    margin-bottom: 2.5rem;
+  }
+  // floating labels
+  .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  label {
+    &.floating {
+      position: absolute;
+      top: -13px;
+      left: 0;
+      color: #333;
+      transition: all 0.1s linear;
+      opacity: 0;
+      &.on {
+        color: #333;
+      }
+      &.show {
+        top: -25px;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // nav
@@ -80,8 +81,8 @@ dd {
   border: none; // remove hamburger border
 }
 
-
 nav[role=navigation] {
+  //background: $nav-bg-color;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -469,4 +470,15 @@ table td {
 .badge {
   display: inline-block;
   margin: .25rem .25rem .45rem 0;
+}
+
+.alert {
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }

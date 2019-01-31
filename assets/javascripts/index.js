@@ -107,3 +107,11 @@ $(function() {
       source: availableTags
     });
 });
+
+// alerts
+
+$(function() {
+  $('#reset-password').click(function() {
+    $('#alert-reset-password').fadeIn("fast").delay(2000).fadeOut("fast");
+  });
+});
