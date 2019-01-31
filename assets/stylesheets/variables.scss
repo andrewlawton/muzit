@@ -1,15 +1,24 @@
-// custom sass varibles
+// custom sass variables
 
 $nav-bg-color: #24292e;
 
 // boostrap variables
 
-$body-bg: #fff;
+$body-bg:    #fff;
 $body-color: #333;
+$green:      #08c900;
+$alert-color: #fff;
 
 // boostrap theme-colors variables
 
 $theme-colors: (
   "primary": #ff161f,
-  "danger": #ff4136
+  "danger": #ff4136,
+  "success": $green,
 );
+
+// change lightness/darkness of alert
+
+$alert-bg-level: 0;
+//$alert-border-level: 0;
+//$alert-color-level: 80;
