@@ -45,17 +45,24 @@
 }
 
 .search-result {
+  border-bottom: 1px solid #eee;
   a {
     text-decoration: none;
     color: black;
     padding: .5rem .75rem;
     display: block;
+    span {
+      font-size: .75em;
+      font-style: italic;
+      display: block;
+    }
   }
   &:first-of-type {
     margin-top: .25rem;
   }
   &:last-of-type {
     margin-bottom: .25rem;
+    border-bottom: none;
   }
 }
 
