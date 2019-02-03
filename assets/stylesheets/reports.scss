@@ -1,0 +1,67 @@
+table.reports {
+  width: 100%;
+}
+
+table.reports th,
+table.reports td {
+  white-space: nowrap;
+  width: 2%;
+}
+
+table.reports th:nth-child(4),
+table.reports td:nth-child(4) {
+  width: 10%;
+}
+
+table.reports th:nth-child(5),
+table.reports td:nth-child(5) {
+  text-align: right;
+  margin-right: 1em !important;
+  width: 3%;
+}
+
+table.reports th:nth-child(6),
+table.reports td:nth-child(6) {
+  text-align: right;
+  padding-right: 1em !important;
+  width: 3%;
+}
+
+table.reports th:last-child,
+table.reports td:last-child {
+  width: 5%;
+  div {
+    border: 1px solid #aaa;
+  }
+}
+
+table.reports td span.oi {
+  margin-left: .25rem;
+}
+
+table.reports .table-scroll {
+  overflow-y: scroll;
+}
+
+table.reports td.rank, table.reports td.prev-rank {
+  width: 5%;
+}
+
+table.reports tr:last-child th,
+table.reports tr:last-child td {
+  border-bottom: 1px solid $table-border-color;
+}
+
+table.reports div.bar {
+  background-color: #dedede;
+  display: inline-block;
+}
+
+// hide reports table size, % changed and downloads columns on small devices
+
+@include media-breakpoint-down(sm) {
+  table.reports th:nth-last-child(-n+2),
+  table.reports td:nth-last-child(-n+2) {
+    display: none;
+  }
+}
