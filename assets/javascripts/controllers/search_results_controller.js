@@ -35,8 +35,8 @@ export default class extends Controller {
 
   setFocus(event) {
     this.resultTargets.forEach((element, index) => {
-      element.classList.toggle("search-result--current", element.firstElementChild == event.target)
-      if (element.firstElementChild == event.target) {
+      element.classList.toggle("search-result--current", element.contains(event.target))
+      if (element.contains(event.target)) {
         this.currentResultIndex = index
       }
     })
