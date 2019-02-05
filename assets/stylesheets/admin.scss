@@ -19,3 +19,28 @@
   background: #f00;
   color: #fff;
 }
+
+// unmapped torrents
+
+.torrents.unmapped {
+  th {
+    &:nth-child(1) {
+      width: 35%;
+    }
+    &:nth-child(2) {
+      text-align: left;
+      width: 45%;
+    }
+    &:nth-child(3) {
+      width: 10%;
+    }
+    &:nth-child(4) {
+      width: 10%;
+    }
+  }
+  td {
+    &:nth-child(2) {
+      text-align: left;
+    }
+  }
+}
