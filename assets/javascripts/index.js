@@ -115,3 +115,12 @@ $(function() {
     $('#alert-reset-password').fadeIn("fast").delay(2000).fadeOut("fast");
   });
 });
+
+// populate dropdown button text based on slected value
+
+$(function() {
+  $(".dropdown-menu a").click(function(){
+    var selText = $(this).text();
+    $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+  });
+});
