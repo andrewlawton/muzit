@@ -413,6 +413,20 @@ table.torrents .table-scroll {
   100% { width: 100%; }
 }
 
+// pagination
+
+@media screen and (max-width:767px) {
+  .pagination {
+    li.page-item {
+      display: none
+    }
+    li.page-item.next,
+    li.page-item.prev {
+      display: inline
+    }
+  }
+}
+
 // utilities
 
 .action {
