@@ -83,7 +83,7 @@ dd {
 
 nav[role=navigation] {
   //background: $nav-bg-color;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(16, 14, 23, 0.9);
 }
 
 nav .search input.form-control {
@@ -204,29 +204,35 @@ nav .search input.form-control:focus {
 
 // artist details
 
-.artist-details .hero img.object-fit-cover {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
 .artist-details .hero .hero-container {
-  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
   overflow: hidden;
   position: relative;
   width: 100%;
+  &:before {
+    background-color: #323232;
+    content: "";
+    display: block;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.artist-details .hero .hero-container:before {
-  background-color: #323232;
-  content: "";
-  display: block;
-  opacity: 0.3;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
+.artist-details .hero.no-image .hero-container {
+  background-color: rgba(16, 14, 23, 0.9);
+  background-image: none !important;
+  height: 200px;
+  &:before {
+    background: none;
+    opacity: 1;
+  }
 }
 
 .artist-details .hero .hero-artist-stats {
@@ -234,13 +240,6 @@ nav .search input.form-control:focus {
   bottom: 0;
   left: 0;
   padding: 0 15px;
-  width: 100%;
-}
-
-.artist-details .hero.image-none {
-  background: #222;
-  height: 200px;
-  position: relative;
   width: 100%;
 }
 
