@@ -225,13 +225,17 @@ nav .search input.form-control:focus {
   }
 }
 
+// artist-details hero no-image
+
 .artist-details .hero.no-image .hero-container {
-  background-color: rgba(16, 14, 23, 0.9);
+  background: #26252d;
   background-image: none !important;
-  height: 200px;
+  height: auto;
+  .hero-artist-stats {
+    position: static; // prevent h1 text clipping
+  }
   &:before {
     background: none;
-    opacity: 1;
   }
 }
 
@@ -244,6 +248,8 @@ nav .search input.form-control:focus {
 }
 
 .artist-details .hero h1 {
+  color: #fff;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
@@ -271,7 +277,7 @@ nav .search input.form-control:focus {
 }
 
 .artist-details .mobile-stats {
-  background: #24292e;
+  background: #26252d;
 }
 
 // download origins table
