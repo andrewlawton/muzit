@@ -75,43 +75,6 @@ dd {
   }
 }
 
-// nav
-
-.navbar-toggler {
-  border: none; // remove hamburger border
-}
-
-nav[role=navigation] {
-  //background: $nav-bg-color;
-  background-color: rgba(16, 14, 23, 0.9);
-}
-
-nav .search input.form-control {
-  border: none;
-  border-radius: 30px;
-}
-
-nav .search .input-group-append button {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border: none;
-  background: white;
-  cursor: pointer;
-  padding-right: 10px;
-}
-
-nav .search input.form-control:focus {
-  border-color: none;
-  box-shadow: none;
-  outline: none;
-}
-
-@include media-breakpoint-down(sm) {
-  nav .search {
-    padding: .55rem 0 .35rem 0;
-  }
-}
-
 // browse artists
 
 .artist-thumbnail {
