@@ -4,40 +4,308 @@ bodyClass: reports
 ---
 
 <div class="container-fluid">
-
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-header">
-        Top 10 Countries
-      </div>
-      <div class="card-body">
-      <div clas="row">
-        <div class="col">
-          Phish
+  <h1 class="my-4 text-center text-md-left">
+    Reports
+  </h1>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Top 10 Artists Worldwide
+          </h5>
         </div>
-        <div class="col">
-          <div class="meter">
-            <span style="width:80%;">
-              <span class="progress"></span>
-            </span>
+        <!-- // end card-header -->
+        <div class="card-body">
+          <table class="table reports top-10">
+            <thead>
+              <th></th>
+              <th></th>
+              <th>Downloads</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac </td>
+                <td>376,432</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">2 Chainz</td>
+                <td>372,123</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">50 Cent</td>
+                <td>365,100</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">André 3000</td>
+                <td>350,326</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Avicii</td>
+                <td>326,110</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Backstreet Boys</td>
+                <td>226,835</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Justin Bieber</td>
+                <td>193,327</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Beyoncé</td>
+                <td>12,152</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Big Sean</td>
+                <td>11,012</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">The Black Eyed Peas</td>
+                <td>10,126</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- // end reports top-10 -->
+          <div class="action text-center">
+            <%= link_to 'View Details', 'global.html', class: 'btn btn-outline-primary btn-sm' %>
           </div>
+          <!-- // end action -->
         </div>
-        <!-- // end column -->
+        <!-- // end card-body -->
       </div>
-      <!-- // end row -->
-      </div>
-      <!-- // end card-body -->
+      <!-- // end card -->
     </div>
-    <!-- // end card -->
-</div>
-<!-- // end column -->
-</div>
-<!-- // end row -->
-
-<label for="tags">Search: </label>
-<input id="countries" type="text">
-
-
+    <!-- // end column -->
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Top 10 Artists in United States
+          </h5>
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body">
+          <table class="table reports top-10">
+            <thead>
+              <th></th>
+              <th></th>
+              <th>Downloads</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac </td>
+                <td>376,432</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">2 Chainz</td>
+                <td>372,123</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">50 Cent</td>
+                <td>365,100</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">André 3000</td>
+                <td>350,326</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Avicii</td>
+                <td>326,110</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Backstreet Boys</td>
+                <td>226,835</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Justin Bieber</td>
+                <td>193,327</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Beyoncé</td>
+                <td>12,152</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Big Sean</td>
+                <td>11,012</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">The Black Eyed Peas</td>
+                <td>10,126</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- // end reports top-10 -->
+          <div class="action text-center">
+            <%= link_to 'View Details', 'us.html', class: 'btn btn-outline-primary btn-sm' %>
+          </div>
+          <!-- // end action -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Top 10 Artists in Massachusetts
+          </h5>
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body">
+          <table class="table reports top-10">
+            <thead>
+              <th></th>
+              <th></th>
+              <th>Downloads</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac 2Pac </td>
+                <td>376,432</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">2 Chainz</td>
+                <td>372,123</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">50 Cent</td>
+                <td>365,100</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">André 3000</td>
+                <td>350,326</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-top font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Avicii</td>
+                <td>326,110</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Backstreet Boys</td>
+                <td>226,835</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Justin Bieber</td>
+                <td>193,327</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Beyoncé</td>
+                <td>12,152</td>
+              </tr>
+              <tr>
+                <td class="text-danger">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">Big Sean</td>
+                <td>11,012</td>
+              </tr>
+              <tr>
+                <td class="text-success">
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold align-middle">
+                </td>
+                <td class="text-truncate">The Black Eyed Peas</td>
+                <td>10,126</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- // end reports top-10 -->
+          <div class="action text-center">
+            <%= link_to 'View Details', 'global.html', class: 'btn btn-outline-primary btn-sm' %>
+          </div>
+          <!-- // end action -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
 </div>
 <!-- // end container-fluid -->

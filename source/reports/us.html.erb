@@ -1,7 +1,50 @@
-<div class="container-fluid">
-  <h1 class="my-4 text-center text-md-left">Top 10 Artists by Downloads - US</h1>
+---
+title: Reports: Top 10 Artists Downloads by State - Muzit
+bodyClass: reports
+---
 
-  <table class="table table-hover reports">
+<div class="container-fluid">
+  <h1 class="my-4 text-center text-md-left">Top 10 Artists by Downloads</h1>
+  <h2 class="my-4 text-center text-md-left">United States</h2>
+  <form>
+    <div class="form-group">
+      <div class="input-group input-group-md">
+        <input class="form-control" id="countries" type="text" placeholder="Enter country">
+        <input class="form-control" id="states" type="text" placeholder="Enter state">
+        <select class="custom-select custom-select-md">
+          <option selected>Select month...</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="3">April</option>
+          <option value="3">May</option>
+          <option value="3">June</option>
+          <option value="3">July</option>
+          <option value="3">August</option>
+          <option value="3">September</option>
+          <option value="3">October</option>
+          <option value="3">November</option>
+          <option value="3">December</option>
+        </select>
+        <select class="custom-select custom-select-md">
+          <option selected>Select year...</option>
+          <option value="1">2019</option>
+          <option value="2">2018</option>
+          <option value="3">2017</option>
+          <option value="3">2016</option>
+          <option value="3">2015</option>
+          <option value="3">2014</option>
+          <option value="3">2013</option>
+          <option value="3">2012</option>
+          <option value="3">2011</option>
+          <option value="3">2010</option>
+        </select>
+      </div>
+      <!-- // end input-group -->
+    </div>
+    <!-- // end form-group -->
+  </form>
+  <table class="table table-hover reports details">
     <thead>
       <tr>
         <th>&nbsp;</th>
@@ -14,177 +57,177 @@
       </tr>
     </thead>
     <tbody>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>1</td>
-            <td>2</td>
-            <td><a href="/artists/213132">DC Entertainment</a></td>
-            <td>68,380</td>
-            <td>30.86%</td>
-            <td>
-              <div class="bar" style="width: 30.86%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>2</td>
-            <td>38,827</td>
-            <td><a href="/artists/14314">Mondo Cozmo</a></td>
-            <td>18,638</td>
-            <td>8.41%</td>
-            <td>
-              <div class="bar" style="width: 8.41%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class=""><span class=""></span></td>
-            <td>3</td>
-            <td>3</td>
-            <td><a href="/artists/2115">Live</a></td>
-            <td>17,088</td>
-            <td>7.71%</td>
-            <td>
-              <div class="bar" style="width: 7.71%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>4</td>
-            <td>7</td>
-            <td><a href="/artists/28">Ed Sheeran</a></td>
-            <td>12,624</td>
-            <td>5.7%</td>
-            <td>
-              <div class="bar" style="width: 5.7%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>5</td>
-            <td>26</td>
-            <td><a href="/artists/3178">ALL</a></td>
-            <td>12,157</td>
-            <td>5.49%</td>
-            <td>
-              <div class="bar" style="width: 5.49%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>6</td>
-            <td>13</td>
-            <td><a href="/artists/235">The Who</a></td>
-            <td>11,849</td>
-            <td>5.35%</td>
-            <td>
-              <div class="bar" style="width: 5.35%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>7</td>
-            <td>14</td>
-            <td><a href="/artists/805">Rihanna</a></td>
-            <td>10,959</td>
-            <td>4.95%</td>
-            <td>
-              <div class="bar" style="width: 4.95%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>8</td>
-            <td>9</td>
-            <td><a href="/artists/694">David Guetta</a></td>
-            <td>10,787</td>
-            <td>4.87%</td>
-            <td>
-              <div class="bar" style="width: 4.87%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
-            <td>9</td>
-            <td>6</td>
-            <td><a href="/artists/55">Drake</a></td>
-            <td>10,437</td>
-            <td>4.71%</td>
-            <td>
-              <div class="bar" style="width: 4.71%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
-            <td>10</td>
-            <td>33</td>
-            <td><a href="/artists/812">Young Thug</a></td>
-            <td>10,290</td>
-            <td>4.64%</td>
-            <td>
-              <div class="bar" style="width: 4.64%;">&nbsp;</div>
-            </td>
-          </tr>
-    </tbody>
-  </table>
-
-  <br><br>
-  <table class="table table-hover reports">
-    <tbody>
-          <tr>
-            <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
-            <td>12</td>
-            <td>1</td>
-            <td><a href="/artists/209436">Marvel Entertainment</a></td>
-            <td>10,210</td>
-            <td>4.61%</td>
-            <td>
-              <div class="bar" style="width: 4.61%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
-            <td>14</td>
-            <td>10</td>
-            <td><a href="/artists/2897">So</a></td>
-            <td>9,913</td>
-            <td>4.47%</td>
-            <td>
-              <div class="bar" style="width: 4.47%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
-            <td>19</td>
-            <td>4</td>
-            <td><a href="/artists/435">Chris Brown</a></td>
-            <td>9,328</td>
-            <td>4.21%</td>
-            <td>
-              <div class="bar" style="width: 4.21%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
-            <td>21</td>
-            <td>8</td>
-            <td><a href="/artists/9879">Dragon</a></td>
-            <td>8,858</td>
-            <td>4.0%</td>
-            <td>
-              <div class="bar" style="width: 4.0%;">&nbsp;</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
-            <td>7901</td>
-            <td>5</td>
-            <td><a href="/artists/1056">John Williams</a></td>
-            <td>94</td>
-            <td>0.04%</td>
-            <td>
-              <div class="bar" style="width: 0.04%;">&nbsp;</div>
-            </td>
-          </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>1</td>
+        <td>2</td>
+        <td class="text-truncate">
+          <a href="/artists/213132">DC Entertainment</a>
+        </td>
+        <td>68,380</td>
+        <td>30.86%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 30.86%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>2</td>
+        <td>38,827</td>
+        <td class="text-truncate">
+          <a href="/artists/14314">Mondo Cozmo</a>
+        </td>
+        <td>18,638</td>
+        <td>8.41%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 8.41%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class=""><span class=""></span></td>
+        <td>3</td>
+        <td>3</td>
+        <td class="text-truncate">
+          <a href="/artists/2115">Live</a>
+        </td>
+        <td>17,088</td>
+        <td>7.71%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 7.71%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>4</td>
+        <td>7</td>
+        <td class="text-truncate">
+          <a href="/artists/28">Ed Sheeran</a>
+        </td>
+        <td>12,624</td>
+        <td>5.7%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 5.7%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>5</td>
+        <td>26</td>
+        <td class="text-truncate">
+          <a href="/artists/3178">ALL</a>
+        </td>
+        <td>12,157</td>
+        <td>5.49%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 5.49%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>6</td>
+        <td>13</td>
+        <td class="text-truncate">
+          <a href="/artists/235">The Who</a>
+        </td>
+        <td>11,849</td>
+        <td>5.35%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 5.35%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>7</td>
+        <td>14</td>
+        <td class="text-truncate">
+          <a href="/artists/805">Rihanna</a>
+        </td>
+        <td>10,959</td>
+        <td>4.95%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 4.95%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>8</td>
+        <td>9</td>
+        <td class="text-truncate">
+          <a href="/artists/694">David Guetta</a>
+        </td>
+        <td>10,787</td>
+        <td>4.87%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 4.87%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-danger"><span class="oi oi-arrow-circle-bottom font-weight-bold align-middle"></span></td>
+        <td>9</td>
+        <td>6</td>
+        <td class="text-truncate">
+          <a href="/artists/55">Drake</a>
+        </td>
+        <td>10,437</td>
+        <td>4.71%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 4.71%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-success"><span class="oi oi-arrow-circle-top font-weight-bold align-middle"></span></td>
+        <td>10</td>
+        <td>33</td>
+        <td class="text-truncate">
+          <a href="/artists/812">Young Thug</a>
+        </td>
+        <td>10,290</td>
+        <td>4.64%</td>
+        <td>
+          <div class="downloads">
+            <span style="width: 4.64%;">
+              <span class="meter"></span>
+            </span>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
+<!-- // end container-fluid -->
