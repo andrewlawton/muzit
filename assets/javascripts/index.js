@@ -96,14 +96,33 @@ $(function(){
 
 $(function() {
     var availableTags = [
-    "United States",
-    "Russia",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
     "United Kingdom",
-    "Jordan",
-    "Micheal",
-    "Peter"
+    "United States",
+    "Uruguay",
+    "Uzbekistan"
     ];
     $( "#countries" ).autocomplete({
+      source: availableTags
+    });
+});
+
+// reports states autocomplete js
+
+$(function() {
+    var availableTags = [
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana"
+    ];
+    $( "#states" ).autocomplete({
       source: availableTags
     });
 });
@@ -118,9 +137,9 @@ $(function() {
 
 // populate dropdown button text based on slected value
 
-$(function() {
-  $(".dropdown-menu a").click(function(){
-    var selText = $(this).text();
-    $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-  });
-});
+// $(function() {
+//   $(".dropdown-menu a").click(function(){
+//     var selText = $(this).text();
+//     $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+//   });
+// });
