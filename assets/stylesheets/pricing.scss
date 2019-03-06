@@ -1,0 +1,91 @@
+// pricing
+
+.pricing .pricing-box {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e1e8ee;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing .pricing-box .card-title {
+  color: #ff161f;
+  font-size: 1rem;
+  line-height: 2;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 1.5rem;
+  padding-bottom: .5rem;
+  font-weight: normal;
+}
+
+.pricing .pricing-box .card-text {
+  margin: 1.75rem 0 1.25rem 0;
+}
+
+.pricing .pricing-box .currency {
+  top: -.50rem;
+  font-size: 1rem;
+  letter-spacing: 0.75rem;
+  margin-right: -1.5rem;
+}
+
+.pricing .pricing-box .amount {
+  font-size: 1.75rem;
+}
+
+.pricing .pricing-box .month {
+  color: #a1a2ac;
+}
+
+.pricing .pricing-box .list-group {
+  margin-bottom: 1rem;
+}
+
+.pricing .pricing-box .list-group-item {
+  padding: 0.45rem 1rem;
+  border: none;
+}
+
+.pricing .pricing-premium {
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.09);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.09);
+  box-shadow: 0 5px 10px rgba(0,0,0,.09);
+}
+
+@media (max-width: 768px) {
+  .pricing .pricing-box {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pricing .pricing-premium {
+    -webkit-transform: scale(1.10);
+    -moz-transform: scale(1.10);
+    transform: scale(1.10);
+  }
+}
+
+// .pricing .card:hover {
+//   -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+//   box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+// }
+
+.pricing .card .ribbon {
+  width: 160px;
+  height: 32px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px rgba(136, 136, 136, 0.25);
+  background: #343a40;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -42px;
+  top: 20px;
+  padding-top: 7px;
+}

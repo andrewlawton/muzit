@@ -135,6 +135,25 @@ $(function() {
   });
 });
 
+// apply active class to button group
+
+$(".btn-group > .btn").click(function(){
+    $(".btn-group > .btn").removeClass("active");
+    $(this).addClass("active");
+});
+
+// show/hide pricing artist/corporate plans
+
+$('#artist-pricing').click(function () {
+  $('#artist-plans').fadeIn();
+  $('#corporate-plans').fadeOut();
+});
+
+$('#corporate-pricing').click(function () {
+  $('#artist-plans').fadeOut();
+  $('#corporate-plans').fadeIn();
+});
+
 // populate dropdown button text based on slected value
 
 // $(function() {
