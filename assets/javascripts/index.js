@@ -135,6 +135,17 @@ $(function() {
   });
 });
 
+// sign-up show alert and go to browse artists url
+
+$(function() {
+  $('#sign-up').click(function() {
+    $('#alert-sign-up').fadeIn("fast").delay(2000).fadeOut("fast");
+    setTimeout(function () {
+      window.location = '../browse-artists/no-artists.html';
+    }, 3000);
+  });
+});
+
 // apply active class to button group
 
 $(".btn-group > .btn").click(function(){
@@ -142,7 +153,7 @@ $(".btn-group > .btn").click(function(){
     $(this).addClass("active");
 });
 
-// show/hide pricing artist/corporate plans
+// pricing show/hide artist/corporate plans
 
 $('#artist-pricing').click(function () {
   $('#artist-plans').fadeIn();

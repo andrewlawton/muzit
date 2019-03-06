@@ -1,0 +1,135 @@
+---
+title: Sign Up - Muzit
+layout: signin
+bodyClass: sign-up
+---
+<div class="alert alert-success" id="alert-sign-up" role="alert" style="display: none">
+  You have sucessefully created an account.
+</div>
+
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
+        <div class="form-container">
+          <hgroup class="text-center">
+            <h1>
+            Sign Up
+          </h1>
+            <h6>
+            Medium Plan
+          </h6>
+          </hgroup>
+          <form>
+          <!-- <form id="login-form" action="" method="" class="form needs-validation" novalidate> -->
+            <div class="form-group">
+              <label class="floating" for="org">Organization</label>
+              <input type="text" class="form-control" id="org" placeholder="Organization Name"
+              required>
+              <div class="invalid-feedback">
+                Please enter your organization name.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="floating" for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                  <div class="invalid-feedback">
+                    Please enter your first name.
+                  </div>
+                </div>
+                <!-- // end form-group -->
+              </div>
+              <!-- // end column -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="floating" for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                  <div class="invalid-feedback">
+                    Please enter your last name.
+                  </div>
+                </div>
+                <!-- // end form-group -->
+              </div>
+              <!-- // end column -->
+            </div>
+            <!-- // end row -->
+            <div class="form-group">
+              <label class="floating" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@domain" required>
+              <div class="invalid-feedback">
+                Please enter a vaild email address.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <label class="floating" for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone" placeholder="123-123-1234" required>
+              <div class="invalid-feedback">
+                Please enter your phone number.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <label class="floating" for="userName">User Name</label>
+              <input type="tel" class="form-control" id="userName" placeholder="Enter user name"
+              required>
+              <div class="invalid-feedback">
+                Please enter your user name.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <label class="floating" for="password">Password</label>
+              <input type="password" class="form-control" id="password" value="" placeholder="Password"
+              required>
+              <div class="invalid-feedback">
+                Password is required.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdB_RUTAAAAAGpmNiyX3kfOfsc16azYwg0P-o-K&amp;co=aHR0cDovL3RyYWNlLm11eml0LmNvbTo4MA..&amp;hl=en&amp;v=v1550471573786&amp;size=normal&amp;cb=mban3pm4hmm7"
+              width="304" height="78" role="presentation" name="a-oszlzna2itcy" frameborder="0"
+              scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
+              <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+              style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 0; padding: 0px; resize: none; display: none;"></textarea>
+            </div>
+            <!-- // end form-group -->
+            <div class="action">
+              <button class="btn btn-primary" type="button" id="sign-up">Submit</button>
+              <%=link_to 'Cancel', '/signin/index.html' %>
+            </div>
+            <!-- // end action -->
+          </form>
+        </div>
+        <!-- // end form-container -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+</div>
+<!-- // end container -->
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
