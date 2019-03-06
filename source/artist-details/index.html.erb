@@ -2,12 +2,41 @@
 title: Artist Details - Muzit
 bodyClass: artist-details
 ---
+
+<div class="alert alert-success" id="alert-following-artist" role="alert" style="display: none">
+  You are now following Phish.
+</div>
+
 <section class="hero">
   <div class="hero-container" style="background-image: url('http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com');">
     <div class="hero-artist-stats">
       <h1>
         Phish
       </h1>
+      <div class="row">
+        <div class="col">
+          <div class="btn-group" id="following-artist" style="display: none;">
+            <button type="button" class="btn dropdown-toggle btn-following-artist btn-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="following">
+              <span class="oi oi-heart"></span>
+              Following
+            </button>
+            <!-- // end following-artist -->
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" id="unfollow">Unfollow</a>
+            </div>
+          </div>
+          <!-- // end btn-group -->
+          <div id="follow-artist">
+            <button class="btn btn-primary btn-md" id="follow">
+              <span class="oi oi-heart"></span>
+              Follow
+            </button>
+          </div>
+          <!-- // end follow-artist -->
+        </div>
+        <!-- // end column -->
+      </div>
+      <!-- // end row -->
         <div class="row pb-3 d-none d-md-block">
           <div class="col-lg-12">
             <div class="container-fluid">

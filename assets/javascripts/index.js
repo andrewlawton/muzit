@@ -135,6 +135,19 @@ $(function() {
   });
 });
 
+// artist details hero follow and unfollow artists button
+
+$('#follow').click(function () {
+  $('#following-artist').show();
+  $('#follow-artist').hide();
+  $('#alert-following-artist').fadeIn("fast").delay(2000).fadeOut("fast");
+});
+
+$('#unfollow').click(function () {
+  $('#following-artist').hide();
+  $('#follow-artist').show();
+});
+
 // sign-up show alert and go to browse artists url
 
 $(function() {
