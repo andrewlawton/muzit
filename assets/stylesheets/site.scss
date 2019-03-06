@@ -39,44 +39,37 @@ dd {
   border: 1px solid #ddd;
 }
 
-.sign-in {
-  h1 {
-    margin-bottom: 2rem;
-  }
-  img.logo {
-    margin-bottom: 2rem;
-  }
-  input {
-    transition: all 0.5s;
-  }
-  p {
-    margin-bottom: 2.5rem;
-  }
-  // floating labels
-  .form-group {
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  label {
-    &.floating {
-      position: absolute;
-      top: -13px;
-      left: 0;
+// floating labels
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+label {
+  &.floating {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    color: #333;
+    transition: all 0.1s linear;
+    opacity: 0;
+    &.on {
       color: #333;
-      transition: all 0.1s linear;
-      opacity: 0;
-      &.on {
-        color: #333;
-      }
-      &.show {
-        top: -25px;
-        opacity: 1;
-      }
+    }
+    &.show {
+      top: -25px;
+      opacity: 1;
     }
   }
 }
 
 // browse artists
+
+.artists {
+  .alert {
+    position: static;
+  }
+}
 
 .artist-thumbnail {
   border-radius: 0;
@@ -173,7 +166,7 @@ dd {
   background-size: cover;
   background-position: center top;
   height: 400px;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   width: 100%;
   &:before {
@@ -186,6 +179,22 @@ dd {
     left: 0px;
     height: 100%;
     width: 100%;
+  }
+}
+
+// follow/unfollow artists button
+
+.artist-details .hero button {
+  margin-bottom: 1.5rem;
+  span.oi {
+    text-shadow: none;
+    font-size: 1rem;
+    margin-right: .15rem;
+  }
+  &.btn-following-artist {
+    background: #08c900;
+    border: #08c900;
+    color: #fff;
   }
 }
 
@@ -213,7 +222,9 @@ dd {
 
 .artist-details .hero h1 {
   color: #fff;
-  margin-bottom: 1.5rem;
+  display: inline-block;
+  line-height: normal;
+  margin: 0 1rem 1rem 0;
   position: relative;
 }
 
@@ -269,7 +280,6 @@ table.download-origins td:last-of-type {
 
 table.torrents {
   width: 100%;
-  //display: table;
 }
 
 .table-scroll {
@@ -367,6 +377,9 @@ table.torrents .table-scroll {
 
 .action {
   margin: 1.5rem 0 1rem 0;
+  button + a {
+    margin-left: .5rem;
+  }
 }
 
 // boostrap overrides
@@ -436,5 +449,5 @@ table td {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
