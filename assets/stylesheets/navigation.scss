@@ -12,6 +12,7 @@ nav[role=navigation] {
 nav a.nav-link {
   color: #fff !important;
   outline: none;
+  padding: .5rem .75rem;
   .oi {
     font-size: 1.25rem;
   }
@@ -116,13 +117,13 @@ nav .navbar-nav .dropdown-menu {
     }
   }
   nav .dropdown.account {
-    right: 18px !important;
+    right: 14px !important;
     .dropdown-menu  {
       width: 300px;
     }
   }
   nav .dropdown.admin {
-    right: 85px !important;
+    right: 70px !important;
   }
   nav .dropdown.search {
     left: 150px !important;
