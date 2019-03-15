@@ -55,7 +55,6 @@ nav .search {
 
 nav .dropdown {
   position: absolute;
-  left: 0;
   .dropdown-header {
     padding: 0.5rem 1rem;
   }
@@ -93,8 +92,6 @@ nav .navbar-nav .dropdown-menu {
     width: auto;
   }
   nav .dropdown {
-    left: auto !important;
-    bottom: auto  !important;
     &.account,
     &.admin {
       .dropdown-menu {
