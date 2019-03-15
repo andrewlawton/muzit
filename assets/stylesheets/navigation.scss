@@ -44,12 +44,10 @@ nav .search {
     cursor: pointer;
     padding-right: 10px;
   }
-}
-
-
-@include media-breakpoint-down(sm) {
-  nav .search .dropdown-menu {
-    padding: 0.75rem;
+  @include media-breakpoint-down(sm) {
+    .dropdown-menu {
+      padding: 0 1rem 1rem 1rem;
+    }
   }
 }
 
