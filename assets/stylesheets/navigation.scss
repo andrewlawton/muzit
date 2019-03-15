@@ -9,57 +9,139 @@ nav[role=navigation] {
   background-color: rgba(16, 14, 23, 0.9);
 }
 
-nav .search input.form-control {
-  border: none;
-  border-radius: 30px;
-}
-
-nav .search .input-group-append button {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border: none;
-  background: white;
-  cursor: pointer;
-  padding-right: 10px;
-}
-
-nav .search input.form-control:focus {
-  border-color: none;
-  box-shadow: none;
+nav a.nav-link {
+  color: #fff !important;
   outline: none;
-}
-
-@include media-breakpoint-down(sm) {
-  nav .search {
-    padding: .55rem 0 .35rem 0;
+  .oi {
+    font-size: 1.25rem;
   }
 }
 
-nav  .navbar-nav .dropdown-menu {
-  position: absolute;
-  float: none;
+nav .dropdown.account .dropdown-header.user {
+  font-size: 1.25rem;
+  padding: .25rem 1rem;
+  span {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+nav .search {
+  input.form-control {
+    border: none;
+    border-radius: 30px;
+    &:focus {
+      border-color: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  .input-group-append button {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    padding-right: 10px;
+  }
 }
 
 
 @include media-breakpoint-down(sm) {
+  nav .search .dropdown-menu {
+    padding: 0.75rem;
+  }
+}
+
+nav .dropdown {
+  position: absolute;
+  left: 0;
+  .dropdown-header {
+    padding: 0.5rem 1rem;
+  }
+}
+
+nav .navbar-nav .dropdown-menu {
+  float: none;
+}
+
+@include media-breakpoint-down(sm) {
   nav .dropdown-menu {
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    position: static  !important;
+    background-color: rgba(16, 14, 23, 0.9);
+    border: none;
+    border-radius: 0;
+    position: static;
+    width: 100%;
     .dropdown-item {
-      padding: .25rem 0;
       color: #fff;
+      font-size: 1rem;
       &:hover {
-        background: none !important;
-        color: #fff !important;
+        background: none;
       }
     }
+  }
+  nav .dropdown {
+    left: 0;
+    top: 62px;
+    width: 100%;
   }
 }
 
 @include media-breakpoint-up(md) {
   nav .dropdown-menu {
-    position: absolute;
+    position: relative;
+    width: auto;
+  }
+  nav .dropdown {
+    left: auto !important;
+    bottom: auto  !important;
+    &.account,
+    &.admin {
+      .dropdown-menu {
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 100%;
+          width: 0;
+          height: 0;
+        }
+        &:before {
+          right: 12px;
+          border: 11px solid transparent;
+          border-bottom-color: #ddd;
+        }
+        &:after {
+          right: 13px;
+          border: 10px solid transparent;
+          border-bottom-color: #fff;
+        }
+      }
+    }
+  }
+  nav .dropdown.account {
+    right: 18px !important;
+    .dropdown-menu  {
+      width: 300px;
+    }
+  }
+  nav .dropdown.admin {
+    right: 85px !important;
+  }
+  nav .dropdown.search {
+    left: 150px !important;
+    top: 12px;
+    width: 50%;
+    .dropdown-menu.search {
+      border-radius: 30px;
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+  nav .nav-link.search {
+    display: none;
   }
 }

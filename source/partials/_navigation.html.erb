@@ -1,70 +1,109 @@
+
+<div class="alert alert-success" id="alert-sign-out" role="alert" style="display: none">
+  You are signed out.
+</div>
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" role="navigation">
   <% link_to "#", class:"navbar-brand" do %>
     <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
   <% end %>
-  <% link_to "#", class: "navbar-toggler ml-auto", "data-toggle" => "collapse", "data-target" => "#nav-search", "aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation" do %>
-    <span class="oi oi-magnifying-glass text-white"></span>
-  <% end %>
-  <% link_to "#", class: "navbar-toggler", "data-toggle" => "collapse", "data-target" => "#account", "aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation" do %>
-    <span class="oi oi-person text-white" title="Account" aria-hidden="true"></span>
-  <% end %>
-  <div class="collapse navbar-collapse align-center" id="nav-search">
-    <div class="search w-100">
-      <div class="input-group search" data-controller="search">
-        <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
-        <div class="input-group-append">
-          <button class="" type="button" data-action="click->search#fetchResults">
-            <span class="oi oi-magnifying-glass text-primary"></span>
-          </button>
-        </div>
-        <div data-target="search.results">
-          <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList">
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="../artist-details/index.html">Phish<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Philly<span>Female Dancemania artist</span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Philth<span>Drum and Bass/Dubstep</span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Phil G<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Phi Phi<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Phixx<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Phil<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">So Phistry<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Philo<span></span></a>
-            </li>
-            <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-              <a href="#">Phil<span>Philipp Müller</span></a>
-            </li>
-          </ul>
-        </div>
+  <div class="navbar-item ml-auto" id="admin-dropdown">
+    <%= link_to 'Admin', '../admin/torrent-mapping.html', :class => 'nav-link', 'role' => 'button', 'data-toggle' => 'dropdown', "aria-haspopup" => 'true', 'aria-expanded' =>'false' %>
+    <div class="dropdown admin">
+      <div class="dropdown-menu" aria-labelledby="adminDropdown">
+        <%= link_to "Unmapped Torrents ", "../admin/torrents-unmapped.html", :class => "dropdown-item" %>
       </div>
-      <!-- // end input-group -->
+      <!-- // end dropdown-menu -->
     </div>
-    <!-- // end search -->
+    <!-- // end dropdown -->
   </div>
-  <!-- // end nav-search -->
-  <div class="collapse navbar-collapse" id="account">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <%= link_to "Register", "#", :class => "nav-link text-white" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Sign In", "#", :class => "nav-link text-white" %>
-      </li>
-    </ul>
+  <!-- // end navbar-item -->
+  <div class="navbar-item">
+    <% link_to "#", class: 'nav-link search', id: 'dropdown-search', 'data-toggle' => 'dropdown', 'aria-haspopup' => "true", 'aria-expanded' => 'false' do %>
+      <span class="oi oi-magnifying-glass text-white"></span>
+    <% end %>
+    <div class="dropdown search">
+      <div class="dropdown-menu search" aria-labelledby="search-dropdown" aria-labelledby="accountDropdown">
+        <div class="search" id="nav-search">
+          <div class="input-group search" data-controller="search">
+            <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+            <div class="input-group-append">
+              <button class="" type="button" data-action="click->search#fetchResults">
+                <span class="oi oi-magnifying-glass text-primary"></span>
+              </button>
+            </div>
+            <div data-target="search.results">
+              <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList">
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="../artist-details/index.html">Phish<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Philly<span>Female Dancemania artist</span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Philth<span>Drum and Bass/Dubstep</span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Phil G<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Phi Phi<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Phixx<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Phil<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">So Phistry<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Philo<span></span></a>
+                </li>
+                <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                  <a href="#">Phil<span>Philipp Müller</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- // end input-group -->
+        </div>
+        <!-- // end search -->
+      </div>
+      <!-- // end dropdown-menu -->
+    </div>
+    <!-- // end dropdown -->
   </div>
+  <!-- // end navbar-item -->
+  <div class="navbar-item">
+    <% link_to "#", class: 'nav-link', id: 'account-dropdown', 'data-toggle' => 'dropdown', 'aria-haspopup' => 'true', 'aria-expanded' => 'false' do %>
+      <span class="oi oi-person " title="Account" aria-hidden="true"></span>
+    <% end %>
+    <div class="dropdown account">
+      <div class="dropdown-menu" aria-labelledby="accountDropdown">
+        <div class="dropdown-header user">
+          Andrew Lawton<span>Administrator</span>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-header">
+          Account
+        </div>
+        <%= link_to "Billing Address", "../account/billing-address.html", :class => "dropdown-item" %>
+        <%= link_to "Credit Card", "../account/credit-card.html", :class => "dropdown-item" %>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-header">
+          Admin
+        </div>
+        <%= link_to "Invite Users", "../admin/invite-users.html", :class => "dropdown-item" %>
+        <div class="dropdown-divider"></div>
+        <%= link_to "Reports", "../reports/index.html", :class => "dropdown-item" %>
+        <div class="dropdown-divider"></div>
+        <%= link_to "Sign Out", "#", :class => "dropdown-item", :id => "sign-out" %>
+      </div>
+      <!-- // end dropdown-menu -->
+    </div>
+    <!-- // end dropdown -->
+  </div>
+  <!-- // end navbar-item -->
 </nav>
