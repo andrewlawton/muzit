@@ -83,21 +83,17 @@
     <div class="dropdown account">
       <div class="dropdown-menu" aria-labelledby="accountDropdown">
         <div class="dropdown-header user">
-          Andrew Lawton<span>Administrator</span>
+          Andrew Lawton<span>Owner, Administrator</span>
         </div>
         <div class="dropdown-divider"></div>
-        <div class="dropdown-header">
-          Account
-        </div>
+        <div class="dropdown-header">Organization</div>
         <%= link_to "Billing Address", "../account/billing-address.html", :class => "dropdown-item" %>
         <%= link_to "Credit Card", "../account/credit-card.html", :class => "dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-header">
-          Admin
-        </div>
         <%= link_to "Invite Users", "../admin/invite-users.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
         <%= link_to "Reports", "../reports/index.html", :class => "dropdown-item" %>
+        <div class="dropdown-divider"></div>
+        <%= link_to "My Account", "../users/my_account.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
         <%= link_to "Sign Out", "#", :class => "dropdown-item", :id => "sign-out" %>
       </div>
