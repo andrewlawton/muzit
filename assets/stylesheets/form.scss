@@ -1,0 +1,39 @@
+
+.form-container {
+  border-radius: 4px;
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+}
+
+// floating labels
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+label {
+  &.floating {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    color: #333;
+    transition: all 0.1s linear;
+    opacity: 0;
+    &.on {
+      color: #333;
+    }
+    &.show {
+      top: -25px;
+      opacity: 1;
+    }
+  }
+}
+
+// required asterisk
+
+form label.required:after {
+  color: red;
+  content: "*";
+  margin-left: .25rem;
+}
