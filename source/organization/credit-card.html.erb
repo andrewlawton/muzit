@@ -40,7 +40,7 @@ bodyClass: billing
       <div class="form-container">
         <form class="needs-validation" novalidate="" method="post" id="payment-form">
           <div class="form-group">
-            <label for="cc-name">Full Name</label>
+            <label class="required" for="cc-name">Full Name</label>
             <input type="text" class="form-control" id="cc-name" placeholder="" required="">
             <small class="text-muted">Full name as displayed on card</small>
             <div class="invalid-feedback">
@@ -49,7 +49,7 @@ bodyClass: billing
           </div>
           <!-- // end form-group -->
           <div class="form-group">
-            <label for="card-element">
+            <label class="required" for="card-element">
               Credit or debit card
             </label>
             <div id="card-element">
