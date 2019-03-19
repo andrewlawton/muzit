@@ -4,101 +4,56 @@ bodyClass: artists-torrents
 ---
 
 <div class="container-fluid">
-  <h1 class="my-4 text-center text-md-left">
-    Phish Torrents
-  </h1>
+  <h1 class="my-4 text-center text-md-left">Phish Torrents</h1>
+
+  <div id="torrent-search">
+    <form class="form" action="/artists/596/torrents" accept-charset="UTF-8" method="get">
+      <label for="q">Search Torrents: </label>
+      <input type="text" name="q" id="q">
+      <input type="submit" name="commit" value="Go" class="btn btn-primary btn-sm" data-disable-with="Go">
+    </form>
+  </div>
+
   <nav class="pagination pagination-sm justify-content-center" aria-label="Page navigation">
     <ul class="pagination">
-      <li class="prev disabled page-item">
+      <li class="prev previous_page disabled page-item">
         <a class="page-link" href="#"><i class="fas fa-angle-left" aria-hidden="true"></i> Previous</a>
       </li>
-      <li class="active page-item">
-        <a class="page-link" href="/artists/191/torrents?page=1">1</a>
-      </li>
-      <li class="page-item">
-        <a rel="next" class="page-link" href="/artists/191/torrents?page=2">2</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=3">3</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=4">4</a>
-      </li>
-      <li class="page-item">
-      <a class="page-link" href="/artists/191/torrents?page=5">5</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=6">6</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=7">7</a>
-      </li>
-      <li class="page-item">
-      <a class="page-link" href="/artists/191/torrents?page=8">8</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=9">9</a></li>
-      <li class="page-item disabled">
-        <a class="page-link" href="#">…</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=41">41</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=42">42</a>
-      </li>
-      <li class="next page-item">
-        <a class="page-link" rel="next" href="/artists/191/torrents?page=2">Next <i class="fas fa-angle-right" aria-hidden="true"></i>
+      <li class="active page-item"><a class="page-link" href="/artists/596/torrents?page=1">1</a></li>
+      <li class="page-item"><a rel="next" class="page-link" href="/artists/596/torrents?page=2">2</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=3">3</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=4">4</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=5">5</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=6">6</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=7">7</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=8">8</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=9">9</a></li>
+      <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=48">48</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=49">49</a></li>
+      <li class="next next_page  page-item">
+        <a class="page-link" rel="next" href="/artists/596/torrents?page=2">
+          Next <i class="fas fa-angle-right" aria-hidden="true"></i>
         </a>
       </li>
     </ul>
-    <!-- // end pagination -->
   </nav>
-  <!-- // end nav -->
+
   <table class="table table-hover torrents">
     <thead>
       <tr>
-        <th>Infohash</th>
         <th>Name</th>
+        <th>Category</th>
         <th>Size</th>
+        <th>% Changed</th>
         <th>Downloads</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2129261">Phish- 2012-12-30- MSG 3</a>
-        </td>
-        <td>1.1 GB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>26</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2130913">Phish - 2003-03-01 - Greensboro Coliseum in Greensboro, NC  DSBD</a>
-        </td>
-        <td>1.1 GB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>73</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2130944">Phish - Collection of Summer 2015 [Live Download] (Flac)</a>
-        </td>
-        <td>27 KB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>122</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2131738">Phish - Hoist</a>
-        </td>
-        <td>322 Bytes</td>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779043">Phish 2010 -10-26 Manchester, NH</a></td>
+        <td></td>
+        <td>340 MB</td>
         <td class="text-success">
           0.00%
           <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
@@ -106,29 +61,9 @@ bodyClass: artists-torrents
         <td>0</td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2131834">Phish - The White Tape</a>
-        </td>
-        <td>346 Bytes</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>92</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2132126">Phish 2010-10-20 24 bit SBD</a>
-        </td>
-        <td>2.3 KB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>46</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2132636">Phish 12-01-1984 Nectars Burlington VT</a>
-        </td>
-        <td>210 MB</td>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779041">2009-11-24 Wachovia Center, Philadelphia PA</a></td>
+        <td>Music</td>
+        <td>330 MB</td>
         <td class="text-success">
           0.00%
           <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
@@ -136,19 +71,9 @@ bodyClass: artists-torrents
         <td>0</td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2134619">Phish - Junta</a>
-        </td>
-        <td>116 Bytes</td>
-        <td class="text-success">
-          100.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>19</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2137479">Phish 7_21_13</a>
-        </td>
-        <td>259 Bytes</td>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779040">2009.11.24</a></td>
+        <td>Music</td>
+        <td>330 MB</td>
         <td class="text-success">
           0.00%
           <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
@@ -156,9 +81,29 @@ bodyClass: artists-torrents
         <td>0</td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2140411">Phish Bits 3.0 - Vol. 03</a>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779039">JoyBox_DVD</a></td>
+        <td></td>
+        <td>4.2 GB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
         </td>
-        <td>174 Bytes</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779038">Phish Acoustic Set 11-01-09 Indio Ca</a></td>
+        <td>Music</td>
+        <td>230 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779034">Phish - The Oxy Years VOLUME III</a></td>
+        <td>Music</td>
+        <td>92 MB</td>
         <td class="text-success">
           0.00%
           <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
@@ -166,9 +111,29 @@ bodyClass: artists-torrents
         <td>1</td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2141330">Phish Halloween Sets</a>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779033">ph2000-09-30.sbd.flac16</a></td>
+        <td>Music</td>
+        <td>1.2 GB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
         </td>
-        <td>1.2 KB</td>
+        <td>36</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779029">Phish 1994 Bluegrass Sessions</a></td>
+        <td></td>
+        <td>700 MB</td>
+        <td class="text-danger">
+          -100.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-bottom"></span>
+        </td>
+        <td>74</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779028">Phish 1994 Bluegrass Sessions</a></td>
+        <td></td>
+        <td>700 MB</td>
         <td class="text-success">
           0.00%
           <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
@@ -176,29 +141,9 @@ bodyClass: artists-torrents
         <td>0</td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2141898">Phish - Live 01- 12.14.95 (Disc 2)</a>
-        </td>
-        <td>100 MB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2142092">Phish - 2009 Early Summer Tour</a>
-        </td>
-        <td>4.8 GB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>58</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2143727">Phish 08-08-09 George, WA</a>
-        </td>
-        <td>353 Bytes</td>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779023">Phish 12-01-1984 Nectars Burlington VT</a></td>
+        <td>Music</td>
+        <td>180 MB</td>
         <td class="text-success">
           0.00%
           <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
@@ -206,58 +151,8 @@ bodyClass: artists-torrents
         <td>0</td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2147991">Phish-Knoxville-06.10.09-Set-Two.mp3</a>
-        </td>
-        <td>140 MB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2148256">Phish Studio Discography(1988-2004)  Flac</a>
-        </td>
-        <td>7.9 GB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2149472">Phish 2010-12-27 Worcester, MA</a>
-        </td>
-        <td>312 Bytes</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2150434">Phish.SPAC-2013-07-07.SBD.Saratoga Springs.NY</a>
-        </td>
-        <td>330 MB</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2151377">Phish Walnut Creek + Left Nuts</a>
-        </td>
-        <td>331 Bytes</td>
-        <td class="text-success">
-          0.00%
-          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
-        </td>
-        <td>35</td>
-      </tr>
-      <tr>
-        <td class="text-truncate"><a href="/artists/596/torrents/2152577">[2004] Phish - Live In Brooklyn (320kbps)</a>
-        </td>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779022">nugs.net</a></td>
+        <td>Music</td>
         <td>420 MB</td>
         <td class="text-success">
           0.00%
@@ -265,59 +160,127 @@ bodyClass: artists-torrents
         </td>
         <td>0</td>
       </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779021">Phish_Madison_1997_12_30.zip</a></td>
+        <td></td>
+        <td>190 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779020">Phish - Live Bait Vol. 08 (2012)</a></td>
+        <td>Software</td>
+        <td>150 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779019">2012-08-15 Long Beach, CA</a></td>
+        <td>Music</td>
+        <td>310 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779016">Live Bait Vol. 08</a></td>
+        <td>Music</td>
+        <td>180 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779015">ph2012-08-26</a></td>
+        <td>Music</td>
+        <td>970 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779013">2012-06-10 Bonnaroo, TN</a></td>
+        <td>Music</td>
+        <td>350 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779011">2012-06-07and08 Worcester, MA</a></td>
+        <td></td>
+        <td>590 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>97</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779010">2012-06-15-18 Atlantic City, NJ</a></td>
+        <td></td>
+        <td>1000 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/artists/596/torrents/2779008">2012-06-19and20 Portsmouth, VA</a></td>
+        <td></td>
+        <td>660 MB</td>
+        <td class="text-success">
+          0.00%
+          <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+        </td>
+        <td>0</td>
+      </tr>
+
     </tbody>
   </table>
+
   <nav class="pagination pagination-sm justify-content-center" aria-label="Page navigation">
     <ul class="pagination">
-      <li class="prev disabled page-item">
+      <li class="prev previous_page disabled page-item">
         <a class="page-link" href="#"><i class="fas fa-angle-left" aria-hidden="true"></i> Previous</a>
       </li>
-      <li class="active page-item">
-        <a class="page-link" href="/artists/191/torrents?page=1">1</a>
-      </li>
-      <li class="page-item">
-        <a rel="next" class="page-link" href="/artists/191/torrents?page=2">2</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=3">3</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=4">4</a>
-      </li>
-      <li class="page-item">
-      <a class="page-link" href="/artists/191/torrents?page=5">5</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=6">6</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=7">7</a>
-      </li>
-      <li class="page-item">
-      <a class="page-link" href="/artists/191/torrents?page=8">8</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=9">9</a></li>
-      <li class="page-item disabled">
-        <a class="page-link" href="#">…</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=41">41</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="/artists/191/torrents?page=42">42</a>
-      </li>
-      <li class="next page-item">
-        <a class="page-link" rel="next" href="/artists/191/torrents?page=2">Next <i class="fas fa-angle-right" aria-hidden="true"></i>
+      <li class="active page-item"><a class="page-link" href="/artists/596/torrents?page=1">1</a></li>
+      <li class="page-item"><a rel="next" class="page-link" href="/artists/596/torrents?page=2">2</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=3">3</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=4">4</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=5">5</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=6">6</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=7">7</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=8">8</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=9">9</a></li>
+      <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=48">48</a></li>
+      <li class="page-item"><a class="page-link" href="/artists/596/torrents?page=49">49</a></li>
+      <li class="next next_page  page-item">
+        <a class="page-link" rel="next" href="/artists/596/torrents?page=2">
+          Next <i class="fas fa-angle-right" aria-hidden="true"></i>
         </a>
       </li>
     </ul>
-    <!-- // end pagination -->
   </nav>
-  <!-- // end nav -->
+
   <div class="action text-center">
-    <%= link_to 'Back', 'index.html', class: 'btn btn-primary btn-md' %>
+    <a class="btn btn-primary btn-md" href="index.html">Go Back</a>
   </div>
-  <!-- // end action -->
 </div>
-<!-- // end container-fluid -->
+
