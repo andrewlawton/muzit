@@ -398,7 +398,7 @@ table th {
 
 table th,
 table td {
-  padding: .55rem .25rem .55rem 0 !important;
+  padding: .55rem .25rem .55rem 0;
 }
 
 .badge {
@@ -420,4 +420,13 @@ table td {
   left: 0;
   width: 100%;
   z-index: 9999;
+}
+
+
+.table.users {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  th, td {
+    padding: .5rem;
+  }
 }

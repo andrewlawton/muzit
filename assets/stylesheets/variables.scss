@@ -10,8 +10,6 @@ $green:      #08c900;
 
 $alert-color: #fff;
 
-
-
 // boostrap theme-colors variables
 
 $theme-colors: (
@@ -26,3 +24,18 @@ $theme-colors: (
 $alert-bg-level: 0;
 //$alert-border-level: 0;
 //$alert-color-level: 80;
+
+// switch toggle variables
+
+$switch-height: calc(#{$input-height} * .8) !default;
+$switch-height-sm: calc(#{$input-height-sm} * .8) !default;
+$switch-border-radius: $switch-height !default;
+$switch-bg: $custom-control-indicator-bg !default;
+$switch-checked-bg: map-get($theme-colors, 'success') !default;
+$switch-disabled-bg: $custom-control-indicator-disabled-bg !default;
+$switch-disabled-color: $custom-control-description-disabled-color !default;
+$switch-thumb-bg: $white !default;
+$switch-thumb-border-radius: 50% !default;
+$switch-thumb-padding: 2px !default;
+$switch-focus-box-shadow: 0 0 0 $input-btn-focus-width rgba(map-get($theme-colors, 'success'), .25);
+$switch-transition: .2s all !default;

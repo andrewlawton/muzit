@@ -9,20 +9,47 @@ bodyClass:
 
 
 <div class="container-fluid">
-
-  <div class="row">
-    <div class="col-md-6 my-4">
-      <h1 class=" text-center text-md-left">
-        Manage Users
-      </h1>
-    </div>
-    <div class="col-md-6 my-4 text-right">
+  <h1 class="my-4 text-center text-md-left">
+    Manage Users
+  </h1>
+  <div class="row mb-4">
+    <div class="col text-center text-md-right">
+      <span class="">Users Remaining <span class="badge badge-pill badge-primary">4</span></span>
       <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#invite-user">
         <span class="oi oi-plus"></span>  Invite New User
       </button>
     </div>
   </div>
-
+  <h2>
+    Invited Users
+  </h2>
+  <table class="table users">
+    <thead>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+        <th>Sent</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-truncate">Larry</td>
+        <td class="text-truncate">Bird</td>
+        <td class="text-truncate">name@domain.com</td>
+        <td>March 19, 2019</td>
+        <td class="text-right">
+          <a href="#" data-toggle="modal" data-target="#uninvite-user">
+            Uninvite
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>
+    Users
+  </h2>
   <table class="table users">
     <thead>
       <tr>
@@ -30,45 +57,73 @@ bodyClass:
         <th>Last</th>
         <th>Email</th>
         <th>Status</th>
+        <th>Admin</th>
+        <th>Owner</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Jon</td>
-        <td>Fishman</td>
-        <td>name@domain.com</td>
-        <td class="text-success">Active</td>
-        <td class="text-right">
-          <a href="#" data-toggle="modal" data-target="#delete-user" >
-            <span class="oi oi-trash text-danger" data-toggle="tooltip" title="Delete user"></span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>Jerry</td>
-        <td>Garcia</td>
-        <td>name@domain.com</td>
+        <td class="text-truncate">Jon</td>
+        <td class="text-truncate">Fishman</td>
+        <td class="text-truncate">name@domain.com</td>
         <td>Active</td>
+        <td>
+          <span class="switch switch-sm">
+            <input type="checkbox" class="switch" id="roleSwitch1" checked>
+            <label for="roleSwitch1"></label>
+          </span>
+        </td>
+        <td>
+          <span class="switch switch-sm">
+            <input type="checkbox" class="switch" id="roleSwitch2">
+            <label for="roleSwitch2"></label>
+          </span>
+        </td>
         <td class="text-right">
           <a href="#" data-toggle="modal" data-target="#delete-user" >
-            <span class="oi oi-trash text-danger" data-toggle="tooltip" title="Delete user"></span>
+            Delete
           </a>
         </td>
       </tr>
       <tr>
-        <td>Larry</td>
-        <td>Bird</td>
-        <td>name@domain.com</td>
-        <td>Pending</td>
+        <td class="text-truncate">Jerry</td>
+        <td class="text-truncate">Garcia</td>
+        <td class="text-truncate">name@domain.com</td>
+        <td>Active</td>
+<!--         <td>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="oi oi-cog"></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href="#">Owner</a>
+              <a class="dropdown-item" href="#">Administrator</a>
+              <a class="dropdown-item" href="#">User</a>
+            </div>
+          </div>
+        </td> -->
+        <td>
+          <span class="switch switch-sm">
+            <input type="checkbox" class="switch" id="roleSwitch3">
+            <label for="roleSwitch3"></label>
+          </span>
+        </td>
+        <td>
+          <span class="switch switch-sm">
+            <input type="checkbox" class="switch" id="roleSwitch4" checked>
+            <label for="roleSwitch4"></label>
+          </span>
+        </td>
         <td class="text-right">
-          <a href="#" data-toggle="modal" data-target="#uninvite-user">
-            <span class="oi oi-x" data-toggle="tooltip" title="Cancel invite"></span>
+          <a href="#" data-toggle="modal" data-target="#delete-user" >
+            Delete
           </a>
         </td>
       </tr>
     </tbody>
   </table>
+
   <div class="modal fade" id="invite-user" tabindex="-1" role="dialog" aria-labelledby="Invite user modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -86,7 +141,7 @@ bodyClass:
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="floating" for="firstName">First Name</label>
+                  <label for="firstName">First Name</label>
                   <input type="text" class="form-control" id="firstName" placeholder="First name" required="">
                   <div class="invalid-feedback">
                     Please enter user first name.
@@ -97,7 +152,7 @@ bodyClass:
               <!-- // end column -->
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="floating" for="lastName">Last Name</label>
+                  <label for="lastName">Last Name</label>
                   <input type="text" class="form-control" id="lastName" placeholder="Last name" required="">
                   <div class="invalid-feedback">
                     Please enter user last name.
@@ -108,13 +163,48 @@ bodyClass:
               <!-- // end column -->
             </div>
             <div class="form-group">
-              <label class="floating" for="email">Email</label>
+              <label for="email">Email</label>
               <input type="email" class="form-control" id="email" placeholder="name@domain" required="">
               <div class="invalid-feedback">
                 Please provide a vaild email address.
               </div>
             </div>
             <!-- // end form-group -->
+            <div class="form-group">
+              <label for="">Role</label>
+
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="roleOwner">
+                <label class="custom-control-label" for="roleOwner">Owner</label>
+                <small class="form-text text-muted">
+                  Owner is able to manage and upate billing information
+                </small>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="roleAdmin">
+                <label class="custom-control-label" for="roleAdmin">Administrator</label>
+                <small class="form-text text-muted">
+                  Administrator is able to to manage the team
+                </small>
+              </div>
+
+<!--               <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">Owner</label>
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  Owner is able to manage and upate billing information
+                </small>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">Administrator</label>
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  Administrator is able to to manage the team
+                </small>
+              </div> -->
+              </div>
+              <!-- // end form-group -->
             </div>
             <!-- // end modal-body -->
           <div class="modal-footer">
