@@ -165,14 +165,14 @@ $('#unfollow').click(function () {
 
 // sign-up show alert and go to browse artists url
 
-$(function() {
-  $('#sign-up').click(function() {
-    $('#alert-sign-up').fadeIn("fast").delay(2000).fadeOut("fast");
-    setTimeout(function () {
-      window.location = '../browse-artists/no-artists.html';
-    }, 3000);
-  });
-});
+// $(function() {
+//   $('#sign-up').click(function() {
+//     $('#alert-sign-up').fadeIn("fast").delay(2000).fadeOut("fast");
+//     setTimeout(function () {
+//       window.location = '../browse-artists/no-artists.html';
+//     }, 3000);
+//   });
+// });
 
 // apply active class to button group
 
