@@ -8,6 +8,7 @@ body {
 main {
   flex: 1;
   padding-bottom: 3rem;
+  position: relative;
 }
 
 h2 {
@@ -33,12 +34,6 @@ dd {
 }
 
 // browse artists
-
-.artists {
-  .alert {
-    position: static;
-  }
-}
 
 .artist-thumbnail {
   border-radius: 0;
@@ -415,7 +410,7 @@ table td {
   border: none;
   border-radius: 0;
   color: #fff;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -427,7 +422,6 @@ table td {
     text-shadow: none;
   }
 }
-
 
 .table.users {
   background: #fff;
