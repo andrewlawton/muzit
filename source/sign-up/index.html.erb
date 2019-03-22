@@ -3,12 +3,6 @@ title: Sign Up - Muzit
 layout: sign-up
 bodyClass: sign-up
 ---
-<div class="alert alert-success" id="alert-sign-up" role="alert" style="display: none">
-  You have sucessefully created an account.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
 
 <div class="container">
   <div class="row justify-content-center align-items-center">
@@ -23,8 +17,7 @@ bodyClass: sign-up
             Medium Plan
           </h6>
           </hgroup>
-          <form>
-            <!-- <form id="login-form" action="" method="" class="form needs-validation" novalidate> -->
+            <form id="login-form" action="../browse-artists/no-artists.html" method="get" class="form needs-validation" novalidate>
             <fieldset class="floating-labels">
               <div class="form-group">
                 <label class="floating" for="org">Organization</label>
@@ -95,7 +88,7 @@ bodyClass: sign-up
               </div>
               <!-- // end form-group -->
               <div class="action">
-                <button class="btn btn-primary" type="button" id="sign-up">Submit</button>
+                <button class="btn btn-primary" type="submit" id="sign-up">Submit</button>
                 <%=link_to 'Cancel', '/signin/index.html' %>
               </div>
               <!-- // end action -->
