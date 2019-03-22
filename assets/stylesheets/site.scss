@@ -420,6 +420,12 @@ table td {
   left: 0;
   width: 100%;
   z-index: 9999;
+  .close {
+    color: inherit;
+    line-height: .90;
+    opacity: 1;
+    text-shadow: none;
+  }
 }
 
 
