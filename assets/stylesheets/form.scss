@@ -8,12 +8,12 @@
 
 // floating labels
 
-.form-group {
-  position: relative;
-  //margin-bottom: 2rem;
-}
-label {
-  &.floating {
+.floating-labels {
+  .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  label.floating {
     position: absolute;
     top: -13px;
     left: 0;
