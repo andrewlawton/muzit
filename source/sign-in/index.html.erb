@@ -1,6 +1,6 @@
 ---
 title: Sign In - Muzit
-layout: signin
+layout: sign-in
 bodyClass: sign-in
 ---
 
@@ -11,44 +11,46 @@ bodyClass: sign-in
       <div class="form-container">
         <h1 class="text-center">Sign In</h1>
         <form id="login-form" action="" method="" class="form needs-validation" novalidate>
-          <div class="form-group">
-            <label class="floating" for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="name@domain" required>
-            <div class="invalid-feedback">
-              Please provide a vaild email address.
-            </div>
-          </div>
-          <!-- // end form-group -->
-          <div class="form-group">
-            <label class="floating" for="password">Password</label>
-            <input type="password" class="form-control" id="password"
-            value="" placeholder="Password" required>
-            <div class="invalid-feedback">
-              Password is required.
-            </div>
-          </div>
-          <!-- // end form-group -->
-          <div class="row">
-            <div class="col">
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
-                  <label class="custom-control-label" for="rememberSignin">
-                    Remember me
-                  </label>
-                </div>
-                <!-- // end custom-control -->
+          <fieldset class="floating-labels">
+            <div class="form-group">
+              <label class="floating" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@domain" required>
+              <div class="invalid-feedback">
+                Please provide a vaild email address.
               </div>
-              <!-- // end form-group -->
             </div>
-            <!-- // end column -->
-            <div class="col text-right">
-              <%= link_to 'Forgot password?', 'forgot-password.html' %>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <label class="floating" for="password">Password</label>
+              <input type="password" class="form-control" id="password"
+              value="" placeholder="Password" required>
+              <div class="invalid-feedback">
+                Password is required.
+              </div>
             </div>
-            <!-- // end column -->
-          </div>
-          <!-- // end row -->
-          <button class="btn btn-primary" type="submit">Sign In</button>
+            <!-- // end form-group -->
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
+                    <label class="custom-control-label" for="rememberSignin">
+                      Remember me
+                    </label>
+                  </div>
+                  <!-- // end custom-control -->
+                </div>
+                <!-- // end form-group -->
+              </div>
+              <!-- // end column -->
+              <div class="col text-right">
+                <%= link_to 'Forgot password?', 'forgot-password.html' %>
+              </div>
+              <!-- // end column -->
+            </div>
+            <!-- // end row -->
+            <button class="btn btn-primary" type="submit">Sign In</button>
+          </fieldset>
         </form>
       </div>
       <!-- // end sign-in-container -->
