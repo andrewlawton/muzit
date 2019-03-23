@@ -13,15 +13,15 @@ bodyClass: sign-up
             <h1>
             Sign Up
           </h1>
-            <h6>
+          <h6>
             Medium Plan
           </h6>
           </hgroup>
-            <form id="login-form" action="../browse-artists/no-artists.html" method="get" class="form needs-validation" novalidate>
+          <form id="login-form" action="../browse-artists/no-artists.html" method="get" class="form needs-validation" novalidate>
             <fieldset class="floating-labels">
               <div class="form-group">
                 <label class="floating" for="org">Organization</label>
-                <input type="text" class="form-control" id="org" placeholder="Organization Name"
+                <input type="text" class="form-control" id="org" placeholder="Organization name"
                 required>
                 <div class="invalid-feedback">
                   Please enter your organization name.
@@ -81,7 +81,9 @@ bodyClass: sign-up
               <!-- // end form-group -->
               <div class="action">
                 <button class="btn btn-primary" type="submit" id="sign-up">Sign Up</button>
-                <%=link_to 'Cancel', '/signin/index.html' %>
+                <div class="text-center d-lg-inline">
+                  <%= link_to 'Cancel', '../pricing/index.html' %>
+                </div>
               </div>
               <!-- // end action -->
             </fieldset>
