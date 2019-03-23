@@ -2,16 +2,24 @@
 // sign-in
 
 .sign-in {
+  margin-top: 0 !important; // remove top margin from body reserved for nav
   h1 {
     margin-bottom: 2rem;
+  }
+  header {
+    margin-top: 2rem;
   }
   img.logo {
     margin-bottom: 2rem;
   }
-  input {
-    transition: all 0.5s;
+  .forgot-password {
+    display: inline-block;
+    font-size: .90rem;
+    margin-top: .25rem
   }
-  p {
-    margin-bottom: 2.5rem;
+  .form-group {
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0; // adjust margin for last form-group
+    }
   }
 }

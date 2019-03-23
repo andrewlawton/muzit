@@ -7,10 +7,12 @@ bodyClass: sign-in
 <div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-6">
-      <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
+      <header>
+        <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
+      </header>
       <div class="form-container">
         <h1 class="text-center">Sign In</h1>
-        <form id="login-form" action="" method="" class="form needs-validation" novalidate>
+        <form id="login-form" action="../browse-artists/no-artists.html" method="get" class="form needs-validation" novalidate>
           <fieldset class="floating-labels">
             <div class="form-group">
               <label class="floating" for="email">Email</label>
@@ -27,29 +29,22 @@ bodyClass: sign-in
               <div class="invalid-feedback">
                 Password is required.
               </div>
+              <div class="text-right">
+                <%= link_to 'Forgot password?', 'forgot-password.html', class: 'forgot-password' %>
+              </div>
             </div>
             <!-- // end form-group -->
-            <div class="row">
-              <div class="col">
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
-                    <label class="custom-control-label" for="rememberSignin">
-                      Remember me
-                    </label>
-                  </div>
-                  <!-- // end custom-control -->
+            <div class="action">
+                <button class="btn btn-primary " type="submit">Sign In</button>
+                <div class="custom-control custom-checkbox d-md-inline-block align-middle">
+                  <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
+                  <label class="custom-control-label" for="rememberSignin">
+                    Remember me
+                  </label>
                 </div>
-                <!-- // end form-group -->
-              </div>
-              <!-- // end column -->
-              <div class="col text-right">
-                <%= link_to 'Forgot password?', 'forgot-password.html' %>
-              </div>
-              <!-- // end column -->
+                <!-- // end custom-control -->
             </div>
-            <!-- // end row -->
-            <button class="btn btn-primary" type="submit">Sign In</button>
+            <!-- // end action -->
           </fieldset>
         </form>
       </div>
@@ -62,7 +57,7 @@ bodyClass: sign-in
   </div>
   <!-- // end row -->
 </div>
-<!-- // end container -->
+<!-- // end form-container -->
 
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
