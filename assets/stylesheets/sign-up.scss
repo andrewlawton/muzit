@@ -2,16 +2,17 @@
 // sign-up
 
 .sign-up {
+  margin-top: 0 !important; // remove top margin from body reserved for nav
   h1 {
     margin-bottom: 1rem;
   }
   h6 {
     margin-bottom: 2rem;
   }
+  header {
+    margin-top: 2rem;
+  }
   img.logo {
     margin-bottom: 2rem;
-  }
-  input {
-    transition: all 0.5s;
   }
 }
