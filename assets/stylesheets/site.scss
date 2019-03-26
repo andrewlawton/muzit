@@ -400,9 +400,13 @@ table td {
   border: none;
   border-radius: 0;
   color: #fff;
-  top: 0;
+  position: fixed;
+  margin-bottom: 0;
+  top: 64px;
   left: 0;
   width: 100%;
+
+  z-index: 9999;
   .close {
     color: inherit;
     line-height: .90;

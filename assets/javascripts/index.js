@@ -6,6 +6,8 @@ import 'jquery-tageditor'
 import 'popper.js'
 import 'bootstrap'
 
+import img from './assets/images';
+
 const application = Application.start()
 const context = require.context("./controllers", true, /.js$/)
 application.load(definitionsFromContext(context))
@@ -155,7 +157,8 @@ $('#send-invite').click(function () {
 $('#follow').click(function () {
   $('#following-artist').show();
   $('#follow-artist').hide();
-  $('#alert-following-artist').fadeIn("fast").delay(2000).fadeOut("fast");
+  //$('#alert-following-artist').fadeIn("fast").delay(2000).fadeOut("fast");
+  $('#alert-following-artist').fadeIn("fast");
 });
 
 $('#unfollow').click(function () {

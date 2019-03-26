@@ -1,5 +1,32 @@
 // pricing
 
+
+// hero background image
+
+.pricing .hero .hero-container {
+  background: url("images/hero-pricing.jpg") 100% 100% no-repeat;
+
+  color: #fff;
+
+
+  background-size: cover;
+  height: 400px;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  &:before {
+    background-color: #323232;
+    content: "";
+    display: block;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .pricing .pricing-box {
   padding: 1rem;
   background: #fff;
