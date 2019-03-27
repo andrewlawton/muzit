@@ -20,18 +20,6 @@ module.exports = {
   },
   module: {
     rules: [
-
-
-      {
-        test:  /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader',
-        options: {
-            name: '[path][name].[ext]',
-            publicPath: '/'
-        },
-      },
-
-
       {
         test: /\.scss$/,
         use: [
@@ -74,26 +62,6 @@ module.exports = {
           },
         },
       },
-
-
-
-
-
-      // {
-      //   test: /\.(png|jpg|gif|svg)$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     options: {
-      //         name: 'assets/images/[name].[ext]',
-      //         //context: path.resolve(__dirname, "assets/images"),
-      //         //outputPath: 'dist/',
-      //         publicPath: '../',
-      //         //publicPath: 'http://localhost:4567',
-      //         useRelativePaths: true
-      //     },
-      //   },
-      // },
-
     ]
   },
   plugins: [
