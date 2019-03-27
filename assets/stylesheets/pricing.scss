@@ -3,19 +3,33 @@
 
 // hero background image
 
-.pricing .hero .hero-container {
-  background: url("images/hero-pricing.jpg") 100% 100% no-repeat;
-
-  color: #fff;
-
-
+.pricing .hero {
+  background: url("/images/hero-pricing.jpg") center center no-repeat;
   background-size: cover;
-  height: 400px;
-  overflow: visible;
+  //height: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  margin-bottom: 3rem;
+  overflow: hidden;
   position: relative;
+  text-align: center;
   width: 100%;
+  h1 {
+    color: #fff;
+    font-size: 4rem;
+    position: relative;
+    text-shadow: 1px 1px #333;
+    span {
+      display: block;
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      padding: 0 1rem;
+    }
+  }
   &:before {
-    background-color: #323232;
+    background-color: #000;
     content: "";
     display: block;
     opacity: 0.3;
