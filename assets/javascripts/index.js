@@ -6,7 +6,6 @@ import 'jquery-tageditor'
 import 'popper.js'
 import 'bootstrap'
 
-import img from './assets/images';
 
 const application = Application.start()
 const context = require.context("./controllers", true, /.js$/)
