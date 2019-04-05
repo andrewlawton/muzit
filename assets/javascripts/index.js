@@ -136,12 +136,9 @@ $(function() {
   });
 
   $('#sign-out').click(function() {
-
     setTimeout(function () {
       window.location = '../sign-in/index.html';
-
     }, 3000);
-$('#alert-sign-out').fadeIn("fast");
   });
 
   $('#send-invite').click(function () {
