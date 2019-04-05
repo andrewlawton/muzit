@@ -130,39 +130,39 @@ $(function() {
 
 // alerts
 
-// $(function() {
-//   $('#reset-password').click(function() {
-//     $('#alert-reset-password').fadeIn("fast").delay(2000).fadeOut("fast");
-//   });
-// });
-
 $(function() {
-  $('#sign-out').click(function() {
-    $('#alert-sign-out').fadeIn("fast").delay(2000).fadeOut("fast");
-    setTimeout(function () {
-      window.location = '../signin/index.html';
-    }, 3000);
-
+  $('#reset-password').click(function() {
+    $('#alert-reset-password').fadeIn("fast");
   });
-});
 
-$('#send-invite').click(function () {
-  $('#alert-user-invite-success').fadeIn("fast").delay(2000).fadeOut("fast");
-});
+  $('#sign-out').click(function() {
 
+    setTimeout(function () {
+      window.location = '../sign-in/index.html';
+
+    }, 3000);
+$('#alert-sign-out').fadeIn("fast");
+  });
+
+  $('#send-invite').click(function () {
+    $('#alert-user-invite-success').fadeIn("fast");
+  });
+
+});
 
 // artist details hero follow and unfollow artists button
 
-$('#follow').click(function () {
-  $('#following-artist').show();
-  $('#follow-artist').hide();
-  //$('#alert-following-artist').fadeIn("fast").delay(2000).fadeOut("fast");
-  $('#alert-following-artist').fadeIn("fast");
-});
+$(function() {
+  $('#follow').click(function () {
+    $('#following-artist').show();
+    $('#follow-artist').hide();
+    $('#alert-following-artist').fadeIn("fast");
+  });
 
-$('#unfollow').click(function () {
-  $('#following-artist').hide();
-  $('#follow-artist').show();
+  $('#unfollow').click(function () {
+    $('#following-artist').hide();
+    $('#follow-artist').show();
+  });
 });
 
 // sign-up show alert and go to browse artists url
