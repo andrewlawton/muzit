@@ -126,6 +126,7 @@ dd {
 // artist details
 
 .artist-details .hero .hero-container {
+  background-color: #20262E;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -400,13 +401,9 @@ table td {
   border: none;
   border-radius: 0;
   color: #fff;
-  position: fixed;
   margin-bottom: 0;
-  top: 64px;
   left: 0;
   width: 100%;
-
-  z-index: 9999;
   .close {
     color: inherit;
     line-height: .90;
