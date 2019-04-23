@@ -1,0 +1,817 @@
+---
+title: Artist Details - Muzit
+bodyClass: artist-details
+---
+
+<div class="alert alert-success" id="alert-following-artist" role="alert" style="display: none">
+  You are now following Phish.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<section class="hero">
+  <div class="hero-container" style="background-image: url('http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com');">
+    <div class="hero-artist-stats">
+      <h1>
+        Phish
+      </h1>
+      <div class="row">
+        <div class="col">
+          <div class="btn-group" id="following-artist" style="display: none;">
+            <button type="button" class="btn dropdown-toggle btn-following-artist btn-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="following">
+              <span class="oi oi-heart"></span>
+              Following
+            </button>
+            <!-- // end following-artist -->
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" id="unfollow">Unfollow</a>
+            </div>
+          </div>
+          <!-- // end btn-group -->
+          <div id="follow-artist">
+            <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#modal-follow-limit" id="follow-limit">
+              <span class="oi oi-heart"></span>
+              Follow
+            </button>
+          </div>
+          <!-- // end follow-artist -->
+        </div>
+        <!-- // end column -->
+      </div>
+      <!-- // end row -->
+        <div class="row pb-3 d-none d-md-block">
+          <div class="col-lg-12">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 col-lg-4">
+                  <div class="row">
+                    <div class="col-md-1 p-0">
+                      <span class="oi oi-data-transfer-download text-white"></span>
+                    </div>
+                    <!-- end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        18,250,300
+                      </span>
+                      <span class="label text-white text-nowrap">
+                        Downloaded Songs
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
+                </div>
+                <!-- // end column -->
+                <div class="col-md-4 col-lg-4">
+                  <div class="row">
+                    <div class="col-md-1 p-0">
+                      <span class="oi oi-target text-white"></span>
+                    </div>
+                    <!-- // end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        1,495,573
+                      </span>
+                      <span class="label text-white text-nowrap">
+                        Potential Reach
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
+                </div>
+                <!-- // end column -->
+                <div class="col-md-4 col-lg-4">
+                  <div class="row">
+                    <div class="col-md-1 p-0">
+                      <span class="oi oi-link-intact text-white"></span>
+                    </div>
+                    <!-- // end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        439
+                      </span>
+                      <span class="label d-block text-white text-nowrap">
+                        Torrents
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="The amount of Torrent Files we are currently tracking for this artist"></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
+                </div>
+                <!-- // end column -->
+              </div>
+              <!-- // end row -->
+            </div>
+            <!-- // end container-fluid -->
+          </div>
+          <!-- // end column -->
+        </div>
+        <!-- // end row -->
+    </div>
+    <!-- // end hero-artist-stats -->
+  </div>
+  <!-- // end hero-container -->
+</section>
+<!-- // end hero -->
+<section class="container-fluid">
+  <div class="d-md-none">
+    <div class="row">
+      <div class="col-md-4 p-0">
+        <div class="mobile-stats pt-2">
+          <div class="card-body text-white">
+            <div class="row m-0">
+              <div class="col-sm text-sm-left pl-0 mb-4 mb-sm-0">
+                <h6 class="card-title text-nowrap">
+                  <span class="oi oi-data-transfer-download mr-1"></span> Downloaded Songs
+                  <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
+                </h6>
+                <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 18,250,300</span>
+              </div>
+              <div class="col-sm mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
+                <h6 class="card-title text-nowrap">
+                  <span class="oi oi-target mr-1"></span>
+                  Potential Reach
+                  <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+                </h6>
+                <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
+              </div>
+              <!-- // end column -->
+              <div class="col-sm text-sm-left pl-0 mb-sm-0">
+                <h6 class="card-title text-nowrap">
+                  <span class="oi oi-link-intact mr-1"></span>
+                    Torrent Files
+                    <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="The amount of Torrent Files we are currently tracking for this artist"></i>
+                </h6>
+                <span class="h5 ml-4 font-weight-bold mb-0"> 439</span>
+              </div>
+              <!-- // end column -->
+            </div>
+            <!-- // end row -->
+          </div>
+          <!-- // end card-body -->
+        </div>
+        <!-- // end mobile-stats -->
+      </div>
+      <!-- // end column -->
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end mobile-stats -->
+  <header class="header-dropdown">
+    <div class="row">
+      <div class="col text-truncate my-auto">
+        <h2>
+           Worldwide Stats
+        </h2>
+      </div>
+      <!-- // end column -->
+      <div class="col text-right">
+        <div class="dropdown">
+          <button class="btn btn-outline-primary btn-md dropdown-toggle" id="artist-stats-filter"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Week</button>
+          <div class="dropdown-menu" aria-labelledby="artist-stats-filter">
+            <a class="dropdown-item" href="#">Week</a>
+            <a class="dropdown-item" href="#">Past Two Weeks</a>
+            <a class="dropdown-item" href="#">Past Month</a>
+          </div>
+        </div>
+        <!-- // end dropdown -->
+      </div>
+      <!-- // end column -->
+    </div>
+    <!-- // end row -->
+  </header>
+  <!-- // end header -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Downloads <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
+          </h5>
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body p-0">
+          <div class="stats px-3 py-2">
+            <div class="mb-1">
+              <span class="h3 text-nowrap">
+                50,300
+              </span>
+            </div>
+            <!-- // end mb-1 -->
+            <div class="row">
+              <div class="col text-truncate">
+                <span class="h6 text-muted align-middle">
+                  <small>Change from previous period </small>
+                </span>
+              </div>
+              <div class="col text-right">
+                <span class="h6">
+                  <small class="text-success mr-1">+ 2.3%</small>
+                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
+                </span>
+              </div>
+            </div>
+            <!-- // end row -->
+          </div>
+          <!-- // end stats -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Potential Reach <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+          </h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="stats px-3 py-2">
+            <div class="mb-1">
+              <span class="h3 text-nowrap">
+                115,798
+              </span>
+            </div>
+            <!-- // end mb-1 -->
+            <div class="row">
+              <div class="col text-truncate">
+                <span class="h6 text-muted align-middle">
+                  <small>Change from previous period</small>
+                </span>
+              </div>
+              <div class="col text-right">
+                <span class="h6">
+                  <small class="text-danger mr-1">-25.33%</small>
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold text-danger align-middle"></span>
+                </span>
+              </div>
+            </div>
+            <!-- // end row -->
+          </div>
+          <!-- // end stats -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Fastest Growing <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
+          </h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="stats px-3 py-2">
+            <div class="mb-1 text-truncate">
+              <span class="h4">
+                Slovenia
+              </span>
+            </div>
+            <!-- // end mb-1 -->
+          </div>
+          <!-- // end stats -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Most Engaged <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
+          </h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="stats px-3 py-2">
+            <div class="mb-1 text-truncate">
+              <span class="h4">
+                Taiwan, Province of China
+              </span>
+            </div>
+            <!-- // end mb-1 -->
+          </div>
+          <!-- // end stats -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+  <div class="card">
+    <div class="card-header">
+      <h5>
+        Download Origins
+      </h5>
+    </div>
+    <div class="card-body">
+        <div id="map-countries">
+          <div class="row">
+            <div class="col-md-7 mb-4 d-none d-md-block">
+              <div class="traffic-map" data-controller="traffic-origins" data-target="traffic-origins.map" data-traffic-origins-world-data="/topojson/world.json" data-traffic-origins-download-data='{"US":{"code":"US","name":"United States","downloads":2584},"RU":{"code":"RU","name":"Russia","downloads":2325},"CA":{"code":"CA","name":"Canada","downloads":608},"GB":{"code":"GB","name":"United Kingdom","downloads":490},"BR":{"code":"BR","name":"Brazil","downloads":345},"ES":{"code":"ES","name":"Spain","downloads":294},"UA":{"code":"UA","name":"Ukraine","downloads":263},"IL":{"code":"IL","name":"Israel","downloads":237},"TW":{"code":"TW","name":"Taiwan","downloads":231},"DE":{"code":"DE","name":"Germany","downloads":179},"IT":{"code":"IT","name":"Italy","downloads":142},"BG":{"code":"BG","name":"Bulgaria","downloads":134},"PL":{"code":"PL","name":"Poland","downloads":124},"SI":{"code":"SI","name":"Slovenia","downloads":114},"DZ":{"code":"DZ","name":"Algeria","downloads":109},"VE":{"code":"VE","name":"Venezuela","downloads":101},"AE":{"code":"AE","name":"United Arab Emirates","downloads":96},"LV":{"code":"LV","name":"Latvia","downloads":92},"AU":{"code":"AU","name":"Australia","downloads":87},"HK":{"code":"HK","name":"Hong Kong","downloads":81},"CH":{"code":"CH","name":"Switzerland","downloads":79},"JO":{"code":"JO","name":"Hashemite Kingdom of Jordan","downloads":77},"PH":{"code":"PH","name":"Philippines","downloads":74},"KZ":{"code":"KZ","name":"Kazakhstan","downloads":73},"ZA":{"code":"ZA","name":"South Africa","downloads":72},"BY":{"code":"BY","name":"Belarus","downloads":70},"JM":{"code":"JM","name":"Jamaica","downloads":70},"TN":{"code":"TN","name":"Tunisia","downloads":67},"KR":{"code":"KR","name":"Republic of Korea","downloads":66},"FR":{"code":"FR","name":"France","downloads":66},"NL":{"code":"NL","name":"Netherlands","downloads":62},"PT":{"code":"PT","name":"Portugal","downloads":61},"IN":{"code":"IN","name":"India","downloads":60},"AR":{"code":"AR","name":"Argentina","downloads":56},"KE":{"code":"KE","name":"Kenya","downloads":56},"LC":{"code":"LC","name":"Saint Lucia","downloads":54},"SR":{"code":"SR","name":"Suriname","downloads":52},"AO":{"code":"AO","name":"Angola","downloads":47},"RO":{"code":"RO","name":"Romania","downloads":46},"LT":{"code":"LT","name":"Republic of Lithuania","downloads":46},"BE":{"code":"BE","name":"Belgium","downloads":45},"BB":{"code":"BB","name":"Barbados","downloads":44},"HU":{"code":"HU","name":"Hungary","downloads":42},"CZ":{"code":"CZ","name":"Czechia","downloads":41},"BW":{"code":"BW","name":"Botswana","downloads":37},"MX":{"code":"MX","name":"Mexico","downloads":34},"MA":{"code":"MA","name":"Morocco","downloads":34},"GR":{"code":"GR","name":"Greece","downloads":31},"SY":{"code":"SY","name":"Syria","downloads":29},"CI":{"code":"CI","name":"Ivory Coast","downloads":25},"VN":{"code":"VN","name":"Vietnam","downloads":25},"CO":{"code":"CO","name":"Colombia","downloads":25},"KY":{"code":"KY","name":"Cayman Islands","downloads":24},"KG":{"code":"KG","name":"Kyrgyzstan","downloads":24},"CL":{"code":"CL","name":"Chile","downloads":22},"GE":{"code":"GE","name":"Georgia","downloads":22},"JP":{"code":"JP","name":"Japan","downloads":19},"MV":{"code":"MV","name":"Maldives","downloads":18},"IE":{"code":"IE","name":"Ireland","downloads":18},"ID":{"code":"ID","name":"Indonesia","downloads":17},"CD":{"code":"CD","name":"Congo","downloads":16},"MK":{"code":"MK","name":"Macedonia","downloads":16},"HR":{"code":"HR","name":"Croatia","downloads":16},"TT":{"code":"TT","name":"Trinidad and Tobago","downloads":15},"BS":{"code":"BS","name":"Bahamas","downloads":15},"SG":{"code":"SG","name":"Singapore","downloads":15},"N ":{"code":"N ","name":"N","downloads":13},"SN":{"code":"SN","name":"Senegal","downloads":13},"NG":{"code":"NG","name":"Nigeria","downloads":13},"EG":{"code":"EG","name":"Egypt","downloads":13},"RE":{"code":"RE","name":"Réunion","downloads":12},"NA":{"code":"NA","name":"Namibia","downloads":12},"TH":{"code":"TH","name":"Thailand","downloads":11},"CN":{"code":"CN","name":"China","downloads":9},"MY":{"code":"MY","name":"Malaysia","downloads":9},"GH":{"code":"GH","name":"Ghana","downloads":9},"SK":{"code":"SK","name":"Slovakia","downloads":8},"KW":{"code":"KW","name":"Kuwait","downloads":8},"RS":{"code":"RS","name":"Serbia","downloads":8},"ET":{"code":"ET","name":"Ethiopia","downloads":7},"MD":{"code":"MD","name":"Republic of Moldova","downloads":7},"GD":{"code":"GD","name":"Grenada","downloads":7},"NZ":{"code":"NZ","name":"New Zealand","downloads":6},"QA":{"code":"QA","name":"Qatar","downloads":5},"PK":{"code":"PK","name":"Pakistan","downloads":5},"ZW":{"code":"ZW","name":"Zimbabwe","downloads":5},"RW":{"code":"RW","name":"Rwanda","downloads":4},"PA":{"code":"PA","name":"Panama","downloads":3},"SA":{"code":"SA","name":"Saudi Arabia","downloads":3},"BD":{"code":"BD","name":"Bangladesh","downloads":3},"VC":{"code":"VC","name":"Saint Vincent and the Grenadines","downloads":3},"VI":{"code":"VI","name":"U.S. Virgin Islands","downloads":3},"GT":{"code":"GT","name":"Guatemala","downloads":3},"BO":{"code":"BO","name":"Bolivia","downloads":3},"AI":{"code":"AI","name":"Anguilla","downloads":2},"NC":{"code":"NC","name":"New Caledonia","downloads":2},"NO":{"code":"NO","name":"Norway","downloads":2},"BH":{"code":"BH","name":"Bahrain","downloads":2},"ZM":{"code":"ZM","name":"Zambia","downloads":2},"BA":{"code":"BA","name":"Bosnia and Herzegovina","downloads":2},"MZ":{"code":"MZ","name":"Mozambique","downloads":2},"MG":{"code":"MG","name":"Madagascar","downloads":2},"AG":{"code":"AG","name":"Antigua and Barbuda","downloads":1},"SD":{"code":"SD","name":"Sudan","downloads":1},"AT":{"code":"AT","name":"Austria","downloads":1},"GY":{"code":"GY","name":"Guyana","downloads":1},"MU":{"code":"MU","name":"Mauritius","downloads":1},"UZ":{"code":"UZ","name":"Uzbekistan","downloads":1},"FI":{"code":"FI","name":"Finland","downloads":1},"TR":{"code":"TR","name":"Turkey","downloads":1},"SL":{"code":"SL","name":"Sierra Leone","downloads":1},"TG":{"code":"TG","name":"Togo","downloads":1},"AF":{"code":"AF","name":"Afghanistan","downloads":1},"NP":{"code":"NP","name":"Nepal","downloads":1},"PF":{"code":"PF","name":"French Polynesia","downloads":0},"SZ":{"code":"SZ","name":"Swaziland","downloads":0},"LR":{"code":"LR","name":"Liberia","downloads":0},"TL":{"code":"TL","name":"East Timor","downloads":0},"AM":{"code":"AM","name":"Armenia","downloads":0},"NE":{"code":"NE","name":"Niger","downloads":0},"GU":{"code":"GU","name":"Guam","downloads":0},"SO":{"code":"SO","name":"Somalia","downloads":0},"MQ":{"code":"MQ","name":"France","downloads":0},"NI":{"code":"NI","name":"Nicaragua","downloads":0},"MR":{"code":"MR","name":"Mauritania","downloads":0},"FM":{"code":"FM","name":"Federated States of Micronesia","downloads":0},"ML":{"code":"ML","name":"Mali","downloads":0},"GF":{"code":"GF","name":"French Guiana","downloads":0},"BJ":{"code":"BJ","name":"Benin","downloads":0},"MF":{"code":"MF","name":"Saint Martin","downloads":0},"CW":{"code":"CW","name":"Curaçao","downloads":0},"MO":{"code":"MO","name":"Macao","downloads":0},"GN":{"code":"GN","name":"Guinea","downloads":0},"AS":{"code":"AS","name":"American Samoa","downloads":0},"VA":{"code":"VA","name":"United States","downloads":0},"PE":{"code":"PE","name":"Peru","downloads":0},"SC":{"code":"SC","name":"Netherlands","downloads":0},"MT":{"code":"MT","name":"Malta","downloads":0},"LS":{"code":"LS","name":"Lesotho","downloads":0},"LB":{"code":"LB","name":"Lebanon","downloads":0},"AL":{"code":"AL","name":"Albania","downloads":0},"AZ":{"code":"AZ","name":"Azerbaijan","downloads":0},"BM":{"code":"BM","name":"Bermuda","downloads":0},"HT":{"code":"HT","name":"Haiti","downloads":0},"TZ":{"code":"TZ","name":"Tanzania","downloads":0},"IM":{"code":"IM","name":"Isle of Man","downloads":0},"VG":{"code":"VG","name":"British Virgin Islands","downloads":0},"PR":{"code":"PR","name":"Puerto Rico","downloads":0},"GP":{"code":"GP","name":"Guadeloupe","downloads":0},"MM":{"code":"MM","name":"Myanmar [Burma]","downloads":0},"SE":{"code":"SE","name":"Estonia","downloads":0},"BQ":{"code":"BQ","name":"Bonaire, Sint Eustatius, and Saba","downloads":0},"AW":{"code":"AW","name":"Aruba","downloads":0},"LK":{"code":"LK","name":"Sri Lanka","downloads":0},"IS":{"code":"IS","name":"Iceland","downloads":0},"DK":{"code":"DK","name":"Denmark","downloads":0},"EC":{"code":"EC","name":"Ecuador","downloads":0},"GA":{"code":"GA","name":"Gabon","downloads":0},"HN":{"code":"HN","name":"Honduras","downloads":0},"GG":{"code":"GG","name":"Guernsey","downloads":0},"SV":{"code":"SV","name":"El Salvador","downloads":0},"LY":{"code":"LY","name":"Libya","downloads":0},"BF":{"code":"BF","name":"Burkina Faso","downloads":0},"MW":{"code":"MW","name":"Malawi","downloads":0},"SX":{"code":"SX","name":"Sint Maarten","downloads":0},"ME":{"code":"ME","name":"Montenegro","downloads":0},"IQ":{"code":"IQ","name":"Iraq","downloads":0},"KH":{"code":"KH","name":"Cambodia","downloads":0},"YT":{"code":"YT","name":"Réunion","downloads":0},"OM":{"code":"OM","name":"Oman","downloads":0},"CG":{"code":"CG","name":"Republic of the Congo","downloads":0},"MN":{"code":"MN","name":"Mongolia","downloads":0},"EE":{"code":"EE","name":"Estonia","downloads":0},"DO":{"code":"DO","name":"Dominican Republic","downloads":0},"PY":{"code":"PY","name":"Paraguay","downloads":0},"FJ":{"code":"FJ","name":"Fiji","downloads":0},"LA":{"code":"LA","name":"Laos","downloads":0},"IR":{"code":"IR","name":"Iran","downloads":0},"BZ":{"code":"BZ","name":"Belize","downloads":0},"SM":{"code":"SM","name":"San Marino","downloads":0},"CK":{"code":"CK","name":"Cook Islands","downloads":0},"PW":{"code":"PW","name":"Palau","downloads":0},"BL":{"code":"BL","name":"Saint-Barthélemy","downloads":0},"AX":{"code":"AX","name":"Åland","downloads":0},"DJ":{"code":"DJ","name":"Djibouti","downloads":0},"CV":{"code":"CV","name":"Cabo Verde","downloads":0},"CF":{"code":"CF","name":"Central African Republic","downloads":0},"BT":{"code":"BT","name":"Bhutan","downloads":0},"KN":{"code":"KN","name":"St Kitts and Nevis","downloads":0},"FO":{"code":"FO","name":"Faroe Islands","downloads":0},"SS":{"code":"SS","name":"South Sudan","downloads":0},"KM":{"code":"KM","name":"Comoros","downloads":0},"XK":{"code":"XK","name":"Kosovo","downloads":0},"WS":{"code":"WS","name":"Samoa","downloads":0},"DM":{"code":"DM","name":"Dominica","downloads":0},"CR":{"code":"CR","name":"Costa Rica","downloads":0},"BN":{"code":"BN","name":"Brunei","downloads":0},"CY":{"code":"CY","name":"Cyprus","downloads":0},"LU":{"code":"LU","name":"Luxembourg","downloads":0},"GW":{"code":"GW","name":"Guinea-Bissau","downloads":0},"TC":{"code":"TC","name":"Turks and Caicos Islands","downloads":0},"UY":{"code":"UY","name":"Uruguay","downloads":0},"CM":{"code":"CM","name":"Cameroon","downloads":0},"UG":{"code":"UG","name":"Uganda","downloads":0},"BI":{"code":"BI","name":"Burundi","downloads":0},"TJ":{"code":"TJ","name":"Tajikistan","downloads":0},"MC":{"code":"MC","name":"Monaco","downloads":0},"MP":{"code":"MP","name":"Northern Mariana Islands","downloads":0},"YE":{"code":"YE","name":"Yemen","downloads":0},"GQ":{"code":"GQ","name":"Equatorial Guinea","downloads":0},"MH":{"code":"MH","name":"Marshall Islands","downloads":0},"KP":{"code":"KP","name":"North Korea","downloads":0},"GI":{"code":"GI","name":"Gibraltar","downloads":0},"LI":{"code":"LI","name":"Liechtenstein","downloads":0},"FK":{"code":"FK","name":"N","downloads":0},"PG":{"code":"PG","name":"Papua New Guinea","downloads":0},"VU":{"code":"VU","name":"Vanuatu","downloads":0},"AD":{"code":"AD","name":"Andorra","downloads":0},"TM":{"code":"TM","name":"Turkmenistan","downloads":0},"GM":{"code":"GM","name":"Gambia","downloads":0},"PS":{"code":"PS","name":"Palestine","downloads":0},"JE":{"code":"JE","name":"Jersey","downloads":0}}'>
+              </div>
+            </div>
+            <!-- // end column -->
+            <div class="col-md-5">
+              <h6 class="d-none d-md-block">
+                Top Countries
+              </h6>
+              <div class="table-responsive-sm">
+                <table class="table download-origins">
+                  <thead>
+                    <tr>
+                      <th>Country</th>
+                      <th>Traffic</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-truncate">
+                        United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States United States </td>
+                      <td >1340</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">China</td>
+                      <td>445</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Russian Federation</td>
+                      <td>367</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Korea</td>
+                      <td>228</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Italy</td>
+                      <td>165</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Brazil</td>
+                      <td>157</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Japan</td>
+                      <td>141</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Canada</td>
+                      <td>110</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">Germany</td>
+                      <td>104</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // end table-responsive -->
+            </div>
+            <!-- // end column -->
+          </div>
+          <!-- // end row -->
+        </div>
+        <!-- // end map-countries -->
+        <div id="map-states" style="display: none;">
+          <div class="row">
+            <div class="col-md-7 mb-4 d-none d-md-block">
+              <%=image_tag( "map-states.png", class: "img-fluid", alt: "Map Image") %>
+            </div>
+            <!-- // end column -->
+            <div class="col-md-5">
+              <h6 class="d-none d-md-block">
+                Top States from United States
+              </h6>
+              <div class="table-responsive-sm">
+                <table class="table download-origins">
+                  <thead>
+                    <tr>
+                      <th>State</th>
+                      <th>Traffic</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-truncate">
+                        California
+                      </td>
+                      <td>242</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Ohio
+                      </td>
+                      <td>195</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        New York
+                      </td>
+                      <td>102</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Texas
+                      </td>
+                      <td>78</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Illinois
+                      </td>
+                      <td>72</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        New Jersey
+                      </td>
+                      <td>71</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Virginia
+                      </td>
+                      <td>69</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        North Carolina
+                      </td>
+                      <td>55</td>
+                    </tr>
+                    <tr>
+                      <td class="text-truncate">
+                        Washington
+                      </td>
+                      <td>44</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // end table-responsive -->
+            </div>
+            <!-- // end column -->
+          </div>
+          <!-- // end row -->
+        </div>
+        <!-- // end map-states -->
+    </div>
+    <!-- // end card-body -->
+  </div>
+  <!-- // end card -->
+
+
+  <div class="card">
+    <div class="card-header">
+      <h5>Most Recent Torrents</h5>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive-sm">
+        <table class="table table-hover torrents">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Size</th>
+              <th>% Changed</th>
+              <th>Downloads</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-truncate"><a href="torrent-details.html">Phish - 2009 Summer Tour [smb]</a>
+              </td>
+              <td>8.3 GB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2218873">Phish - New York, NY 2015 - 3 shows</a>
+              </td>
+              <td>4.8 KB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2215986">Phish Bits 3.0 - Vol. 11</a>
+              </td>
+              <td>180 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2214839">Phish Bits 3.0 - Vol. 15</a>
+              </td>
+              <td>170 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2212054">Phish Live Jams Volume 1-3</a>
+              </td>
+              <td>1.9 GB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2211493">Phish Bits 3.0 - Vol. 07</a>
+              </td>
+              <td>180 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2208928">Phish - 2009 Late Summer Tour</a>
+              </td>
+              <td>3.6 GB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2208462">Phish - Festival 8 - [2009-11-01] Empire Polo Club, Indio, CA</a>
+              </td>
+              <td>550 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2208002">Phish Bits 3.0 - Vol. 08</a>
+              </td>
+              <td>180 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2207789">Phish Bits 3.0 - Vol. 10</a>
+              </td>
+              <td>170 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2206063">Phish 2010-10-10 Broomfield, CO</a>
+              </td>
+              <td>300 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2205980">Phish - Joy - [ 2009 ]</a>
+              </td>
+              <td>61 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2205296">Phish- 2012-12-31- MSG 4</a>
+              </td>
+              <td>1.4 GB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>91</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2203110">Phish - 2013-07-14 Columbia, MD</a>
+              </td>
+              <td>382 Bytes</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2202512">Phish - 2009 Hamptons Run</a>
+              </td>
+              <td>1.2 GB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2202224">Phish 2013 07 21 Northerly Island</a>
+              </td>
+              <td>260 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2202107">Phish Ultimate Jams Compilation From 1984 To 2012 SBD Flac &amp; Mp3</a>
+              </td>
+              <td>55 GB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>117</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2199980">Phish</a>
+              </td>
+              <td>866 Bytes</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2199188">PHiSH 1989-08-26 Townshend, VT (LivePhish 09) [FLAC]</a>
+              </td>
+              <td>1.2 KB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="/artists/596/torrents/2198604">Phish Reba Jams</a>
+              </td>
+              <td>420 MB</td>
+              <td class="text-success">
+                0.00%
+                <span class="oi font-weight-bold align-middle oi-arrow-circle-top"></span>
+              </td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="action text-center">
+          <%= link_to 'View all Torrents', 'torrents.html', class: 'btn btn-outline-primary btn-md' %>
+        </div>
+      </div>
+      <!-- // end table-responsive-sm -->
+    </div>
+    <!-- // end card-body -->
+  </div>
+  <!-- // end card -->
+  <div class="card">
+    <div class="card-header">
+      <h5>Activity Timeline - Last 30 Days</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <!-- <img class="img-fluid" alt="Activity Timeline Image" src="/assets/activity-timeline-46423f05bb7868c0f33126da122b40604d22354858be4ed61ad4f06526410cd8.png" /> -->
+
+          <div class="activity-timeline-container" data-controller="activity-timeline" data-activity-timeline-dates="['Nov 22, 2018', 'Nov 23, 2018', 'Nov 24, 2018', 'Nov 25, 2018', 'Nov 26, 2018', 'Nov 27, 2018', 'Nov 28, 2018', 'Nov 29, 2018', 'Nov 30, 2018', 'Dec 1, 2018', 'Dec 2, 2018', 'Dec 3, 2018', 'Dec 4, 2018', 'Dec 5, 2018', 'Dec 6, 2018', 'Dec 7, 2018', 'Dec 8, 2018', 'Dec 9, 2018', 'Dec 10, 2018', 'Dec 11, 2018', 'Dec 12, 2018', 'Dec 13, 2018', 'Dec 14, 2018', 'Dec 15, 2018', 'Dec 16, 2018', 'Dec 17, 2018', 'Dec 18, 2018', 'Dec 19, 2018', 'Dec 20, 2018', 'Dec 21, 2018']" data-activity-timeline-downloads="[310, 740, 417, 659, 564, 1576, 616, 879, 906, 418, 717, 626, 668, 614, 674, 816, 490, 383, 266, 865, 629, 487, 447, 887, 1446, 1011, 997, 805, 1065, 1031]" data-activity-timeline-reach="[87, 130, 99, 118, 97, 204, 137, 102, 140, 97, 145, 119, 144, 136, 131, 125, 96, 129, 84, 144, 138, 128, 113, 140, 165, 163, 168, 146, 169, 157]">
+            <canvas class="activity-timeline chartjs-render-monitor" data-target="activity-timeline.canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>
+        Artist Details
+      </h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <dl>
+            <dt>Members</dt>
+            <dd>Jeff Holdsworth, Page McConnell, Mike Gordon, Trey Anastasio, Jon Fishman</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <dl>
+            <dt>Active Years</dt>
+            <dd>1983 - 2004</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <dl>
+            <dt>Genres</dt>
+            <dd>
+              <span class="badge badge-dark">jam band</span>
+              <span class="badge badge-dark">funk metal</span>
+              <span class="badge badge-dark">alternative rock</span>
+              <span class="badge badge-dark">rock</span>
+              <span class="badge badge-dark"></span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <dl>
+            <dt>Keywords</dt>
+            <dd>
+              <span class="badge badge-light">rock</span>
+              <span class="badge badge-light">jam band</span>
+              <span class="badge badge-light">classic rock</span>
+              <span class="badge badge-light">bluegrass</span>
+              <span class="badge badge-light">progressive rock</span>
+              <span class="badge badge-light">jazz</span>
+              <span class="badge badge-light">pop</span>
+              <span class="badge badge-light">90s</span>
+              <span class="badge badge-light">folk</span>
+              <span class="badge badge-light">alternative rock</span>
+              <span class="badge badge-light">folk rock</span>
+              <span class="badge badge-light">fusion</span>
+              <span class="badge badge-light">funk</span>
+              <span class="badge badge-light">jazz fusion</span>
+              <span class="badge badge-light">instrumental</span>
+              <span class="badge badge-light">country</span>
+              <span class="badge badge-light">blues</span>
+              <span class="badge badge-light">psychedelic</span>
+              <span class="badge badge-light">jazz rock</span>
+              <span class="badge badge-light">hardcore</span>
+              <span class="badge badge-light">soul</span>
+              <span class="badge badge-light">reggae</span>
+              <span class="badge badge-light">alternative</span>
+              <span class="badge badge-light"></span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <!-- // end card-body -->
+  </div>
+  <!-- // end card -->
+</section>
+<!-- // end container-fluid -->
+
+<div class="modal fade" id="modal-follow-limit" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Follow artist limit reached</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        You have reached the number of artists you can follow. Please visit our pricing page and select another plan to follow more artists.
+      </div>
+      <div class="modal-footer">
+        <%= link_to 'Pricing Plans', '../pricing/index.html', class: 'btn btn-primary btn-sm' %>
+      </div>
+    </div>
+  </div>
+</div>
