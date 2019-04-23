@@ -200,3 +200,11 @@ $('#corporate-pricing').click(function () {
 //     $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
 //   });
 // });
+
+
+  $(window).on('load',function(){
+    $('#modal-credit-card-failed').modal('show');
+    $('#modal-credit-card-declined').modal('show');
+  });
+
+
