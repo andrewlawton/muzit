@@ -203,8 +203,5 @@ $('#corporate-pricing').click(function () {
 
 
   $(window).on('load',function(){
-    $('#modal-credit-card-failed').modal('show');
     $('#modal-credit-card-declined').modal('show');
   });
-
-
