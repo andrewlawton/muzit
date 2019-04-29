@@ -798,18 +798,20 @@ bodyClass: artist-details
 </section>
 <!-- // end container-fluid -->
 
-<div class="modal fade" id="modal-follow-limit" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+<div class="modal fade" id="modal-follow-limit" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Follow artist limit reached</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          &times;
         </button>
       </div>
       <div class="modal-body">
-        You have reached the number of artists you can follow. Please visit our pricing page and select another plan to follow more artists.
+        You have reached the number of artists you can follow. You can choose to unfollow another artist or visit our pricing page and select a plan that allows you to follow more artists.
       </div>
       <div class="modal-footer">
+        <%= link_to 'Close', '#', class: 'btn btn-sm btn-link', 'data-dismiss' => 'modal' %>
         <%= link_to 'Pricing Plans', '../pricing/index.html', class: 'btn btn-primary btn-sm' %>
       </div>
     </div>
