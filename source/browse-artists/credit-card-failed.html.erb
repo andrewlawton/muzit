@@ -1,38 +1,29 @@
 ---
-title: Artist Details - Muzit
-bodyClass: artists
+title: Account Deactivated - Muzit
+layout: sign-up
+bodyClass: sign-in
 ---
-<div class="container-fluid">
-  <h1 class="my-4 text-center text-md-left">Artists</h1>
-  <h5 class="font-weight-light mb-4">P</h5>
-  <div class="row">
-    <div class="col-lg-3 col-md-4">
-      <div class="artist-thumbnail">
-         <a class="h-100" title="Phish" href="../artist-details/index.html">
-          <img class="img-fluid" alt="Phish" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com">
-         </a>
-         <span class="artist-name">Phish</span>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <header>
+        <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
+      </header>
+      <div class="card">
+        <h5 class="card-header">Account deactivated</h5>
+        <div class="card-body">
+          <p class="card-text">
+            The credit card you have on file has failed and your account has been deactivated. Please contact us to have your account reactivated.
+          </p>
+          <div class="text-center">
+            <%= link_to 'Contact Muzit', 'mailto:info@muzit.com?subject=Account Deactivated', class: 'btn btn-primary btn-sm' %>
+          </div>
+        </div>
       </div>
-      <!-- // end artist-thumbnail -->
+      <!-- // end card -->
     </div>
     <!-- // end column -->
   </div>
   <!-- // end row -->
 </div>
 <!-- // end container-fluid -->
-
-<div class="modal fade" id="modal-credit-card-failed" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Account deactivated</h5>
-      </div>
-      <div class="modal-body">
-        The credit card you have on file has failed and your account has been deactivated. Please contact us to have your account reactivated.
-      </div>
-      <div class="modal-footer">
-        <%= link_to 'Contact Muzit', 'mailto:info@muzit.com?subject=Account Deactivated', class: 'btn btn-primary btn-sm' %>
-      </div>
-    </div>
-  </div>
-</div>
