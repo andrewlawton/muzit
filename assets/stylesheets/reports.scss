@@ -98,6 +98,46 @@ table.reports.details {
   }
 }
 
+// report artist
+
+table.artist-torrents {
+  th {
+    &:nth-child(1) {
+     width: 40%;
+    }
+    &:nth-child(2) {
+      width: 10%;
+    }
+    &:nth-child(3) {
+      width: 15%;
+    }
+    &:nth-child(4) {
+      width: 15%;
+    }
+    &:nth-child(5) {
+      width: 20%;
+    }
+  }
+  th, td {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5)
+     {
+      text-align: right;
+    }
+  }
+}
+
+table.artist-activity {
+  th, td {
+    &:nth-child(2),
+    &:nth-child(3) {
+      text-align: right;
+    }
+  }
+}
+
 // report details downloads meter percentage
 
 .downloads {

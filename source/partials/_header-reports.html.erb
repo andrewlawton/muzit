@@ -1,0 +1,7 @@
+<header class="bg-dark p-2 d-flex">
+  <%= image_tag("logo-muzit.png", class: "mr-auto", alt: "Muzit Logo") %>
+  <div class="align-middle p-2">
+    <span class=" oi oi-print text-white mr-1"></span> <%= link_to "Print", "javascript:print();", :class => "text-white mr-4" %>
+    <span class="oi oi-data-transfer-download text-white  mr-1"></span> <%= link_to "Download", "../reports/artist-report.pdf", :class => "text-white" %>
+  </div>
+</header>
