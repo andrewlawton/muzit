@@ -220,6 +220,27 @@ dd {
   background: #26252d;
 }
 
+.artist-details .stats-filter {
+  a {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 1px;
+    font-size: .80rem;
+    margin-left: .5rem;
+    padding: .20rem;
+    transition: 0.3s;
+    &:hover,
+    &.active  {
+      background: #ff161f;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.artist-details .stats .h3 {
+  margin-bottom: 0;
+}
+
 // download origins table
 
 table.download-origins th:last-of-type,

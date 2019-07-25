@@ -200,34 +200,43 @@ bodyClass: artist-details
   </header>
   <!-- // end header -->
   <div class="row">
-    <div class="col-md-6">
-      <div class="card">
+    <div class="col-md-4">
+      <div class="card" data-controller="stats">
         <div class="card-header">
-          <h5>
-            Downloads <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Downloads <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Number of unique downloads for this artist."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
         </div>
         <!-- // end card-header -->
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
-            <div class="mb-1">
-              <span class="h3 text-nowrap">
-                50,300
-              </span>
-            </div>
-            <!-- // end mb-1 -->
+            <span class="h3 text-nowrap" data-target="stats.number">13,072</span>
             <div class="row">
               <div class="col text-truncate">
                 <span class="h6 text-muted align-middle">
-                  <small>Change from previous period </small>
+                  <small>Change from previous period</small>
                 </span>
               </div>
+              <!-- // end column -->
               <div class="col text-right">
-                <span class="h6">
-                  <small class="text-success mr-1">+ 2.3%</small>
-                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
+                <span class="h6" data-target="stats.difference">
+                  <small class="text-danger mr-1">
+                    -72.21%
+                  </small>
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold text-danger align-middle"></span>
                 </span>
               </div>
+              <!-- // end column -->
             </div>
             <!-- // end row -->
           </div>
@@ -238,33 +247,90 @@ bodyClass: artist-details
       <!-- // end card -->
     </div>
     <!-- // end column -->
-    <div class="col-md-6">
-      <div class="card">
+    <div class="col-md-4">
+      <div class="card" data-controller="stats">
         <div class="card-header">
-          <h5>
-            Potential Reach <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Searches <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Number of times a torrent associated with this artist was searched for."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
         </div>
+        <!-- // end card-header -->
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
-            <div class="mb-1">
-              <span class="h3 text-nowrap">
-                115,798
-              </span>
-            </div>
-            <!-- // end mb-1 -->
+            <span class="h3 text-nowrap" data-target="stats.number">18,250</span>
             <div class="row">
               <div class="col text-truncate">
                 <span class="h6 text-muted align-middle">
                   <small>Change from previous period</small>
                 </span>
               </div>
+              <!-- // end column -->
               <div class="col text-right">
-                <span class="h6">
-                  <small class="text-danger mr-1">-25.33%</small>
-                  <span class="oi oi-arrow-circle-bottom font-weight-bold text-danger align-middle"></span>
+                <span class="h6" data-target="stats.difference">
+                  <small class="text-success mr-1">
+                    30.25%
+                  </small>
+                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
                 </span>
               </div>
+              <!-- // end column -->
+            </div>
+            <!-- // end row -->
+          </div>
+          <!-- // end stats -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+   <div class="col-md-4">
+      <div class="card" data-controller="stats">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Potential Reach <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body p-0">
+          <div class="stats px-3 py-2">
+            <span class="h3 text-nowrap" data-target="stats.number">115,798</span>
+            <div class="row">
+              <div class="col text-truncate">
+                <span class="h6 text-muted align-middle">
+                  <small>Change from previous period</small>
+                </span>
+              </div>
+              <!-- // end column -->
+              <div class="col text-right">
+                <span class="h6" data-target="stats.difference">
+                  <small class="text-success mr-1">
+                    15.15%
+                  </small>
+                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
+                </span>
+              </div>
+              <!-- // end column -->
             </div>
             <!-- // end row -->
           </div>
@@ -281,9 +347,19 @@ bodyClass: artist-details
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h5>
-            Fastest Growing <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Fastest Growing <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
         </div>
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
@@ -304,9 +380,18 @@ bodyClass: artist-details
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h5>
-            Most Engaged <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Most Engaged <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
         </div>
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
