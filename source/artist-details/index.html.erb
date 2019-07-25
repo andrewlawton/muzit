@@ -12,7 +12,7 @@ bodyClass: artist-details
 
 <section class="hero">
   <div class="hero-container" style="background-image: url('http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com');">
-    <div class="hero-artist-stats">
+    <div class="meta">
       <h1>
         Phish
       </h1>
@@ -43,10 +43,10 @@ bodyClass: artist-details
         <div class="row pb-3 d-none d-md-block">
           <div class="col-lg-12">
             <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-3 col-lg-3">
+              <div class="row stats">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
+                    <div class="col-md-1 p-0 icon">
                       <span class="oi oi-data-transfer-download text-white"></span>
                     </div>
                     <!-- end column -->
@@ -55,7 +55,7 @@ bodyClass: artist-details
                         18,250,300
                       </span>
                       <span class="label text-white text-nowrap">
-                        Downloaded Songs
+                        Downloads
                         <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
                       </span>
                     </div>
@@ -64,10 +64,10 @@ bodyClass: artist-details
                   <!-- // end row -->
                 </div>
                 <!-- // end column -->
-                <div class="col-md-3 col-lg-3">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
-                      <span class="oi oi-magnifying-glass text-white"></span>
+                    <div class="col-md-1 p-0 icon">
+                      <i class="fas fa-search-location text-white"></i>
                     </div>
                     <!-- end column -->
                     <div class="col-md-6 p-0">
@@ -76,7 +76,7 @@ bodyClass: artist-details
                       </span>
                       <span class="label text-white text-nowrap">
                         Searches
-                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number unique searches for this artist including infringements."></i>
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of times a torrent associated with this artist was searched for."></i>
                       </span>
                     </div>
                     <!-- // end column -->
@@ -84,9 +84,9 @@ bodyClass: artist-details
                   <!-- // end row -->
                 </div>
                 <!-- // end column -->
-                <div class="col-md-3 col-lg-3">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
+                    <div class="col-md-1 p-0 icon">
                       <span class="oi oi-target text-white"></span>
                     </div>
                     <!-- // end column -->
@@ -104,9 +104,9 @@ bodyClass: artist-details
                   <!-- // end row -->
                 </div>
                 <!-- // end column -->
-                <div class="col-md-3 col-lg-3">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
+                    <div class="col-md-1 p-0 icon">
                       <span class="oi oi-link-intact text-white"></span>
                     </div>
                     <!-- // end column -->
@@ -133,7 +133,7 @@ bodyClass: artist-details
         </div>
         <!-- // end row -->
     </div>
-    <!-- // end hero-artist-stats -->
+    <!-- // end meta -->
   </div>
   <!-- // end hero-container -->
 </section>
@@ -145,14 +145,23 @@ bodyClass: artist-details
         <div class="mobile-stats pt-2">
           <div class="card-body text-white">
             <div class="row m-0">
-              <div class="col-sm text-sm-left pl-0 mb-4 mb-sm-0">
+              <div class="col-sm-3 text-sm-left pl-0 mb-4 mb-sm-0">
                 <h6 class="card-title text-nowrap">
-                  <span class="oi oi-data-transfer-download mr-1"></span> Downloaded Songs
+                  <span class="oi oi-data-transfer-download mr-1"></span> Downloads
                   <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
                 </h6>
                 <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 18,250,300</span>
               </div>
-              <div class="col-sm mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
+              <div class="col-sm-3 mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
+                <h6 class="card-title text-nowrap">
+                  <i class="fas fa-search-location mr-1"></i>
+                  Searches
+                  <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of times a torrent associated with this artist was searched for."></i>
+                </h6>
+                <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
+              </div>
+              <!-- // end column -->
+              <div class="col-sm-3 mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
                 <h6 class="card-title text-nowrap">
                   <span class="oi oi-target mr-1"></span>
                   Potential Reach
@@ -161,7 +170,7 @@ bodyClass: artist-details
                 <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
               </div>
               <!-- // end column -->
-              <div class="col-sm text-sm-left pl-0 mb-sm-0">
+              <div class="col-sm-3 text-sm-left pl-0 mb-sm-0">
                 <h6 class="card-title text-nowrap">
                   <span class="oi oi-link-intact mr-1"></span>
                     Torrent Files

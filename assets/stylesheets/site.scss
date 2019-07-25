@@ -126,7 +126,7 @@ dd {
 // artist details
 
 .artist-details .hero .hero-container {
-  background-color: #20262E;
+  background-color: #26252d;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -169,7 +169,7 @@ dd {
   background: #26252d;
   background-image: none !important;
   height: auto;
-  .hero-artist-stats {
+  .meta {
     position: static; // prevent h1 text clipping
   }
   &:before {
@@ -177,7 +177,7 @@ dd {
   }
 }
 
-.artist-details .hero .hero-artist-stats {
+.artist-details .hero .meta {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -194,28 +194,26 @@ dd {
 }
 
 .artist-details .hero h1,
-.artist-details .hero .data,
-.artist-details .hero .label,
-.artist-details .hero .oi {
+.artist-details .hero .meta {
   text-shadow: 1px 1px #333;
 }
 
-.artist-details .hero .data {
+.artist-details .hero .meta .stats .data {
   font-size: 2rem;
   font-weight: bold;
   line-height: .90rem;
 }
 
-.artist-details .hero .label {
+.artist-details .hero .meta .stats .label {
   text-transform: uppercase;
   font-size: .85rem;
   font-weight: 300;
 }
 
-.artist-details .hero .oi {
+.artist-details .hero .meta .stats .icon {
   font-size: 1.35rem;
-  display: block;
-  margin-right: 100px !important;
+  line-height: 1;
+  margin-right: .5rem;
 }
 
 .artist-details .mobile-stats {
