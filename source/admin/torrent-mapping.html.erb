@@ -7,48 +7,73 @@ bodyClass: artists-torrents
   <h1 class="my-4 text-center text-md-left">
     Torrent Details
   </h1>
-  <div class="card torrent-meta-data" >
-    <div class="card-body">
-      <dl>
-        <dt>Infohash</dt>
-        <dd>3786a72f6bc4fc56bd2ecddbefc0908c23af472c</dd>
-        <dt>Torrent Name</dt>
-        <dd>Live Phish SBD 2003 Complete Tour (almost)</dd>
-        <dt>Category</dt>
-        <dd>
-          <div class="dropdown">
-            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select Category
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Movie</a>
-              <a class="dropdown-item" href="#">Music</a>
-              <a class="dropdown-item" href="#">Pornography</a>
-              <a class="dropdown-item" href="#">Television</a>
-              <a class="dropdown-item" href="#">Software</a>
+<form id="login-form" class="form needs-validation" action="/artists/596/torrents/2779043" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="tANpqXku5+eystIWBWQroWmVkdmQQFgn9Jtvvqmo4BRTjru+ggwvkYuKJjtEKzxsBzcFHmbWVvVqoRnaWum6YQ==">
+    <input type="hidden" name="page" id="page">
+    <input type="hidden" name="q" id="q">
+
+    <!-- torrent details -->
+    <div class="card torrent-meta-data" id="torrent-meta-data">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <label>Infohash</label>
+            <span class="text">
+              c5b70bec171280ed8d4633b09e46eb397e87e967
+            </span>
+          </div>
+          <div class="col-md-6">
+              <label>Torrent Name</label>
+              <span class="text">
+                Phish 2010 -10-26 Manchester, NH
+              </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select class="form-control custom-select custom-select-sm" id="category" name="category"><option value=""></option>
+              <option value="audiobook">Audio Books</option>
+              <option value="game">Games</option>
+              <option value="movie">Movies</option>
+              <option value="music">Music</option>
+              <option value="porn">Pornography</option>
+              <option value="software">Software</option>
+              <option value="tv">TV</option>
+            </select>
             </div>
           </div>
-        </dd>
-        <dt>Associated Artists</dt>
-        <dd class="associated-artists">
-          <textarea id="torrent-mapping"></textarea>
-          <div class="row">
-            <div class="col-md-6">
-              <button class="btn btn-primary btn-sm" type="button">Save</button>
-              <a href="">Cancel</a>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Artists</label>
+            <div class="border" data-controller="torrent-artists" data-torrent-artists-url="http://localhost:3000/search">
+              <div class="form-group search">
+              <input type="text" name="query" id="query" value="" class="form-control form-control-sm" placeholder="Search artists and bands..." aria-label="Search" autocomplete="off" data-action="keyup->torrent-artists#fetchResults keydown->torrent-artists#navigateResults focus->torrent-artists#fetchResults" data-target="torrent-artists.query">
+                <div data-target="torrent-artists.results"></div>
+              </div>
+              <div id="assigned-artists" class="scroll">
+                  <span class="badge badge-dark" id="artist-596">
+                    <input type="hidden" name="artist_ids[]" id="artist_ids_596" value="596">
+                    Phish<span data-action="click->torrent-artists#removeArtist">&nbsp;×</span>
+                  </span>
+              </div>
             </div>
-            <!-- // end column -->
-            <div class="col-md-6 text-center text-md-right">
-              <button class="btn btn-outline-primary btn-sm" type="button">Next Torrent</button>
-            </div>
-            <!-- // end column -->
           </div>
-          <!-- // end row -->
-        </dd>
-      </dl>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12">
+            <div class="action">
+              <input type="submit" name="commit" value="Save" class="btn btn-primary btn-sm" data-disable-with="Save">
+              <div class="text-center d-md-inline">
+                <a class="small" href="/artists/596/torrents">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- // end card-body -->
-  </div>
+</form>
   <!-- // end torrent-meta-data -->
   <div class="card">
     <div class="card-header">
