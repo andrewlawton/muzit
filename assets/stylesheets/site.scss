@@ -314,10 +314,29 @@ table.torrents .table-scroll {
 // torrent details
 
 .torrent-meta-data {
-  dl {
-    margin-bottom: 0;
+  label {
+    display: block;
+    font-size: .80rem;
+    font-weight: 700;
+    margin-bottom: .25rem;
   }
-  .associated-artists {
+  .text {
+    display: block;
+    font-size: .85rem;
+    margin-bottom: .75rem;
+  }
+  .border {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: .5rem;
+  }
+  .search {
+    margin-bottom: .25rem;
+  }
+  .search-results {
+    top: 1.10rem;
+  }
+  .artist {
     span {
       &::after {
         content: ', ';
@@ -327,13 +346,10 @@ table.torrents .table-scroll {
       }
     }
   }
-}
-
-@include media-breakpoint-up(md) {
-  .torrent-meta-data .stat {
-    dt, dd {
-      display: inline-block;
-    }
+  .scroll {
+    height: 76px;
+    overflow: auto;
+    width: auto;
   }
 }
 
@@ -358,6 +374,20 @@ table.torrents .table-scroll {
       display: inline
     }
   }
+}
+
+// fix torrent-meta-data on scroll to allow selection of suggested artists
+
+.fixed {
+  position: fixed;
+  top: 65px;
+  right: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.torrent-meta-data-fixed {
+  margin-top: 400px;
 }
 
 // boostrap overrides
