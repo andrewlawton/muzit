@@ -1,0 +1,259 @@
+---
+title: Torrents Unmapped - Muzit
+bodyClass: artists-torrents
+---
+
+<div class="alert alert-success" id="alert-bulk-edit" role="alert">
+  Torrent mappings for Phish have been saved.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+</div>
+<div class="container-fluid">
+  <div class="row my-4">
+    <div class="col-md-6">
+      <h1 class="text-center text-md-left">
+        Unmapped Torrents
+      </h1>
+    </div>
+    <!-- // end column -->
+    <div class="col-md-6 text-center text-md-right">
+      <%= link_to "Bulk Edit", "../admin/torrents-edit.html", :class => "btn btn-primary btn-md" %>
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+  <div id="torrent">
+    <form class="form" action="/admin/torrents" accept-charset="UTF-8" method="get">
+      <fieldset>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mb-4">
+              <div class="input-group">
+                <input value="phish" class="form-control" placeholder="Search torrents" type="text" name="q" id="q">
+                <div class="input-group-append">
+                  <input type="submit" name="commit" value="Search" class="btn btn-primary btn-sm" data-disable-with="Search">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <table class="table table-hover torrents unmapped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Size</th>
+        <th>Downloads</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2415938/edit?q=phish">phish2018-07-18.matrix.flac16</a>
+        </td>
+        <td>Music</td>
+        <td>900 MB</td>
+        <td>2,244</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/4048710/edit?q=phish">Phish 1993-08-25 Seattle</a>
+        </td>
+        <td></td>
+        <td>1000 MB</td>
+        <td>1,032</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2686353/edit?q=phish">phish2018-10-24.flac16</a>
+        </td>
+        <td>Music</td>
+        <td>770 MB</td>
+        <td>945</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2708354/edit?q=phish">phish2018-10-31.flac16</a>
+        </td>
+        <td>Music</td>
+        <td>1.2 GB</td>
+        <td>882</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/14159979/edit?q=phish">Phish 1993-12-28 Washington, DC</a>
+        </td>
+        <td></td>
+        <td>1.6 GB</td>
+        <td>836</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/5427753/edit?q=phish">Phish 1993-08-24 Vancouver</a>
+        </td>
+        <td></td>
+        <td>2.2 GB</td>
+        <td>797</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2486757/edit?q=phish">Phish 7-20-18 Gorge Amph. Nak 300's</a>
+        </td>
+        <td>Music</td>
+        <td>780 MB</td>
+        <td>770</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2810959/edit?q=phish">Phish2019-10-21_MK22</a>
+        </td>
+        <td>Music</td>
+        <td>3.8 GB</td>
+        <td>617</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2641238/edit?q=phish">Phish 2018-10-21 matrix</a>
+        </td>
+        <td>Music</td>
+        <td>950 MB</td>
+        <td>599</td>
+      </tr>
+      <tr>
+        <td class="text-truncate"><a href="/admin/torrents/2657555/edit?q=phish">Phish 10-31-18 MGM Grand Arena, Las Vegas, NV</a>
+        </td>
+        <td>Music</td>
+        <td>1.2 GB</td>
+        <td>569</td>
+      </tr>
+    </tbody>
+  </table>
+<!--   <table class="table table-hover torrents unmapped bulk-edit" id="torrent-files-bulk-edit" style="display: none;">
+    <thead>
+      <tr>
+        <th>
+          <input class="position-static" type="checkbox" id="checkAll">
+        </th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Size</th>
+        <th>Downloads</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2415938/edit?q=phish">phish2018-07-18.matrix.flac16</a>
+        </td>
+        <td>Music</td>
+        <td>900 MB</td>
+        <td>2,244</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/4048710/edit?q=phish">Phish 1993-08-25 Seattle</a>
+        </td>
+        <td></td>
+        <td>1000 MB</td>
+        <td>1,032</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2686353/edit?q=phish">phish2018-10-24.flac16</a>
+        </td>
+        <td>Music</td>
+        <td>770 MB</td>
+        <td>945</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2708354/edit?q=phish">phish2018-10-31.flac16</a>
+        </td>
+        <td>Music</td>
+        <td>1.2 GB</td>
+        <td>882</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/14159979/edit?q=phish">Phish 1993-12-28 Washington, DC</a>
+        </td>
+        <td></td>
+        <td>1.6 GB</td>
+        <td>836</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/5427753/edit?q=phish">Phish 1993-08-24 Vancouver</a>
+        </td>
+        <td></td>
+        <td>2.2 GB</td>
+        <td>797</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2486757/edit?q=phish">Phish 7-20-18 Gorge Amph. Nak 300's</a>
+        </td>
+        <td>Music</td>
+        <td>780 MB</td>
+        <td>770</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2810959/edit?q=phish">Phish2019-10-21_MK22</a>
+        </td>
+        <td>Music</td>
+        <td>3.8 GB</td>
+        <td>617</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2641238/edit?q=phish">Phish 2018-10-21 matrix</a>
+        </td>
+        <td>Music</td>
+        <td>950 MB</td>
+        <td>599</td>
+      </tr>
+      <tr>
+        <td>
+          <input class="position-static" type="checkbox" value="">
+        </td>
+        <td class="text-truncate"><a href="/admin/torrents/2657555/edit?q=phish">Phish 10-31-18 MGM Grand Arena, Las Vegas, NV</a>
+        </td>
+        <td>Music</td>
+        <td>1.2 GB</td>
+        <td>569</td>
+      </tr>
+    </tbody>
+  </table> -->
+  <nav class="pagination pagination-sm justify-content-center" aria-label="Page navigation">
+    <ul class="pagination">
+      <li class="prev previous_page disabled page-item"><a class="page-link" href="#"><i class="fas fa-angle-left" aria-hidden="true"></i> Previous</a>
+      </li>
+      <li class="active page-item"><a class="page-link" href="/admin/torrents?page=1&amp;q=phish">1</a>
+      </li>
+      <li class="page-item"><a rel="next" class="page-link" href="/admin/torrents?page=2&amp;q=phish">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="/admin/torrents?page=3&amp;q=phish">3</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="/admin/torrents?page=4&amp;q=phish">4</a>
+      </li>
+      <li class="next next_page  page-item"><a class="page-link" rel="next" href="/admin/torrents?page=2&amp;q=phish">Next <i class="fas fa-angle-right" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- // end nav -->
+</div>
+<!-- // end container-fluid -->
