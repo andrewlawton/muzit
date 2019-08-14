@@ -192,7 +192,35 @@ $('#corporate-pricing').click(function () {
   $('#corporate-plans').fadeIn();
 });
 
-// populate dropdown button text based on slected value
+// fix torrent details meta data on scroll
+
+$(function() {
+  var $window = $(window);
+  var data = $('#torrent-meta-data');
+  var files = $('#torrent-files');
+  $window.scroll(function(){
+      if ($window.scrollTop() >= 100) {
+         data.addClass('fixed');
+         files.addClass('torrent-meta-data-fixed');
+      }
+      else {
+         data.removeClass('fixed');
+         files.removeClass('torrent-meta-data-fixed');
+      }
+  });
+});
+
+// unmapped torrents bulk edit checkbox
+
+$("#map-torrents").click(function () {
+  $('input:checkbox').not(this).prop('checked', this.checked);
+});
+
+$(window).on('load',function(){
+  $('#modal-credit-card-declined').modal('show');
+});
+
+// populate dropdown button text based on selected value
 
 // $(function() {
 //   $(".dropdown-menu a").click(function(){
@@ -201,7 +229,21 @@ $('#corporate-pricing').click(function () {
 //   });
 // });
 
+// show viewport height and width
 
-  $(window).on('load',function(){
-    $('#modal-credit-card-declined').modal('show');
-  });
+// function showViewPortSize(display) {
+//   if(display) {
+//     var height = window.innerHeight;
+//     var width = window.innerWidth;
+//     jQuery('body').prepend('<div id="viewportsize" style="z-index:9999;position:fixed;bottom:0px;left:0px;color:#fff;background:#000;padding:10px">Height: '+height+'<br>Width: '+width+'</div>');
+//     jQuery(window).resize(function() {
+//             height = window.innerHeight;
+//             width = window.innerWidth;
+//             jQuery('#viewportsize').html('Height: '+height+'<br>Width: '+width);
+//     });
+//   }
+// }
+
+// $(document).ready(function(){
+//    showViewPortSize(true);
+// });
