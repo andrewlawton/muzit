@@ -3,8 +3,8 @@ title: Add Organization - Muzit Admin
 bodyClass: add-organization
 ---
 
-<div class="alert alert-success" id="alert-user-invite-success" role="alert" style="display: none">
-  Organzation <strong>Organzation Name</strong> was successfully added.
+<div class="alert alert-success" id="alert-organization-added" role="alert" style="display: none">
+  Organzation Name was successfully added.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -16,7 +16,7 @@ bodyClass: add-organization
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <div class="input-group input-group-sm">
+        <div class="input-group">
           <input class="form-control" placeholder="Search organizations" type="text" name="q" id="q">
           <div class="input-group-append">
             <input type="submit" name="commit" value="Search" class="btn btn-primary btn-sm" data-disable-with="Search">
@@ -24,7 +24,9 @@ bodyClass: add-organization
         </div>
       </div>
     </div>
-    <div class="col-md-6 text-center text-md-right">
+  </div>
+  <div class="form-group">
+    <div class="text-center text-md-right">
       <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#add-organization">
         <span class="oi oi-plus"></span>&nbsp;Add Organization
       </button>
@@ -33,11 +35,11 @@ bodyClass: add-organization
   <h2>
     Organizations
   </h2>
-  <table class="table users">
-    <thead class="thead-dark">
+  <table class="table">
+    <thead>
       <tr>
         <th>Name</th>
-        <th>Created by</th>
+        <th class="text-truncate">Created by</th>
         <th>Added</th>
         <th>Status</th>
         <th>Contact</th>
@@ -50,16 +52,55 @@ bodyClass: add-organization
         <td class="text-truncate">
           <%= link_to 'Organzation name', '#' %>
         </td>
-        <td class="text-truncate">Greg Titus</td>
-        <td class="text-truncate">05/08/19</td>
-        <td>Active</td>
+        <td class="text-truncate">
+          Greg Titus
+        </td>
         <td>
+          05/08/19
+        </td>
+        <td>
+          Active
+        </td>
+        <td class="text-truncate">
           <a href="mailto:greg@muzit.com">Greg Titus</a>
         </td>
         <td>
           <span class="switch switch-sm">
-            <input type="checkbox" class="switch" id="roleSwitch2" checked>
-            <label for="roleSwitch2"></label>
+            <input type="checkbox" class="switch" id="orgSwitch1" checked>
+            <label for="orgSwitch1"></label>
+          </span>
+        </td>
+        <td class="action text-right text-nowrap">
+          <a href="../organization/invite-users.html">
+            Invite Users
+          </a>
+          <a href="#" data-toggle="modal" data-target="#delete-organization">
+            Delete
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-truncate">
+          <%= link_to 'Organzation name', '#' %>
+        </td>
+        <td class="text-truncate">
+          Tommy Funderburk
+        </td>
+        <td>
+          05/08/19
+        </td>
+        <td>
+          Deactivated
+        </td>
+        <td class="text-truncate">
+          <a href="mailto:george@muzit.com">
+            George Nunes
+          </a>
+        </td>
+        <td>
+          <span class="switch switch-sm">
+            <input type="checkbox" class="switch" id="orgSwitch2">
+            <label for="orgSwitch2"></label>
           </span>
         </td>
         <td class="action text-right text-nowrap">
@@ -73,6 +114,7 @@ bodyClass: add-organization
       </tr>
     </tbody>
   </table>
+
 
   <nav class="pagination pagination-sm justify-content-center" aria-label="pageNavigation">
     <ul class="pagination">
@@ -132,16 +174,29 @@ bodyClass: add-organization
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form id="login-form" action="" method="" class="form needs-validation" novalidate="">
+        <form id="add-org" action="" method="" class="form needs-validation" novalidate>
           <div class="modal-body">
-            <p>
-              Enter the user information below and an invitation will be sent to their email address.
-            </p>
             <div class="form-group">
-              <label for="firstName">Organzation Name</label>
-               <input type="text" class="form-control" id="firstName" placeholder="Organzation name" required="">
+              <label for="orgName">Organzation Name</label>
+               <input type="text" class="form-control" id="orgName" placeholder="Enter organzation name" required>
               <div class="invalid-feedback">
                 Please enter organization name.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <label for="contactName">Contact Name</label>
+               <input type="text" class="form-control" id="contactName" placeholder="Enter contact name" required>
+              <div class="invalid-feedback">
+                Please enter contact name.
+              </div>
+            </div>
+            <!-- // end form-group -->
+            <div class="form-group">
+              <label for="contactEmail">Contact Email</label>
+               <input type="email" class="form-control" id="contactEmail" placeholder="name@domain" required>
+              <div class="invalid-feedback">
+                Please enter valid email address.
               </div>
             </div>
             <!-- // end form-group -->
@@ -149,7 +204,7 @@ bodyClass: add-organization
           <!-- // end modal-body -->
           <div class="modal-footer">
             <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary btn-sm" data-dismiss="modal" id="send-invite">Save</button>
+            <button type="submit" class="btn btn-primary btn-sm" id="add-org">Save</button>
           </div>
           <!-- // end modal-footer -->
         </form>
