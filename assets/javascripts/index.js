@@ -145,6 +145,10 @@ $(function() {
     $('#alert-user-invite-success').fadeIn("fast");
   });
 
+  $('#add-org').click(function () {
+    $('#alert-organization-added').fadeIn("fast");
+  });
+
 });
 
 // artist details hero follow and unfollow artists button
@@ -218,6 +222,14 @@ $("#map-torrents").click(function () {
 
 $(window).on('load',function(){
   $('#modal-credit-card-declined').modal('show');
+});
+
+
+$(function() {
+    $('#categories').change(function(){
+        $('.category').fadeOut('fast');
+        $('#' + $(this).val()).fadeIn('fast');
+    });
 });
 
 // populate dropdown button text based on selected value
