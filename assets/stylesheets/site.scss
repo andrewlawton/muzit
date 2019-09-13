@@ -362,6 +362,44 @@ table.torrents .table-scroll {
   }
 }
 
+// artist-details households by country table
+
+.artist-details .households-by-country {
+  height: 320px;
+  overflow-y: auto;
+  padding: 0 .5rem 1rem;
+  table {
+    margin-bottom: 0;
+    thead {
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      th {
+        &:nth-child(1) {
+          width: 19%;
+        }
+        &:nth-child(2) {
+          width: 48%;
+        }
+        &:nth-child(3) {
+          width: 33%;
+          text-align: right;
+          white-space: nowrap;
+        }
+      }
+    }
+    td {
+      .oi {
+        margin-right: .25rem;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+  }
+}
+
 // pagination
 
 @media screen and (max-width:767px) {
