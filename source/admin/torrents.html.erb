@@ -1,6 +1,6 @@
 ---
 title: Torrents Unmapped - Muzit
-bodyClass: artists-torrents
+bodyClass: unmapped-torrents
 ---
 
 <div class="container-fluid">
@@ -20,15 +20,31 @@ bodyClass: artists-torrents
   <div id="torrent">
     <form class="form" action="/admin/torrents" accept-charset="UTF-8" method="get">
       <fieldset>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group mb-4">
-              <div class="input-group">
-                <input value="phish" class="form-control" placeholder="Search torrents" type="text" name="q" id="q">
-                <div class="input-group-append">
-                  <input type="submit" name="commit" value="Search" class="btn btn-primary btn-sm" data-disable-with="Search">
-                </div>
-              </div>
+        <div class="form-group mb-4">
+          <div class="input-group">
+            <input value="" class="form-control" placeholder="Search torrents" type="text" name="q" id="q" style="width: 35%;">
+            <select class="custom-select">
+              <option selected>Sort by...</option>
+              <option value="1">Date</option>
+              <option value="2">Number of Downloads</option>
+            </select>
+            <select class="form-control custom-select">
+              <option selected>Filter by...</option>
+              <option value="all">All Torrents</option>
+              <option value="porn">Adult</option>
+              <option value="anime">Anime</option>
+              <option value="audiobook">Audio Books</option>
+              <option value="comic">Comic Books</option>
+              <option value="ebook">ebooks</option>
+              <option value="game">Games</option>
+              <option value="movie">Movies</option>
+              <option value="music">Music</option>
+              <option value="software">Software</option>
+              <option value="tv">TV</option>
+              <option value="video">Videos</option>
+            </select>
+            <div class="input-group-append">
+              <input type="submit" name="commit" value="Search" class="btn btn-primary btn-sm" data-disable-with="Search">
             </div>
           </div>
         </div>
@@ -41,6 +57,7 @@ bodyClass: artists-torrents
         <th>Name</th>
         <th>Category</th>
         <th>Size</th>
+        <th>Date</th>
         <th>Downloads</th>
       </tr>
     </thead>
@@ -50,6 +67,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>900 MB</td>
+        <td>09/19/19</td>
         <td>2,244</td>
       </tr>
       <tr>
@@ -57,6 +75,7 @@ bodyClass: artists-torrents
         </td>
         <td></td>
         <td>1000 MB</td>
+        <td>09/19/19</td>
         <td>1,032</td>
       </tr>
       <tr>
@@ -64,6 +83,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>770 MB</td>
+        <td>09/19/19</td>
         <td>945</td>
       </tr>
       <tr>
@@ -71,6 +91,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>1.2 GB</td>
+        <td>09/19/19</td>
         <td>882</td>
       </tr>
       <tr>
@@ -78,6 +99,7 @@ bodyClass: artists-torrents
         </td>
         <td></td>
         <td>1.6 GB</td>
+        <td>09/19/19</td>
         <td>836</td>
       </tr>
       <tr>
@@ -85,6 +107,7 @@ bodyClass: artists-torrents
         </td>
         <td></td>
         <td>2.2 GB</td>
+        <td>09/19/19</td>
         <td>797</td>
       </tr>
       <tr>
@@ -92,6 +115,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>780 MB</td>
+        <td>09/19/19</td>
         <td>770</td>
       </tr>
       <tr>
@@ -99,6 +123,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>3.8 GB</td>
+        <td>09/19/19</td>
         <td>617</td>
       </tr>
       <tr>
@@ -106,6 +131,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>950 MB</td>
+        <td>09/19/19</td>
         <td>599</td>
       </tr>
       <tr>
@@ -113,6 +139,7 @@ bodyClass: artists-torrents
         </td>
         <td>Music</td>
         <td>1.2 GB</td>
+        <td>09/19/19</td>
         <td>569</td>
       </tr>
     </tbody>

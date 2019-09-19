@@ -25,17 +25,20 @@
 .torrents.unmapped {
   th {
     &:nth-child(1) {
-      width: 65%;
+      width: 60%;
     }
     &:nth-child(2) {
       text-align: left;
       width: 10%;
     }
     &:nth-child(3) {
-      width: 12%;
+      width: 10%;
     }
     &:nth-child(4) {
-      width: 12%;
+      width: 10%;
+    }
+    &:nth-child(5) {
+      width: 10%;
     }
   }
   td {
