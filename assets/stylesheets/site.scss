@@ -366,6 +366,11 @@ table.torrents .table-scroll {
     overflow: auto;
     width: auto;
   }
+  &.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 64px;
+  }
 }
 
 .torrent-files {

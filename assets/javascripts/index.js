@@ -196,24 +196,6 @@ $('#corporate-pricing').click(function () {
   $('#corporate-plans').fadeIn();
 });
 
-// fix torrent details meta data on scroll
-
-$(function() {
-  var $window = $(window);
-  var data = $('#torrent-meta-data');
-  var files = $('#torrent-files');
-  $window.scroll(function(){
-      if ($window.scrollTop() >= 100) {
-         data.addClass('fixed');
-         files.addClass('torrent-meta-data-fixed');
-      }
-      else {
-         data.removeClass('fixed');
-         files.removeClass('torrent-meta-data-fixed');
-      }
-  });
-});
-
 // unmapped torrents bulk edit checkbox
 
 $("#map-torrents").click(function () {
