@@ -386,11 +386,10 @@ table.torrents .table-scroll {
   table {
     margin-bottom: 0;
     thead {
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1;
       th {
+        background: #fff;
+        position: sticky; // apply sticky to th to fix thead not being supported chrome
+        top: 0;
         &:nth-child(1) {
           width: 19%;
         }
