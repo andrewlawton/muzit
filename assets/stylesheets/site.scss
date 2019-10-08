@@ -433,20 +433,6 @@ table.torrents .table-scroll {
   }
 }
 
-// fix torrent-meta-data on scroll to allow selection of suggested artists
-
-.fixed {
-  position: fixed;
-  top: 65px;
-  right: 15px;
-  left: 15px;
-  z-index: 2;
-}
-
-.torrent-meta-data-fixed {
-  margin-top: 400px;
-}
-
 // boostrap overrides
 
 .card {
