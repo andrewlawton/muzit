@@ -214,6 +214,13 @@ $(function() {
     });
 });
 
+// admin lists add list 
+
+$("#add-list-item").click(function () {
+  $('#list-none').hide();
+  $('#list').show();
+});
+
 // populate dropdown button text based on selected value
 
 // $(function() {

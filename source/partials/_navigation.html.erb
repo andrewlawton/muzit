@@ -8,6 +8,7 @@
       <div class="dropdown-menu" aria-labelledby="adminDropdown">
         <%= link_to "Create Artist", "#", :class => "dropdown-item" %>
         <%= link_to "Add Organization", "../admin/add-organization.html", :class => "dropdown-item" %>
+        <%= link_to "Lists", "../admin/lists.html", :class => "dropdown-item" %>
         <%= link_to "Unmapped Torrents", "../admin/torrents.html", :class => "dropdown-item" %>
         <%= link_to "Feature Flags", "#", :class => "dropdown-item" %>
       </div>
@@ -85,6 +86,7 @@
         </div>
         <div class="dropdown-divider"></div>
         <div class="dropdown-header">Organization</div>
+        <%= link_to "Billing", "../organization/billing.html", :class => "dropdown-item" %>
         <%= link_to "Credit Card", "../organization/credit-card.html", :class => "dropdown-item" %>
         <%= link_to "Manage Users", "../organization/invite-users.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>

@@ -139,3 +139,25 @@ table.users td span {
   margin: 2px 5px 0 0;
   font-size: 1rem;
 }
+
+// lists
+
+.lists {
+  .form-container {
+    margin-bottom: 2rem;
+  }
+  .search-results {
+    margin-top: 12px;
+    &:before {
+      border: none; // remove dafault search results arrow
+    }
+  }
+  table {
+    background: #fff;
+    border: 1px solid #ddd;
+    a:last-child {
+      margin-left: .5rem;
+    }
+  }
+}
+
