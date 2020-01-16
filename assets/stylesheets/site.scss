@@ -433,6 +433,51 @@ table.torrents .table-scroll {
   }
 }
 
+// organization - billing
+
+.billing  {
+  section {
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+      @include media-breakpoint-up(sm) {
+        margin-right: 1.75rem;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      @include media-breakpoint-up(sm) {
+        width: 250px;
+      }
+      h4 {
+        font-size: .70rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .text {
+        color: #6a737d;
+        font-size: 1.5rem;
+        line-height: 2.15;
+        .date {
+          display: inline-block;
+          font-size: .85rem;
+          line-height: normal;
+          vertical-align: middle;
+        }
+      }
+     a {
+        font-size: .85rem;
+     }
+    }
+  }
+}
+
+
 // boostrap overrides
 
 .card {

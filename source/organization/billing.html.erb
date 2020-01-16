@@ -1,0 +1,79 @@
+---
+title: Billing - Muzit
+bodyClass: billing
+---
+
+<div class="container-fluid">
+
+  <h1 class="text-center text-sm-left my-4">
+    Billing
+  </h1>
+
+  <h2 class="text-center text-sm-left">Billing overview</h2>
+
+  <section>
+    <div class="card">
+      <h4>Current bill total</h4>
+      <div class="text">
+        $4,995 / mo
+      </div>
+      <a href="../pricing/index.html">Update plan</a>
+    </div>
+    <!-- // end card -->
+    <div class="card">
+      <h4>Next payment due</h4>
+      <div class="text">
+        Nov 1, 2019
+      </div>
+      <a href="#">Payment history</a>
+    </div>
+    <!-- // end card -->
+  </section>
+  <!-- // end section -->
+  <h2 class="text-center text-sm-left">Payments overview</h2>
+  <section>
+    <div class="card">
+      <h4>Payment method</h4>
+      <div class="text">
+        Visa 7890
+      </div>
+      <a href="../organization/credit-card.html">Update credit card</a>
+    </div>
+    <!-- // end card -->
+    <div class="card">
+      <h4>Last Payment</h4>
+      <div class="text">
+        $4,995
+        <span class="date">9/2/2019</span>
+      </div>
+      <a href="#">Payment history</a>
+    </div>
+    <!-- // end card -->
+    <div class="card">
+      <h4>Coupon</h4>
+      <div class="text">
+        No coupon
+      </div>
+      <a href="#">Add Coupon</a>
+    </div>
+    <!-- // end card -->
+  </section>
+  <!-- // end section -->
+
+  <div class="action text-center">
+    <a href="#" class="btn btn-primary" onclick="cancelAccount()">Cancel Account</a>
+  </div>
+
+  <script>
+
+  function cancelAccount() {
+    if (confirm("Are you sure you want to cancel your account? This can not be undone.")) {
+      window.location = '../pricing/index.html';
+    } else {
+
+    }
+  }
+
+  </script>
+</div>
+<!-- // end container-fluid -->
