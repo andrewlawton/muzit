@@ -1,0 +1,56 @@
+---
+title: Payment History - Muzit
+bodyClass: billing
+---
+<div class="container-fluid">
+  <h1 class="text-center text-md-left my-4">
+    Payment History
+  </h1>
+  <table class="table border payment-history">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Card</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jan 16, 2020</td>
+        <td>Visa</td>
+        <td>$20.00</td>
+      </tr>
+      <tr>
+        <td>Jan 16, 2020</td>
+        <td>Visa</td>
+        <td>$20.00</td>
+      </tr>
+      <tr>
+        <td>Jan 16, 2020</td>
+        <td>Visa</td>
+        <td>$20.00</td>
+      </tr>
+    </tbody>
+  </table>
+  <nav class="pagination pagination-sm justify-content-center" aria-label="Page navigation">
+    <ul class="pagination">
+      <li class="prev previous_page disabled page-item"><a class="page-link" href="#"><i class="fas fa-angle-left" aria-hidden="true"></i> Previous</a>
+      </li>
+      <li class="active page-item"><a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item"><a rel="next" class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">4</a>
+      </li>
+      <li class="next next_page  page-item"><a class="page-link" rel="next" href="#">Next <i class="fas fa-angle-right" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="action text-center">
+    <%= link_to 'Back', '../organization/billing.html', class: 'btn btn-primary btn-md' %>
+  </div>
+  <!-- // end action -->
+</div>
+<!-- // end container-fluid -->

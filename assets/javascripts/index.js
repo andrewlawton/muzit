@@ -214,8 +214,7 @@ $(function() {
     });
 });
 
-// admin lists add list 
-
+// admin lists add list
 $("#add-list-item").click(function () {
   $('#list-none').hide();
   $('#list').show();
