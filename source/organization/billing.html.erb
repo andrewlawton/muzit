@@ -2,78 +2,122 @@
 title: Billing - Muzit
 bodyClass: billing
 ---
-
-<div class="container-fluid">
-
-  <h1 class="text-center text-sm-left my-4">
+<div class="container">
+  <h1 class="text-center text-md-left my-4">
     Billing
   </h1>
-
-  <h2 class="text-center text-sm-left">Billing overview</h2>
-
-  <section>
-    <div class="card">
-      <h4>Current bill total</h4>
-      <div class="text">
-        $4,995 / mo
+  <h2 class="text-center text-md-left">
+    Medium Plan
+  </h2>
+  <div class="overview payments">
+    <div class="row">
+      <div class="col-md-3 details">
+        <h4>Current bill total</h4>
+        <div class="text">
+          $4,995 / mo
+        </div>
       </div>
-      <a href="../pricing/index.html">Update plan</a>
-    </div>
-    <!-- // end card -->
-    <div class="card">
-      <h4>Next payment due</h4>
-      <div class="text">
-        Nov 1, 2019
+      <div class="col-md-3 details">
+        <h4>Last Payment</h4>
+        <div class="text">
+          $4,995
+          <span class="date">9/2/2019</span>
+        </div>
       </div>
-      <a href="#">Payment history</a>
-    </div>
-    <!-- // end card -->
-  </section>
-  <!-- // end section -->
-  <h2 class="text-center text-sm-left">Payments overview</h2>
-  <section>
-    <div class="card">
-      <h4>Payment method</h4>
-      <div class="text">
-        Visa 7890
+      <div class="col-md-3 details">
+        <h4>Next payment due</h4>
+        <div class="text">
+          Nov 1, 2019
+        </div>
       </div>
-      <a href="../organization/credit-card.html">Update credit card</a>
-    </div>
-    <!-- // end card -->
-    <div class="card">
-      <h4>Last Payment</h4>
-      <div class="text">
-        $4,995
-        <span class="date">9/2/2019</span>
+      <div class="col-md-3 details">
+        <h4>Promo Code</h4>
+        <div class="text">
+          <%= link_to 'Add Promo Code', '#', 'data-toggle' => "modal", 'data-target' => '#add-promo-code' %>
+        </div>
       </div>
-      <a href="#">Payment history</a>
     </div>
-    <!-- // end card -->
-    <div class="card">
-      <h4>Coupon</h4>
-      <div class="text">
-        No coupon
-      </div>
-      <a href="#">Add Coupon</a>
-    </div>
-    <!-- // end card -->
-  </section>
-  <!-- // end section -->
-
-  <div class="action text-center">
-    <a href="#" class="btn btn-primary" onclick="cancelAccount()">Cancel Account</a>
   </div>
-
-  <script>
-
-  function cancelAccount() {
-    if (confirm("Are you sure you want to cancel your account? This can not be undone.")) {
-      window.location = '../pricing/index.html';
-    } else {
-
-    }
-  }
-
-  </script>
+  <div class="text-center">
+    <%= link_to 'Change Plan', '../pricing/index.html', class: 'btn btn-sm btn-outline-primary' %>
+  </div>
+  <h2 class="text-center text-md-left">
+    Payment Method
+  </h2>
+  <div class="overview payment-method">
+    <div class="row">
+      <div class="col-4">
+        <h4>Visa</h4>
+        <div class="text">
+          * * * * 1234
+        </div>
+      </div>
+      <div class="col-4">
+        <h4>Expires</h4>
+        <div class="text">
+          12/2020
+        </div>
+      </div>
+      <div class="col-4 text-right">
+        <%= link_to 'Update Card', '../organization/credit-card.html', class: 'align-middle' %>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= link_to 'Payment History', '../organization/payment-history.html', class: 'btn btn-sm btn-outline-primary' %>
+  </div>
+  <div class="action text-center cancel-subscription">
+    <a href="#">Cancel Subscription</a>
+  </div>
 </div>
 <!-- // end container-fluid -->
+<div class="modal fade" id="add-promo-code" tabindex="-1" role="dialog" aria-labelledby="AddPromoCode" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="AddPromoCode">Add promo code</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="" class="form needs-validation" novalidate>
+        <div class="modal-body">
+          <fieldset>
+            <div class="form-group">
+              <label for="coupon">Discount Code</label>
+              <input class="form-control" type="text" name="coupon" id="coupon" placeholder="Enter code" required>
+              <div class="invalid-feedback">
+                Please enter valid promo code.
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- // end modal add-promo-code -->
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
