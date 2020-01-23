@@ -152,17 +152,20 @@ form label.required:after {
 
 .action {
   margin: 1.5rem 0 0 0;
-  @include media-breakpoint-down(md) {
-    input,
-    button {
-      margin: 0 0 1.5rem 0 !important;
-      width: 100%;
+  input,
+  button,
+  .btn {
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      margin: 0;
+      width: auto;
     }
-  }
-  @include media-breakpoint-up(md) {
-    input,
-    button {
-      margin: 0 1rem 0 0;
+    & + div a,
+    & + label  {
+      @include media-breakpoint-up(md) {
+        margin-left: 1rem;
+      }
     }
   }
 }

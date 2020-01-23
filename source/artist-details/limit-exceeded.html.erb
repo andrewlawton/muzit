@@ -12,7 +12,7 @@ bodyClass: artist-details
 
 <section class="hero">
   <div class="hero-container" style="background-image: url('http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com');">
-    <div class="hero-artist-stats">
+    <div class="meta">
       <h1>
         Phish
       </h1>
@@ -43,10 +43,10 @@ bodyClass: artist-details
         <div class="row pb-3 d-none d-md-block">
           <div class="col-lg-12">
             <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-4 col-lg-4">
+              <div class="row stats">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
+                    <div class="col-md-1 p-0 icon">
                       <span class="oi oi-data-transfer-download text-white"></span>
                     </div>
                     <!-- end column -->
@@ -55,7 +55,7 @@ bodyClass: artist-details
                         18,250,300
                       </span>
                       <span class="label text-white text-nowrap">
-                        Downloaded Songs
+                        Downloads
                         <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
                       </span>
                     </div>
@@ -64,9 +64,29 @@ bodyClass: artist-details
                   <!-- // end row -->
                 </div>
                 <!-- // end column -->
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
+                    <div class="col-md-1 p-0 icon">
+                      <i class="fas fa-search-location text-white"></i>
+                    </div>
+                    <!-- end column -->
+                    <div class="col-md-6 p-0">
+                      <span class="data text-white">
+                        18,250,300
+                      </span>
+                      <span class="label text-white text-nowrap">
+                        Searches
+                        <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of times a torrent associated with this artist was searched for."></i>
+                      </span>
+                    </div>
+                    <!-- // end column -->
+                  </div>
+                  <!-- // end row -->
+                </div>
+                <!-- // end column -->
+                <div class="col-md-3">
+                  <div class="row">
+                    <div class="col-md-1 p-0 icon">
                       <span class="oi oi-target text-white"></span>
                     </div>
                     <!-- // end column -->
@@ -84,9 +104,9 @@ bodyClass: artist-details
                   <!-- // end row -->
                 </div>
                 <!-- // end column -->
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-3">
                   <div class="row">
-                    <div class="col-md-1 p-0">
+                    <div class="col-md-1 p-0 icon">
                       <span class="oi oi-link-intact text-white"></span>
                     </div>
                     <!-- // end column -->
@@ -113,7 +133,7 @@ bodyClass: artist-details
         </div>
         <!-- // end row -->
     </div>
-    <!-- // end hero-artist-stats -->
+    <!-- // end meta -->
   </div>
   <!-- // end hero-container -->
 </section>
@@ -125,14 +145,23 @@ bodyClass: artist-details
         <div class="mobile-stats pt-2">
           <div class="card-body text-white">
             <div class="row m-0">
-              <div class="col-sm text-sm-left pl-0 mb-4 mb-sm-0">
+              <div class="col-sm-3 text-sm-left pl-0 mb-4 mb-sm-0">
                 <h6 class="card-title text-nowrap">
-                  <span class="oi oi-data-transfer-download mr-1"></span> Downloaded Songs
+                  <span class="oi oi-data-transfer-download mr-1"></span> Downloads
                   <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
                 </h6>
                 <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 18,250,300</span>
               </div>
-              <div class="col-sm mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
+              <div class="col-sm-3 mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
+                <h6 class="card-title text-nowrap">
+                  <i class="fas fa-search-location mr-1"></i>
+                  Searches
+                  <i class="fas fa-question-circle text-white ml-1" data-toggle="tooltip" data-placement="top" title="Number of times a torrent associated with this artist was searched for."></i>
+                </h6>
+                <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
+              </div>
+              <!-- // end column -->
+              <div class="col-sm-3 mb-4 text-sm-left pl-0 mb-4 mb-sm-0">
                 <h6 class="card-title text-nowrap">
                   <span class="oi oi-target mr-1"></span>
                   Potential Reach
@@ -141,7 +170,7 @@ bodyClass: artist-details
                 <span class="h5 ml-4 font-weight-bold mb-0 text-nowrap"> 1,495,573</span>
               </div>
               <!-- // end column -->
-              <div class="col-sm text-sm-left pl-0 mb-sm-0">
+              <div class="col-sm-3 text-sm-left pl-0 mb-sm-0">
                 <h6 class="card-title text-nowrap">
                   <span class="oi oi-link-intact mr-1"></span>
                     Torrent Files
@@ -165,57 +194,49 @@ bodyClass: artist-details
   <header class="header-dropdown">
     <div class="row">
       <div class="col text-truncate my-auto">
-        <h2>
-           Worldwide Stats
-        </h2>
+        <h2>Worldwide Stats</h2>
       </div>
-      <!-- // end column -->
-      <div class="col text-right">
-        <div class="dropdown">
-          <button class="btn btn-outline-primary btn-md dropdown-toggle" id="artist-stats-filter"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Week</button>
-          <div class="dropdown-menu" aria-labelledby="artist-stats-filter">
-            <a class="dropdown-item" href="#">Week</a>
-            <a class="dropdown-item" href="#">Past Two Weeks</a>
-            <a class="dropdown-item" href="#">Past Month</a>
-          </div>
-        </div>
-        <!-- // end dropdown -->
-      </div>
-      <!-- // end column -->
     </div>
-    <!-- // end row -->
   </header>
   <!-- // end header -->
   <div class="row">
-    <div class="col-md-6">
-      <div class="card">
+    <div class="col-md-4">
+      <div class="card" data-controller="stats">
         <div class="card-header">
-          <h5>
-            Downloads <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique songs downloaded for this artist."></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Downloads <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Number of unique downloads for this artist."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
         </div>
         <!-- // end card-header -->
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
-            <div class="mb-1">
-              <span class="h3 text-nowrap">
-                50,300
-              </span>
-            </div>
-            <!-- // end mb-1 -->
+            <span class="h3 text-nowrap" data-target="stats.number">13,072</span>
             <div class="row">
               <div class="col text-truncate">
                 <span class="h6 text-muted align-middle">
-                  <small>Change from previous period </small>
+                  <small>Change from previous period</small>
                 </span>
               </div>
-              <div class="col text-right">
-                <span class="h6">
-                  <small class="text-success mr-1">+ 2.3%</small>
-                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
+              <!-- // end column -->
+              <div class="col text-right text-nowrap">
+                <span class="h6" data-target="stats.difference">
+                  <small class="text-danger mr-1">
+                    -72.21%
+                  </small>
+                  <span class="oi oi-arrow-circle-bottom font-weight-bold text-danger align-middle"></span>
                 </span>
               </div>
+              <!-- // end column -->
             </div>
             <!-- // end row -->
           </div>
@@ -226,33 +247,90 @@ bodyClass: artist-details
       <!-- // end card -->
     </div>
     <!-- // end column -->
-    <div class="col-md-6">
-      <div class="card">
+    <div class="col-md-4">
+      <div class="card" data-controller="stats">
         <div class="card-header">
-          <h5>
-            Potential Reach <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Searches <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Number of times a torrent associated with this artist was searched for."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
         </div>
+        <!-- // end card-header -->
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
-            <div class="mb-1">
-              <span class="h3 text-nowrap">
-                115,798
-              </span>
-            </div>
-            <!-- // end mb-1 -->
+            <span class="h3 text-nowrap" data-target="stats.number">18,250</span>
             <div class="row">
               <div class="col text-truncate">
                 <span class="h6 text-muted align-middle">
                   <small>Change from previous period</small>
                 </span>
               </div>
-              <div class="col text-right">
-                <span class="h6">
-                  <small class="text-danger mr-1">-25.33%</small>
-                  <span class="oi oi-arrow-circle-bottom font-weight-bold text-danger align-middle"></span>
+              <!-- // end column -->
+              <div class="col text-right text-nowrap">
+                <span class="h6" data-target="stats.difference">
+                  <small class="text-success mr-1">
+                    30.25%
+                  </small>
+                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
                 </span>
               </div>
+              <!-- // end column -->
+            </div>
+            <!-- // end row -->
+          </div>
+          <!-- // end stats -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+   <div class="col-md-4">
+      <div class="card" data-controller="stats">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Potential Reach <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Number of unique IP addresses that have downloaded at least one file from this artist. These are the fans!"></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body p-0">
+          <div class="stats px-3 py-2">
+            <span class="h3 text-nowrap" data-target="stats.number">115,798</span>
+            <div class="row">
+              <div class="col text-truncate">
+                <span class="h6 text-muted align-middle">
+                  <small>Change from previous period</small>
+                </span>
+              </div>
+              <!-- // end column -->
+              <div class="col text-right text-nowrap">
+                <span class="h6" data-target="stats.difference">
+                  <small class="text-success mr-1">
+                    15.15%
+                  </small>
+                  <span class="oi oi-arrow-circle-top font-weight-bold text-success align-middle"></span>
+                </span>
+              </div>
+              <!-- // end column -->
             </div>
             <!-- // end row -->
           </div>
@@ -269,9 +347,19 @@ bodyClass: artist-details
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h5>
-            Fastest Growing <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Fastest Growing <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="The country with highest increase in traffic."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
+          <!-- // end row -->
         </div>
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
@@ -292,9 +380,18 @@ bodyClass: artist-details
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h5>
-            Most Engaged <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
-          </h5>
+          <div class="row align-items-center">
+            <h5 class="col text-truncate">
+              Most Engaged <i class="fas fa-question-circle text-dark ml-1" data-toggle="tooltip" data-placement="top" title="Avg. daily potential reach divided by the country population."></i>
+            </h5>
+            <div class="col text-right stats-filter text-nowrap">
+              <a title="One week" class="downloads active" data-action="click->stats#updateStats"
+              data-number="3072" data-difference="" href="#">1w</a>
+              <a title="Two weeks" class="downloads" data-action="click->stats#updateStats" data-number="14125" data-difference="" href="#">2w</a>
+              <a title="One month" class="downloads" data-action="click->stats#updateStats" data-number="23692"
+              data-difference="" href="#">1m</a>
+            </div>
+          </div>
         </div>
         <div class="card-body p-0">
           <div class="stats px-3 py-2">
@@ -475,8 +572,6 @@ bodyClass: artist-details
     <!-- // end card-body -->
   </div>
   <!-- // end card -->
-
-
   <div class="card">
     <div class="card-header">
       <h5>Most Recent Torrents</h5>
@@ -706,13 +801,165 @@ bodyClass: artist-details
   <!-- // end card -->
   <div class="card">
     <div class="card-header">
+      <h5>Households by Country</h5>
+    </div>
+    <div class="card-body households-by-country">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Country</th>
+            <th>Households</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              United States
+            </td>
+            <td>3,019</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              Canada
+            </td>
+            <td>209</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              Italy
+            </td>
+            <td>155</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              Germany
+            </td>
+            <td>131</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              Netherlands
+            </td>
+            <td>116</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>
+              United Kingdom
+            </td>
+            <td>92</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>
+              Japan
+            </td>
+            <td>66</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>
+              Spain
+            </td>
+            <td>47</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>
+              Sweden
+            </td>
+            <td>47</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>
+              Mexico
+            </td>
+            <td>41</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>
+              China
+            </td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>
+              Brazil
+            </td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>
+              France
+            </td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>
+              Thailand
+            </td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>
+              Israel
+            </td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>
+              India
+            </td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>
+              Romania
+            </td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>
+              Russian Federation
+            </td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>
+              Korea
+            </td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- // end table -->
+    </div>
+    <!-- // end households-by-country -->
+  </div>
+  <!-- // end card -->
+  <div class="card">
+    <div class="card-header">
       <h5>Activity Timeline - Last 30 Days</h5>
     </div>
     <div class="card-body">
       <div class="row">
         <div class="col">
-          <!-- <img class="img-fluid" alt="Activity Timeline Image" src="/assets/activity-timeline-46423f05bb7868c0f33126da122b40604d22354858be4ed61ad4f06526410cd8.png" /> -->
-
           <div class="activity-timeline-container" data-controller="activity-timeline" data-activity-timeline-dates="['Nov 22, 2018', 'Nov 23, 2018', 'Nov 24, 2018', 'Nov 25, 2018', 'Nov 26, 2018', 'Nov 27, 2018', 'Nov 28, 2018', 'Nov 29, 2018', 'Nov 30, 2018', 'Dec 1, 2018', 'Dec 2, 2018', 'Dec 3, 2018', 'Dec 4, 2018', 'Dec 5, 2018', 'Dec 6, 2018', 'Dec 7, 2018', 'Dec 8, 2018', 'Dec 9, 2018', 'Dec 10, 2018', 'Dec 11, 2018', 'Dec 12, 2018', 'Dec 13, 2018', 'Dec 14, 2018', 'Dec 15, 2018', 'Dec 16, 2018', 'Dec 17, 2018', 'Dec 18, 2018', 'Dec 19, 2018', 'Dec 20, 2018', 'Dec 21, 2018']" data-activity-timeline-downloads="[310, 740, 417, 659, 564, 1576, 616, 879, 906, 418, 717, 626, 668, 614, 674, 816, 490, 383, 266, 865, 629, 487, 447, 887, 1446, 1011, 997, 805, 1065, 1031]" data-activity-timeline-reach="[87, 130, 99, 118, 97, 204, 137, 102, 140, 97, 145, 119, 144, 136, 131, 125, 96, 129, 84, 144, 138, 128, 113, 140, 165, 163, 168, 146, 169, 157]">
             <canvas class="activity-timeline chartjs-render-monitor" data-target="activity-timeline.canvas"></canvas>
           </div>
@@ -720,7 +967,6 @@ bodyClass: artist-details
       </div>
     </div>
   </div>
-
   <div class="card">
     <div class="card-header">
       <h5>
@@ -795,9 +1041,11 @@ bodyClass: artist-details
     <!-- // end card-body -->
   </div>
   <!-- // end card -->
+  <div class="action text-center">
+    <%= link_to 'View Report', '../reports/artist.html', class: 'btn btn-primary btn-md', target: '_blank' %>
+  </div>
 </section>
 <!-- // end container-fluid -->
-
 <div class="modal fade" id="modal-follow-limit" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
