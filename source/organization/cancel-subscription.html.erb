@@ -1,0 +1,42 @@
+---
+title: Billing - Muzit
+bodyClass: billing
+---
+<div class="container">
+  <h1 class="text-center text-md-left my-4">
+    Sorry to see you go...
+  </h1>
+  <div class="container-background-border">
+    <p>
+      Before proceeding please be advised that you will lose the following data associated with your account. If you decide to cancel you will need to create a new subscription to access Muzit again. You will receive an email confirmation after cancelation has been processed.
+    </p>
+    <ul>
+      <li>Access to Muzit data will be lost</li>
+      <li>Users associated with your account will be removed</li>
+      <li>Credit card information will be deleted</li>
+    </ul>
+    <p>
+      If you have any questions about your subscription before canceling please email <a href="mailto:info@muzit.com?subject=Cancel Subscription Question">info@muzit.com</a>.
+    </p>
+  </div>
+  <div class="action text-center">
+    <%= link_to 'Cancel Subscription', '#', class: 'btn btn-primary', 'onclick' => 'return cancelSubscription()' %>
+    <div class="text-center d-md-inline">
+      <%= link_to 'Back', '../organization/billing.html' %>
+    </div>
+  </div>
+  <!-- // end action -->
+</div>
+<!-- // end container -->
+
+<script>
+function cancelSubscription() {
+  if (confirm("Are you sure you want to cancel your subscription? This can not be undone.")) {
+    //window.location = '../sign-in/alert-cancel-subscription.html';
+    window.location = '../sign-in/#cancel-subscription';
+
+  } else {
+    return false;
+  }
+}
+</script>
