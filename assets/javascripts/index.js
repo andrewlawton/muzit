@@ -230,7 +230,7 @@ $(function() {
   }
 });
 
-// disable sign up button until agreeg to terms checkbox is clicked
+// disable sign up button until agree to terms checkbox is clicked
 $(function() {
   $('#agreeToTerms').click(function() {
     if ($(this).is(':checked')) {
