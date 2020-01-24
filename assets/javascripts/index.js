@@ -230,6 +230,17 @@ $(function() {
   }
 });
 
+// disable sign up button until agreeg to terms checkbox is clicked
+$(function() {
+  $('#agreeToTerms').click(function() {
+    if ($(this).is(':checked')) {
+      $('#sign-up').removeAttr('disabled');
+    } else {
+      $('#sign-up').attr('disabled', 'disabled');
+    }
+  });
+});
+
 // populate dropdown button text based on selected value
 
 // $(function() {
