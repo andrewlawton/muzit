@@ -221,6 +221,15 @@ $("#add-list-item").click(function () {
   $('#list').show();
 });
 
+// display cancel subscription alert based on url hash
+
+$(function() {
+  var query = window.location.hash;
+  if (query=="#cancel-subscription") {
+    $('#alert-cancel-subscription').css("display", "block");
+  }
+});
+
 // populate dropdown button text based on selected value
 
 // $(function() {
