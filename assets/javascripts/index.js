@@ -221,16 +221,17 @@ $("#add-list-item").click(function () {
   $('#list').show();
 });
 
-// display cancel subscription alert based on url hash
+// display cancel subscription alert based on url
 
 $(function() {
-  var query = window.location.hash;
-  if (query=="#cancel-subscription") {
+  var url = window.location.href;
+  if(url.indexOf('?cancel') != -1) {
     $('#alert-cancel-subscription').css("display", "block");
   }
 });
 
 // disable sign up button until agree to terms checkbox is clicked
+
 $(function() {
   $('#agreeToTerms').click(function() {
     if ($(this).is(':checked')) {
