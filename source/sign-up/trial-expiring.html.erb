@@ -1,0 +1,198 @@
+---
+title: Trial Expiring Soon - Muzit
+layout: sign-up
+bodyClass: trial
+---
+
+<style>
+
+  header {
+    background-color: rgba(16, 14, 23, 0.9);
+    padding: .5rem 1rem;
+  }
+  header .logo {
+    padding: 1rem;
+  }
+
+</style>
+
+<header class="logo">
+  <% link_to "#", class:"navbar-brand" do %>
+    <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
+  <% end %>
+</header>
+<div class="container">
+
+<script src="https://js.stripe.com/v3/"></script>
+<style>
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+  padding: .5rem .75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background-color: white;
+  width: 100%;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+#card-errors {
+  color: #ff4136;
+  font-size: 13px;
+  margin-top: 0.25rem;
+}
+</style>
+ <div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="form-container">
+        <h1>
+          Thank you for trying TRACE!
+        </h1>
+        <p>
+          Your 30 day free trial will expire in <strong>3 days</strong>. To continue using TRACE please provide a credit card below. If you have any feedback or questions please email <%= mail_to 'support@muzit.com', 'support@muzit.com', subject: 'Trial Question' %>.
+        </p>
+        <form class="needs-validation" novalidate="" method="post" id="payment-form">
+          <div class="form-group">
+            <label class="required" for="cc-name">Full Name</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+            <small class="text-muted">Full name as displayed on card</small>
+            <div class="invalid-feedback">
+              Name on card is required
+            </div>
+          </div>
+          <!-- // end form-group -->
+          <div class="form-group">
+            <label class="required" for="card-element">
+              Credit or debit card
+            </label>
+            <div id="card-element">
+              <!-- A Stripe Element will be inserted here. -->
+            </div>
+            <!-- Used to display form errors. -->
+            <div id="card-errors" role="alert"></div>
+            <script>
+            // Create a Stripe client.
+            var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+            // Create an instance of Elements.
+            var elements = stripe.elements();
+
+            // Custom styling can be passed to options when creating an Element.
+            // (Note that this demo uses a wider set of styles than the guide below.)
+            var style = {
+              base: {
+                color: '#32325d',
+                //fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                  color: '#aab7c4'
+                }
+              },
+              invalid: {
+                color: '#ff4136',
+                iconColor: '#ff4136'
+              }
+            };
+
+            // Create an instance of the card Element.
+            var card = elements.create('card', {style: style});
+
+            // Add an instance of the card Element into the `card-element` <div>.
+            card.mount('#card-element');
+
+            // Handle real-time validation errors from the card Element.
+            card.addEventListener('change', function(event) {
+              var displayError = document.getElementById('card-errors');
+              if (event.error) {
+                displayError.textContent = event.error.message;
+              } else {
+                displayError.textContent = '';
+              }
+            });
+
+            // Handle form submission.
+            var form = document.getElementById('payment-form');
+            form.addEventListener('submit', function(event) {
+              event.preventDefault();
+
+              stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                  // Inform the user if there was an error.
+                  var errorElement = document.getElementById('card-errors');
+                  errorElement.textContent = result.error.message;
+                } else {
+                  // Send the token to your server.
+                  stripeTokenHandler(result.token);
+                }
+              });
+            });
+
+            // Submit the form with the token ID.
+            function stripeTokenHandler(token) {
+              // Insert the token ID into the form so it gets submitted to the server
+              var form = document.getElementById('payment-form');
+              var hiddenInput = document.createElement('input');
+              hiddenInput.setAttribute('type', 'hidden');
+              hiddenInput.setAttribute('name', 'stripeToken');
+              hiddenInput.setAttribute('value', token.id);
+              form.appendChild(hiddenInput);
+
+              // Submit the form
+              form.submit();
+            }
+
+            </script>
+          </div>
+          <!-- // end form-group -->
+          <div class="action">
+            <button class="btn btn-primary" type="submit">Save</button>
+            <div class="text-center d-md-inline">
+              <%=link_to 'Add Card Later', '#' %>
+            </div>
+          </div>
+          <!-- // end action -->
+        </form>
+      </div>
+      <!-- // end form-container -->
+    </div>
+    <!-- // end column  -->
+  </div>
+  <!-- // end row -->
+</div>
+<!-- // end container -->
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+
+</div>
+<!-- // end container-fluid -->

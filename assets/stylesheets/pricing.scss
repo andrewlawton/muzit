@@ -3,54 +3,124 @@
 
 // hero background image
 
-.pricing .hero {
-  background: url("/images/hero-pricing.jpg") center center no-repeat;
-  background-size: cover;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 3rem;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  h1 {
+.pricing {
+
+  header {
+    background-color: rgba(16, 14, 23, 0.9);
+    padding: .5rem 1rem;
+  }
+  header .logo {
+    padding: 1rem;
+  }
+
+  main {
+    padding-bottom: 0;
+    margin-top: 64px;
+  }
+  .trace-video {
+    background-color: #ff161f;
     color: #fff;
-    font-size: 4rem;
-    margin-bottom: 0;
-    position: relative;
-    text-shadow: 1px 1px #333;
-    span {
-      display: block;
-      font-size: 1.5rem;
-      margin: 2rem 0;
-      padding: 0 1rem;
+    margin-bottom: 3rem;
+    padding: 3rem 0 4rem 0;
+
+    //width: 100%;
+    //height: auto;
+
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      padding: 0;
+      list-style-position: outside;
+      li {
+        padding-left: 1.5em;
+        line-height: 1.75;
+        &:before {
+          display: inline-block;
+          margin-left: -1.5em; /* same as padding-left set on li */
+          width: 1.5em; /* same as padding-left set on li */
+          content: '\f00c';
+          color: #fff;
+          font: 1em 'Font Awesome 5 Free';
+        }
+      }
+    }
+    video {
+      border: 1px solid #000;
     }
   }
-  &:before {
-    background-color: #000;
-    content: "";
-    display: block;
-    opacity: 0.3;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
+
+  .intro {
+    margin-bottom: 3rem;
+  }
+
+  .hero {
+    position: relative;
+    background-color: #323232;
+    margin-bottom: 3rem;
     width: 100%;
+
+    .image {
+      position: relative;
+      z-index: 1;
+      max-height: 400px;
+      overflow: hidden;
+    }
+
+    &:before {
+      background-color: #323232;
+      content: "";
+      display: block;
+      opacity: 0.3;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+
+    img {
+      object-position: center right;
+      max-height: 400px;
+      object-fit: cover;
+      position: relative;
+      vertical-align: middle;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .text {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 1px 1px #333;
+    z-index: 3;
+
+    h2 {
+      font-size: 24px;
+    }
   }
 }
 
+
+
+
 .pricing .pricing-box {
   padding: 1rem;
-  background: #fff;
-  border: 1px solid #e1e8ee;
   position: relative;
   overflow: hidden;
 }
 
 .pricing .pricing-box .card-title {
-  color: #ff161f;
+  color: #333;
   font-size: 1rem;
   line-height: 2;
   text-transform: uppercase;
@@ -88,26 +158,82 @@
   border: none;
 }
 
-.pricing .pricing-premium {
+
+.pricing .plan-option input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.pricing .plan-option .padding {
+  padding: 2rem;
+}
+
+
+.pricing .plan-option label.clickable {
+  width: 100%;
+  height: 100%;
+  transition: all ease .5s;
+  cursor: pointer;
+
   position: relative;
-  z-index: 1;
-  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.09);
-  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.09);
-  box-shadow: 0 5px 10px rgba(0,0,0,.09);
 }
 
-@media (max-width: 768px) {
-  .pricing .pricing-box {
-    margin-bottom: 1rem;
-  }
+
+.pricing .option.checked {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  background-color: #08c900;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+  display: none;
+  z-index: 2;
 }
 
-@media (min-width: 768px) {
-  .pricing .pricing-premium {
-    -webkit-transform: scale(1.10);
-    -moz-transform: scale(1.10);
-    transform: scale(1.10);
-  }
+.pricing .option.checked:after {
+  content: '\f00c'; /* checkmark */
+  font: 2em 'Font Awesome 5 Free';
+  line-height: 1.6;
+  vertical-align: bottom;
+}
+
+
+.pricing .plan-option input[name="audience-lists"]:checked+.clickable,
+.pricing .plan-option input[name="global-piracy-report"]:checked+.clickable,
+.pricing .plan-option input[name="music-genre-data-report"]:checked+.clickable {
+
+  border-radius: 4px;
+
+  // border: 1px solid #0055ff;
+
+  // background: rgba(76, 175, 80, 0.6);
+
+
+  border-color: #0055ff;
+  outline: 0;
+  // -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  // box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: 0px 0px 2px 2px #0055FF;
+}
+
+
+.pricing .plan-option input[name="audience-lists"]:checked+.clickable .checked,
+.pricing .plan-option input[name="global-piracy-report"]:checked+.clickable .checked,
+.pricing .plan-option input[name="music-genre-data-report"]:checked+.clickable .checked {
+  display: block;
+}
+
+.plan-options .card.pricing-box {
+  border: none;
+  box-shadow: none !important;
+}
+
+.plan-options .card.pricing-box {
+  border-right: #e1e8ee;
 }
 
 .pricing .card .ribbon {
@@ -124,4 +250,34 @@
   right: -42px;
   top: 20px;
   padding-top: 7px;
+}
+
+
+
+.container-fluid-background  {
+  background: #fff;
+  padding: 1rem;
+  border-top: 1px solid #e1e8ee;
+  border-bottom: 1px solid #e1e8ee;
+  .plan-option {
+    border-bottom: 1px solid #e1e8ee;
+    padding: 1rem 0;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    @include media-breakpoint-up(md) {
+      padding: 0 1rem;
+      border-right: 1px solid  #e1e8ee;
+      border-bottom: none;
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+    .card {
+      margin-bottom: 0;
+    }
+    .pricing-box .card-title {
+      border-bottom: none;
+    }
+  }
 }
