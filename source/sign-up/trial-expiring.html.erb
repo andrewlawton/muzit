@@ -3,17 +3,14 @@ title: Trial Expiring Soon - Muzit
 layout: sign-up
 bodyClass: trial
 ---
-
 <header class="logo">
   <% link_to "#", class:"navbar-brand" do %>
-    <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
+  <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
   <% end %>
 </header>
-<div class="container">
-
 <script src="https://js.stripe.com/v3/"></script>
 <style>
-/**
+  /**
  * The CSS shown here will not be introduced in the Quickstart guide, but shows
  * how you can use CSS to style your Element's container.
  */
@@ -39,7 +36,7 @@ bodyClass: trial
   margin-top: 0.25rem;
 }
 </style>
- <div class="container">
+<div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-6">
       <div class="form-container">
@@ -47,7 +44,8 @@ bodyClass: trial
           Thank you for trying TRACE!
         </h1>
         <p>
-          Your 30 day free trial will expire in <strong>3 days</strong>. To continue using TRACE please provide a credit card below. If you have any feedback or questions please email <%= mail_to 'support@muzit.com', 'support@muzit.com', subject: 'Trial Question' %>.
+          Your 30 day free trial will expire in <strong>3 days</strong>. To continue using TRACE please provide a credit card below. If you have any feedback or questions please email
+          <%= mail_to 'support@muzit.com', 'support@muzit.com', subject: 'Trial Question' %>.
         </p>
         <form class="needs-validation" novalidate="" method="post" id="payment-form">
           <div class="form-group">
@@ -69,7 +67,7 @@ bodyClass: trial
             <!-- Used to display form errors. -->
             <div id="card-errors" role="alert"></div>
             <script>
-            // Create a Stripe client.
+              // Create a Stripe client.
             var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
             // Create an instance of Elements.
@@ -159,7 +157,6 @@ bodyClass: trial
   <!-- // end row -->
 </div>
 <!-- // end container -->
-
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
@@ -180,7 +177,3 @@ bodyClass: trial
   }, false);
 })();
 </script>
-
-
-</div>
-<!-- // end container-fluid -->
