@@ -40,6 +40,7 @@
     "jquery": "^3.4.1",
     "jquery-tageditor": "^1.0.1",
     "jquery-ui-dist": "^1.12.1",
+    "minimist": "1.2.3",
     "popper.js": "^1.14.6",
     "stimulus": "^1.1.0",
     "topojson": "^3.0.2"
