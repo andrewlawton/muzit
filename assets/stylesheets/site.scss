@@ -496,12 +496,20 @@ table.torrents .table-scroll {
   }
 }
 
-
 .container-background {
   background-color: #fff;
   border-radius: 4px;
   margin-bottom: 1rem;
   padding: 1rem;
+}
+
+// header with logo to be used for layout types without nav e.g., trial
+
+header {
+  &.logo {
+    background-color: rgba(16, 14, 23, 0.9);
+    padding: .5rem 1rem;
+  }
 }
 
 // boostrap overrides
