@@ -155,8 +155,11 @@ table.users td span {
   table {
     background: #fff;
     border: 1px solid #ddd;
-    a:last-child {
-      margin-left: .5rem;
+    a {
+      margin-right: .5rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
