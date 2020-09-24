@@ -28,7 +28,9 @@
     "sass-loader": "^7.1.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "serialize-javascript": "^3.1.0",
+    "yargs-parser": "^13.1.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
