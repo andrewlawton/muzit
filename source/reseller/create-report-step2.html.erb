@@ -1,0 +1,45 @@
+---
+title: Create Report - Muzit
+layout: reseller
+bodyClass: reseller
+---
+<h1 class="text-center my-4">
+  Create IP Address Report
+</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="form-container">
+        <h5>
+          Select Artist Lists
+        </h5>
+        <p>
+          Select the artist lists to use in your report. This will limit the results to just the artists included in your lists.
+        </p>
+        <form action="create-report-step3.html" method="get">
+          <fieldset class="form-group check_boxes optional ip_address_report_candidate_artist_lists form-group-valid">
+            <legend class="col-form-label pt-0"></legend><input type="hidden" name="ip_address_report_candidate[artist_lists][]" value="">
+            <div class="form-check">
+              <input class="form-check-input check_boxes optional" type="checkbox" value="2" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_2">
+              <label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_2">Kula Campaign 1</label>
+            </div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="14" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_14"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_14">Kula Campaign 2</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="22" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_22"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_22">Kula Campaign 3</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="16" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_16"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_16">Kula Campaign 4</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="17" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_17"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_17">Kula Campaign 5</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="15" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_15"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_15">Kula Campaign 6</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="11" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_11"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_11">Kula Campaign 7</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="13" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_13"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_13">Kula Campaign 8</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="3" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_3"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_3">Kula Campaign 9</label></div>
+            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="21" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_21"><label class="collection_check_boxes" for="ip_address_report_candidate_artist_lists_21">Kula Campaign 10</label></div>
+          </fieldset>
+          <div class="action steps text-right">
+            <%= link_to "Cancel", "dashboard.html" %>
+            <%= link_to "Back", "create-report.html", class: 'btn btn-outline-primary'  %>
+            <%= submit_tag "Next", class: 'btn btn-primary' %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

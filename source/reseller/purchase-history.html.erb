@@ -1,0 +1,91 @@
+---
+title: Reseller Purchase History - Muzit
+layout: reseller
+bodyClass: lists reseller dashboard
+---
+<div class="container">
+  <h1 class="text-center text-md-left my-4">
+    Purchase History
+  </h1>
+  <div class="container-background border credit-details">
+    <div class="row">
+      <div class="col-md-3 detail">
+        <h4>IP Credits Remaining</h4>
+        <div class="text">
+          5,000
+        </div>
+      </div>
+      <div class="col-md-3 detail">
+        <h4>Ip Credits Puchased</h4>
+        <div class="text">
+          100,000
+        </div>
+      </div>
+      <div class="col-md-3 detail">
+        <h4>Total Purchases</h4>
+        <div class="text">
+          $12,000.00
+        </div>
+      </div>
+      <div class="col-md-3 detail">
+        <h4>Latest Purchase</h4>
+        <div class="text">
+          $2,900.00
+          <span class="date">09/23/20</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table border">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th class="text-right">IP Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          2020-09-05
+        </td>
+        <td class="text-truncate">
+          Purchased: 75,000 IP Credits - $2,900.00
+        </td>
+        <td class="text-right text-nowrap">
+          5,000
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2020-09-18
+        </td>
+        <td class="text-truncate">
+          Report: Stoners - Pacific Northwest
+        </td>
+        <td class="text-nowrap text-right text-truncate text-danger">
+          (39,431)
+        </td>
+      </tr>
+      <tr>
+        <td class="text-truncate">
+          2020-09-18
+        </td>
+        <td class="text-nowrap">
+          Report: Stoners - New Hampshire
+        </td>
+        <td class="text-nowrap text-right text-truncate text-danger">
+          (9,172)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+    <div class="action text-center">
+      <%= link_to "Buy Credits", "credit-blocks.html", :class => "btn btn-primary btn-md" %>
+      <%= link_to "Back", "dashboard.html" %>
+    </div>
+    <!-- // end column -->
+
+</div>
+<!-- // end container-fluid -->

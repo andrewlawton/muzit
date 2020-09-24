@@ -1,0 +1,62 @@
+---
+title: Reseller Dashboard - Muzit
+layout: reseller
+bodyClass: reseller
+---
+
+<div class="container-fluid">
+  <h1 class="my-4 text-center text-md-left">
+    Welcome to Muzit
+  </h1>
+  <p>
+    To get started simply add Artist Lists or create a IP Address Report. You will need to buy IP address credits and will be prompted if you do not have enough credits to download an IP Address Report. You can always buy credits at any time.
+  </p>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Add Artist Lists
+          </h5>
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body">
+          <p>
+            Search our database of over 250 million households that includes software programs, movies, music, video games, TV shows and other digital media and them to a list.
+          </p>
+          <div class="action text-center">
+            <%= link_to 'Add Artist Lists', 'artist-lists-add.html', class: 'btn btn-primary btn-md' %>
+          </div>
+          <!-- // end action -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            IP Address Report
+          </h5>
+        </div>
+        <!-- // end card-header -->
+        <div class="card-body">
+          <p>
+            Create a report of IP address' by selecting the artists lists you would like to use in your report. Once created you can download a report containing a list of IP addresses.
+          </p>
+          <div class="action text-center">
+            <%= link_to 'Create Report', 'create-report.html', class: 'btn btn-primary btn-md' %>
+          </div>
+          <!-- // end action -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+</div>
+<!-- // end container-fluid -->

@@ -1,0 +1,81 @@
+---
+title: Create Report - Muzit
+layout: reseller
+bodyClass: reseller
+---
+<h1 class="text-center my-4">
+  Create IP Address Report
+</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="form-container review">
+        <h5>
+          Review
+        </h5>
+        <p>
+          Review your selections before submitting your report.
+        </p>
+        <form action="dashboard-alert-report.html" method="get">
+          <div class="my-3 p-3 bg-light rounded-sm">
+            <div class="row">
+              <div class="col-6">
+                <h6>Report Name </h6>
+              </div>
+              <div class="col-6 text-right">
+                <a href="/organization/ip_address_reports/38/build/add_name">Update</a>
+              </div>
+            </div>
+            <ul>
+              <li>Kula</li>
+            </ul>
+          </div>
+          <div class="my-3 p-3 bg-light rounded-sm">
+            <div class="row">
+              <div class="col-6">
+                <h6>Artist List </h6>
+              </div>
+              <div class="col-6 text-right">
+                <a href="/organization/ip_address_reports/38/build/add_name">Update</a>
+              </div>
+            </div>
+            <ul>
+              <li>Kula List</li>
+            </ul>
+          </div>
+          <div class="my-3 p-3 bg-light rounded-sm">
+            <div class="row">
+              <div class="col-6">
+                <h6>Countries</h6>
+              </div>
+              <div class="col-6 text-right">
+                <a href="/organization/ip_address_reports/38/build/add_name">Update</a>
+              </div>
+            </div>
+            <ul>
+              <li>United States</li>
+            </ul>
+          </div>
+          <div class="my-3 p-3 bg-light rounded-sm">
+            <div class="row">
+              <div class="col-6">
+                <h6>Regions for United States</h6>
+              </div>
+              <div class="col-6 text-right">
+                <a href="/organization/ip_address_reports/38/build/add_name">Update</a>
+              </div>
+            </div>
+            <ul>
+              <li>Massachusetts</li>
+            </ul>
+          </div>
+          <div class="action steps text-right">
+            <%= link_to "Cancel", "dashboard.html" %>
+            <%= link_to "Back", "create-report-step4.html", class: 'btn btn-outline-primary'  %>
+            <%= submit_tag "Create Report", class: 'btn btn-primary' %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

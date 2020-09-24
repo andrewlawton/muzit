@@ -1,0 +1,126 @@
+---
+title: Add Artist Lists - Muzit
+layout: reseller
+bodyClass: lists
+---
+<div class="container-fluid">
+  <h1 class="text-center text-sm-left my-4">
+    Add Artist Lists
+  </h1>
+  <div class="form-container">
+    <form action="" method="" class="form needs-validation" novalidate="">
+      <fieldset>
+        <div class="form-group">
+          <label for="list-name" class="required">Name</label>
+          <input type="text" class="form-control" id="list-name" placeholder="Enter list name" required="">
+          <div class="invalid-feedback">
+            Please provide a list name.
+          </div>
+        </div>
+        <!-- // end form-group -->
+        <div class="form-group">
+          <label for="artist-name">Artists</label>
+          <div class="search" id="nav-search">
+            <div class="search" data-controller="search">
+              <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+              <div data-target="search.results">
+                <ul class="search-results scroll hide-search-results" data-controller="search-results" data-target="search.resultsList">
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Phish<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Philly<span>Female Dancemania artist</span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Philth<span>Drum and Bass/Dubstep</span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Phil G<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Phi Phi<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Phixx<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Phil<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">So Phistry<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Philo<span></span></a>
+                  </li>
+                  <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                    <a href="#">Phil<span>Philipp Müller</span></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- // end search results -->
+            </div>
+            <!-- // end input-group -->
+          </div>
+          <!-- // end search -->
+        </div>
+        <!-- // end form-group -->
+      </fieldset>
+    </form>
+  </div>
+  <!-- // end form-container -->
+  <table class="table" id="list" style="display: none">
+    <thead>
+      <tr">
+        <th>Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-truncate">
+          Marvel Entertainment
+        </td>
+        <td class="action text-right text-nowrap">
+          <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table" id="list-none">
+    <thead>
+      <tr">
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="list-none">
+        <td>
+          No list items have been added
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col">
+      <div class="action">
+        <button type="button" class="btn btn-primary" onclick="javascript:window.location = '../reseller/dashboard.html';">Save</button>
+        <div class="text-center d-md-inline">
+          <%= link_to "Cancel", "../../reseller/artist-lists.html" %>
+        </div>
+      </div>
+      <!-- // end form-group -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+</div>
+<!-- // end container-fluid -->
+<script>
+  function removeListItem1() {
+    if (confirm("Are you sure you want to remove this item from the list?")) {
+      document.getElementById("list").deleteRow(1);
+    } else {
+
+    }
+  }
+</script>

@@ -1,0 +1,135 @@
+---
+title: Artist Lists - Muzit
+layout: reseller
+bodyClass: lists
+---
+<div class="container-fluid">
+  <h1 class="text-center text-sm-left my-4">
+    Artist Lists
+  </h1>
+  <div class="row my-4">
+    <div class="col text-center text-md-right">
+      <%= link_to "Add List", "../reseller/artist-lists-add.html", :class => "btn btn-primary btn-md" %>
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-truncate">
+          14All
+        </td>
+        <td class="action text-right text-nowrap">
+          <%= link_to 'Edit', '../reseller/artist-lists-edit.html' %>
+          <%= link_to 'Delete', '#', data: {confirm: 'Are you sure?'} %>
+          <%= link_to 'Generate', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-truncate">
+          Kula
+        </td>
+        <td class="action text-right text-nowrap">
+          <%= link_to 'Edit', '../reseller/artist-lists-edit.html' %>
+          <%= link_to 'Delete', '#', data: {confirm: 'Are you sure?'} %>
+          <%= link_to 'Generate', '#', data: {target: '#generate-list', toggle: 'modal'} %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav class="pagination pagination-sm justify-content-center" aria-label="pageNavigation">
+    <ul class="pagination">
+      <li class="prev disabled page-item">
+        <a class="page-link" href="#"><i class="fas fa-angle-left" aria-hidden="true"></i> Previous</a>
+      </li>
+      <li class="active page-item">
+        <a class="page-link" href="/artists/191/torrents?page=1">1</a>
+      </li>
+      <li class="page-item">
+        <a rel="next" class="page-link" href="/artists/191/torrents?page=2">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=3">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=4">4</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=5">5</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=6">6</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=7">7</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=8">8</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=9">9</a></li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">…</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=41">41</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/artists/191/torrents?page=42">42</a>
+      </li>
+      <li class="next page-item">
+        <a class="page-link" rel="next" href="/artists/191/torrents?page=2">Next <i class="fas fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    <!-- // end pagination -->
+  </nav>
+  <!-- // end nav -->
+</div>
+<!-- // end container-fluid -->
+<div class="modal fade" id="generate-list" tabindex="-1" role="dialog" aria-labelledby="generateList" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">List is being generated...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        An email will be sent to andrew@muzit.com with the generated list in appoximately one hour.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // end modal generate-list -->
+<div class="modal fade" id="purchase-credits" tabindex="-1" role="dialog" aria-labelledby="purchaseCredits" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Credit limit exceeded</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You do not have the number of credits needed to generate this list. You need to buy more credits to continue. Click the Buy Credits button and select an IP block based on how many IP's you need.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+        <%= link_to 'Buy Credits', '../reseller/credit-blocks.html', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // end modal generate-list -->

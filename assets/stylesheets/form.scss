@@ -161,10 +161,23 @@ form label.required:after {
       margin: 0;
       width: auto;
     }
+    & + a,
     & + div a,
-    & + label  {
+    & + label {
       @include media-breakpoint-up(md) {
-        margin-left: 1rem;
+        margin-left: .75rem;
+      }
+    }
+  }
+  &.steps {
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+    a, input {
+      width: auto;
+      display: inline-block;
+      margin: 0;
+      & + .btn {
+        margin-left: .75rem;
       }
     }
   }
