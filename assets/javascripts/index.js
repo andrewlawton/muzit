@@ -202,11 +202,6 @@ $("#map-torrents").click(function () {
   $('input:checkbox').not(this).prop('checked', this.checked);
 });
 
-$(window).on('load',function(){
-  $('#modal-credit-card-declined').modal('show');
-});
-
-
 $(function() {
     $('#categories').change(function(){
         $('.category').fadeOut('fast');
