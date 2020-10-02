@@ -1,0 +1,29 @@
+---
+title: Account Deactivated - Muzit
+layout: sign-up
+bodyClass: sign-in
+---
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <header>
+        <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
+      </header>
+      <div class="card">
+        <h5 class="card-header">Account deactivated</h5>
+        <div class="card-body">
+          <p class="card-text">
+            The credit card you have on file has failed and your account has been deactivated. Please contact us to have your account reactivated.
+          </p>
+          <div class="action text-center">
+            <%= link_to 'Contact Muzit', '../contact-us/', class: 'btn btn-primary btn-sm' %>
+          </div>
+        </div>
+      </div>
+      <!-- // end card -->
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+</div>
+<!-- // end container-fluid -->
