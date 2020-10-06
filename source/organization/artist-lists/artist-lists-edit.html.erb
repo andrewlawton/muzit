@@ -1,18 +1,17 @@
 ---
-title: Add Artist Lists - Muzit
-layout: reseller
+title: Add List - Muzit
 bodyClass: lists
 ---
 <div class="container-fluid">
   <h1 class="text-center text-sm-left my-4">
-    Add Artist Lists
+    Edit Artist List
   </h1>
   <div class="form-container">
     <form action="" method="" class="form needs-validation" novalidate="">
       <fieldset>
         <div class="form-group">
-          <label for="list-name" class="required">Name</label>
-          <input type="text" class="form-control" id="list-name" placeholder="Enter list name" required="">
+          <label for="list-name">List Name</label>
+          <input type="text" class="form-control" id="list-name" placeholder="Enter list name" required="" value="">
           <div class="invalid-feedback">
             Please provide a list name.
           </div>
@@ -68,9 +67,9 @@ bodyClass: lists
     </form>
   </div>
   <!-- // end form-container -->
-  <table class="table" id="list" style="display: none">
+  <table class="table" id="list">
     <thead>
-      <tr">
+      <tr>
         <th>Name</th>
         <th></th>
       </tr>
@@ -84,18 +83,12 @@ bodyClass: lists
           <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
         </td>
       </tr>
-    </tbody>
-  </table>
-  <table class="table" id="list-none">
-    <thead>
-      <tr">
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr id="list-none">
-        <td>
-          No list items have been added
+      <tr>
+        <td class="text-truncate">
+          Game of Thrones
+        </td>
+        <td class="action text-right text-nowrap">
+          <%= link_to "Remove", "#", 'onclick' => 'removeListItem2()' %>
         </td>
       </tr>
     </tbody>
@@ -103,9 +96,9 @@ bodyClass: lists
   <div class="row">
     <div class="col">
       <div class="action">
-        <button type="button" class="btn btn-primary" onclick="javascript:window.location = '../reseller/dashboard.html';">Save</button>
+        <button type="button" class="btn btn-primary" onclick="javascript:window.location = '../../organization/artist-lists/artist-lists-notification.html';">Save</button>
         <div class="text-center d-md-inline">
-          <%= link_to "Cancel", "../../reseller/artist-lists.html" %>
+          <%= link_to "Cancel", "../../organization/artist-lists/artist-lists.html" %>
         </div>
       </div>
       <!-- // end form-group -->
@@ -119,6 +112,13 @@ bodyClass: lists
   function removeListItem1() {
     if (confirm("Are you sure you want to remove this item from the list?")) {
       document.getElementById("list").deleteRow(1);
+    } else {
+
+    }
+  }
+  function removeListItem2() {
+    if (confirm("Are you sure you want to remove this item from the list?")) {
+      document.getElementById("list").deleteRow(2);
     } else {
 
     }

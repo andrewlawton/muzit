@@ -1,6 +1,5 @@
 ---
 title: Artist Lists - Muzit
-layout: reseller
 bodyClass: lists
 ---
 <div class="container-fluid">
@@ -9,7 +8,7 @@ bodyClass: lists
   </h1>
   <div class="row my-4">
     <div class="col text-center text-md-right">
-      <%= link_to "Add List", "../reseller/artist-lists-add.html", :class => "btn btn-primary btn-md" %>
+      <%= link_to "Add List", "../../organization/artist-lists/artist-lists-add.html", :class => "btn btn-primary btn-md" %>
     </div>
     <!-- // end column -->
   </div>
@@ -27,9 +26,8 @@ bodyClass: lists
           14All
         </td>
         <td class="action text-right text-nowrap">
-          <%= link_to 'Edit', '../reseller/artist-lists-edit.html' %>
+          <%= link_to 'Edit', '../../organization/artist-lists/artist-lists-edit.html' %>
           <%= link_to 'Delete', '#', data: {confirm: 'Are you sure?'} %>
-          <%= link_to 'Generate', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
         </td>
       </tr>
       <tr>
@@ -37,9 +35,8 @@ bodyClass: lists
           Kula
         </td>
         <td class="action text-right text-nowrap">
-          <%= link_to 'Edit', '../reseller/artist-lists-edit.html' %>
+          <%= link_to 'Edit', '../../organization/artist-lists/artist-lists-edit.html' %>
           <%= link_to 'Delete', '#', data: {confirm: 'Are you sure?'} %>
-          <%= link_to 'Generate', '#', data: {target: '#generate-list', toggle: 'modal'} %>
         </td>
       </tr>
     </tbody>
@@ -94,25 +91,6 @@ bodyClass: lists
   <!-- // end nav -->
 </div>
 <!-- // end container-fluid -->
-<div class="modal fade" id="generate-list" tabindex="-1" role="dialog" aria-labelledby="generateList" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">List is being generated...</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        An email will be sent to andrew@muzit.com with the generated list in appoximately one hour.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- // end modal generate-list -->
 <div class="modal fade" id="purchase-credits" tabindex="-1" role="dialog" aria-labelledby="purchaseCredits" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
