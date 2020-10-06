@@ -1,0 +1,1260 @@
+---
+title: Dashboard - Muzit
+bodyClass: artists dashboard
+---
+<div class="container-fluid">
+  <h1 class="text-center text-md-left my-4">
+    Muzit Dashboard
+  </h1>
+  <div class="row my-5 credits-remaining">
+    <div class="col-md-6 text-center text-md-left">
+      <span class="badge badge-pill badge-dark">100,000</span> IP Address Credits Remaining
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <%= link_to "Purchase History", "../organization/purchase-history.html", class: 'mr-2' %>
+      <%= link_to "Buy Credits", "../buy-credits/credit-blocks.html", :class => "btn btn-primary btn-md" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header d-flex">
+          Artist Lists
+          <%= link_to "View All", "../organization/artist-lists/artist-lists.html", class: "ml-auto" %>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Auto Enthusiasts', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Country Artists', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'CBD', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Gamers', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'New Mothers', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Rap Artists', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Reggae Artists', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Pop Music', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Home Improvement', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Travel', '../organization/artist-lists/artist-lists-edit.html' %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-center">
+            <%= link_to "Add Artist Lists", "../organization/artist-lists/artist-lists-add.html", :class => "btn btn-outline-primary btn-sm" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // end column -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header d-flex">
+          IP Address Reports
+          <%= link_to "View All", "../organization/ip-address-reports/ip-address-reports.html", class: "ml-auto" %>
+        </div>
+        <div class="card-body">
+          <table class="table ip-address-reports">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th class="text-truncate text-right">IP Addresses</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Auto Enthusiasts Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">47,291</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Country Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">850,697</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'CBD Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">54,047</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Gamers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">93,322</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'New Mothers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">38,923</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Rap Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">198,504</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Reggae Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">54,047</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Pop Music Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">71,021</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Home Improvement Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">46,291</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-truncate">
+                  <%= link_to 'Travel Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+                </td>
+                <td class="text-right">73,191</td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-center">
+            <%= link_to "Create Report", "../organization/ip-address-reports/create-report.html", :class => "btn btn-outline-primary btn-sm" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+</div>
+<!-- // end container-fluid -->
+<div class="container-fluid">
+  <h2 class="my-4 text-center text-md-left">Following</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <form>
+        <div class="form-group">
+          <select class="custom-select categories" id="categories">
+            <option value="allFollowed" selected>All Followed</option>
+            <option value="audioBooks">Audio Books</option>
+            <option value="comicBooks">Comic Books</option>
+            <option value="games">Games</option>
+            <option value="movies">Movies</option>
+            <option value="music">Music</option>
+            <option value="pornography">Pornography</option>
+            <option value="software">Software</option>
+            <option value="tv">TV</option>
+            <option value="videos">Videos</option>
+          </select>
+        </div>
+        <!-- // end form-group -->
+      </form>
+    </div>
+    <!-- // end column -->
+  </div>
+  <!-- // end row -->
+  <div class="category" id="allFollowed">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="AC/DC" href="/artists/80">
+            <img class="img-fluid" alt="AC/DC" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0080.jpg">
+          </a>
+          <span class="artist-name">AC/DC</span>
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Aerosmith" href="/artists/112">
+            <img class="img-fluid" alt="Aerosmith" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/877/MI0003877705.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Aerosmith</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ballers" href="/artists/231944">
+            <img class="img-fluid" alt="Ballers" src="https://muz-static-content.s3.amazonaws.com/images/ballers.jpg">
+          </a> <span class="artist-name">Ballers</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Beatles" href="/artists/56">
+            <img class="img-fluid" alt="The Beatles" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0056.jpg">
+          </a> <span class="artist-name">The Beatles</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Beauty and the Beast" href="/artists/231852">
+            <img class="img-fluid" alt="Beauty and the Beast" src="https://muz-static-content.s3.amazonaws.com/images/beauty-and-the-beast.jpg">
+          </a> <span class="artist-name">Beauty and the Beast</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Big Little Lies" href="/artists/231866">
+            <img class="img-fluid" alt="Big Little Lies" src="https://muz-static-content.s3.amazonaws.com/images/big_little_lies.jpg">
+          </a> <span class="artist-name">Big Little Lies</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Billions" href="/artists/231951">
+            <img class="img-fluid" alt="Billions" src="https://muz-static-content.s3.amazonaws.com/images/billions.jpg">
+          </a> <span class="artist-name">Billions</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Black Sabbath" href="/artists/287">
+            <img class="img-fluid" alt="Black Sabbath" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0287.jpg">
+          </a> <span class="artist-name">Black Sabbath</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="David Bowie" href="/artists/191">
+            <img class="img-fluid" alt="David Bowie" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0191.jpg">
+          </a> <span class="artist-name">David Bowie</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Call of Duty" href="/artists/231844">
+            <img class="img-fluid" alt="Call of Duty" src="https://muz-static-content.s3.amazonaws.com/images/call-of-duty.jpg">
+          </a> <span class="artist-name">Call of Duty</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Chernobyl" href="/artists/231857">
+            <img class="img-fluid" alt="Chernobyl" src="https://muz-static-content.s3.amazonaws.com/images/chernobyl.jpg">
+          </a> <span class="artist-name">Chernobyl</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Clash" href="/artists/874">
+            <img class="img-fluid" alt="The Clash" src="http://cps-static.rovicorp.com/3/JPG_500/MI0001/406/MI0001406896.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">The Clash</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Coldplay" href="/artists/175">
+            <img class="img-fluid" alt="Coldplay" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/991/MI0003991728.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Coldplay</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Daft Punk" href="/artists/1693">
+            <img class="img-fluid" alt="Daft Punk" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/572/MI0003572918.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Daft Punk</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Daily Show" href="/artists/231868">
+            <img class="img-fluid" alt="The Daily Show" src="https://muz-static-content.s3.amazonaws.com/images/the_daily_show.png">
+          </a> <span class="artist-name">The Daily Show</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DC Entertainment" href="/artists/213132">
+            <img class="img-fluid" alt="DC Entertainment" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/dc.jpg">
+          </a> <span class="artist-name">DC Entertainment</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="deadmau5" href="/artists/739">
+            <img class="img-fluid" alt="deadmau5" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0739.jpg">
+          </a> <span class="artist-name">deadmau5</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Depeche Mode" href="/artists/358">
+            <img class="img-fluid" alt="Depeche Mode" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0358.jpg">
+          </a> <span class="artist-name">Depeche Mode</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DNCE" href="/artists/551">
+            <img class="img-fluid" alt="DNCE" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/921/MI0003921943.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">DNCE</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Doctor Who" href="/artists/231952">
+            <img class="img-fluid" alt="Doctor Who" src="https://muz-static-content.s3.amazonaws.com/images/doctor_who.jpg">
+          </a> <span class="artist-name">Doctor Who</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Drake" href="/artists/55">
+            <img class="img-fluid" alt="Drake" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0055.jpg">
+          </a> <span class="artist-name">Drake</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Dr. Dre" href="/artists/185">
+            <img class="img-fluid" alt="Dr. Dre" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0185.jpg">
+          </a> <span class="artist-name">Dr. Dre</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Fear the Walking Dead" href="/artists/231881">
+            <img class="img-fluid" alt="Fear the Walking Dead" src="https://muz-static-content.s3.amazonaws.com/images/fear_the_walking_dead.jpg">
+          </a> <span class="artist-name">Fear the Walking Dead</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Game of Thrones" href="/artists/231821">
+            <img class="img-fluid" alt="Game of Thrones" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/game_of_thrones.jpg">
+          </a> <span class="artist-name">Game of Thrones</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ariana Grande" href="/artists/471">
+            <img class="img-fluid" alt="Ariana Grande" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0471.jpg">
+          </a> <span class="artist-name">Ariana Grande</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Grand Theft Auto" href="/artists/231845">
+            <img class="img-fluid" alt="Grand Theft Auto" src="https://muz-static-content.s3.amazonaws.com/images/gta.png">
+          </a> <span class="artist-name">Grand Theft Auto</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="David Guetta" href="/artists/694">
+            <img class="img-fluid" alt="David Guetta" src="http://cps-static.rovicorp.com/3/JPG_500/MI0004/075/MI0004075140.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">David Guetta</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Calvin Harris" href="/artists/589">
+            <img class="img-fluid" alt="Calvin Harris" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0589.jpg">
+          </a> <span class="artist-name">Calvin Harris</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Harry Potter" href="/artists/231853">
+            <img class="img-fluid" alt="Harry Potter" src="https://muz-static-content.s3.amazonaws.com/images/harry-potter.jpg">
+          </a> <span class="artist-name">Harry Potter</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Homeland" href="/artists/231955">
+            <img class="img-fluid" alt="Homeland" src="https://muz-static-content.s3.amazonaws.com/images/homeland.jpg">
+          </a> <span class="artist-name">Homeland</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Imagine Dragons" href="/artists/479">
+            <img class="img-fluid" alt="Imagine Dragons" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/323/MI0003323429.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Imagine Dragons</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Incredibles" href="/artists/231855">
+            <img class="img-fluid" alt="The Incredibles" src="https://muz-static-content.s3.amazonaws.com/images/incredibles.jpg">
+          </a> <span class="artist-name">The Incredibles</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="John Wick" href="/artists/231840">
+            <img class="img-fluid" alt="John Wick" src="https://muz-static-content.s3.amazonaws.com/images/john-wick.jpg">
+          </a> <span class="artist-name">John Wick</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Jonas Brothers" href="/artists/1001">
+            <img class="img-fluid" alt="Jonas Brothers" src="http://cps-static.rovicorp.com/3/JPG_500/MI0001/364/MI0001364535.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Jonas Brothers</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Nick Jonas" href="/artists/476">
+            <img class="img-fluid" alt="Nick Jonas" src="http://cps-static.rovicorp.com/3/JPG_500/MI0004/039/MI0004039937.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Nick Jonas</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Toby Keith" href="/artists/35">
+            <img class="img-fluid" alt="Toby Keith" src="http://cps-static.rovicorp.com/3/JPG_500/MI0004/008/MI0004008733.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Toby Keith</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Last Week Tonight with John Oliver" href="/artists/231867">
+            <img class="img-fluid" alt="Last Week Tonight with John Oliver" src="https://muz-static-content.s3.amazonaws.com/images/last_week_tonight.jpg">
+          </a> <span class="artist-name">Last Week Tonight with John Oliver</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Led Zeppelin" href="/artists/171">
+            <img class="img-fluid" alt="Led Zeppelin" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/680/MI0003680454.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Led Zeppelin</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Lil Wayne" href="/artists/170">
+            <img class="img-fluid" alt="Lil Wayne" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0170.jpg">
+          </a> <span class="artist-name">Lil Wayne</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Maroon 5" href="/artists/398">
+            <img class="img-fluid" alt="Maroon 5" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/351/MI0003351247.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Maroon 5</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Bruno Mars" href="/artists/3">
+            <img class="img-fluid" alt="Bruno Mars" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0003.jpg">
+          </a> <span class="artist-name">Bruno Mars</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Marvel Entertainment" href="/artists/209436">
+            <img class="img-fluid" alt="Marvel Entertainment" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/marvel.jpg">
+          </a> <span class="artist-name">Marvel Entertainment</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Phish" href="../artist-details/index.html">
+            <img class="img-fluid" alt="Phish" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Phish</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Pirates of the Caribbean" href="/artists/231850">
+            <img class="img-fluid" alt="Pirates of the Caribbean" src="https://muz-static-content.s3.amazonaws.com/images/pirates.jpg">
+          </a> <span class="artist-name">Pirates of the Caribbean</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Queen" href="/artists/225">
+            <img class="img-fluid" alt="Queen" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/627/MI0003627193.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Queen</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ray Donovan" href="/artists/231954">
+            <img class="img-fluid" alt="Ray Donovan" src="https://muz-static-content.s3.amazonaws.com/images/ray_donovan.jpg">
+          </a> <span class="artist-name">Ray Donovan</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Rihanna" href="/artists/805">
+            <img class="img-fluid" alt="Rihanna" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/463/MI0003463792.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Rihanna</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Riverdale" href="/artists/231938">
+            <img class="img-fluid" alt="Riverdale" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/riverdale.png">
+          </a> <span class="artist-name">Riverdale</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ed Sheeran" href="/artists/28">
+            <img class="img-fluid" alt="Ed Sheeran" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0028.jpg">
+          </a> <span class="artist-name">Ed Sheeran</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Sia" href="/artists/947">
+            <img class="img-fluid" alt="Sia" src="https://muz-static-content.s3.amazonaws.com/images/sia.jpg">
+          </a> <span class="artist-name">Sia</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Silicon Valley" href="/artists/231947">
+            <img class="img-fluid" alt="Silicon Valley" src="https://muz-static-content.s3.amazonaws.com/images/silicon_valley.jpg">
+          </a> <span class="artist-name">Silicon Valley</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Sims" href="/artists/231883">
+            <img class="img-fluid" alt="The Sims" src="https://muz-static-content.s3.amazonaws.com/images/the_sims.png">
+          </a> <span class="artist-name">The Sims</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Skrillex" href="/artists/411">
+            <img class="img-fluid" alt="Skrillex" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0411.jpg">
+          </a> <span class="artist-name">Skrillex</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DJ Snake" href="/artists/4030">
+            <img class="img-fluid" alt="DJ Snake" src="https://muz-static-content.s3.amazonaws.com/images/dj_snake.jpg">
+          </a> <span class="artist-name">DJ Snake</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Star Wars" href="/artists/231848">
+            <img class="img-fluid" alt="Star Wars" src="https://muz-static-content.s3.amazonaws.com/images/star-wars.jpg">
+          </a> <span class="artist-name">Star Wars</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Steely Dan" href="/artists/201">
+            <img class="img-fluid" alt="Steely Dan" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0201.jpg">
+          </a> <span class="artist-name">Steely Dan</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Taylor Swift" href="/artists/102">
+            <img class="img-fluid" alt="Taylor Swift" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/953/MI0003953305.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Taylor Swift</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="’Til Tuesday" href="/artists/21863">
+            <img class="img-fluid" alt="’Til Tuesday" src="https://muz-static-content.s3.amazonaws.com/images/til-tuesday.jpg">
+          </a> <span class="artist-name">’Til Tuesday</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="UFC" href="/artists/206625">
+            <img class="img-fluid" alt="UFC" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/ufc.jpg">
+          </a> <span class="artist-name">UFC</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Vikings" href="/artists/231886">
+            <img class="img-fluid" alt="Vikings" src="https://muz-static-content.s3.amazonaws.com/images/vikings.jpg">
+          </a> <span class="artist-name">Vikings</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Walking Dead" href="/artists/231880">
+            <img class="img-fluid" alt="The Walking Dead" src="https://muz-static-content.s3.amazonaws.com/images/walking_dead.jpg">
+          </a> <span class="artist-name">The Walking Dead</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Roger Waters" href="/artists/2544">
+            <img class="img-fluid" alt="Roger Waters" src="https://muz-static-content.s3.amazonaws.com/images/roger-waters.jpg">
+          </a> <span class="artist-name">Roger Waters</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Weeknd" href="/artists/183">
+            <img class="img-fluid" alt="The Weeknd" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0183.jpg">
+          </a> <span class="artist-name">The Weeknd</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Westworld" href="/artists/231873">
+            <img class="img-fluid" alt="Westworld" src="https://muz-static-content.s3.amazonaws.com/images/westworld.jpg">
+          </a> <span class="artist-name">Westworld</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Who" href="/artists/235">
+            <img class="img-fluid" alt="The Who" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0235.jpg">
+          </a> <span class="artist-name">The Who</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="WWE" href="/artists/231784">
+            <img class="img-fluid" alt="WWE" src="/assets/no-image-a3b8b419e54872e13327d8f10fa0cc40b841e69ce328c7344074787fa7c0d170.png">
+          </a> <span class="artist-name">WWE</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Zona" href="/artists/231858">
+            <img class="img-fluid" alt="Zona" src="/assets/no-image-a3b8b419e54872e13327d8f10fa0cc40b841e69ce328c7344074787fa7c0d170.png">
+          </a> <span class="artist-name">Zona</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="audioBooks" style="display: none;">
+    <p>
+      This category is not being followed.
+    </p>
+  </div>
+  <!-- // end category -->
+  <div class="category" id="games" style="display: none;">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Call of Duty" href="/artists/231844">
+            <img class="img-fluid" alt="Call of Duty" src="https://muz-static-content.s3.amazonaws.com/images/call-of-duty.jpg">
+          </a> <span class="artist-name">Call of Duty</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Grand Theft Auto" href="/artists/231845">
+            <img class="img-fluid" alt="Grand Theft Auto" src="https://muz-static-content.s3.amazonaws.com/images/gta.png">
+          </a> <span class="artist-name">Grand Theft Auto</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="movies" style="display: none;">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Beauty and the Beast" href="/artists/231852">
+            <img class="img-fluid" alt="Beauty and the Beast" src="https://muz-static-content.s3.amazonaws.com/images/beauty-and-the-beast.jpg">
+          </a> <span class="artist-name">Beauty and the Beast</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Harry Potter" href="/artists/231853">
+            <img class="img-fluid" alt="Harry Potter" src="https://muz-static-content.s3.amazonaws.com/images/harry-potter.jpg">
+          </a> <span class="artist-name">Harry Potter</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Incredibles" href="/artists/231855">
+            <img class="img-fluid" alt="The Incredibles" src="https://muz-static-content.s3.amazonaws.com/images/incredibles.jpg">
+          </a> <span class="artist-name">The Incredibles</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Pirates of the Caribbean" href="/artists/231850">
+            <img class="img-fluid" alt="Pirates of the Caribbean" src="https://muz-static-content.s3.amazonaws.com/images/pirates.jpg">
+          </a> <span class="artist-name">Pirates of the Caribbean</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="music" style="display: none;">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="AC/DC" href="/artists/80">
+            <img class="img-fluid" alt="AC/DC" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0080.jpg">
+          </a> <span class="artist-name">AC/DC</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Aerosmith" href="/artists/112">
+            <img class="img-fluid" alt="Aerosmith" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/877/MI0003877705.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Aerosmith</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Beatles" href="/artists/56">
+            <img class="img-fluid" alt="The Beatles" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0056.jpg">
+          </a> <span class="artist-name">The Beatles</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Black Sabbath" href="/artists/287">
+            <img class="img-fluid" alt="Black Sabbath" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0287.jpg">
+          </a> <span class="artist-name">Black Sabbath</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="David Bowie" href="/artists/191">
+            <img class="img-fluid" alt="David Bowie" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0191.jpg">
+          </a> <span class="artist-name">David Bowie</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Clash" href="/artists/874">
+            <img class="img-fluid" alt="The Clash" src="http://cps-static.rovicorp.com/3/JPG_500/MI0001/406/MI0001406896.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">The Clash</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Coldplay" href="/artists/175">
+            <img class="img-fluid" alt="Coldplay" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/991/MI0003991728.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Coldplay</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Daft Punk" href="/artists/1693">
+            <img class="img-fluid" alt="Daft Punk" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/572/MI0003572918.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Daft Punk</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="deadmau5" href="/artists/739">
+            <img class="img-fluid" alt="deadmau5" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0739.jpg">
+          </a> <span class="artist-name">deadmau5</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Depeche Mode" href="/artists/358">
+            <img class="img-fluid" alt="Depeche Mode" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0358.jpg">
+          </a> <span class="artist-name">Depeche Mode</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DNCE" href="/artists/551">
+            <img class="img-fluid" alt="DNCE" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/921/MI0003921943.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">DNCE</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Drake" href="/artists/55">
+            <img class="img-fluid" alt="Drake" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0055.jpg">
+          </a> <span class="artist-name">Drake</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Dr. Dre" href="/artists/185">
+            <img class="img-fluid" alt="Dr. Dre" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0185.jpg">
+          </a> <span class="artist-name">Dr. Dre</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ariana Grande" href="/artists/471">
+            <img class="img-fluid" alt="Ariana Grande" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0471.jpg">
+          </a> <span class="artist-name">Ariana Grande</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="David Guetta" href="/artists/694">
+            <img class="img-fluid" alt="David Guetta" src="http://cps-static.rovicorp.com/3/JPG_500/MI0004/075/MI0004075140.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">David Guetta</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Calvin Harris" href="/artists/589">
+            <img class="img-fluid" alt="Calvin Harris" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0589.jpg">
+          </a> <span class="artist-name">Calvin Harris</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Imagine Dragons" href="/artists/479">
+            <img class="img-fluid" alt="Imagine Dragons" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/323/MI0003323429.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Imagine Dragons</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Jonas Brothers" href="/artists/1001">
+            <img class="img-fluid" alt="Jonas Brothers" src="http://cps-static.rovicorp.com/3/JPG_500/MI0001/364/MI0001364535.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Jonas Brothers</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Nick Jonas" href="/artists/476">
+            <img class="img-fluid" alt="Nick Jonas" src="http://cps-static.rovicorp.com/3/JPG_500/MI0004/039/MI0004039937.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Nick Jonas</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Toby Keith" href="/artists/35">
+            <img class="img-fluid" alt="Toby Keith" src="http://cps-static.rovicorp.com/3/JPG_500/MI0004/008/MI0004008733.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Toby Keith</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Led Zeppelin" href="/artists/171">
+            <img class="img-fluid" alt="Led Zeppelin" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/680/MI0003680454.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Led Zeppelin</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Lil Wayne" href="/artists/170">
+            <img class="img-fluid" alt="Lil Wayne" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0170.jpg">
+          </a> <span class="artist-name">Lil Wayne</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Maroon 5" href="/artists/398">
+            <img class="img-fluid" alt="Maroon 5" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/351/MI0003351247.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Maroon 5</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Bruno Mars" href="/artists/3">
+            <img class="img-fluid" alt="Bruno Mars" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0003.jpg">
+          </a> <span class="artist-name">Bruno Mars</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Phish" href="/artists/596">
+            <img class="img-fluid" alt="Phish" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/938/MI0003938466.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Phish</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Queen" href="/artists/225">
+            <img class="img-fluid" alt="Queen" src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/627/MI0003627193.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Queen</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ray Donovan" href="/artists/231954">
+            <img class="img-fluid" alt="Ray Donovan" src="https://muz-static-content.s3.amazonaws.com/images/ray_donovan.jpg">
+          </a> <span class="artist-name">Ray Donovan</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Rihanna" href="/artists/805">
+            <img class="img-fluid" alt="Rihanna" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/463/MI0003463792.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Rihanna</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ed Sheeran" href="/artists/28">
+            <img class="img-fluid" alt="Ed Sheeran" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0028.jpg">
+          </a> <span class="artist-name">Ed Sheeran</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Sia" href="/artists/947">
+            <img class="img-fluid" alt="Sia" src="https://muz-static-content.s3.amazonaws.com/images/sia.jpg">
+          </a> <span class="artist-name">Sia</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Sims" href="/artists/231883">
+            <img class="img-fluid" alt="The Sims" src="https://muz-static-content.s3.amazonaws.com/images/the_sims.png">
+          </a> <span class="artist-name">The Sims</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Skrillex" href="/artists/411">
+            <img class="img-fluid" alt="Skrillex" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0411.jpg">
+          </a> <span class="artist-name">Skrillex</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DJ Snake" href="/artists/4030">
+            <img class="img-fluid" alt="DJ Snake" src="https://muz-static-content.s3.amazonaws.com/images/dj_snake.jpg">
+          </a> <span class="artist-name">DJ Snake</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Steely Dan" href="/artists/201">
+            <img class="img-fluid" alt="Steely Dan" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0201.jpg">
+          </a> <span class="artist-name">Steely Dan</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Taylor Swift" href="/artists/102">
+            <img class="img-fluid" alt="Taylor Swift" src="http://cps-static.rovicorp.com/3/JPG_500/MI0003/953/MI0003953305.jpg?partner=allrovi.com">
+          </a> <span class="artist-name">Taylor Swift</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="’Til Tuesday" href="/artists/21863">
+            <img class="img-fluid" alt="’Til Tuesday" src="https://muz-static-content.s3.amazonaws.com/images/til-tuesday.jpg">
+          </a> <span class="artist-name">’Til Tuesday</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Roger Waters" href="/artists/2544">
+            <img class="img-fluid" alt="Roger Waters" src="https://muz-static-content.s3.amazonaws.com/images/roger-waters.jpg">
+          </a> <span class="artist-name">Roger Waters</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Weeknd" href="/artists/183">
+            <img class="img-fluid" alt="The Weeknd" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0183.jpg">
+          </a> <span class="artist-name">The Weeknd</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Who" href="/artists/235">
+            <img class="img-fluid" alt="The Who" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/mz_0235.jpg">
+          </a> <span class="artist-name">The Who</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="tv" style="display: none;">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ballers" href="/artists/231944">
+            <img class="img-fluid" alt="Ballers" src="https://muz-static-content.s3.amazonaws.com/images/ballers.jpg">
+          </a> <span class="artist-name">Ballers</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Big Little Lies" href="/artists/231866">
+            <img class="img-fluid" alt="Big Little Lies" src="https://muz-static-content.s3.amazonaws.com/images/big_little_lies.jpg">
+          </a> <span class="artist-name">Big Little Lies</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Billions" href="/artists/231951">
+            <img class="img-fluid" alt="Billions" src="https://muz-static-content.s3.amazonaws.com/images/billions.jpg">
+          </a> <span class="artist-name">Billions</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Chernobyl" href="/artists/231857">
+            <img class="img-fluid" alt="Chernobyl" src="https://muz-static-content.s3.amazonaws.com/images/chernobyl.jpg">
+          </a> <span class="artist-name">Chernobyl</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Daily Show" href="/artists/231868">
+            <img class="img-fluid" alt="The Daily Show" src="https://muz-static-content.s3.amazonaws.com/images/the_daily_show.png">
+          </a> <span class="artist-name">The Daily Show</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DC Entertainment" href="/artists/213132">
+            <img class="img-fluid" alt="DC Entertainment" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/dc.jpg">
+          </a> <span class="artist-name">DC Entertainment</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Doctor Who" href="/artists/231952">
+            <img class="img-fluid" alt="Doctor Who" src="https://muz-static-content.s3.amazonaws.com/images/doctor_who.jpg">
+          </a> <span class="artist-name">Doctor Who</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Fear the Walking Dead" href="/artists/231881">
+            <img class="img-fluid" alt="Fear the Walking Dead" src="https://muz-static-content.s3.amazonaws.com/images/fear_the_walking_dead.jpg">
+          </a> <span class="artist-name">Fear the Walking Dead</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Game of Thrones" href="/artists/231821">
+            <img class="img-fluid" alt="Game of Thrones" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/game_of_thrones.jpg">
+          </a> <span class="artist-name">Game of Thrones</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Homeland" href="/artists/231955">
+            <img class="img-fluid" alt="Homeland" src="https://muz-static-content.s3.amazonaws.com/images/homeland.jpg">
+          </a> <span class="artist-name">Homeland</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Last Week Tonight with John Oliver" href="/artists/231867">
+            <img class="img-fluid" alt="Last Week Tonight with John Oliver" src="https://muz-static-content.s3.amazonaws.com/images/last_week_tonight.jpg">
+          </a> <span class="artist-name">Last Week Tonight with John Oliver</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Ray Donovan" href="/artists/231954">
+            <img class="img-fluid" alt="Ray Donovan" src="https://muz-static-content.s3.amazonaws.com/images/ray_donovan.jpg">
+          </a> <span class="artist-name">Ray Donovan</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Riverdale" href="/artists/231938">
+            <img class="img-fluid" alt="Riverdale" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/riverdale.png">
+          </a> <span class="artist-name">Riverdale</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Silicon Valley" href="/artists/231947">
+            <img class="img-fluid" alt="Silicon Valley" src="https://muz-static-content.s3.amazonaws.com/images/silicon_valley.jpg">
+          </a> <span class="artist-name">Silicon Valley</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Sims" href="/artists/231883">
+            <img class="img-fluid" alt="The Sims" src="https://muz-static-content.s3.amazonaws.com/images/the_sims.png">
+          </a> <span class="artist-name">The Sims</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="UFC" href="/artists/206625">
+            <img class="img-fluid" alt="UFC" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/ufc.jpg">
+          </a> <span class="artist-name">UFC</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Vikings" href="/artists/231886">
+            <img class="img-fluid" alt="Vikings" src="https://muz-static-content.s3.amazonaws.com/images/vikings.jpg">
+          </a> <span class="artist-name">Vikings</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="The Walking Dead" href="/artists/231880">
+            <img class="img-fluid" alt="The Walking Dead" src="https://muz-static-content.s3.amazonaws.com/images/walking_dead.jpg">
+          </a> <span class="artist-name">The Walking Dead</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Westworld" href="/artists/231873">
+            <img class="img-fluid" alt="Westworld" src="https://muz-static-content.s3.amazonaws.com/images/westworld.jpg">
+          </a> <span class="artist-name">Westworld</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="WWE" href="/artists/231784">
+            <img class="img-fluid" alt="WWE" src="/assets/no-image-a3b8b419e54872e13327d8f10fa0cc40b841e69ce328c7344074787fa7c0d170.png">
+          </a> <span class="artist-name">WWE</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="comicBooks" style="display: none;">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="DC Entertainment" href="/artists/213132">
+            <img class="img-fluid" alt="DC Entertainment" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/dc.jpg">
+          </a> <span class="artist-name">DC Entertainment</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Marvel Entertainment" href="/artists/209436">
+            <img class="img-fluid" alt="Marvel Entertainment" src="http://muz-static-content.s3-website-us-east-1.amazonaws.com/images/marvel.jpg">
+          </a> <span class="artist-name">Marvel Entertainment</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="pornography" style="display: none;">
+    This category is not being followed.
+  </div>
+  <!-- // end category -->
+  <div class="category" id="software" style="display: none;">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="artist-thumbnail">
+          <a class="h-100" title="Zona" href="/artists/231858">
+            <img class="img-fluid" alt="Zona" src="/assets/no-image-a3b8b419e54872e13327d8f10fa0cc40b841e69ce328c7344074787fa7c0d170.png">
+          </a> <span class="artist-name">Zona</span>
+        </div>
+      </div>
+    </div>
+    <!-- // end row -->
+  </div>
+  <!-- // end category -->
+  <div class="category" id="videos" style="display: none;">
+    This category is not being followed.
+  </div>
+  <!-- // end category -->
+</div>
+<!-- // end container -->
+<div class="modal fade" id="purchase-credits" tabindex="-1" role="dialog" aria-labelledby="purchaseCredits" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Insufficient credits</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You do not have enough IP address credits to download this report. To buy more credits click the Buy Credits button and then select an IP block based on how many IP's you need.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+        <%= link_to 'Buy Credits', '../buy-credits/credit-blocks.html', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // end modal generate-list -->
