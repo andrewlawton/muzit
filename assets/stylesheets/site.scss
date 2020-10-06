@@ -56,7 +56,7 @@ dd {
 }
 
 .artist-thumbnail a:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 
 .artist-thumbnail a:before {
@@ -530,10 +530,6 @@ header {
   font-weight: 300;
   margin: 0;
   text-transform: uppercase;
-}
-
-.card-body {
-  padding: .5rem 1rem;
 }
 
 .dropdown-item {
