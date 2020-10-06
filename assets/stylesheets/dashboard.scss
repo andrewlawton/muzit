@@ -1,0 +1,25 @@
+// dashboard
+
+.dashboard {
+  .credits-remaining div {
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 1rem;
+    }
+  }
+  .card {
+    height: 100%;
+    .card-body {
+      padding: 1rem;
+    }
+  }
+  .table {
+    th {
+      border-bottom: none;
+      padding: 0;
+    }
+    td {
+      border-top: none;
+      padding: .55rem 0;
+    }
+  }
+}

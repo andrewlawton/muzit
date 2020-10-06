@@ -1,0 +1,25 @@
+// ip-address-reports
+
+.ip-address-reports {
+
+  fieldset {
+    legend {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .review {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+}
