@@ -1,7 +1,6 @@
 ---
 title: Create Report - Muzit
-layout: reseller
-bodyClass: reseller
+bodyClass: ip-address-reports
 ---
 <h1 class="text-center my-4">
   Create IP Address Report
@@ -17,7 +16,7 @@ bodyClass: reseller
           <label class="form-control-label" for="ip_address_report_candidate_name">Enter a name for your report</label>
           <input class="form-control string optional" type="text" value="" name="ip_address_report_candidate[name]" id="ip_address_report_candidate_name">
           <div class="action steps text-right">
-            <%= link_to "Cancel", "dashboard.html" %>
+            <%= link_to "Cancel", "../../index.html" %>
             <%= submit_tag "Next", class: 'btn btn-primary' %>
           </div>
         </form>
