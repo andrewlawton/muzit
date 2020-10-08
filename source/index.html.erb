@@ -6,14 +6,9 @@ bodyClass: artists dashboard
   <h1 class="text-center text-md-left my-4">
     Muzit Dashboard
   </h1>
-  <div class="row my-5 credits-remaining">
-    <div class="col-md-6 text-center text-md-left">
-      <span class="badge badge-pill badge-dark">100,000</span> IP Address Credits Remaining
-    </div>
-    <div class="col-md-6 text-center text-md-right">
-      <%= link_to "Purchase History", "../organization/purchase-history.html", class: 'mr-2' %>
-      <%= link_to "Buy Credits", "../buy-credits/credit-blocks.html", :class => "btn btn-primary btn-md" %>
-    </div>
+
+  <div class="credits-status">
+    You have <span class="badge badge-pill badge-danger">1,000</span> credits remaining out of a total <span class="badge badge-pill badge-success">100,000</span> credits in your account. To puchase additional credits click the Buy Credits button below.
   </div>
   <div class="cards">
     <div class="card">
@@ -251,6 +246,9 @@ bodyClass: artists dashboard
     <!-- // end card -->
   </div>
   <!-- // end cards -->
+  <div class="action text-center my-4">
+    <%= link_to "Buy Credits", "../buy-credits/credit-blocks.html", :class => "btn btn-outline-primary btn-md" %>
+  </div>
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid">
@@ -1297,7 +1295,7 @@ bodyClass: artists dashboard
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-        <%= link_to 'Buy Credits', '../buy-credits/credit-blocks.html', class: 'btn btn-primary' %>
+        <%= link_to 'Buy Credits', '../buy-credits/credit-blocks.html', class: 'btn btn-outline-white' %>
       </div>
     </div>
   </div>
