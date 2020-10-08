@@ -2,22 +2,8 @@
   <% link_to "../../index.html", class:"navbar-brand" do %>
     <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
   <% end %>
-  <div class="navbar-item ml-auto" id="admin-dropdown">
-    <%= link_to 'Admin', '../admin/torrent-mapping.html', :class => 'nav-link', 'role' => 'button', 'data-toggle' => 'dropdown', "aria-haspopup" => 'true', 'aria-expanded' =>'false' %>
-    <div class="dropdown admin">
-      <div class="dropdown-menu" aria-labelledby="adminDropdown">
-        <%= link_to "Create Artist", "#", :class => "dropdown-item" %>
-        <%= link_to "Add Organization", "../admin/add-organization.html", :class => "dropdown-item" %>
-        <%= link_to "Lists", "../admin/lists.html", :class => "dropdown-item" %>
-        <%= link_to "Unmapped Torrents", "../admin/torrents.html", :class => "dropdown-item" %>
-        <%= link_to "Feature Flags", "#", :class => "dropdown-item" %>
-      </div>
-      <!-- // end dropdown-menu -->
-    </div>
-    <!-- // end dropdown -->
-  </div>
-  <!-- // end navbar-item -->
-  <div class="navbar-item">
+
+  <div class="navbar-item ml-auto">
     <% link_to "#", class: 'nav-link search', id: 'dropdown-search', 'data-toggle' => 'dropdown', 'aria-haspopup' => "true", 'aria-expanded' => 'false' do %>
       <span class="oi oi-magnifying-glass text-white"></span>
     <% end %>
@@ -85,12 +71,23 @@
           Andrew Lawton<span>Owner, Administrator</span>
         </div>
         <div class="dropdown-divider"></div>
-        <div class="dropdown-header">Organization</div>
-        <%= link_to "Billing", "../organization/billing.html", :class => "dropdown-item" %>
-        <%= link_to "Credit Card", "../organization/credit-card.html", :class => "dropdown-item" %>
-        <%= link_to "Manage Users", "../organization/invite-users.html", :class => "dropdown-item" %>
+        <div class="dropdown-header">Staff</div>
+        <%= link_to "Create Artist", "#", :class => "dropdown-item" %>
+        <%= link_to "Manage Organizations", "../admin/add-organization.html", :class => "dropdown-item" %>
+        <%= link_to "Unmapped Torrents", "../admin/torrents.html", :class => "dropdown-item" %>
+        <%= link_to "Feature Flags", "#", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
-        <%= link_to "Reports", "../reports/index.html", :class => "dropdown-item" %>
+        <%= link_to "Dashboard", "../index.html", :class => "dropdown-item" %>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-header">IP Addresses</div>
+        <%= link_to "IP Credits", "../../organization/purchase-history.html", :class => "dropdown-item" %>
+        <%= link_to "Manage Artist Lists", "../../organization/artist-lists/artist-lists.html", :class => "dropdown-item" %>
+        <%= link_to "IP Address Reports", "../../organization/ip-address-reports/ip-address-reports.html", :class => "dropdown-item" %>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-header">Organization</div>
+        <%= link_to "Billing", "../../organization/billing.html", :class => "dropdown-item" %>
+        <%= link_to "Credit Card", "../../organization/credit-card.html", :class => "dropdown-item" %>
+        <%= link_to "Manage Users", "../../organization/invite-users.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
         <%= link_to "My Account", "../users/my_account.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
