@@ -6,9 +6,12 @@ bodyClass: artists dashboard
   <h1 class="text-center text-md-left my-4">
     Muzit Dashboard
   </h1>
-
   <div class="credits-status">
     You have <span class="badge badge-pill badge-danger">1,000</span> credits remaining out of a total <span class="badge badge-pill badge-success">100,000</span> credits in your account. To puchase additional credits click the Buy Credits button below.
+  </div>
+  <div class="action buy-credits my-4 d-flex">
+    <%= link_to "Buy Credits", "../buy-credits/credit-blocks.html", :class => "btn btn-primary btn-md" %>
+    <%= link_to "Purchase History", "../buy-credits/credit-blocks.html" %>
   </div>
   <div class="cards">
     <div class="card">
@@ -154,7 +157,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Auto Enthusiasts Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">47,291</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -163,7 +166,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Country Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">850,697</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -172,7 +175,7 @@ bodyClass: artists dashboard
                 <%= link_to 'CBD Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">54,047</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -181,7 +184,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Gamers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">93,322</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -190,7 +193,7 @@ bodyClass: artists dashboard
                 <%= link_to 'New Mothers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">38,923</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -199,7 +202,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Rap Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">198,504</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -208,7 +211,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Reggae Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">54,047</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -217,7 +220,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Pop Music Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">71,021</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -226,7 +229,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Home Improvement Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">46,291</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -235,7 +238,7 @@ bodyClass: artists dashboard
                 <%= link_to 'Travel Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
               <td class="text-right">73,191</td>
-              <td class="action text-right text-nowrap">
+              <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
               </td>
             </tr>
@@ -246,9 +249,6 @@ bodyClass: artists dashboard
     <!-- // end card -->
   </div>
   <!-- // end cards -->
-  <div class="action text-center my-4">
-    <%= link_to "Buy Credits", "../buy-credits/credit-blocks.html", :class => "btn btn-outline-primary btn-md" %>
-  </div>
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid">
@@ -1307,7 +1307,7 @@ bodyClass: artists dashboard
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-        <%= link_to 'Buy Credits', '../buy-credits/credit-blocks.html', class: 'btn btn-outline-white' %>
+        <%= link_to 'Buy Credits', '../buy-credits/credit-blocks.html', class: 'btn btn-primary' %>
       </div>
     </div>
   </div>

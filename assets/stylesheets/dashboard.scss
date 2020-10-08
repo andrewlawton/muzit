@@ -4,12 +4,14 @@
   main {
     padding-bottom: 0;
   }
+
   .credits-status {
     background: #f1f3f5;
     border-radius: 4px;
-    border: 1px solid rgba(0,0,0,0.125);
-    margin: 2rem 0 2.5rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin: 2rem 0 1.5rem 0;
     padding: .5rem 1rem;
+
     .badge {
       margin: 0;
     }
@@ -46,13 +48,38 @@
       padding: .55rem 0;
     }
   }
+
   .callout {
     background: #ff161f;
     color: #fff;
     text-align: center;
     padding: 2rem 1rem;
+
     .btn {
       border: 1px solid #fff;
+    }
+  }
+
+  .action {
+    &.buy-credits {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include media-breakpoint-up(md) {
+        & .btn+a {
+          margin-right: .75rem;
+        }
+
+        justify-content: flex-end;
+
+        a:nth-of-type(1) {
+          order: 2;
+        }
+
+        a:nth-of-type(2) {
+          order: 1;
+        }
+      }
     }
   }
 }
