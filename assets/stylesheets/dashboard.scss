@@ -1,6 +1,9 @@
 // dashboard
 
 .dashboard {
+  main {
+    padding-bottom: 0;
+  }
   .credits-status {
     background: #f1f3f5;
     border-radius: 4px;
@@ -29,10 +32,6 @@
       display: flex;
       flex-direction: column;
       padding: 1rem;
-
-      div {
-        margin-top: auto;
-      }
     }
   }
 
@@ -45,6 +44,15 @@
     td {
       border-top: none;
       padding: .55rem 0;
+    }
+  }
+  .callout {
+    background: #ff161f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    .btn {
+      border: 1px solid #fff;
     }
   }
 }
