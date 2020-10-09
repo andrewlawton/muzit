@@ -1,10 +1,10 @@
 ---
-title: Add List - Muzit
+title: Edit Title List - Muzit
 bodyClass: lists
 ---
 <div class="container-fluid">
   <h1 class="text-center text-sm-left my-4">
-    Edit Artist List
+    Edit Title List
   </h1>
   <div class="form-container">
     <form action="" method="" class="form needs-validation" novalidate="">
@@ -18,10 +18,10 @@ bodyClass: lists
         </div>
         <!-- // end form-group -->
         <div class="form-group">
-          <label for="artist-name">Artists</label>
+          <label for="artist-name">Titles</label>
           <div class="search" id="nav-search">
             <div class="search" data-controller="search">
-              <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+              <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search titles...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
               <div data-target="search.results">
                 <ul class="search-results scroll hide-search-results" data-controller="search-results" data-target="search.resultsList">
                   <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
@@ -96,9 +96,9 @@ bodyClass: lists
   <div class="row">
     <div class="col">
       <div class="action">
-        <button type="button" class="btn btn-primary" onclick="javascript:window.location = '../../organization/artist-lists/artist-lists-notification.html';">Save</button>
+        <button type="button" class="btn btn-primary" onclick="javascript:window.location = '../../organization/title-lists/title-lists-notification.html';">Save</button>
         <div class="text-center d-md-inline">
-          <%= link_to "Cancel", "../../organization/artist-lists/artist-lists.html" %>
+          <%= link_to "Cancel", "../../organization/title-lists/title-lists.html" %>
         </div>
       </div>
       <!-- // end form-group -->
