@@ -10,7 +10,7 @@
       <div class="dropdown-menu search" aria-labelledby="search-dropdown" aria-labelledby="accountDropdown">
         <div class="search" id="nav-search">
           <div class="input-group search" data-controller="search">
-            <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search artists and bands...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+            <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Search titles...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
             <div class="input-group-append">
               <button class="" type="button" data-action="click->search#fetchResults">
                 <span class="oi oi-magnifying-glass text-primary"></span>
@@ -80,7 +80,7 @@
         <div class="dropdown-divider"></div>
         <div class="dropdown-header">IP Addresses</div>
         <%= link_to "IP Credits", "../../organization/purchase-history.html", :class => "dropdown-item" %>
-        <%= link_to "Manage Artist Lists", "../../organization/artist-lists/artist-lists.html", :class => "dropdown-item" %>
+        <%= link_to "Manage Title Lists", "../../organization/title-lists/title-lists.html", :class => "dropdown-item" %>
         <%= link_to "IP Address Reports", "../../organization/ip-address-reports/ip-address-reports.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
         <div class="dropdown-header">Organization</div>
