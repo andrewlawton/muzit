@@ -6,18 +6,162 @@ bodyClass: artists dashboard
   <h1 class="text-center text-md-left my-4">
     Muzit Dashboard
   </h1>
-  <div class="credits-status">
-    You have <span class="badge badge-pill badge-danger">1,000</span> credits remaining out of a total <span class="badge badge-pill badge-success">100,000</span> credits in your account. To puchase additional credits click the Buy Credits button below.
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="credits-status text-center">
+        You have <span class="badge badge-pill badge-danger">1,000</span> IP records remaining in your account.
+      </div>
+    </div>
   </div>
-  <div class="action buy-credits my-4 d-flex">
+  <p>
+    If you have extra IP records you can to donate them to someone. Simply click the Donate IP Credits link. You can also puchase additional credits by clicking the Buy Credits button.
+  </p>
+  <div class="action buy-credits my-4">
     <%= link_to "Buy Credits", "../buy-credits/credit-blocks.html", :class => "btn btn-primary btn-md" %>
-    <%= link_to "Purchase History", "../buy-credits/credit-blocks.html" %>
+    <%= link_to "Purchase History", "../organization/purchase-history.html" %>
+    <%= link_to "Donate IP Credits", "#" %>
   </div>
   <div class="cards">
     <div class="card">
       <div class="card-header d-flex">
         Title Lists
         <%= link_to "View All", "../organization/title-lists/title-lists.html", class: "ml-auto" %>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Auto Enthusiasts', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Country Artists', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'CBD', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Gamers', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'New Mothers', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Rap Artists', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Reggae Artists', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Pop Music', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Home Improvement', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Travel', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Entrepreneur', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Conservatives', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Pet Owners', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="action text-right">
+                <%= link_to 'Edit', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Delete', '#' %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- // end card -->
+    <div class="card">
+      <div class="card-header d-flex">
+        Reports
+        <%= link_to "View All", "#", class: "ml-auto" %>
       </div>
       <div class="card-body">
         <table class="table">
