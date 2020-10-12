@@ -1,0 +1,107 @@
+---
+title: Donate IP Records - Muzit
+bodyClass:
+---
+<div class="alert alert-success" role="alert">
+  Thank you! Your donation was successfully submitted.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <h1 class="my-4 text-center">
+        Donate IP Records
+      </h1>
+      <div class="form-container">
+        <form action="" class="needs-validation" method="" novalidate="">
+          <fieldset>
+            <div class="form-group">
+              <label for="fullName" class="control-label required">
+                Full Name
+              </label>
+              <input type="text" name="name" class="form-control" id="fullName" required>
+              <div class="invalid-feedback">
+                Please provide your full name
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="emailAddress" class="control-label required">
+                Email
+              </label>
+              <input type="email" name="email" class="form-control" id="emailAddress" required>
+              <div class="invalid-feedback">
+                Please provide a valid email
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber" class="control-label required">
+                Phone Number
+              </label>
+              <input type="text" name="contactNumber" class="form-control" id="phoneNumber" required>
+              <div class="invalid-feedback">
+                Please enter your phone number
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="CompanyName" class="control-label required">
+                Company
+              </label>
+              <input type="text" name="company" class="form-control" id="CompanyName" required>
+            </div>
+            <div class="form-group">
+              <label for="ip-records-donation" class="control-label required">
+                IP Records Donation
+              </label>
+              <input id="ip-records-donation" type="number" name="credits" class="form-control" min="1" value="" aria-describedby="ipRecordsHelpBlock" required>
+              <small id="ipRecordsHelpBlock" class="form-text text-muted">
+                Enter the number of IP records you wish to donate.
+              </small>
+              <div class="invalid-feedback">
+                Please enter the number of IP records
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message" class="control-label">
+                Message (optional)
+              </label>
+              <textarea id="message" name="message" class="form-control"></textarea>
+              <div class="invalid-feedback">
+                Please add your message
+              </div>
+            </div>
+            <div class="action">
+              <button type="submit" class="btn btn-primary">
+                Submit
+              </button>
+              <div class="text-center d-md-inline">
+                <%=link_to 'Cancel', '#', 'onclick' => 'window.history.go(-1); return false;' %>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
