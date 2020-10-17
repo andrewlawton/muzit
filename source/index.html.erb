@@ -22,7 +22,7 @@ bodyClass: artists dashboard
     <%= link_to "Donate IP Records", "../organization/donate-ip-records/index.html" %>
   </div>
   <div class="cards">
-    <div class="card">
+    <div class="card" style="display: none;">
       <div class="card-header d-flex">
         Title Lists
         <%= link_to "View All", "../organization/title-lists/title-lists.html", class: "ml-auto" %>
@@ -160,48 +160,72 @@ bodyClass: artists dashboard
     <!-- // end card -->
     <div class="card">
       <div class="card-header d-flex">
-        Reports
-        <%= link_to "View All", "#", class: "ml-auto" %>
+        IP Address Reports
+        <%= link_to "View All", "../organization/prebuilt-reports/index.html", class: "ml-auto" %>
       </div>
       <div class="card-body">
         <table class="table">
           <thead>
             <tr>
               <th>Name</th>
+              <th class="text-right">Location</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'Auto Enthusiasts', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Kula Brands', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'Country Artists', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Jacelyn Soundalikes', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US, CA
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'CBD', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Donovan Lee Carpenter Soundalikes', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'Gamers', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Healx Natural', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                <%= link_to 'Country Music Fans', '../organization/title-lists/title-lists-edit.html' %>
+              </td>
+              <td class="text-right">
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
@@ -209,39 +233,10 @@ bodyClass: artists dashboard
                 <%= link_to 'New Mothers', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Rap Artists', '../organization/title-lists/title-lists-edit.html' %>
+                US
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Reggae Artists', '../organization/title-lists/title-lists-edit.html' %>
-              </td>
-              <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Pop Music', '../organization/title-lists/title-lists-edit.html' %>
-              </td>
-              <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Home Improvement', '../organization/title-lists/title-lists-edit.html' %>
-              </td>
-              <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
@@ -249,31 +244,43 @@ bodyClass: artists dashboard
                 <%= link_to 'Travel', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'Entrepreneur', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Auto Enthusiasts', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'Conservatives', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Fitness Enthusiasts', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
-                <%= link_to 'Pet Owners', '../organization/title-lists/title-lists-edit.html' %>
+                <%= link_to 'Hip Hop Culture', '../organization/title-lists/title-lists-edit.html' %>
               </td>
               <td class="text-right">
-                <%= link_to 'Generate Report', '#' %>
+                US
+              </td>
+              <td class="text-right">
+                <%= link_to 'Generate', '#' %>
               </td>
             </tr>
           </tbody>
@@ -283,16 +290,17 @@ bodyClass: artists dashboard
     <!-- // end card -->
     <div class="card">
       <div class="card-header d-flex">
-        IP Address Reports
+        Report Downloads
         <%= link_to "View All", "../organization/ip-address-reports/ip-address-reports.html", class: "ml-auto" %>
       </div>
       <div class="card-body">
-        <table class="table ip-address-reports">
+        <table class="table report-downloads">
           <thead>
             <tr>
               <th>Name</th>
+              <th class="text-truncate">Created</th>
               <th class="text-truncate text-right">IP Addresses</th>
-              <th>&nbsp;</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -300,23 +308,32 @@ bodyClass: artists dashboard
               <td class="text-truncate">
                 <%= link_to 'Auto Enthusiasts Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
+              <td class="text-truncate">
+                Sep 17, 2020 5:28 PM UTC
+              </td>
               <td class="text-right">47,291</td>
               <td class="text-right text-nowrap">
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                Generating
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
                 <%= link_to 'Country Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
+              <td class="text-truncate">
+                Sep 9, 2020 9:31 PM UTC
+              </td>
               <td class="text-right">850,697</td>
               <td class="text-right text-nowrap">
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
+                <%= link_to 'Purchase', '#' %>
               </td>
             </tr>
             <tr>
               <td class="text-truncate">
                 <%= link_to 'CBD Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+              </td>
+              <td class="text-truncate">
+                Aug 26, 2020 2:28 PM UTC
               </td>
               <td class="text-right">54,047</td>
               <td class="text-right text-nowrap">
@@ -327,6 +344,9 @@ bodyClass: artists dashboard
               <td class="text-truncate">
                 <%= link_to 'Gamers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
+              <td class="text-truncate">
+                Aug 25, 2020 9:34 PM UTC
+              </td>
               <td class="text-right">93,322</td>
               <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
@@ -335,6 +355,9 @@ bodyClass: artists dashboard
             <tr>
               <td class="text-truncate">
                 <%= link_to 'New Mothers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+              </td>
+              <td class="text-truncate">
+                Aug 21, 2020 10:14 PM UTC
               </td>
               <td class="text-right">38,923</td>
               <td class="text-right text-nowrap">
@@ -345,6 +368,9 @@ bodyClass: artists dashboard
               <td class="text-truncate">
                 <%= link_to 'Rap Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
+              <td class="text-truncate">
+                Aug 20, 2020 4:39 PM UTC
+              </td>
               <td class="text-right">198,504</td>
               <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
@@ -353,6 +379,9 @@ bodyClass: artists dashboard
             <tr>
               <td class="text-truncate">
                 <%= link_to 'Reggae Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+              </td>
+              <td class="text-truncate">
+                Aug 20, 2020 2:33 AM UTC
               </td>
               <td class="text-right">54,047</td>
               <td class="text-right text-nowrap">
@@ -363,6 +392,9 @@ bodyClass: artists dashboard
               <td class="text-truncate">
                 <%= link_to 'Pop Music Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
+              <td class="text-truncate">
+                Aug 18, 2020 9:38 PM UTC
+              </td>
               <td class="text-right">71,021</td>
               <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
@@ -372,6 +404,9 @@ bodyClass: artists dashboard
               <td class="text-truncate">
                 <%= link_to 'Home Improvement Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
               </td>
+              <td class="text-truncate">
+                Aug 18, 2020 9:31 PM UTC
+              </td>
               <td class="text-right">46,291</td>
               <td class="text-right text-nowrap">
                 <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
@@ -380,6 +415,9 @@ bodyClass: artists dashboard
             <tr>
               <td class="text-truncate">
                 <%= link_to 'Travel Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
+              </td>
+              <td class="text-truncate">
+                Jul 31, 2020 8:05 PM UTC
               </td>
               <td class="text-right">73,191</td>
               <td class="text-right text-nowrap">
