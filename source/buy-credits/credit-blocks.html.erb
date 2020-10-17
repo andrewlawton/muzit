@@ -2,98 +2,144 @@
 title: Buy Credits - Muzit
 bodyClass: pricing
 ---
+<header class="hero">
+  <div class="image">
+    <figure>
+      <%= image_set_tag 'hero-pricing_2160w.jpg', {
+        'hero-pricing_300w.jpg' => '300w',
+        'hero-pricing_761w.jpg' => '761w',
+        'hero-pricing_1098w.jpg' => '1098w',
+        'hero-pricing_1390w.jpg' => '1390w',
+        'hero-pricing_1648w.jpg' => '1648w',
+        'hero-pricing_1924w.jpg' => '1924w',
+        'hero-pricing_2160w.jpg' => '2160w' },
+        sizes: '(max-width: 2160px) 100vw, 2160px',
+        alt: 'Trace hero image' %>
+    </figure>
+  </div>
+  <div class="text">
+    <div class="container-fluid">
+      <h1>Buy Credits</h1>
+      <p>
+        Target IP addresses of over 250 million households
+      </p>
+    </div>
+  </div>
+</header>
 <section class="pricing-plans">
-  <h1 class="text-center mt-4">
-    Buy Credits
-  </h1>
-  <div class="container">
-    <p class="text-center mb-4">
-      One credit is worth 1 IP Address.
-    </p>
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <div class="card pricing-box rounded text-center">
-          <h4 class="card-title">
+        <div class="card pricing-plan">
+          <h6 class="card-header">
             1,000 IP Blocks
-          </h4>
-          <h6 class="card-text text-nowrap">
-            <sup class="currency">
-              $
-            </sup>
-            <span class="amount">
-              190.00
-            </span>
-            <span class="per">
-              / 1000
-            </span>
           </h6>
-          <form action="" method="">
-            <div class="form-group">
-              <label for="ip-block-1">How many block's would you like?</label>
-              <input id="ip-block-1" type="number" name="credits" min="1" max="10" class="form-control" value="1">
-            </div>
-          </form>
-          <div class="card-block action">
-            <%= link_to 'Continue', 'buy-credits.html', class: 'btn btn-outline-primary' %>
+          <div class="card-body">
+            <h3>
+              <sup class="currency">
+                $
+              </sup>
+              <span class="amount">
+                190.00
+              </span>
+              <span class="per">
+                / 1000
+              </span>
+            </h3>
+            <form action="buy-credits.html" method="get">
+              <div class="form-group">
+                <label for="ip-blocks-1">How many block's would you like?</label>
+                <input id="ip-blocks-1" type="number" name="credits" min="1" max="10" class="form-control" value="1">
+              </div>
+              <div class="action">
+                <%= submit_tag "Continue", class: 'btn btn-outline-primary'  %>
+              </div>
+            </form>
           </div>
+          <!-- // end card-body -->
         </div>
+        <!-- // end pricing-plan -->
       </div>
       <div class="col-md-4">
-        <div class="card pricing-box rounded text-center">
-          <h4 class="card-title">
+        <div class="card pricing-plan">
+          <h6 class="card-header">
             10,000 IP Blocks
-          </h4>
-          <h6 class="card-text text-nowrap">
-            <sup class="currency">
-              $
-            </sup>
-            <span class="amount">
-              150.00
-            </span>
-            <span class="per">
-              / 1000
-            </span>
           </h6>
-          <form action="" method="">
-            <div class="form-group">
-              <label for="ip-block-2">How many block's would you like?</label>
-              <input id="ip-block-2" type="number" name="credits" min="1" max="10" class="form-control" value="1">
-            </div>
-          </form>
-          <div class="card-block action">
-            <%= link_to 'Continue', 'buy-credits.html', class: 'btn btn-outline-primary' %>
+          <div class="card-body">
+            <h3>
+              <sup class="currency">
+                $
+              </sup>
+              <span class="amount">
+                150.00
+              </span>
+              <span class="per">
+                / 1000
+              </span>
+            </h3>
+            <form action="buy-credits.html" method="get">
+              <div class="form-group">
+                <label for="ip-blocks-2">How many block's would you like?</label>
+                <input id="ip-blocks-2" type="number" name="credits" min="1" max="10" class="form-control" value="1">
+              </div>
+              <div class="action">
+                <%= submit_tag "Continue", class: 'btn btn-outline-primary'  %>
+              </div>
+            </form>
           </div>
+          <!-- // end card-body -->
         </div>
+        <!-- // end pricing-plan -->
       </div>
       <div class="col-md-4">
-        <div class="card pricing-box rounded text-center">
-          <h4 class="card-title">
+        <div class="card pricing-plan">
+          <div class="ribbon">Most Popular</div>
+          <h6 class="card-header">
             100,000 IP Blocks
-          </h4>
-          <h6 class="card-text text-nowrap">
-            <sup class="currency">
-              $
-            </sup>
-            <span class="amount">
-              120.00
-            </span>
-            <span class="per">
-              / 1000
-            </span>
           </h6>
-          <form action="" method="">
-            <div class="form-group">
-              <label for="ip-block-3">How many block's would you like?</label>
-              <input id="ip-block-3" type="number" name="credits" min="1" max="10" class="form-control" value="1">
-            </div>
-          </form>
-          <div class="card-block action">
-            <%= link_to 'Continue', 'buy-credits.html', class: 'btn btn-outline-primary' %>
+          <div class="card-body">
+            <h3>
+              <sup class="currency">
+                $
+              </sup>
+              <span class="amount">
+                120.00
+              </span>
+              <span class="per">
+                / 1000
+              </span>
+            </h3>
+            <form action="buy-credits.html" method="get">
+              <div class="form-group">
+                <label for="ip-blocks-3">How many block's would you like?</label>
+                <input id="ip-blocks-3" type="number" name="credits" min="1" max="10" class="form-control" value="1">
+              </div>
+              <div class="action">
+                <%= submit_tag "Continue", class: 'btn btn-outline-primary'  %>
+              </div>
+            </form>
           </div>
+          <!-- // end card-body -->
         </div>
+        <!-- // end pricing-plan -->
       </div>
     </div>
     <!-- // end row -->
+    <p class="text-center mb-4" style="font-size: .90rem; font-style: italic;">
+      One credit is worth one IP address.
+    </p>
   </div>
-  <!-- // end container -->
+  <!-- // end container-fluid -->
+  <div class="callout">
+    <h2>
+      Don't see what you're looking for?
+    </h2>
+    <p>
+      If you have any questions please contact us and we'd be happy to help.
+    </p>
+    <div class="action">
+      <%= link_to "Contact Us", "../contact-us/index.html", class: "btn btn-primary" %>
+    </div>
+  </div>
+  <!-- // end callout -->
 </section>
