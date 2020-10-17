@@ -130,13 +130,13 @@ dd {
 
 // make load more button full width
 
-@include media-breakpoint-down(sm) {
-  .artists {
-    .btn-outline-primary {
-      width: 100%;
-    }
-  }
-}
+// @include media-breakpoint-down(sm) {
+//   .artists {
+//     .btn-outline-primary {
+//       width: 100%;
+//     }
+//   }
+// }
 
 // artist details
 

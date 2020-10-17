@@ -57,17 +57,6 @@
     }
   }
 
-  .callout {
-    background: #ff161f;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-
-    .btn {
-      border: 1px solid #fff;
-    }
-  }
-
   .action {
     &.buy-credits {
       text-align: center;
@@ -103,5 +92,12 @@
         }
       }
     }
+  }
+}
+
+table.report-downloads {
+
+  th:nth-child(1) {
+    width: 40%;
   }
 }
