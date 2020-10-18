@@ -1,87 +1,71 @@
 // pricing
 
-.hero {
-  background-color: #0d1724;
-  margin-bottom: 3rem;
-  position: relative;
-  width: 100%;
-
-  .image {
-    position: relative;
-    z-index: 1;
-    max-height: 100vh;
-    overflow: hidden;
-
-    figure {
-      margin: 0;
-    }
-  }
-
-  img {
-    max-height: 400px;
-    object-fit: cover;
-    object-position: center right;
-    position: relative;
-    vertical-align: middle;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .text {
-    color: #fff;
-    left: 0;
-    position: absolute;
-    right: 0;
-    text-shadow: 1px 1px #333;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-
-    p {
-      font-size: 1.25rem
-    }
-
-    @include media-breakpoint-up(md) {
-      bottom: 0;
-      transform: none;
-    }
-
-    // h1 {
-    //   //@include font-size(1.75rem, 2.75rem);
-    //   font-size: clamp(1rem, 5vw, 5rem);
-    //   line-height: normal;
-    // }
-
-    // h1 {
-    //   //max-width: max(500px, 100% - 80px);
-    //   font-size: min(max(1.75rem, 5vw), 2.5rem);
-    //   line-height: normal;
-
-    //   @supports (font-size: clamp(1.75rem, 5vw, 2.5rem)) {
-    //     font-size: clamp(1.75rem, 5vw, 2.5rem);
-    //   }
-    // }
-
-  }
-
-  &:before {
-    background-color: #000;
-    content: "";
-    display: block;
-    opacity: 0.3;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-  }
-}
-
 .pricing {
 
   main {
     padding-bottom: 0;
+  }
+
+  .hero {
+    background-color: #0d1724;
+    margin-bottom: 3rem;
+    position: relative;
+    width: 100%;
+
+    .image {
+      position: relative;
+      z-index: 1;
+      max-height: 100vh;
+      overflow: hidden;
+
+      figure {
+        margin: 0;
+      }
+    }
+
+    img {
+      max-height: 400px;
+      object-fit: cover;
+      object-position: center right;
+      position: relative;
+      vertical-align: middle;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .text {
+      color: #fff;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-shadow: 1px 1px #333;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+
+      p {
+        font-size: 1.25rem
+      }
+
+      @include media-breakpoint-up(md) {
+        bottom: 0;
+        transform: none;
+      }
+
+    }
+
+    &:before {
+      background-color: #000;
+      content: "";
+      display: block;
+      opacity: 0.3;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
   }
 
   .pricing-plan {
@@ -90,9 +74,10 @@
     text-align: center;
 
     .card-header {
+      background: none;
+      font-weight: normal;
       line-height: 2;
       text-transform: uppercase;
-      font-weight: normal;
     }
 
     h3 {
