@@ -1,6 +1,6 @@
-
-
-
+.card {
+  margin-bottom: 1.5rem;
+}
 
 .callout {
   background: #ff161f;
@@ -11,4 +11,13 @@
   .btn {
     border: 1px solid #fff;
   }
+}
+
+.buy-credits .ip-blocks {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
