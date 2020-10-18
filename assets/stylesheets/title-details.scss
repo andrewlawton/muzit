@@ -92,6 +92,23 @@
   margin-right: .5rem;
 }
 
+.artist-details .card {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+
+.artist-details .card .card-header {
+  background: white;
+  padding: .65rem 1rem;
+}
+
+.artist-details .card .card-header h5 {
+  font-size: .85rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
 .artist-details .mobile-stats {
   background: #26252d;
 }
