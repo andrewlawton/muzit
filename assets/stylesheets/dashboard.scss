@@ -24,16 +24,15 @@
   }
 
   .card {
+    .card-header {
+      background: none;
+    }
     @include media-breakpoint-up(md) {
       margin-right: 2rem;
 
       &:last-child {
         margin-right: 0;
       }
-    }
-
-    .card-body {
-      padding: 1rem;
     }
 
     table {
