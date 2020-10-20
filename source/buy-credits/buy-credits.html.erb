@@ -1,6 +1,6 @@
 ---
 title: Buy Credits - Muzit
-bodyClass: buy-credits
+bodyClass:
 ---
 <script src="https://js.stripe.com/v3/"></script>
 <style>
@@ -34,25 +34,26 @@ bodyClass: buy-credits
   <h1 class="my-4 text-center">
     Buy Credits
   </h1>
-  <div class="row justify-content-center align-items-center">
+  <div class="row justify-content-center">
     <div class="col-md-6">
-      <div class="form-container">
-        <div class="ip-blocks">
-          You have selected <strong>100,000 IP blocks</strong> totalling <strong>$12,000.00</strong>.
-        </div>
-        <form id="login-form" action="buy-credits-confirmation.html" method="get" class="form needs-validation" novalidate>
-          <fieldset>
-            <div class="form-group">
-              <label class="required" for="card-element">
-                Credit or debit card
-              </label>
-              <div id="card-element">
-                <!-- A Stripe Element will be inserted here. -->
-              </div>
-              <!-- Used to display form errors. -->
-              <div id="card-errors" role="alert"></div>
-              <script>
-                // Create a Stripe client.
+      <div class="card">
+        <div class="card-body">
+          <div class="notification">
+            You have selected <strong>100,000 IP blocks</strong> totalling <strong>$12,000.00</strong>.
+          </div>
+          <form id="login-form" action="buy-credits-confirmation.html" method="get" class="form needs-validation" novalidate>
+            <fieldset>
+              <div class="form-group">
+                <label class="required" for="card-element">
+                  Credit or debit card
+                </label>
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display form errors. -->
+                <div id="card-errors" role="alert"></div>
+                <script>
+                  // Create a Stripe client.
             var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
             // Create an instance of Elements.
@@ -124,24 +125,26 @@ bodyClass: buy-credits
             }
 
             </script>
-            </div>
-            <!-- // end form-group -->
-            <div class="form-group">
-              <label for="coupon">Promo Code</label>
-              <input class="form-control" type="text" name="coupon" id="coupon" placeholder="Enter promo code">
-              <div class="invalid-feedback"></div>
-            </div>
-            <div class="action">
-              <%= submit_tag "Buy Credits", class: 'btn btn-primary' %>
-              <div class="text-center d-md-inline">
-                <%= link_to 'Cancel', '../buy-credits/index.html' %>
               </div>
-            </div>
-            <!-- // end action -->
-          </fieldset>
-        </form>
+              <!-- // end form-group -->
+              <div class="form-group">
+                <label for="coupon">Promo Code</label>
+                <input class="form-control" type="text" name="coupon" id="coupon" placeholder="Enter promo code">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="action">
+                <%= submit_tag "Buy Credits", class: 'btn btn-primary' %>
+                <div class="text-center d-md-inline">
+                  <%= link_to 'Cancel', '../buy-credits/index.html' %>
+                </div>
+              </div>
+              <!-- // end action -->
+            </fieldset>
+          </form>
+        </div>
+        <!-- // end card-body -->
       </div>
-      <!-- // end form-container -->
+      <!-- // end card -->
     </div>
     <!-- // end column -->
   </div>
