@@ -1,5 +1,97 @@
 .card {
   margin-bottom: 1.5rem;
+
+  &.box-shadow {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+  }
+
+  .card-header {
+    &.small {
+      font-size: .85rem;
+      font-weight: 300;
+    }
+    &.medium {
+      font-size: 1rem;
+    }
+    &.large {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.account-details {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      border-right: 1px solid #e1e8ee;
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 0;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    dl {
+      border-bottom: 1px solid #e1e8ee;
+      margin-bottom: 0;
+      padding: 1rem .5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        flex: 1 1 auto;
+        border-right: 1px solid #e1e8ee;
+        border-bottom: none;
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      dt {
+        font-size: .80rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+      }
+
+      dd {
+        color: #6a737d;
+        font-size: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        span {
+          display: inline-block;
+          font-size: .85rem;
+          line-height: normal;
+          vertical-align: middle;
+        }
+
+        sup {
+          font-size: 1rem;
+          letter-spacing: 0.75rem;
+          margin-right: -1rem;
+          padding-right: .10rem;
+          top: -.28rem;
+        }
+      }
+
+    }
+
+    a {
+      font-size: .85rem;
+    }
+  }
 }
 
 .callout {
@@ -13,11 +105,12 @@
   }
 }
 
-.buy-credits .ip-blocks {
+.notification {
   background: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 3px;
-  padding: 1rem;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  padding: 1rem;
+
 }
