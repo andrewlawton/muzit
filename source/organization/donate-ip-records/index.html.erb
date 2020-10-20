@@ -3,43 +3,26 @@ title: Donate IP Records - Muzit
 bodyClass:
 ---
 <div class="container">
-  <div class="row justify-content-center align-items-center">
+  <div class="row justify-content-center">
     <div class="col-md-6">
-      <h1 class="my-4 text-center">
-        Donate IP Records
-      </h1>
-      <div class="card">
+      <div class="card my-5">
+        <h1 class="card-header large bg-white">
+          Donate IP Records
+        </h1>
         <div class="card-body">
           <p>
             Do you have extra IP records you would like to donate to someone? Please contact kulaBrands support for assistance.
           </p>
           <div class="action text-center">
-            <%= link_to "Contact Support", "mailto:support@kulabrandsfire.zendesk.com?subject=IP Records Donation", class: 'btn btn-outline-primary' %>
-            <div class="text-center d-md-inline-block align-middle">
-              <%= link_to "Back", "../../index.html" %>
-            </div>
+            <%= link_to "Contact Support", "mailto:support@kulabrandsfire.zendesk.com?subject=IP Records Donation", class: 'btn btn-primary' %>
           </div>
         </div>
+        <!-- // end card-body -->
       </div>
+      <!-- // end card -->
     </div>
+    <!-- // end column -->
   </div>
-  <script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
-  </script>
+  <!-- // end row -->
+</div>
+<!-- // end container -->
