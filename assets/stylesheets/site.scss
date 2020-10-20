@@ -33,6 +33,62 @@ dd {
   margin: 0;
 }
 
+// torrent details
+
+.torrent-meta-data {
+  label {
+    display: block;
+    font-size: .80rem;
+    font-weight: 700;
+    margin-bottom: .25rem;
+  }
+  .text {
+    display: block;
+    font-size: .85rem;
+    margin-bottom: .75rem;
+  }
+  .border {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: .5rem;
+  }
+  .search {
+    margin-bottom: .25rem;
+  }
+  .search-results {
+    top: 1.10rem;
+  }
+  .artist {
+    span {
+      &::after {
+        content: ', ';
+      }
+      &:last-of-type::after {
+        content: '';
+      }
+    }
+  }
+  .scroll {
+    height: 76px;
+    overflow: auto;
+    width: auto;
+  }
+  &.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 64px;
+  }
+}
+
+.torrent-files {
+  th:last-of-type,
+  td:last-of-type {
+    text-align: right;
+    white-space: nowrap;
+    width: 15%;
+  }
+}
+
 // pagination
 
 @media screen and (max-width:767px) {

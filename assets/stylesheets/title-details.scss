@@ -1,4 +1,6 @@
+// ==============================
 // title details
+// ==============================
 
 .artist-details .hero .hero-container {
   background-color: #26252d;
@@ -98,6 +100,7 @@
 
 .artist-details .card .card-header {
   background: white;
+  line-height: 1;
   padding: .65rem 1rem;
 }
 
@@ -107,7 +110,6 @@
   margin: 0;
   text-transform: uppercase;
 }
-
 
 .artist-details .mobile-stats {
   background: #26252d;
@@ -200,62 +202,6 @@ table.torrents .table-scroll {
   table.torrents th:nth-last-child(-n+3),
   table.torrents td:nth-last-child(-n+3) {
     display: none;
-  }
-}
-
-// torrent details
-
-.torrent-meta-data {
-  label {
-    display: block;
-    font-size: .80rem;
-    font-weight: 700;
-    margin-bottom: .25rem;
-  }
-  .text {
-    display: block;
-    font-size: .85rem;
-    margin-bottom: .75rem;
-  }
-  .border {
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    padding: .5rem;
-  }
-  .search {
-    margin-bottom: .25rem;
-  }
-  .search-results {
-    top: 1.10rem;
-  }
-  .artist {
-    span {
-      &::after {
-        content: ', ';
-      }
-      &:last-of-type::after {
-        content: '';
-      }
-    }
-  }
-  .scroll {
-    height: 76px;
-    overflow: auto;
-    width: auto;
-  }
-  &.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 64px;
-  }
-}
-
-.torrent-files {
-  th:last-of-type,
-  td:last-of-type {
-    text-align: right;
-    white-space: nowrap;
-    width: 15%;
   }
 }
 
