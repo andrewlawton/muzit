@@ -15,6 +15,12 @@ $(function() {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+$(function () {
+  $('[data-toggle="popover"]').popover({
+    html: true
+  })
+})
+
 // admin artist torrent mapping jquery-tageditor
 
 $(function() {
