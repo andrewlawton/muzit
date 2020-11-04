@@ -13,9 +13,6 @@ bodyClass: artists dashboard
       </div>
     </div>
   </div>
-  <p>
-    If you have extra IP records you can to donate them to someone. Simply click the Donate IP Records link. You can also puchase additional credits by clicking the Buy Credits button.
-  </p>
   <div class="action buy-credits my-4">
     <%= link_to "Buy Credits", "../buy-credits/index.html", :class => "btn btn-primary btn-md" %>
     <%= link_to "IP Credits Purchases", "../organization/purchase-history.html" %>
@@ -160,8 +157,15 @@ bodyClass: artists dashboard
     <!-- // end card -->
     <div class="card">
       <div class="card-header d-flex">
-        IP Address Reports
-        <%= link_to "View All", "../organization/prebuilt-reports/index.html", class: "ml-auto" %>
+        IP Address Lists
+        <div class="ml-auto">
+          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Simply click generate for the report you would like IP addresses list generated. You will then see <strong>Download Lists</strong> displayed. You can either purchase or download depending on your available IP credits.'}} do %>
+          <i class="fas fa-question-circle"></i>
+          <% end %>
+          <% link_to "../organization/prebuilt-reports/index.html", title: 'View All IP Address Reports' do %>
+          <i class="fas fa-bars"></i>
+          <% end %>
+        </div>
       </div>
       <div class="card-body">
         <table class="table ip-address-reports">
@@ -259,8 +263,15 @@ bodyClass: artists dashboard
     <!-- // end card -->
     <div class="card">
       <div class="card-header d-flex">
-        Report Downloads
-        <%= link_to "View All", "../organization/ip-address-reports/ip-address-reports.html", class: "ml-auto" %>
+        Download Lists
+        <div class="ml-auto">
+          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'Download Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Once your IP Address Lists is generated you can either purchase or download the report depending on your available IP credits.'}} do %>
+          <i class="fas fa-question-circle"></i>
+          <% end %>
+          <% link_to "../organization/ip-address-reports/ip-address-reports.html", title: 'View All Report Downloads' do %>
+          <i class="fas fa-bars"></i>
+          <% end %>
+        </div>
       </div>
       <div class="card-body">
         <table class="table report-downloads">
@@ -402,7 +413,7 @@ bodyClass: artists dashboard
   <!-- // end cards -->
 </div>
 <!-- // end container-fluid -->
-<div class="container-fluid">
+<div class="container-fluid" id="following" style="display: none;">
   <h2 class="my-4 text-center text-md-left">Following</h2>
   <div class="row">
     <div class="col-md-3">
@@ -1431,7 +1442,34 @@ bodyClass: artists dashboard
   </div>
   <!-- // end category -->
 </div>
-<!-- // end container -->
+<!-- // end container-fluid -->
+
+<div class="container-fluid" id="how-to-follow" syle="display: none">
+  <h2 class="my-4 text-center text-md-left">How to Follow Titles</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="video-container">
+        <video class="video" preload controls id="video">
+          <source src="video/following.m4v" type="video/mp4" />
+          <source src="video/following.ogv" type="video/ogg; codecs=theora, vorbis" />
+          <source src="video/following.webm" type="video/webm; codecs=vp8, vorbis" />
+          <p>This is fallback content to display for user agents that do not support the video tag.</p>
+        </video>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <p>
+          Follow title's and get real-time stats from over 250,000 titles in our datatbase.
+        </p>
+        <p>
+          Simply enter the name of a game, music artist, movie, software, or TV show in the search box at the top of the page. In the search results menu click the name of the title you want to follow and you will be taken to the title details page.
+        </p>
+        <p>
+          Click the “Follow” button. Any title you follow will be added to the dashboard page so you can easily find it again. If you no longer want to follow a title simply click the “Following” button and select Unfollow.
+      </p>
+    </div>
+  </div>
+</div>
 <div class="callout">
   <h2>
     Don't see what you're looking for?

@@ -231,6 +231,19 @@ $(function() {
   }
 });
 
+// display dashboard how to follow titles section based on url
+
+$(function() {
+  var url = window.location.href;
+  if(url.indexOf('/?how-to-follow') != -1) {
+      $('#how-to-follow').css("display", "block");
+      $('#following').css("display", "none");
+    } else {
+      $('#how-to-follow').css("display", "none");
+      $('#following').css("display", "block");
+    }
+});
+
 // disable sign up button until agree to terms checkbox is clicked
 
 $(function() {
