@@ -10,12 +10,9 @@
     z-index: 1020;
   }
 
-  .credits-status {
-    background: #f7f7f7;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
+  .alert-info {
     padding: .5rem 1rem;
+    text-align: center;
 
     .badge {
       margin: 0;
