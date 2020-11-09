@@ -9,42 +9,43 @@ bodyClass: billing
   <h2 class="text-center text-md-left">
     Medium Plan
   </h2>
-  <div class="container-background border payments">
-    <div class="row">
-      <div class="col-md-3 details">
-        <h4>Current bill total</h4>
-        <div class="text">
-          $4,995 / mo
-        </div>
-      </div>
-      <div class="col-md-3 details">
-        <h4>Last Payment</h4>
-        <div class="text">
-          $4,995
-          <span class="date">9/2/2019</span>
-        </div>
-      </div>
-      <div class="col-md-3 details">
-        <h4>Next payment due</h4>
-        <div class="text">
-          Nov 1, 2019
-        </div>
-      </div>
-      <div class="col-md-3 details">
-        <h4>Promo Code</h4>
-        <div class="text">
-          <%= link_to 'Add Promo Code', '#', 'data-toggle' => "modal", 'data-target' => '#add-promo-code' %>
-        </div>
-      </div>
+
+  <dl class="definition-list-group">
+    <div class="list-item">
+      <dt>Current bill total</dt>
+      <dd>
+        $4,995 / mo
+      </dd>
     </div>
-  </div>
+    <div class="list-item">
+      <dt>Last Payment</dt>
+      <dd>
+        <sup>$</sup>
+        4,995
+        <span class="date">9/2/2019</span>
+      </dd>
+    </div>
+    <div class="list-item">
+      <dt>Next payment due</dt>
+      <dd>
+        Nov 1, 2019
+      </dd>
+    </div>
+    <div class="list-item">
+      <dt>Promo Code</dt>
+      <dd>
+        <%= link_to 'Add Promo Code', '#', 'data-toggle' => "modal", 'data-target' => '#add-promo-code' %>
+      </dd>
+    </div>
+  </dl>
+
   <div class="text-center">
     <%= link_to 'Change Plan', '../pricing/index.html', class: 'btn btn-sm btn-outline-primary' %>
   </div>
   <h2 class="text-center text-md-left">
     Payment Method
   </h2>
-  <div class="container-background border payment-method">
+  <div class="card payment-method">
     <div class="row">
       <div class="col-4">
         <h4>Visa</h4>
