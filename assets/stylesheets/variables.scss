@@ -7,8 +7,7 @@ $nav-bg-color: #24292e;
 $body-bg:    #fff;
 $body-color: #333;
 $green:      #08c900;
-
-$alert-color: #fff;
+$info:       #f4f4f4;
 
 // boostrap theme-colors variables
 
@@ -16,14 +15,16 @@ $theme-colors: (
   "primary": #ff161f,
   "danger": #ff4136,
   "success": $green,
-  "info": #ff161f,
+  "info": $info,
 );
 
-// change lightness/darkness of alert
 
+// Background and border colors use a lightness/darkness level of -10 to 10
 $alert-bg-level: 0;
-//$alert-border-level: 0;
-//$alert-color-level: 80;
+$alert-border-level: 1;
+
+// Text color uses a lightness/darkness level of 0 to 10
+$alert-color-level: 10;
 
 
 // bootstrap switch variables
