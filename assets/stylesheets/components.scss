@@ -10,87 +10,94 @@
       font-size: .85rem;
       font-weight: 300;
     }
+
     &.medium {
       font-size: 1rem;
     }
+
     &.large {
       font-size: 1.25rem;
     }
   }
 
-  &.account-details {
-    text-align: center;
+  .alert {
+    margin-bottom: 1.5rem;
+    &.alert-danger {
+      color: #fff;
+    }
+  }
+}
+
+.definition-list-group {
+
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e1e8ee;
+  border-radius: 3px;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1rem 0;
+  }
+
+  .list-item {
+    border-bottom: 1px solid #e1e8ee;
+    padding: 1rem;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
 
     @include media-breakpoint-up(md) {
       border-right: 1px solid #e1e8ee;
-      display: flex;
-      flex-direction: row;
-      padding: 1rem 0;
+      border-bottom: none;
+      flex: 1 1 auto;
+      padding: 0 .65rem;
+      margin: 1rem 0;
 
       &:last-of-type {
         border-right: none;
       }
     }
+  }
 
-    dl {
-      border-bottom: 1px solid #e1e8ee;
+  dt {
+    font-size: .75rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  dd {
+    color: #6a737d;
+    font-size: 1.5rem;
+    white-space: nowrap;
+
+    &:last-child {
       margin-bottom: 0;
-      padding: 1rem .5rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @include media-breakpoint-up(md) {
-        flex: 1 1 auto;
-        border-right: 1px solid #e1e8ee;
-        border-bottom: none;
-
-        &:last-of-type {
-          border-right: none;
-        }
-      }
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      dt {
-        font-size: .80rem;
-        font-weight: 700;
-        margin-bottom: .5rem;
-        text-transform: uppercase;
-      }
-
-      dd {
-        color: #6a737d;
-        font-size: 1.5rem;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        span {
-          display: inline-block;
-          font-size: .85rem;
-          line-height: normal;
-          vertical-align: middle;
-        }
-
-        sup {
-          font-size: 1rem;
-          letter-spacing: 0.75rem;
-          margin-right: -1rem;
-          padding-right: .10rem;
-          top: -.28rem;
-        }
-      }
-
     }
 
-    a {
+    span {
+      display: block;
       font-size: .85rem;
+      line-height: normal;
+      vertical-align: middle;
     }
+
+    sup {
+      font-size: 1rem;
+      letter-spacing: 0.75rem;
+      margin-right: -1rem;
+      padding-right: .10rem;
+      top: -.28rem;
+    }
+  }
+
+  a {
+    font-size: .85rem;
   }
 }
 
@@ -103,13 +110,4 @@
   .btn {
     border: 1px solid #fff;
   }
-}
-
-.notification {
-  background: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
 }
