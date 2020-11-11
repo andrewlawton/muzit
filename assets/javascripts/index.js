@@ -236,10 +236,10 @@ $(function() {
 $(function() {
   var url = window.location.href;
   if(url.indexOf('/?follow-titles') != -1) {
-      $('#how-to-follow').css("display", "block");
+      $('#follow-titles').css("display", "block");
       $('#following').css("display", "none");
     } else {
-      $('#how-to-follow').css("display", "none");
+      $('#follow-titles').css("display", "none");
       $('#following').css("display", "block");
     }
 });
