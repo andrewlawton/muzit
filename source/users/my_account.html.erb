@@ -2,7 +2,6 @@
 title: My Account - Muzit
 bodyClass: my-account
 ---
-
 <div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-6">
@@ -33,12 +32,12 @@ bodyClass: my-account
           </div>
           <div class="form-group password optional user_password_confirmation form-group-invalid">
             <label class="form-control-label password optional" for="user_password_confirmation">Password confirmation</label>
-            <input class="form-control is-invalid password optional" aria-invalid="true" type="password" name="user[password_confirmation]" id="user_password_confirmation"
-            ><div class="invalid-feedback">Password confirmation doesn't match Password</div>
+            <input class="form-control is-invalid password optional" aria-invalid="true" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+            <div class="invalid-feedback">Password confirmation doesn't match Password</div>
           </div>
           <div class="action">
             <input type="submit" name="commit" value="Save" class="btn btn-primary" data-disable-with="Save">
-            <a href="#">Cancel</a>
+            <%= link_to 'Cancel', '#' %>
           </div>
         </form>
       </div>
