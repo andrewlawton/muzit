@@ -235,7 +235,7 @@ $(function() {
 
 $(function() {
   var url = window.location.href;
-  if(url.indexOf('/?how-to-follow') != -1) {
+  if(url.indexOf('/?follow-titles') != -1) {
       $('#how-to-follow').css("display", "block");
       $('#following').css("display", "none");
     } else {
