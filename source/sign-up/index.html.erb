@@ -3,7 +3,7 @@ title: Sign Up - Muzit
 layout: sign-up
 bodyClass: sign-up
 ---
-<script src="https://js.stripe.com/v3/"></script>
+
 <style>
   /**
  * The CSS shown here will not be introduced in the Quickstart guide, but shows
@@ -529,9 +529,7 @@ bodyClass: sign-up
             <!-- // end form-group -->
             <div class="action">
               <button class="btn btn-primary" type="submit" id="sign-up" disabled>Sign Up</button>
-              <div class="text-center d-md-inline">
-                <%= link_to 'Cancel', '../pricing/index.html' %>
-              </div>
+              <%= link_to 'Cancel', '../pricing/index.html' %>
             </div>
             <!-- // end action -->
           </fieldset>
