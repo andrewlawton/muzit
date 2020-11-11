@@ -12,6 +12,7 @@
   }
 
   .alert-info {
+    margin-bottom: 2rem;
     padding: .5rem 1rem;
     text-align: center;
 
@@ -39,7 +40,7 @@
     }
 
     @include media-breakpoint-up(md) {
-      margin-right: 1.80rem;
+      margin-right: 1.875rem;
 
       &:last-child {
         margin-right: 0;
@@ -69,6 +70,7 @@
 
   .action {
     &.buy-credits {
+      margin: 0 0 2rem 0;
       text-align: center;
 
       a {
@@ -80,7 +82,7 @@
         }
       }
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(sm) {
         align-items: center;
         display: flex;
         justify-content: flex-end;
