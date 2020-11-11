@@ -231,7 +231,7 @@ $(function() {
   }
 });
 
-// display dashboard how to follow titles section based on url
+// display dashboard follow titles section based on url
 
 $(function() {
   var url = window.location.href;
