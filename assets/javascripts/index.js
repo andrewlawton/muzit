@@ -155,6 +155,11 @@ $(function() {
     $('#alert-organization-added').fadeIn("fast");
   });
 
+  $('#copy-title').click(function () {
+    $('#alert-title-copied').fadeIn("fast");
+    $('#copied-title').show();
+  });
+
 });
 
 // artist details hero follow and unfollow artists button
