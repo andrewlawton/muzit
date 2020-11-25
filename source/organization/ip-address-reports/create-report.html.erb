@@ -1,19 +1,19 @@
 ---
-title: Create Report - Muzit
+title: Add IP Address List - Muzit
 bodyClass: ip-address-reports
 ---
 <h1 class="text-center my-4">
-  Create IP Address Report
+  Add IP Address List
 </h1>
 <div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-8">
       <div class="form-container">
         <h5>
-          Report Name
+          List Name
         </h5>
         <form action="create-report-step2.html" method="get">
-          <label class="form-control-label" for="ip_address_report_candidate_name">Enter a name for your report</label>
+          <label class="form-control-label required" for="ip_address_report_candidate_name">Enter the name of your list</label>
           <input class="form-control string optional" type="text" value="" name="ip_address_report_candidate[name]" id="ip_address_report_candidate_name">
           <div class="action steps text-right">
             <%= link_to "Cancel", "../ip-address-reports/ip-address-reports.html" %>
