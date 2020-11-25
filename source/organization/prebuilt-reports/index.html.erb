@@ -2,8 +2,17 @@
 title: IP Address Lists - Muzit
 bodyClass: lists
 ---
+<div class="alert alert-success" id="alert-title-copied" role="alert" style="display: none">
+  The title list has been copied.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <div class="container-fluid">
   <h1 class="text-center text-md-left my-4">IP Address Lists</h1>
+  <div class="text-center text-md-right my-4">
+    <%= link_to "Add IP Address List", "../ip-address-reports/create-report.html", class: 'btn btn-primary' %>
+  </div>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -19,7 +28,18 @@ bodyClass: lists
         </td>
         <td>35</td>
         <td class="action text-right text-nowrap">
+          <%= link_to "Copy", "#", id: 'copy-title' %>
            <%= link_to "Generate", "#" %>
+        </td>
+      </tr>
+      <tr id="copied-title" style="display: none;">
+        <td class="text-truncate">
+          <%= link_to "Auto Enthusiasts (copy)", "#" %>
+        </td>
+        <td>35</td>
+        <td class="action text-right text-nowrap">
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -28,7 +48,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -37,7 +58,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -46,7 +68,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -55,7 +78,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -64,7 +88,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -73,7 +98,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -82,7 +108,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -91,7 +118,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -100,7 +128,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -109,7 +138,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -118,7 +148,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
       <tr>
@@ -127,7 +158,8 @@ bodyClass: lists
         </td>
         <td>246,340</td>
         <td class="action text-right text-nowrap">
-           <%= link_to "Generate", "#" %>
+          <%= link_to "Copy", "#" %>
+          <%= link_to "Generate", "#" %>
         </td>
       </tr>
     </tbody>
