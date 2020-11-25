@@ -10,7 +10,7 @@ bodyClass: artists dashboard
   <div class="row justify-content-center">
     <div class="col-md-5">
       <div class="alert alert-info">
-        You have <span class="badge badge-pill badge-danger">1,000</span> IP credits remaining in your account.
+        You have <span class="badge badge-pill badge-danger">1,000</span> credits remaining in your account.
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@ bodyClass: artists dashboard
       <div class="card-header d-flex">
         IP Address Lists
         <div class="ml-auto">
-          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Simply click generate for the report you would like IP addresses list generated. You will then see <strong>Download Lists</strong> displayed. You can either purchase or download depending on your available IP credits.'}} do %>
+          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Click generate for the list you would like IP addresses list generated. You will then see <strong>Downloads</strong> displayed. You can either purchase or download depending on your available IP credits.'}} do %>
           <i class="fas fa-question-circle"></i>
           <% end %>
           <% link_to "../organization/ip-address-reports/create-report.html", title: 'Add IP Address Lists' do %>
@@ -131,9 +131,9 @@ bodyClass: artists dashboard
     <!-- // end card -->
     <div class="card">
       <div class="card-header d-flex">
-        Download Lists
+        Downloads
         <div class="ml-auto">
-          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'Download Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Once your IP Address Lists is generated you can either purchase or download the report depending on your available IP credits.'}} do %>
+          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'Downloads', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Once your IP Address Lists is generated you can either purchase or download the report depending on your available IP credits.'}} do %>
           <i class="fas fa-question-circle"></i>
           <% end %>
           <% link_to "../organization/ip-address-reports/ip-address-reports.html", title: 'See all Download Lists' do %>
