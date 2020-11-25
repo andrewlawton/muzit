@@ -1,51 +1,122 @@
 ---
-title: Create Report - Muzit
+title: Add IP Address List - Muzit
 bodyClass: ip-address-reports
 ---
 <h1 class="text-center my-4">
-  Create IP Address Report
+  Add IP Address List
 </h1>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-9">
       <div class="form-container">
         <h5>
-          Select Title Lists
+          Add Titles
         </h5>
         <p>
-          Select the title lists to use in your report. This will limit the results to just the titles included in your lists. If you don't see a list you want to use you can easily create your own custom title list.
+          Search for a title and click the name of the title you want in the search results and it will be added to the list. You can skip this step if you don't want to include titles.
         </p>
-        <form action="create-report-step3.html" method="get">
-          <fieldset class="form-group check_boxes optional ip_address_report_candidate_artist_lists form-group-valid">
-            <input type="hidden" name="ip_address_report_candidate[artist_lists][]" value="">
-            <div class="custom-control custom-checkbox mr-sm-2">
-              <input class="custom-control-input check_boxes optional" type="checkbox" value="2" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_2">
-              <label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_2">Kula Brands</label>
+        <form action="" method="" class="form">
+          <fieldset>
+            <div class="form-group">
+              <label for="search-titles">Search for titles</label>
+              <div class="search">
+                <div class="search" data-controller="search">
+                  <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Enter a title name...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+                  <div data-target="search.results">
+                    <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList">
+                      <div class="scroll">
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phish<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Philly<span>Female Dancemania artist</span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Philth<span>Drum and Bass/Dubstep</span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phil G<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phi Phi<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phixx<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phil<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">So Phistry<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Philo<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phil<span>Philipp Müller</span></a>
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                  <!-- // end search results -->
+                </div>
+                <!-- // end input-group -->
+              </div>
+              <!-- // end search -->
             </div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="14" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_14"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_14">Jacelyn Soundalikes</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="22" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_22"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_22">Donovan Lee Carpenter Soundalikes</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="16" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_16"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_16">Healx Natural</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="17" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_17"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_17">Country Music Fans</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="15" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_15"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_15">New Mothers</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="11" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_11"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_11">Travel</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="13" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_13"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_13">Auto Enthusiasts</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="3" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_3"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_3">Fitness Enthusiasts</label></div>
-            <div class="custom-control custom-checkbox mr-sm-2"><input class="custom-control-input check_boxes optional" type="checkbox" value="21" name="ip_address_report_candidate[artist_lists][]" id="ip_address_report_candidate_artist_lists_21"><label class="custom-control-label collection_check_boxes" for="ip_address_report_candidate_artist_lists_21">Hip Hop Culture</label></div>
+            <!-- // end form-group -->
           </fieldset>
-          <div class="action steps text-right">
-            <div class="row">
-              <div class="col-md-6 text-left">
-                <%= link_to "Create Title List", "../../organization/title-lists/title-lists-add.html", class: 'btn btn-outline-primary' %>
-              </div>
-              <div class="col-md-6">
-                <%= link_to "Cancel", "../ip-address-reports/ip-address-reports.html" %>
-                <%= link_to "Back", "create-report.html", class: 'btn btn-outline-primary' %>
-                <%= submit_tag "Next", class: 'btn btn-primary' %>
-              </div>
-            </div>
-          </div>
+        </form>
+        <table class="table" id="list">
+          <thead>
+            <tr>
+              <th>Title Name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-truncate">
+                Marvel Entertainment
+              </td>
+              <td class="action text-right text-nowrap">
+                <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-truncate">
+                Game of Thrones
+              </td>
+              <td class="action text-right text-nowrap">
+                <%= link_to "Remove", "#", 'onclick' => 'removeListItem2()' %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="action steps text-right">
+          <%= link_to "Cancel", "../ip-address-reports/ip-address-reports.html" %>
+          <%= link_to "Back", "create-report.html", class: 'btn btn-outline-primary' %>
+          <%= link_to "Next", "create-report-step3.html", class: 'btn btn-primary' %>
+        </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+<!-- // end container -->
+<script>
+  function removeListItem1() {
+    if (confirm("Are you sure you want to remove this item from the list?")) {
+      document.getElementById("list").deleteRow(1);
+    } else {
+
+    }
+  }
+  function removeListItem2() {
+    if (confirm("Are you sure you want to remove this item from the list?")) {
+      document.getElementById("list").deleteRow(2);
+    } else {
+
+    }
+  }
+</script>
