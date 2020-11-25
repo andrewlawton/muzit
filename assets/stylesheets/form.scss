@@ -175,9 +175,10 @@ form label.required:after {
     border-top: 1px solid #ddd;
     padding-top: 1.5rem;
     a, input {
-      width: auto;
       display: inline-block;
       margin: 0;
+      vertical-align: middle;
+      width: auto;
       & + .btn {
         margin-left: .75rem;
       }
