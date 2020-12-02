@@ -13,17 +13,16 @@ bodyClass: ip-address-reports
           Add Titles
         </h5>
         <p>
-          Search for a title and click the name of the title you want in the search results and it will be added to the list. You can skip this step if you don't want to include titles.
+          Add titles to the list by searching the name of a title you want to add. Titles are associated with the names of games, movies, musicians, tv shows and software applications. You can skip this step if you don't want to add any titles.
         </p>
         <form action="" method="" class="form">
           <fieldset>
             <div class="form-group">
-              <label for="search-titles">Search for titles</label>
-              <div class="search">
+              <label for="search-titles">Search titles</label>
                 <div class="search" data-controller="search">
-                  <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Enter a title name...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+                  <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Enter title name...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
                   <div data-target="search.results">
-                    <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList">
+                    <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList" id="add-titles">
                       <div class="scroll">
                         <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
                           <a href="#">Phish<span></span></a>
@@ -60,14 +59,18 @@ bodyClass: ip-address-reports
                   </div>
                   <!-- // end search results -->
                 </div>
-                <!-- // end input-group -->
-              </div>
-              <!-- // end search -->
+                <!-- // end search -->
             </div>
             <!-- // end form-group -->
           </fieldset>
         </form>
-        <table class="table" id="list">
+
+        <div class="border px-3 py-2" id="no-titles" style="display: none;">
+          <p class="p-0 m-0">
+            <small>No titles have been added.</small>
+          </p>
+        </div>
+        <table class="table border" id="list-title" style="display: none;">
           <thead>
             <tr>
               <th>Title Name</th>
@@ -77,18 +80,10 @@ bodyClass: ip-address-reports
           <tbody>
             <tr>
               <td class="text-truncate">
-                Marvel Entertainment
+                Phish
               </td>
               <td class="action text-right text-nowrap">
                 <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                Game of Thrones
-              </td>
-              <td class="action text-right text-nowrap">
-                <%= link_to "Remove", "#", 'onclick' => 'removeListItem2()' %>
               </td>
             </tr>
           </tbody>
@@ -105,18 +100,12 @@ bodyClass: ip-address-reports
 </div>
 <!-- // end container -->
 <script>
-  function removeListItem1() {
-    if (confirm("Are you sure you want to remove this item from the list?")) {
-      document.getElementById("list").deleteRow(1);
-    } else {
+function removeListItem1() {
+  if (confirm("Are you sure you want to remove this title from the list?")) {
+    document.getElementById("list-title").style.display='none';
+    document.getElementById('no-titles').style.display='block';
+  } else {
 
-    }
   }
-  function removeListItem2() {
-    if (confirm("Are you sure you want to remove this item from the list?")) {
-      document.getElementById("list").deleteRow(2);
-    } else {
-
-    }
-  }
+}
 </script>
