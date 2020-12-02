@@ -249,6 +249,13 @@ $(function() {
     }
 });
 
+// Add IP Address List Step 2 Add Title Search results click handler
+
+$('#add-titles div > li > a').click(function () {
+  $('#list-title').show();
+  $('#no-titles').hide();
+});
+
 // disable sign up button until agree to terms checkbox is clicked
 
 $(function() {
