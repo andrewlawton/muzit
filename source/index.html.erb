@@ -24,7 +24,7 @@ bodyClass: artists dashboard
       <div class="card-header d-flex">
         IP Address Lists
         <div class="ml-auto">
-          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Click generate for the list you would like IP addresses list generated. You will then see <strong>Downloads</strong> displayed. You can either purchase or download depending on your available IP credits.'}} do %>
+          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Click generate for the list you want. You will then see the list generating in the <strong>Downloads</strong>. Once the list has been generated you can purchase or download the list.'}} do %>
           <i class="fas fa-question-circle"></i>
           <% end %>
           <% link_to "../organization/ip-address-reports/create-report.html", title: 'Add IP Address Lists' do %>
@@ -133,7 +133,7 @@ bodyClass: artists dashboard
       <div class="card-header d-flex">
         Downloads
         <div class="ml-auto">
-          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'Downloads', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Once your IP Address Lists is generated you can either purchase or download the report depending on your available IP credits.'}} do %>
+          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'Downloads', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'You can either purchase or download a list depending on your available credits. Click the Buy Credits button to purchase additional credits at any time.'}} do %>
           <i class="fas fa-question-circle"></i>
           <% end %>
           <% link_to "../organization/ip-address-reports/ip-address-reports.html", title: 'See all Download Lists' do %>
@@ -1362,7 +1362,7 @@ bodyClass: artists dashboard
         </button>
       </div>
       <div class="modal-body">
-        You do not have enough IP address credits to download this report. To buy more credits click the Buy Credits button and then select an IP block based on how many IP's you need.
+        You do not have enough credits to download this list. To buy more credits click the Buy Credits button and then select an IP block based on how many IP's you need.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
