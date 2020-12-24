@@ -7,43 +7,148 @@
   main {
     padding-bottom: 0;
   }
+
   .popover {
-    z-index: 1020;
+    z-index: 1020; // adjusting z-index to prevent nav bar overlap
   }
 
   .alert-info {
-    margin-bottom: 2rem;
-    padding: .5rem 1rem;
-    text-align: center;
+    margin: 2rem 0;
+    padding: .5rem .75rem;
 
-    .badge {
-      margin: 0;
+    .action {
+      margin: .75rem 0 .25rem 0;
+
+      a {
+        text-transform: capitalize;
+      }
     }
   }
 
+  .segmented-controls {
+    margin-top: 1rem;
+
+    .nav-pills {
+
+      @include media-breakpoint-down(sm) {
+        justify-content: center;
+      }
+
+      .nav-item {
+
+        // make nav-items grow to full width on xs devices
+
+        @include media-breakpoint-only(xs) {
+          text-align: center;
+          flex-grow: 1;
+        }
+
+      }
+
+      .nav-item:first-of-type {
+        border: 1px solid #ff161f;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .nav-item:last-of-type {
+        border: 1px solid #ff161f;
+        border-radius: 0 3px 3px 0;
+      }
+
+      .nav-link {
+        border-radius: 0;
+        padding: .25rem 1rem;
+      }
+
+      font-size: .90rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    .card {
+      .card-header {
+        background-color: rgba(0,0,0,.03);
+        span {
+          display: none; // hide card-header text
+        }
+      }
+    }
+
+  }
+
   .cards {
+    margin-top: 2rem;
+
+    display: none;
     @include media-breakpoint-up(md) {
       display: flex;
     }
   }
 
   .card {
+    margin-bottom: 1rem;
+
     .card-header {
       background: none;
-      div > a {
+      padding: .5rem .75rem;
+
+      // h5 {
+      //   font-size: 1rem;
+      //   margin: 0;
+      //   font-weight: normal;
+      //   line-height: 1.5;
+      // }
+
+      div>a {
         margin-right: .5rem;
         outline: none;
+
         &:last-of-type {
           margin-right: 0;
         }
       }
     }
 
+    .card-body {
+      padding: .75rem;
+    }
+
+    td {
+
+      .btn.spinner:hover {
+        background-color: #fff;
+        color: var(--primary);
+      }
+
+    }
+
     @include media-breakpoint-up(md) {
-      margin-right: 1.875rem;
 
       &:last-child {
-        margin-right: 0;
+        margin-left: 1.875rem;
+      }
+
+      &:only-child {
+        margin-left: 0;
+        border: 1px solid #f00;
+      }
+    }
+
+    .spinner {
+
+      padding: .25rem 0; // downloads table cell padding adjustment for spinner to vertically align all table cells
+
+      .spinner-border-sm {
+        height: .75rem;
+        width: .75rem;
+      }
+
+      span {
+        //font-size: .675rem;
+        //font-weight: 500;
+        //margin-left: .25rem;
       }
     }
 
@@ -51,17 +156,17 @@
       &.table {
         th {
           border-bottom: none;
+          font-size: .65rem;
           padding: 0;
         }
 
         td {
           border-top: none;
-          padding: .55rem 0;
+          padding: .40rem 0;
+          vertical-align: middle;
 
-          &.action {
-            a {
-              margin-left: .5rem;
-            }
+          a.btn {
+            font-size: .675rem;
           }
         }
       }
@@ -110,10 +215,12 @@
     height: 0;
     margin-bottom: 1rem;
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     padding-bottom: 0;
     position: relative;
     width: 100%;
+
     video {
       border: 1px solid #222;
       position: absolute;
@@ -123,6 +230,11 @@
       width: 100%;
     }
   }
+
+  h2 {
+    margin: 2rem 0;
+  }
+
 }
 
 table {
@@ -132,6 +244,7 @@ table {
     th:nth-child(1) {
       width: 70%;
     }
+
     td:nth-child(2) {
       text-align: right;
     }
@@ -142,34 +255,43 @@ table {
       &:nth-child(1) {
         width: 35%;
       }
+
       &:nth-child(2) {
         display: none;
+
         @include media-breakpoint-up(sm) {
           display: table-cell;
         }
       }
+
       &:nth-child(3) {
         display: none;
+
         @include media-breakpoint-up(sm) {
           display: table-cell;
           text-align: right;
         }
       }
     }
+
     td {
       &:nth-child(2) {
         display: none;
+
         @include media-breakpoint-up(sm) {
           display: table-cell;
         }
       }
+
       &:nth-child(3) {
         display: none;
+
         @include media-breakpoint-up(sm) {
           display: table-cell;
           text-align: right;
         }
       }
+
       &:nth-child(4) {
         text-align: right;
       }
