@@ -2,287 +2,49 @@
 title: Dashboard - Muzit
 bodyClass: artists dashboard
 ---
-
+<div class="alert alert-success" id="alert-welcome" role="alert">
+  Welcome Andrew
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <div class="container-fluid">
-  <h1 class="text-center text-md-left my-4">
+  <h1 class="sr-only">
     Dashboard
   </h1>
-  <div class="row justify-content-center">
-    <div class="col-md-5">
-      <div class="alert alert-info">
-        You have <span class="badge badge-pill badge-danger">1,000</span> credits remaining in your account.
-      </div>
+  <div class="alert alert-info">
+    Get started by clicking generate for the list you want in the IP Address Lists below. The list will be added to Downloads. Once it's generated you can purchase and download the list. If you don't see a list you want you can add your own IP address list.
+    <div class="text-center action">
+      <%= link_to 'Got It', '#', class: '', :data => {dismiss: 'alert'} %>
     </div>
   </div>
-  <div class="action buy-credits">
-    <%= link_to "Buy Credits", "../buy-credits/index.html", :class => "btn btn-primary btn-md" %>
-    <%= link_to "Purchase History", "../organization/purchase-history.html" %>
-    <%= link_to "Donate IP Records", "../organization/donate-ip-records/index.html" %>
+  <div class="segmented-controls">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <%= link_to 'IP Address Lists', '#segment-ip-addresses', :class => 'nav-link active', :id => 'ip-addresses-tab', :data => {toggle: 'pill'}, :role => 'tab', :aria => {controls: 'pills-ip-addresses', selected: 'true' } %>
+      </li>
+      <li class="nav-item" role="presentation">
+        <%= link_to 'Downloads', '#segment-downloads', :class => 'nav-link', :id => 'downloads-tab', :data => {toggle: 'pill'}, :role => 'tab', :aria => {controls: 'pills-downloads', selected: 'false' } %>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="segment-ip-addresses" role="tabpanel" aria-labelledby="ip-addresses-tab">
+        <%= partial "partials/dashboard-ip-address-lists" %>
+      </div>
+      <div class="tab-pane fade" id="segment-downloads" role="tabpanel" aria-labelledby="downloads-tab">
+        <%= partial "partials/dashboard-downloads" %>
+      </div>
+    </div>
   </div>
   <div class="cards">
-    <div class="card">
-      <div class="card-header d-flex">
-        IP Address Lists
-        <div class="ml-auto">
-          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Click generate for the list you want. You will then see the list generating in the <strong>Downloads</strong>. Once the list has been generated you can purchase or download the list.'}} do %>
-          <i class="fas fa-question-circle"></i>
-          <% end %>
-          <% link_to "../organization/ip-address-reports/create-report.html", title: 'Add IP Address Lists' do %>
-          <i class="fas fa-plus"></i>
-          <% end %>
-          <% link_to "../organization/prebuilt-reports/index.html", title: 'See all IP Address Lists' do %>
-          <i class="fas fa-list"></i>
-          <% end %>
-        </div>
-      </div>
-      <div class="card-body">
-        <table class="table ip-address-lists">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Kula Brands', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Jacelyn Soundalikes', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Donovan Lee Carpenter Soundalikes', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Healx Natural', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Country Music Fans', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'New Mothers', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Travel', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Auto Enthusiasts', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Fitness Enthusiasts', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Hip Hop Culture', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td>
-                <%= link_to 'Generate', '#' %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!-- // end card -->
-    <div class="card">
-      <div class="card-header d-flex">
-        Downloads
-        <div class="ml-auto">
-          <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'Downloads', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'You can either purchase or download a list depending on your available credits. Click the Buy Credits button to purchase additional credits at any time.'}} do %>
-          <i class="fas fa-question-circle"></i>
-          <% end %>
-          <% link_to "../organization/ip-address-reports/ip-address-reports.html", title: 'See all Download Lists' do %>
-          <i class="fas fa-list"></i>
-          <% end %>
-        </div>
-      </div>
-      <div class="card-body">
-        <table class="table download-lists">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th class="text-truncate">Created</th>
-              <th class="text-truncate">IP Addresses</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Auto Enthusiasts Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-10-09 14:28
-              </td>
-              <td></td>
-              <td>
-                Generating
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Country Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-04-16 21:11
-              </td>
-              <td>850,697</td>
-              <td>
-                <%= link_to 'Purchase', 'buy-credits/index.html' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'CBD Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-04-16 21:11
-              </td>
-              <td>54,047</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Gamers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-04-07 02:41
-              </td>
-              <td>93,322</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'New Mothers Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-03-12 23:43
-              </td>
-              <td>38,923</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Rap Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-03-12 23:43
-              </td>
-              <td>198,504</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Reggae Artists Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-03-12 23:43
-              </td>
-              <td>54,047</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Pop Music Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-03-12 23:43
-              </td>
-              <td>71,021</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Home Improvement Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-03-12 23:43
-              </td>
-              <td>46,291</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-truncate">
-                <%= link_to 'Travel Report', '../organization/ip-address-reports/ip-address-report-details.html' %>
-              </td>
-              <td class="text-truncate">
-                2020-03-12 23:43
-              </td>
-              <td>73,191</td>
-              <td>
-                <%= link_to 'Download', '#', data: {target: '#purchase-credits', toggle: 'modal'} %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!-- // end card -->
+    <%= partial "partials/dashboard-ip-address-lists" %>
+    <%= partial "partials/dashboard-downloads" %>
   </div>
   <!-- // end cards -->
 </div>
 <!-- // end container-fluid -->
 <div class="container-fluid" id="following" style="display: none;">
-  <h2 class="my-4 text-center text-md-left">Following</h2>
+  <h2 class="text-center text-md-left">Following</h2>
   <div class="row">
     <div class="col-md-3">
       <form>
@@ -1311,9 +1073,8 @@ bodyClass: artists dashboard
   <!-- // end category -->
 </div>
 <!-- // end container-fluid -->
-
 <div class="container-fluid" id="follow-titles" syle="display: none">
-  <h2 class="my-4 text-center text-md-left">Follow titles</h2>
+  <h2 class="text-center text-md-left">Follow titles</h2>
   <div class="row">
     <div class="col-md-6">
       <div class="video-container">
@@ -1332,10 +1093,10 @@ bodyClass: artists dashboard
         Follow titles and get real-time stats from over 1 million titles in our database.
       </h3>
       <p>
-        Simply enter the name of a game, music artist, movie, software, or TV show in the Search titles at the top of the page. Click the name of the title you want to follow and you will be taken a page with the title details and stats.
+        Simply enter the name of a game, music artist, movie, software, or TV show in the Search titles at the top of the page. Click the name of the title, you want to follow, in the search results and you will be taken to the title details page.
       </p>
       <p>
-        Click the &ldquo;Follow&rdquo; button. Any title you follow will be added to the dashboard page and available each time you sign in. If you no longer want to follow a title simply click the &ldquo;Following&rdquo; button and select &ldquo;Unfollow&rdquo;.
+        Click the &ldquo;Follow&rdquo; button. Any title you follow will be added to the dashboard page and available each time you sign in. If you no longer want to follow a title click the &ldquo;Following&rdquo; button and select &ldquo;Unfollow&rdquo;.
       </p>
     </div>
   </div>
@@ -1352,23 +1113,25 @@ bodyClass: artists dashboard
   </div>
 </div>
 <!-- // end callout -->
-<div class="modal fade" id="purchase-credits" tabindex="-1" role="dialog" aria-labelledby="purchaseCredits" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Insufficient credits</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        You do not have enough credits to download this list. To buy more credits click the Buy Credits button and then select an IP block based on how many IP's you need.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-        <%= link_to 'Buy Credits', '../buy-credits/index.html', class: 'btn btn-primary' %>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- // end modal generate-list -->
+<script>
+  let generate = document.querySelectorAll('.btn[data-name="generate"]');
+
+  generate.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+
+      //alert(event.target);
+
+      btn.innerHTML = "<span class=\"spinner-border spinner-border-sm text-primary\"></span>";
+      btn.classList.add("spinner");
+
+      setTimeout(function(){
+
+       // reset the button to original state
+       btn.innerHTML = 'Generate';
+       btn.classList.remove("spinner");
+
+       }, 5000);
+
+    });
+  });
+</script>
