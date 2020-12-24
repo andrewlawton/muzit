@@ -1,0 +1,56 @@
+.purchase-details {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 1.25rem;
+
+  table {
+    table-layout: auto;
+
+    tr {
+      border-top: 1px solid #ddd;
+
+      &:first-of-type {
+        border-top: none;
+      }
+
+      &:first-of-type td {
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      &:last-of-type td {
+        font-weight: bold;
+      }
+    }
+
+    th {
+      color: #959598;
+      font-size: .75rem;
+      font-weight: 400;
+      padding: 0 .5rem;
+      text-transform: uppercase;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 75%;
+    }
+
+    td {
+      border-top: none;
+      padding: .5rem;
+      text-align: right;
+    }
+  }
+}
+
+.purchase-confirmation {
+  .icon {
+    margin: 1.5rem auto;
+    text-align: center;
+
+    i {
+      color: #08c900;
+      font-size: 4rem;
+    }
+  }
+}
