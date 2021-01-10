@@ -1,24 +1,31 @@
 ---
 title: Add IP Address List - Muzit
-bodyClass: ip-address-reports
+bodyClass: add-list
 ---
+<div class="alert alert-success" id="alert-list-saved" role="alert" style="display: none">
+  The list has been saved.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <h1 class="text-center my-4">
-  Add IP Address List
+  Add List
 </h1>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-9">
-      <div class="form-container">
-        <h5>
-          Add Titles
-        </h5>
-        <p>
-          Add titles to the list by searching the name of a title you want to add. Titles are associated with the names of games, movies, musicians, tv shows and software applications. You can skip this step if you don't want to add any titles.
-        </p>
-        <form action="" method="" class="form">
-          <fieldset>
-            <div class="form-group">
-              <label for="search-titles">Search titles</label>
+      <div class="card">
+        <div class="card-header">
+          Add List Titles
+        </div>
+        <div class="card-body">
+          <p>
+            Add titles to the list by searching for the name of a title you want to add. Titles are associated with the names of games, movies, musicians, tv shows and software applications. This step is optional if you don't want to add any titles.
+          </p>
+          <form action="" method="" class="form">
+            <fieldset>
+              <div class="form-group">
+                <label for="search-titles">Search titles (optional)</label>
                 <div class="search" data-controller="search">
                   <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Enter title name...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
                   <div data-target="search.results">
@@ -55,45 +62,45 @@ bodyClass: ip-address-reports
                           <a href="#">Phil<span>Philipp Müller</span></a>
                         </li>
                       </div>
+                      <!-- // end scroll -->
                     </ul>
                   </div>
                   <!-- // end search results -->
                 </div>
                 <!-- // end search -->
-            </div>
-            <!-- // end form-group -->
-          </fieldset>
-        </form>
-
-        <div class="border px-3 py-2" id="no-titles" style="display: none;">
-          <p class="p-0 m-0">
-            <small>No titles have been added.</small>
-          </p>
+              </div>
+              <!-- // end form-group -->
+            </fieldset>
+          </form>
+          <div class="border px-3 py-2" id="no-titles" style="display: none;">
+            <p class="p-0 m-0">
+              <small>No titles have been added.</small>
+            </p>
+          </div>
+          <table class="table border" id="list-title" style="display: none;">
+            <thead>
+              <tr>
+                <th>Title Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-truncate">
+                  Phish
+                </td>
+                <td class="action text-right text-nowrap">
+                  <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="action steps text-right">
+            <%= link_to 'Cancel', '../../organization/prebuilt-reports/index.html' %>
+            <%= link_to 'Back', 'create-report.html', class: 'btn btn-outline-primary' %>
+            <%= link_to 'Next', 'create-report-step3.html', class: 'btn btn-primary' %>
+          </div>
         </div>
-        <table class="table border" id="list-title" style="display: none;">
-          <thead>
-            <tr>
-              <th>Title Name</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-truncate">
-                Phish
-              </td>
-              <td class="action text-right text-nowrap">
-                <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="action steps text-right">
-          <%= link_to "Cancel", "../ip-address-reports/ip-address-reports.html" %>
-          <%= link_to "Back", "create-report.html", class: 'btn btn-outline-primary' %>
-          <%= link_to "Next", "create-report-step3.html", class: 'btn btn-primary' %>
-        </div>
-        </form>
       </div>
     </div>
   </div>
@@ -102,8 +109,8 @@ bodyClass: ip-address-reports
 <script>
 function removeListItem1() {
   if (confirm("Are you sure you want to remove this title from the list?")) {
-    document.getElementById("list-title").style.display='none';
-    document.getElementById('no-titles').style.display='block';
+    document.getElementById("list-title").style.display = 'none';
+    document.getElementById('no-titles').style.display = 'block';
   } else {
 
   }
