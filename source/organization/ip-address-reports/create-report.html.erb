@@ -1,25 +1,36 @@
 ---
 title: Add IP Address List - Muzit
-bodyClass: ip-address-reports
+bodyClass: add-list
 ---
+<div class="alert alert-success" id="alert-list-saved" role="alert" style="display: none">
+  The list has been saved.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <h1 class="text-center my-4">
-  Add IP Address List
+  Add List
 </h1>
 <div class="container">
-  <div class="row justify-content-center align-items-center">
+  <div class="row justify-content-center">
     <div class="col-md-8">
-      <div class="form-container">
-        <h5>
+      <div class="card">
+        <div class="card-header">
           List Name
-        </h5>
-        <form action="create-report-step2.html" method="get">
-          <label class="form-control-label required" for="ip_address_report_candidate_name">Enter the name of your list</label>
-          <input class="form-control string optional" type="text" value="" name="ip_address_report_candidate[name]" id="ip_address_report_candidate_name">
-          <div class="action steps text-right">
-            <%= link_to "Cancel", "../ip-address-reports/ip-address-reports.html" %>
-            <%= submit_tag "Next", class: 'btn btn-primary' %>
-          </div>
-        </form>
+        </div>
+        <div class="card-body">
+          <form action="create-report-step2.html" method="get">
+            <div class="form-group">
+              <label class="form-control-label required" for="ip_address_report_candidate_name">Enter a name for the list</label>
+              <input class="form-control string optional" type="text" value="" name="ip_address_report_candidate[name]" id="ip_address_report_candidate_name">
+            </div>
+            <!-- // end form-group -->
+            <div class="action steps text-right">
+              <%= link_to "Cancel", "../../organization/prebuilt-reports/index.html" %>
+              <%= submit_tag "Next", class: 'btn btn-primary' %>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
