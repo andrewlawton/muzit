@@ -1,25 +1,72 @@
-// ip-address-reports
+// ip-address-lists
 
-.ip-address-reports {
+.add-list {
+
+  .card-header {
+    font-weight: 600;
+  }
 
   fieldset {
-    legend {
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
     &.form-group {
+      margin-bottom: 1.5rem;
+    }
+    legend {
+      font-weight: 600;
+      line-height: 1;
+    }
+    .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1rem;
-      margin-bottom: 2rem;
+      grid-template-columns: 1fr 1fr;
+
+      legend {
+        grid-column: span 2;
+      }
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        legend {
+          grid-column: span 3;
+        }
+
+      }
     }
   }
 
-  .review {
-    ul {
-      list-style: none;
-      padding: 0;
+  &.review-list {
+
+    dl {
+      div {
+
+        padding: .75rem;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+
+      dt {
+        display: flex;
+        margin-bottom: .75rem;
+
+        a {
+          font-weight: normal;
+          margin-left: auto;
+        }
+      }
+
+      dd ul {
+        display: grid;
+        //grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+
+        list-style: none;
+        padding: 0;
+
+        @include media-breakpoint-up(md) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
     }
   }
 }
