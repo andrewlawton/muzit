@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" role="navigation">
-  <% link_to "../../index.html", class:"navbar-brand" do %>
+  <% link_to "../../../index.html", class:"navbar-brand" do %>
   <%= image_tag("logo-muzit.png", class: "", alt: "Muzit Logo") %>
   <% end %>
   <div class="navbar-item ml-auto">
@@ -80,8 +80,9 @@
         <div class="dropdown-divider"></div>
         <div class="dropdown-header">IP Addresses</div>
         <%= link_to "Purchase History", "../../organization/purchase-history.html", :class => "dropdown-item" %>
-        <%= link_to "Donate IP Records", "../organization/donate-ip-records/index.html", :class => "dropdown-item" %>
+        <%= link_to "IP Address Lists", "../../organization/prebuilt-reports/index.html", :class => "dropdown-item" %>
         <%= link_to "Download Lists", "../../organization/ip-address-reports/ip-address-reports.html", :class => "dropdown-item" %>
+        <%= link_to "Donate IP Records", "../../organization/donate-ip-records/index.html", :class => "dropdown-item" %>
         <div class="dropdown-divider"></div>
         <div class="dropdown-header">Organization</div>
         <%= link_to "Credit Card", "../../organization/credit-card.html", :class => "dropdown-item" %>
