@@ -1,0 +1,82 @@
+---
+title: Add IP Address List - Muzit
+bodyClass: add-list review-list
+---
+<h1 class="text-center my-4">
+  Add List
+</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          List Review
+        </div>
+        <div class="card-body">
+          <p>
+            Please review your list selections. You can make any updates before saving the list.
+          </p>
+          <form action="dashboard-alert-report.html" method="get">
+            <dl>
+              <div>
+                <dt>List Name <%= link_to "Update", "#" %></dt>
+                <dd>Andrew's List</dd>
+              </div>
+              <div>
+                <dt>Titles <%= link_to "Update", "#" %></dt>
+                <dd>
+                  <ul>
+                    <li>Kula List</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Countries <%= link_to "Update", "#" %></dt>
+                <dd>
+                  <ul>
+                    <li>Canada</li>
+                    <li>United States</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Regions for Canada <%= link_to "Update", "#" %></dt>
+                <dd>
+                  <ul>
+                    <li>Ontario</li>
+                    <li>Quebec</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Regions for United States <%= link_to "Update", "#" %></dt>
+                <dd>
+                  <ul>
+                    <li>California</li>
+                    <li>Colorado</li>
+                    <li>Louisiana</li>
+                    <li>Massachusetts</li>
+                    <li>Vermont</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Number of IP Addresses <%= link_to "Update", "#" %></dt>
+                <dd>
+                  <ul>
+                    <li>100,000</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+            <div class="action steps text-right">
+              <%= link_to 'Cancel', '../../../organization/ip-address-lists/index.html' %>
+              <%= link_to "Back", "step5.html", class: 'btn btn-outline-primary' %>
+              <%= link_to "Save", "../../../organization/ip-address-lists/index.html", class: 'btn btn-primary' %>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

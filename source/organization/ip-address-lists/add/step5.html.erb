@@ -1,0 +1,37 @@
+---
+title: Add IP Address List - Muzit
+bodyClass: add-list review-list
+---
+<h1 class="text-center my-4">
+  Add List
+</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          Limit IP Addresses
+        </div>
+        <div class="card-body">
+          <p>
+            Limit the number of IP addresses included in the list by entering the number of IP addresses you need below. If you don't specify a number the list will include all IP addresses based on the list criteria.
+          </p>
+          <form action="step6.html" method="get">
+            <fieldset>
+              <div class="form-group">
+                <label for="limitAddresses">Number of IP Addresses (Optional)</label>
+                <input class="form-control" type="text" name="coupon" id="limitAddresses" placeholder="" aria-describedby="limitAddressesHint">
+              </div>
+              <!-- // end form-group -->
+              <div class="action steps text-right">
+                <%= link_to 'Cancel', '../../../organization/ip-address-lists/index.html' %>
+                <%= link_to "Back", "step4.html", class: 'btn btn-outline-primary' %>
+                <%= submit_tag "Next", class: 'btn btn-primary' %>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
