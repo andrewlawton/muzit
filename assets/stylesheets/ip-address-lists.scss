@@ -41,11 +41,10 @@
 
   dl {
     div {
-
-      padding: .75rem;
       background-color: #f8f9fa;
       border-radius: 4px;
       margin-bottom: 1rem;
+      padding: .75rem;
     }
 
     dt {
@@ -60,9 +59,7 @@
 
     dd ul {
       display: grid;
-      //grid-gap: 1rem;
       grid-template-columns: 1fr 1fr;
-
       list-style: none;
       padding: 0;
 
