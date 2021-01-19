@@ -26,17 +26,32 @@
 
   .alert {
     margin-bottom: 1.5rem;
+
     &.alert-danger {
       color: #fff;
     }
   }
+
   .table {
     margin-bottom: 0;
+  }
+
+  .justify-card-center & {
+    @include media-breakpoint-up(sm) {
+      width: 30rem;
+    }
+  }
+}
+
+.justify-card-center {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
   }
 }
 
 .definition-list-group {
-
   text-align: center;
   background: #fff;
   border: 1px solid #e1e8ee;
