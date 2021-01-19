@@ -34,133 +34,145 @@ bodyClass:
   <h1 class="my-4 text-center">
     Purchase List
   </h1>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <div class="purchase-details">
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td colspan="2">Country Artists List</td>
-                </tr>
-                <tr>
-                  <th>IP Addresses</th>
-                  <td>850,697</td>
-                </tr>
-                <tr>
-                  <th>Amount Due</th>
-                  <td>$8,506.97</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <form action="confirmation.html" method="get" class="form needs-validation" novalidate>
-            <fieldset>
-              <div class="form-group">
-                <label class="required" for="card-element">
-                  Credit or debit card
-                </label>
-                <div id="card-element">
-                  <!-- A Stripe Element will be inserted here. -->
-                </div>
-                <!-- Used to display form errors. -->
-                <div id="card-errors" role="alert"></div>
-                <script>
-                  // Create a Stripe client.
-            var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+  <div class="justify-card-center">
+    <div class="card">
+      <div class="card-body">
+        <div class="purchase-details">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td colspan="4">Bowie - everyone</td>
+              </tr>
+              <tr>
+                <th>&nbsp;</th>
+                <th>IP Addresses</th>
+                <th>Cost per IP</th>
+                <th>Amount</th>
+              </tr>
+              <tr>
+                <th>&nbsp;</th>
+                <td>117,084</td>
+                <td>$0.03</td>
+                <td>$3,512.52</td>
+              </tr>
+              <tr>
+                <th>Pre-purchased</th>
+                <td>77,017</td>
+                <td>-&nbsp;$0.03</td>
+                <td>-&nbsp;$2.310.51</td>
+              </tr>
+              <tr>
+                <th colspan="3">Amount Due</th>
+                <td>$1,202.01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form action="confirmation.html" method="get" class="form needs-validation" novalidate>
+          <fieldset>
+            <div class="form-group">
+              <label class="required" for="card-element">
+                Credit or debit card
+              </label>
+              <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+              <!-- Used to display form errors. -->
+              <div id="card-errors" role="alert"></div>
+              <script>
+              // Create a Stripe client.
+              var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
-            // Create an instance of Elements.
-            var elements = stripe.elements();
+              // Create an instance of Elements.
+              var elements = stripe.elements();
 
-            // Custom styling can be passed to options when creating an Element.
-            // (Note that this demo uses a wider set of styles than the guide below.)
-            var style = {
-              base: {
-                color: '#32325d',
-                //fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-                fontSmoothing: 'antialiased',
-                fontSize: '16px',
-                '::placeholder': {
-                  color: '#aab7c4'
+              // Custom styling can be passed to options when creating an Element.
+              // (Note that this demo uses a wider set of styles than the guide below.)
+              var style = {
+                base: {
+                  color: '#32325d',
+                  //fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                  fontSmoothing: 'antialiased',
+                  fontSize: '16px',
+                  '::placeholder': {
+                    color: '#aab7c4'
+                  }
+                },
+                invalid: {
+                  color: '#ff4136',
+                  iconColor: '#ff4136'
                 }
-              },
-              invalid: {
-                color: '#ff4136',
-                iconColor: '#ff4136'
-              }
-            };
+              };
 
-            // Create an instance of the card Element.
-            var card = elements.create('card', {style: style});
+              // Create an instance of the card Element.
+              var card = elements.create('card', { style: style });
 
-            // Add an instance of the card Element into the `card-element` <div>.
-            card.mount('#card-element');
+              // Add an instance of the card Element into the `card-element` <div>.
+              card.mount('#card-element');
 
-            // Handle real-time validation errors from the card Element.
-            card.addEventListener('change', function(event) {
-              var displayError = document.getElementById('card-errors');
-              if (event.error) {
-                displayError.textContent = event.error.message;
-              } else {
-                displayError.textContent = '';
-              }
-            });
-
-            // Handle form submission.
-            var form = document.getElementById('payment-form');
-            form.addEventListener('submit', function(event) {
-              event.preventDefault();
-
-              stripe.createToken(card).then(function(result) {
-                if (result.error) {
-                  // Inform the user if there was an error.
-                  var errorElement = document.getElementById('card-errors');
-                  errorElement.textContent = result.error.message;
+              // Handle real-time validation errors from the card Element.
+              card.addEventListener('change', function(event) {
+                var displayError = document.getElementById('card-errors');
+                if (event.error) {
+                  displayError.textContent = event.error.message;
                 } else {
-                  // Send the token to your server.
-                  stripeTokenHandler(result.token);
+                  displayError.textContent = '';
                 }
               });
-            });
 
-            // Submit the form with the token ID.
-            function stripeTokenHandler(token) {
-              // Insert the token ID into the form so it gets submitted to the server
+              // Handle form submission.
               var form = document.getElementById('payment-form');
-              var hiddenInput = document.createElement('input');
-              hiddenInput.setAttribute('type', 'hidden');
-              hiddenInput.setAttribute('name', 'stripeToken');
-              hiddenInput.setAttribute('value', token.id);
-              form.appendChild(hiddenInput);
+              form.addEventListener('submit', function(event) {
+                event.preventDefault();
 
-              // Submit the form
-              form.submit();
-            }
+                stripe.createToken(card).then(function(result) {
+                  if (result.error) {
+                    // Inform the user if there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                  } else {
+                    // Send the token to your server.
+                    stripeTokenHandler(result.token);
+                  }
+                });
+              });
 
-            </script>
-              </div>
-              <!-- // end form-group -->
-              <div class="form-group">
-                <label for="coupon">Promo Code</label>
-                <input class="form-control" type="text" name="coupon" id="coupon" placeholder="Enter promo code">
-                <div class="invalid-feedback"></div>
-              </div>
-              <div class="action">
-                <%= submit_tag "Purchase", class: 'btn btn-primary' %>
-                <%= link_to 'Cancel', '../index.html' %>
-              </div>
-              <!-- // end action -->
-            </fieldset>
-          </form>
-        </div>
-        <!-- // end card-body -->
+              // Submit the form with the token ID.
+              function stripeTokenHandler(token) {
+                // Insert the token ID into the form so it gets submitted to the server
+                var form = document.getElementById('payment-form');
+                var hiddenInput = document.createElement('input');
+                hiddenInput.setAttribute('type', 'hidden');
+                hiddenInput.setAttribute('name', 'stripeToken');
+                hiddenInput.setAttribute('value', token.id);
+                form.appendChild(hiddenInput);
+
+                // Submit the form
+                form.submit();
+              }
+              </script>
+            </div>
+            <!-- // end form-group -->
+            <!--
+            <div class="form-group">
+              <label for="coupon">Promo Code</label>
+              <input class="form-control" type="text" name="coupon" id="coupon" placeholder="Enter promo code">
+              <div class="invalid-feedback"></div>
+            </div>
+            -->
+            <div class="action">
+              <%= submit_tag "Purchase", class: 'btn btn-primary' %>
+              <%= link_to 'Cancel', '../index.html' %>
+            </div>
+            <!-- // end action -->
+          </fieldset>
+        </form>
       </div>
-      <!-- // end card -->
+      <!-- // end card-body -->
     </div>
-    <!-- // end column -->
+    <!-- // end card -->
   </div>
-  <!-- // end row -->
+  <!-- // end justify-card-center -->
 </div>
 <!-- // end container -->
 <script>
