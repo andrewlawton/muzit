@@ -1,34 +1,31 @@
 ---
 title: Purchase List Confirmation - Muzit
-bodyClass: purchase-confirmation
+bodyClass:
 ---
 <div class="container">
   <h1 class="my-4 text-center">
     Thank You!
   </h1>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <div class="icon">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <h2 class="text-center">
-            List Purchased
-          </h2>
-          <p>
-            You have purchased <strong>Kula Brands</strong>. The list is ready to download. An email was sent to <strong>name@domain.com</strong> with the purchase details.
-          </p>
-          <div class="action text-center">
-            <%= link_to "Continue", "../../index.html", :class => "btn btn-primary btn-md" %>
-          </div>
+  <div class="justify-card-center">
+    <div class="card purchase-confirmation">
+      <div class="card-body">
+        <div class="icon">
+          <i class="fas fa-check-circle"></i>
         </div>
-        <!-- // end card-body -->
+        <h2 class="text-center">
+          List Purchased
+        </h2>
+        <p>
+          You have purchased <strong>Kula Brands</strong>. The list is ready to download. An email was sent to <strong>name@domain.com</strong> with the purchase details.
+        </p>
+        <div class="action text-center">
+          <%= link_to "Continue", "../../index.html", :class => "btn btn-primary btn-md" %>
+        </div>
       </div>
-      <!-- // end card -->
+      <!-- // end card-body -->
     </div>
-    <!-- // end column -->
+    <!-- // end card -->
   </div>
-  <!-- // end row -->
+  <!-- // end justify-card-center -->
 </div>
 <!-- // end container -->
