@@ -12,6 +12,7 @@
     }
 
     legend {
+      font-size: 1rem;
       font-weight: 600;
       line-height: 1;
     }
@@ -49,6 +50,7 @@
 
     dt {
       display: flex;
+      font-size: .85rem;
       margin-bottom: .75rem;
 
       a {
@@ -57,14 +59,18 @@
       }
     }
 
-    dd ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      list-style: none;
-      padding: 0;
+    dd {
+      font-size: .85rem;
 
-      @include media-breakpoint-up(md) {
-        grid-template-columns: 1fr 1fr 1fr;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        padding: 0;
+
+        @include media-breakpoint-up(md) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
       }
     }
   }
