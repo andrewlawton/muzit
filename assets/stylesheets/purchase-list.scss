@@ -4,7 +4,32 @@
   border-radius: 3px;
   margin-bottom: 1.25rem;
 
+  // force table-responsive-sm to display scroll bar for portrait orientation
+
+  .table-responsive-sm {
+    @include media-breakpoint-up(sm) {
+      overflow-x: hidden; // hide overflow to remove extra space for landscape orientation
+    }
+
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, .5); /* should match background, can't be transparent */
+    }
+  }
+
   table {
+
     table-layout: auto;
 
     tr {
@@ -12,6 +37,13 @@
 
       &:first-of-type {
         border-top: none;
+      }
+
+      &:nth-child(2) th {
+        font-size: .65rem;
+        font-weight: 700;
+        padding: .25rem .5rem;
+        text-align: right;
       }
 
       &:first-of-type td {
@@ -32,7 +64,6 @@
       text-transform: uppercase;
       vertical-align: middle;
       white-space: nowrap;
-      width: 75%;
     }
 
     td {
