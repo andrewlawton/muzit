@@ -36,18 +36,19 @@
     margin-bottom: 0;
   }
 
-  .justify-card-center & {
-    @include media-breakpoint-up(sm) {
-      width: 30rem;
-    }
-  }
-}
+  // if card parent container is justify-content-center:
 
-.justify-card-center {
-  @include media-breakpoint-up(sm) {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+  .justify-content-center & {
+
+    // make card full width on x-small devices
+    width: 100%;
+
+    // make card fixed width on ≥ small devices if only one card exists in the parent
+    @include media-breakpoint-up(sm) {
+      &:only-of-type {
+        width: 32rem;
+      }
+    }
   }
 }
 
