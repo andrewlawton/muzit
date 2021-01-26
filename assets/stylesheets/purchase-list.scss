@@ -3,28 +3,32 @@
   border: 1px solid #ddd;
   border-radius: 3px;
   margin-bottom: 1.25rem;
-
-  // force table-responsive-sm to display scroll bar for portrait orientation
+  overflow-x: hidden;
+  position: relative; // position scroll gradient
 
   .table-responsive-sm {
-    @include media-breakpoint-up(sm) {
-      overflow-x: hidden; // hide overflow to remove extra space for landscape orientation
-    }
 
-    overflow-x: scroll;
+    // custom media query to display gradient indicating scroll on small device portrait mode
+    @media (max-width: 438px) and (orientation: portrait) {
 
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-    }
+      &.gradient-right:after,
+      &.gradient-left:before {
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 20px;
+      }
 
-    &::-webkit-scrollbar:horizontal {
-      height: 11px;
-    }
+      &.gradient-right:after {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        right: 0;
+      }
 
-    &::-webkit-scrollbar-thumb {
-      border-radius: 8px;
-      border: 2px solid white;
-      background-color: rgba(0, 0, 0, .5); /* should match background, can't be transparent */
+      &.gradient-left:before {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+        left: 0;
+      }
     }
   }
 
