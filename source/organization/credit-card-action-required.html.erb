@@ -1,0 +1,31 @@
+---
+title: Additional Action Required - Muzit
+bodyClass:
+---
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card card-margin-top">
+        <h1 class="card-header large">Additional Action Required</h1>
+        <div class="card-body">
+          <p>Your credit card requires additional action before we can continue.</p>
+          <form action="" method="" id="payment-form">
+            <fieldset id="failure" style="display: none;">
+              <p>There was a problem verifying your credit card.</p>
+              <div class="action">
+                <%= link_to 'Try another card', '#', class: 'btn btn-primary' %>
+              </div>
+            </fieldset>
+            <fieldset id="success">
+              <p>Your card was successfully verified.</p>
+              <div class="action">
+                <%= link_to 'Continue', '#', class: 'btn btn-primary' %>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
