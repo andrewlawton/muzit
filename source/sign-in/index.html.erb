@@ -12,14 +12,13 @@ bodyClass: sign-in
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-
-<div class="container">
-  <div class="row justify-content-center align-items-center">
-    <div class="col-md-6">
-      <header>
-        <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
-      </header>
-      <div class="form-container">
+<div class="container-fluid">
+  <header class="text-center">
+    <%=image_tag( "logo-large.png", class: "img-fluid logo", alt: "Muzit Logo", width: 225) %>
+  </header>
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
         <h1 class="text-center">Sign In</h1>
         <form id="login-form" action="../" method="get" class="form needs-validation" novalidate>
           <fieldset class="floating-labels">
@@ -33,8 +32,7 @@ bodyClass: sign-in
             <!-- // end form-group -->
             <div class="form-group">
               <label class="floating" for="password">Password</label>
-              <input type="password" class="form-control" id="password"
-              value="" placeholder="Password" required>
+              <input type="password" class="form-control" id="password" value="" placeholder="Password" required>
               <div class="invalid-feedback">
                 Password is required.
               </div>
@@ -44,30 +42,28 @@ bodyClass: sign-in
             </div>
             <!-- // end form-group -->
             <div class="action">
-                <button class="btn btn-primary " type="submit">Sign In</button>
-                <div class="custom-control custom-checkbox">
-                  <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
-                  <label class="custom-control-label" for="rememberSignin">
-                    Remember me
-                  </label>
-                </div>
-                <!-- // end custom-control -->
+              <button class="btn btn-primary " type="submit">Sign In</button>
+              <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox" value="" id="rememberSignin">
+                <label class="custom-control-label" for="rememberSignin">
+                  Remember me
+                </label>
+              </div>
+              <!-- // end custom-control -->
             </div>
             <!-- // end action -->
           </fieldset>
         </form>
       </div>
-      <!-- // end sign-in-container -->
-      <div id="register-link" class="text-center my-3">
-        <%=link_to 'Sign up to create an account', '../pricing/index.html' %>
-      </div>
+      <!-- // end card-body -->
     </div>
-    <!-- // end column -->
+    <!-- // end card -->
   </div>
-  <!-- // end row -->
+  <div id="register-link" class="text-center my-3">
+    <%=link_to 'Sign up to create an account', '../pricing/index.html' %>
+  </div>
 </div>
-<!-- // end form-container -->
-
+<!-- // end container-fluid -->
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {

@@ -3,7 +3,7 @@ title: Sign Up - Muzit
 layout: sign-up
 bodyClass: sign-up
 ---
-
+<script src="https://js.stripe.com/v3/"></script>
 <style>
   /**
  * The CSS shown here will not be introduced in the Quickstart guide, but shows
@@ -31,13 +31,13 @@ bodyClass: sign-up
   margin-top: 0.25rem;
 }
 </style>
-<div class="container">
-  <div class="row justify-content-center align-items-center">
-    <div class="col-md-6">
-      <header>
-        <%=image_tag( "logo-muzit2.png", class: "img-fluid logo", alt: "Muzit Logo") %>
-      </header>
-      <div class="form-container">
+<div class="container-fluid">
+  <header class="text-center">
+    <%=image_tag( "logo-large.png", class: "img-fluid logo", alt: "Muzit logo", width: 225) %>
+  </header>
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
         <hgroup class="text-center">
           <h1>
             Sign Up
@@ -46,49 +46,6 @@ bodyClass: sign-up
             Plus Plan
           </h6>
         </hgroup>
-        <table class="table table-border border">
-          <thead>
-            <tr>
-              <th></th>
-              <th class="text-right">Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1">Audience Lists</label>
-                </div>
-              </td>
-              <td class="text-right">$190</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1">Global Piracy Reports</label>
-                </div>
-              </td>
-              <td class="text-right">$999</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1">Music Genre Data Report</label>
-                </div>
-              </td>
-              <td class="text-right">$199</td>
-            </tr>
-            <tr>
-              <td>
-              </td>
-              <td class="text-right">$1,388</td>
-            </tr>
-          </tbody>
-          </tr>
-        </table>
         <form id="login-form" action="../browse-artists/no-artists.html" method="get" class="form needs-validation" novalidate>
           <fieldset>
             <div class="form-group">
@@ -100,7 +57,7 @@ bodyClass: sign-up
             </div>
             <!-- // end form-group -->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="form-group">
                   <label class="required" for="firstName">First Name</label>
                   <input type="text" class="form-control" id="firstName" placeholder="First name" required>
@@ -111,7 +68,7 @@ bodyClass: sign-up
                 <!-- // end form-group -->
               </div>
               <!-- // end column -->
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="form-group">
                   <label class="required" for="lastName">Last Name</label>
                   <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
@@ -535,14 +492,14 @@ bodyClass: sign-up
           </fieldset>
         </form>
       </div>
-      <!-- // end form-container -->
+      <!-- // end card-body -->
     </div>
-    <!-- // end column -->
+    <!-- // end card -->
   </div>
-  <!-- // end row -->
+  <!-- // end form-container -->
 </div>
 <!-- // end container -->
-<script src="https://js.stripe.com/v3/"></script>
+
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
