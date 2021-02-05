@@ -59,8 +59,18 @@ nav .dropdown {
   }
 }
 
-nav .navbar-nav .dropdown-menu {
-  float: none;
+// non-referenced
+
+// nav .navbar-nav .dropdown-menu {
+//   float: none;
+// }
+
+nav .dropdown-menu {
+
+  .dropdown-scroll {
+    max-height: 575px;
+    overflow-y: auto;
+  }
 }
 
 @include media-breakpoint-down(sm) {
@@ -91,6 +101,7 @@ nav .navbar-nav .dropdown-menu {
     width: auto;
   }
   nav .dropdown {
+
     &.account,
     &.admin {
       .dropdown-menu {

@@ -66,31 +66,34 @@
     <% end %>
     <div class="dropdown account">
       <div class="dropdown-menu" aria-labelledby="accountDropdown">
-        <div class="dropdown-header user">
-          Andrew Lawton<span>Owner, Administrator</span>
+        <div class="dropdown-scroll">
+          <div class="dropdown-header user">
+            Andrew Lawton<span>Owner, Administrator</span>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header">Staff</div>
+          <%= link_to "Create Artist", "#", :class => "dropdown-item" %>
+          <%= link_to "Manage Organizations", "../../admin/add-organization.html", :class => "dropdown-item" %>
+          <%= link_to "Unmapped Torrents", "../../admin/torrents.html", :class => "dropdown-item" %>
+          <%= link_to "Feature Flags", "#", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Dashboard", "../../../index.html", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header">IP Addresses</div>
+          <%= link_to "Purchase History", "../../../organization/purchase-history.html", :class => "dropdown-item" %>
+          <%= link_to "IP Address Lists", "../../../organization/ip-address-lists/index.html", :class => "dropdown-item" %>
+          <%= link_to "Download Lists", "../../../organization/ip-address-downloads/index.html", :class => "dropdown-item" %>
+          <%= link_to "Donate IP Records", "../../../organization/donate-ip-records/index.html", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header">Organization</div>
+          <%= link_to "Credit Card", "../../organization/credit-card.html", :class => "dropdown-item" %>
+          <%= link_to "Manage Users", "../../organization/invite-users.html", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "My Account", "../../users/my_account.html", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Sign Out", "../../sign-in/index.html", :class => "dropdown-item", :id => "sign-out" %>
         </div>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-header">Staff</div>
-        <%= link_to "Create Artist", "#", :class => "dropdown-item" %>
-        <%= link_to "Manage Organizations", "../../admin/add-organization.html", :class => "dropdown-item" %>
-        <%= link_to "Unmapped Torrents", "../../admin/torrents.html", :class => "dropdown-item" %>
-        <%= link_to "Feature Flags", "#", :class => "dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <%= link_to "Dashboard", "../../../index.html", :class => "dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-header">IP Addresses</div>
-        <%= link_to "Purchase History", "../../../organization/purchase-history.html", :class => "dropdown-item" %>
-        <%= link_to "IP Address Lists", "../../../organization/ip-address-lists/index.html", :class => "dropdown-item" %>
-        <%= link_to "Download Lists", "../../../organization/ip-address-downloads/index.html", :class => "dropdown-item" %>
-        <%= link_to "Donate IP Records", "../../../organization/donate-ip-records/index.html", :class => "dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-header">Organization</div>
-        <%= link_to "Credit Card", "../../organization/credit-card.html", :class => "dropdown-item" %>
-        <%= link_to "Manage Users", "../../organization/invite-users.html", :class => "dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <%= link_to "My Account", "../../users/my_account.html", :class => "dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <%= link_to "Sign Out", "../../sign-in/index.html", :class => "dropdown-item", :id => "sign-out" %>
+        <!-- // end dropdown-scroll -->
       </div>
       <!-- // end dropdown-menu -->
     </div>
