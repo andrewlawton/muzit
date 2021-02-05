@@ -1,11 +1,10 @@
 ---
 title: Billing Address - Muzit Admin
-bodyClass: billing
 ---
 
 <script src="https://js.stripe.com/v3/"></script>
 <style>
-/**
+  /**
  * The CSS shown here will not be introduced in the Quickstart guide, but shows
  * how you can use CSS to style your Element's container.
  */
@@ -31,13 +30,13 @@ bodyClass: billing
   margin-top: 0.25rem;
 }
 </style>
- <div class="container">
-  <div class="row justify-content-center align-items-center">
-    <div class="col-md-6">
-      <h1 class="my-3 text-center">
-        Credit Card
-      </h1>
-      <div class="form-container">
+<div class="container-fliud">
+  <h1 class="my-4 text-center">
+    Credit Card
+  </h1>
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
         <form class="needs-validation" novalidate="" method="post" id="payment-form">
           <div class="form-group">
             <label class="required" for="cc-name">Full Name</label>
@@ -58,7 +57,7 @@ bodyClass: billing
             <!-- Used to display form errors. -->
             <div id="card-errors" role="alert"></div>
             <script>
-            // Create a Stripe client.
+              // Create a Stripe client.
             var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
             // Create an instance of Elements.
@@ -139,14 +138,13 @@ bodyClass: billing
           <!-- // end action -->
         </form>
       </div>
-      <!-- // end form-container -->
+      <!-- // end card-body -->
     </div>
-    <!-- // end column  -->
+    <!-- // end card -->
   </div>
-  <!-- // end row -->
+  <!-- // end justify-content-center -->
 </div>
-<!-- // end container -->
-
+<!-- // end container-fluid -->
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
