@@ -177,16 +177,36 @@ $(function() {
   });
 });
 
-// sign-up show alert and go to browse artists url
+// edit ip address list hide action steps buttons
 
-// $(function() {
-//   $('#sign-up').click(function() {
-//     $('#alert-sign-up').fadeIn("fast").delay(2000).fadeOut("fast");
-//     setTimeout(function () {
-//       window.location = '../browse-artists/no-artists.html';
-//     }, 3000);
-//   });
-// });
+$(function() {
+  var url = window.location.href;
+  if(url.indexOf('?edit-list') != -1) {
+    //$('.action.steps').css("display", "none");
+    //$('.action.steps.edit').css("display", "block");
+    $("h1").html("Edit List");
+  }
+});
+
+// save list and show alert
+
+$('#save-list').click(function () {
+  $(window).scrollTop(0); // scroll to alert at top of page
+  $('#alert-list-saved').css("display", "block");
+  setTimeout(function () {
+    window.location = '../../organization/ip-address-reports/edit-list.html';
+  }, 2000);
+});
+
+
+$(function() {
+  $('#sign-up').click(function() {
+    $('#alert-sign-up').fadeIn("fast").delay(2000).fadeOut("fast");
+    setTimeout(function () {
+      window.location = '../index.html/?default';
+    }, 3000);
+  });
+});
 
 // apply active class to button group
 
@@ -236,16 +256,20 @@ $(function() {
   }
 });
 
-// display dashboard follow titles section based on url
+// display dashboard follow titles section default view based on url
 
 $(function() {
   var url = window.location.href;
-  if(url.indexOf('/?follow-titles') != -1) {
+  if(url.indexOf('/index.html?default') != -1) {
       $('#follow-titles').css("display", "block");
       $('#following').css("display", "none");
+      $('#downloads').css("display", "none");
+      $('#alert-welcome').css("display", "block");
     } else {
+      $('#alert-welcome').css("display", "none");
       $('#follow-titles').css("display", "none");
       $('#following').css("display", "block");
+      $('#downloads').css("display", "block");
     }
 });
 
@@ -266,6 +290,36 @@ $(function() {
       $('#sign-up').attr('disabled', 'disabled');
     }
   });
+});
+
+// Add gradient to table-responsive-sm div to indicate horizontal scrolling on small devices
+
+var div = document.getElementById("scroll-gradient");
+var position = div.scrollLeft;
+
+function divScroll(scrollPos) {
+  var divWidth = div.scrollWidth - div.clientWidth;
+
+  if (scrollPos == 0) {
+    div.classList.remove("gradient-left");
+  }
+
+  if (scrollPos > 0) {
+    div.classList.add("gradient-left");
+  }
+
+  if (scrollPos < divWidth) {
+    div.classList.add("gradient-right");
+  }
+
+  if (scrollPos == divWidth) {
+    div.classList.remove("gradient-right");
+  }
+}
+
+div.addEventListener('scroll', function(e) {
+  position = div.scrollLeft;
+  divScroll(position);
 });
 
 // pricing plan additonal options click events
