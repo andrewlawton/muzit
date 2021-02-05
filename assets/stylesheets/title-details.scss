@@ -2,25 +2,64 @@
 // title details
 // ==============================
 
-.artist-details .hero .hero-container {
+.hero {
   background-color: #26252d;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  height: 400px;
-  overflow: visible;
   position: relative;
   width: 100%;
-  &:before {
-    background-color: #323232;
-    content: "";
-    display: block;
-    opacity: 0.3;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
+
+  .hero-container {
+
+    .image {
+      max-height: 400px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      img {
+        object-fit: cover;
+        object-position: center center;
+        position: relative;
+        vertical-align: middle;
+        width: 100%;
+      }
+    }
+
+    &:before {
+      background-color: #323232;
+      content: "";
+      display: block;
+      opacity: 0.3;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  // artist-details hero no-image
+
+  &.no-image {
+
+    .hero-container {
+
+      .image {
+        display: none;
+      }
+
+      .meta {
+        position: static;
+
+        h1 {
+          margin-top: 2rem;
+        }
+      }
+
+      &:before {
+        content: none; // prevent hero-container pseudo element from being generated/inherited
+      }
+    }
   }
 }
 
@@ -28,29 +67,17 @@
 
 .artist-details .hero button {
   margin-bottom: 1.5rem;
+
   span.oi {
     text-shadow: none;
     font-size: 1rem;
     margin-right: .15rem;
   }
+
   &.btn-following-artist {
     background: #08c900;
     border: #08c900;
     color: #fff;
-  }
-}
-
-// artist-details hero no-image
-
-.artist-details .hero.no-image .hero-container {
-  background: #26252d;
-  background-image: none !important;
-  height: auto;
-  .meta {
-    position: static; // prevent h1 text clipping
-  }
-  &:before {
-    background: none;
   }
 }
 
@@ -60,6 +87,7 @@
   left: 0;
   padding: 0 15px;
   width: 100%;
+  z-index: 3;
 }
 
 .artist-details .hero h1 {
@@ -95,7 +123,7 @@
 }
 
 .artist-details .card {
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
 }
 
 .artist-details .card .card-header {
@@ -123,8 +151,9 @@
     margin-left: .5rem;
     padding: .20rem;
     transition: 0.3s;
+
     &:hover,
-    &.active  {
+    &.active {
       background: #ff161f;
       color: #fff;
       text-decoration: none;
@@ -195,10 +224,12 @@ table.torrents .table-scroll {
 // hide torrents table size, % changed and downloads columns on small devices
 
 @include media-breakpoint-down(sm) {
+
   table.torrents th:first-of-type,
   table.torrents td:first-of-type {
     width: 100%;
   }
+
   table.torrents th:nth-last-child(-n+3),
   table.torrents td:nth-last-child(-n+3) {
     display: none;
@@ -211,19 +242,24 @@ table.torrents .table-scroll {
   height: 320px;
   overflow-y: auto;
   padding: 0 .5rem 1rem;
+
   table {
     margin-bottom: 0;
+
     thead {
       th {
         background: #fff;
         position: sticky; // apply sticky to th to fix thead not being supported chrome
         top: 0;
+
         &:nth-child(1) {
           width: 19%;
         }
+
         &:nth-child(2) {
           width: 48%;
         }
+
         &:nth-child(3) {
           width: 33%;
           text-align: right;
@@ -231,10 +267,12 @@ table.torrents .table-scroll {
         }
       }
     }
+
     td {
       .oi {
         margin-right: .25rem;
       }
+
       &:nth-child(3) {
         text-align: right;
       }
