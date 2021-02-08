@@ -2,83 +2,81 @@
 title: List Details - Muzit
 bodyClass:
 ---
-<div class="container">
+<div class="container-fluid">
   <h1 class="my-4 text-center">List Details</h1>
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body list-details">
-          <form action="" method="get">
-            <dl>
-              <div>
-                <dt>
-                  List Name
-                </dt>
-                <dd>Andrew's List</dd>
-              </div>
-              <div>
-                <dt>
-                  Titles
-                </dt>
-                <dd>
-                  <ul>
-                    <li>Kula List</li>
-                  </ul>
-                </dd>
-              </div>
-              <div>
-                <dt>
-                  Countries
-                </dt>
-                <dd>
-                  <ul>
-                    <li>Canada</li>
-                    <li>United States</li>
-                  </ul>
-                </dd>
-              </div>
-              <div>
-                <dt>
-                  Regions for Canada
-                </dt>
-                <dd>
-                  <ul>
-                    <li>Ontario</li>
-                    <li>Quebec</li>
-                  </ul>
-                </dd>
-              </div>
-              <div>
-                <dt>
-                  Regions for United States
-                </dt>
-                <dd>
-                  <ul>
-                    <li>California</li>
-                    <li>Colorado</li>
-                    <li>Louisiana</li>
-                    <li>Massachusetts</li>
-                    <li>Vermont</li>
-                  </ul>
-                </dd>
-              </div>
-              <div>
-                <dt>
-                  Number of IP Addresses
-                </dt>
-                <dd>
-                  <ul>
-                    <li>100,000</li>
-                  </ul>
-                </dd>
-              </div>
-            </dl>
-            <div class="action steps text-right">
-              <%= link_to "Edit", "../../../organization/ip-address-lists/add/?edit-list", class: 'btn btn-outline-primary' %>
-              <%= link_to "Generate", "#", class: 'btn btn-primary' %>
+    <div class="card">
+      <div class="card-body list-details">
+        <form action="" method="get">
+          <dl>
+            <div>
+              <dt>
+                List Name
+              </dt>
+              <dd>Andrew's List</dd>
             </div>
-          </form>
-        </div>
+            <div>
+              <dt>
+                Titles
+              </dt>
+              <dd>
+                <ul>
+                  <li>Kula List</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                Countries
+              </dt>
+              <dd>
+                <ul>
+                  <li>Canada</li>
+                  <li>United States</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                Regions for Canada
+              </dt>
+              <dd>
+                <ul>
+                  <li>Ontario</li>
+                  <li>Quebec</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                Regions for United States
+              </dt>
+              <dd>
+                <ul>
+                  <li>California</li>
+                  <li>Colorado</li>
+                  <li>Louisiana</li>
+                  <li>Massachusetts</li>
+                  <li>Vermont</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                Number of IP Addresses
+              </dt>
+              <dd>
+                <ul>
+                  <li>100,000</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+          <div class="action steps text-right">
+            <%= link_to "Edit", "../../../organization/ip-address-lists/add/?edit-list", class: 'btn btn-outline-primary' %>
+            <%= link_to "Generate", "#", class: 'btn btn-primary' %>
+          </div>
+        </form>
       </div>
     </div>
   </div>
