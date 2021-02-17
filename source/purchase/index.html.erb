@@ -1,6 +1,6 @@
 ---
 title: Purchase List - Muzit
-bodyClass:
+bodyClass: purchase-list
 ---
 <script src="https://js.stripe.com/v3/"></script>
 <style>
@@ -34,11 +34,47 @@ bodyClass:
   <h1 class="my-4 text-center">
     Purchase List
   </h1>
-  <div class="row justify-content-center">
-    <div class="alert alert-info credits-status">
-      You have <span class="badge badge-pill badge-success">77,017</span> IP credits remaining.
+  <div class="d-flex justify-content-center mb-3">
+    <div class="alert alert-info">
+      You have <span class="badge badge-pill badge-success">77,017</span> pre-purchased IP addresses.
     </div>
   </div>
+  <div class="d-flex justify-content-center">
+    <div class="form-group-switch mb-2">
+      <div class="card">
+        <div class="card-body p-2">
+          <div class="row">
+            <div class="col-9">
+              Use pre-purchased
+            </div>
+            <!-- // end column -->
+            <div class="col-3 text-right">
+              <form>
+                <div class="switch switch-sm">
+                  <input type="checkbox" class="switch" id="usePrepurchased">
+                  <label for="usePrepurchased"></label>
+                </div>
+              </form>
+              <script>
+              document.getElementById('usePrepurchased').onchange = function() {
+                document.getElementById('prepurchased').style.display = this.checked ? 'table-row' : 'none';
+              };
+              </script>
+            </div>
+            <!-- // end column -->
+          </div>
+          <!-- // end row -->
+        </div>
+        <!-- // end card-body -->
+      </div>
+      <!-- // end card -->
+      <p class="form-text text-muted">
+        <small>Apply your pre-purchased IP addresses towards the purchase of this list.</small>
+      </p>
+    </div>
+    <!-- // end switch-container -->
+  </div>
+  <!-- // end justify-content-center -->
   <div class="d-flex justify-content-center">
     <div class="card">
       <div class="card-body">
@@ -74,22 +110,6 @@ bodyClass:
               </tbody>
             </table>
           </div>
-        </div>
-        <div class="alert alert-info" style="background-color: #f8f9fa; font-size: 14px;">
-          <p>
-            <strong>Would you like to use your existing IP credits towards the purchase of this list?</strong>
-          </p>
-          <form>
-            <div class="custom-control custom-checkbox mr-sm-2">
-              <input type="checkbox" class="custom-control-input" id="useIPCredits">
-              <label class="custom-control-label" for="useIPCredits">Use My IP Credits</label>
-            </div>
-          </form>
-          <script>
-            document.getElementById('useIPCredits').onchange = function() {
-              document.getElementById('prepurchased').style.display = this.checked ? 'table-row' : 'none';
-            };
-          </script>
         </div>
         <form action="confirmation.html" method="get" class="form needs-validation" novalidate>
           <fieldset>
@@ -197,7 +217,7 @@ bodyClass:
   </div>
   <!-- // end justify-card-center -->
 </div>
-<!-- // end container -->
+<!-- // end container-fluid -->
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 
