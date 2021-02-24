@@ -292,36 +292,6 @@ $(function() {
   });
 });
 
-// Add gradient to table-responsive-sm div to indicate horizontal scrolling on small devices
-
-var div = document.getElementById("scroll-gradient");
-var position = div.scrollLeft;
-
-function divScroll(scrollPos) {
-  var divWidth = div.scrollWidth - div.clientWidth;
-
-  if (scrollPos == 0) {
-    div.classList.remove("gradient-left");
-  }
-
-  if (scrollPos > 0) {
-    div.classList.add("gradient-left");
-  }
-
-  if (scrollPos < divWidth) {
-    div.classList.add("gradient-right");
-  }
-
-  if (scrollPos == divWidth) {
-    div.classList.remove("gradient-right");
-  }
-}
-
-div.addEventListener('scroll', function(e) {
-  position = div.scrollLeft;
-  divScroll(position);
-});
-
 // pricing plan additonal options click events
 
 $(function() {
