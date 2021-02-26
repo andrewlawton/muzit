@@ -1,0 +1,38 @@
+---
+title: Purchase List Error - Muzit
+bodyClass:
+---
+<div class="alert alert-danger" role="alert">
+  Purchase list error
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="container mt-4">
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-header">
+        List Error
+      </div>
+      <div class="card-body">
+        <p>
+          We're sorry! Your list does not contain the minimum number of 1000 IP addresses. Please update your list criteria to increase the number of IP addresses following the steps below.
+        </p>
+        <h6>
+          Add IP addresses
+        </h6>
+        <ol>
+          <li>Click the list name in the IP Addresses Lists section.</li>
+          <li>Click Edit at the bottom of the List Details page.</li>
+          <li>Click Next to add titles, countries and regions.</li>
+          <li>Click Save on the List Review page.</li>
+        </ol>
+        <div class="action text-center">
+          <%= link_to 'Back', '../../index.html', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+    <!-- // end card -->
+  </div>
+</div>
+<!-- // end container -->
