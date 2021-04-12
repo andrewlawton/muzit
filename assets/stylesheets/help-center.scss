@@ -1,5 +1,4 @@
 .help-center {
-
   main {
     padding-bottom: 0;
   }
@@ -37,7 +36,7 @@
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     color: #555;
-    font-size: .90rem;
+    font-size: .9rem;
     padding: 2rem 0 1rem 0;
 
     dl {
@@ -89,12 +88,6 @@
           }
         }
 
-        &.activity-timeline {
-          &::before {
-            content: "\f080";
-          }
-        }
-
         &.report {
           &::before {
             content: "\f019";
@@ -119,7 +112,7 @@
 
   .steps {
     color: #555;
-    font-size: .90rem;
+    font-size: .9rem;
 
     h3 {
       font-size: inherit;
