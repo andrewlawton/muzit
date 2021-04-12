@@ -5,6 +5,7 @@ import 'jquery-ui'
 import 'jquery-tageditor'
 import 'popper.js'
 import 'bootstrap'
+import 'video.js'
 
 
 const application = Application.start()
@@ -294,34 +295,34 @@ $(function() {
 
 // pricing plan additonal options click events
 
-$(function() {
-  $("#option-audience-lists").click(function(){
-    $('#audience-lists').prop('checked',true);
-    $("label span.plan-option").addClass('checked');
-  });
+// $(function() {
+//   $("#option-audience-lists").click(function(){
+//     $('#audience-lists').prop('checked',true);
+//     $("label span.plan-option").addClass('checked');
+//   });
 
-  $("#option-global-piracy").click(function(){
-    $('#global-piracy').prop('checked',true);
-    $("label span.plan-option").addClass('checked');
-  });
+//   $("#option-global-piracy").click(function(){
+//     $('#global-piracy').prop('checked',true);
+//     $("label span.plan-option").addClass('checked');
+//   });
 
-  $("#option-music-genre").click(function(){
-    $('#music-genre').prop('checked',true);
-    $("label span.plan-option").addClass('checked');
-  });
-});
+//   $("#option-music-genre").click(function(){
+//     $('#music-genre').prop('checked',true);
+//     $("label span.plan-option").addClass('checked');
+//   });
+// });
 
 // display pricing options on sign-up based on url
 
-$(function() {
-  var url = window.location.href;
-  if(url.indexOf('global-piracy-report=on') != -1) {
-    $('#global-piracy-reports').css("display", "block");
-  }
-  if(url.indexOf('music-genre-data-report=on') != -1) {
-    $('#music-genre-report').css("display", "block");
-  }
-});
+// $(function() {
+//   var url = window.location.href;
+//   if(url.indexOf('global-piracy-report=on') != -1) {
+//     $('#global-piracy-reports').css("display", "block");
+//   }
+//   if(url.indexOf('music-genre-data-report=on') != -1) {
+//     $('#music-genre-report').css("display", "block");
+//   }
+// });
 
 // populate dropdown button text based on selected value
 
