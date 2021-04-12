@@ -1,0 +1,138 @@
+.help-center {
+
+  main {
+    padding-bottom: 0;
+  }
+
+  .card {
+    margin-bottom: 1.25rem;
+
+    .card-header {
+      align-items: center;
+      border-bottom: none;
+      cursor: pointer;
+      display: flex;
+      font-size: 1rem;
+      justify-content: space-between;
+      padding: .75rem;
+
+      &::after {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f077";
+        font-weight: 900;
+      }
+
+      &.collapsed::after {
+        content: "\f078";
+      }
+
+      .card-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  section {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    font-size: .90rem;
+    padding: 2rem 0 1rem 0;
+
+    dl {
+      margin-bottom: 0;
+
+      dt {
+        font-size: inherit;
+        margin-bottom: .25rem;
+
+        &::before {
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          margin-right: .5rem;
+        }
+
+        &.generate {
+          &::before {
+            content: "\f1ce";
+          }
+        }
+
+        &.purchase {
+          &::before {
+            content: "\f09d";
+          }
+        }
+
+        &.download {
+          &::before {
+            content: "\f56d";
+          }
+        }
+
+        &.global-insights {
+          &::before {
+            content: "\f57d";
+          }
+        }
+
+        &.recent-torrents {
+          &::before {
+            content: "\f017";
+          }
+        }
+
+        &.activity-timeline {
+          &::before {
+            content: "\f080";
+          }
+        }
+
+        &.activity-timeline {
+          &::before {
+            content: "\f080";
+          }
+        }
+
+        &.report {
+          &::before {
+            content: "\f019";
+          }
+        }
+      }
+
+      dd {
+        margin-bottom: 1.5rem;
+
+        &:last-of-type {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  .video-container {
+    border: 1px solid #222;
+    margin-bottom: 2rem;
+  }
+
+  .steps {
+    color: #555;
+    font-size: .90rem;
+
+    h3 {
+      font-size: inherit;
+      margin-bottom: 1rem;
+    }
+
+    ol {
+      margin-bottom: 1rem;
+      padding-left: 1.75rem;
+
+      li {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

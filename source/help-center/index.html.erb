@@ -1,0 +1,182 @@
+---
+title: Help Center - Muzit
+bodyClass: help-center
+---
+<div class="container">
+  <h1 class="text-center my-4">
+    Help Center
+  </h1>
+  <p>
+    The Muzit torrent reporting and content engine (TRACE) platform monitors the global peer-to-peer (P2P) file sharing network capturing the unique IP addresses of over 330 million households who have downloaded over 24 billion titles such as games, movies, musicians, tv shows and software applications.
+  </p>
+  <p>
+    Muzit enables you to generate highly targeted lists of IP addresses based on the audiences specifc interests and geographic location. These lists can be used in your advertising campaigns to effectively reach your intended audience like never before.
+  </p>
+</div>
+<!-- // end container -->
+<h2 class="text-center my-5">
+  Audience Lists
+</h2>
+<section>
+  <div class="container">
+    <p>
+      Lists are collections of IP addresses based on titles, countries and regions. There are two types of lists:
+    </p>
+    <p>
+      A list that you add using your specific criteria. Once a list is added you can edit it if you need to change the criteria. The list will also be available to all members in your organization.
+    </p>
+    <p>
+      Curated lists are default lists created by the Muzit team that you can use as is or customize to target your specific audience. Curated lists are made available to all Muzit users.
+    </p>
+    <dl>
+      <dt class="generate">Generate</dt>
+      <dd>Lists need to be generated first because the number of IP addresses associated with a list changes by the second depending on download trends and real-time geographic data. When you generate a list it is added to the Download Lists section and can take up to 10 minutes to generate depending on the list criteria.</dd>
+      <dt class="purchase">Purchase</dt>
+      <dd>When the list is generated it can be purchased using a credit card. If you have pre-purchased IP addresses you can apply them to the list amount. An email will be sent to you with the purchase details.</dd>
+      <dt class="download">Download</dt>
+      <dd>After you have purchased a list it can be downloaded. You will need to set up an account with an ad exchange company such as
+        <%= link_to 'Choozle', 'https://choozle.com/', target: '_blank' %> or
+        <%= link_to 'El Toro', 'https://eltoro.com', target: '_blank' %> to run your own direct to IP advertising campaigns.</dd>
+    </dl>
+    <div class="card">
+      <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+        <span class="card-title">Add a list</span>
+      </div>
+      <div id="collapseOne" class="collapse">
+        <div class="card-body" style="border-top: 1px solid #ddd; padding: 1rem .75rem;">
+          <div class="row">
+            <div class="col-lg-6 order-lg-2">
+              <div class="video-container">
+                <video class="video-js vjs-default-skin vjs-fluid" poster="https://muzit-trace-video-output.s3.amazonaws.com/add-list/add-list.png" controls preload data-setup='{"liveui": true, "fluid": true}'>
+                  <source src="https://muzit-trace-video-output.s3.amazonaws.com/add-list/add-list.m3u8" type="application/x-mpegurl" />
+                </video>
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="steps">
+                <h3>
+                  Steps
+                </h3>
+                <ol>
+                  <li>Click the Add List <i class="fas fa-plus text-primary" style="margin: 0 .25rem;"></i> icon in IP Address Lists.</li>
+                  <li>Enter a list name.</li>
+                  <li>Search for specifc titles to add to the list (optional).</li>
+                  <li>Select one or more countries.</li>
+                  <li>Select one or more country regions.</li>
+                  <li>If you have pre-purchased IP addresses' you can limit the number of IP's associated in the list (optional).</li>
+                  <li>Review list criteria.</li>
+                  <li>Click Save.</li>
+                  <li>The list will be added to the IP Address Lists.</li>
+                  <li>Click Generate and the list will be generated in the Download Lists.</li>
+                  <li>Once generated the list can be purchased and then downloaded.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header collapsed" data-toggle="collapse" href="#collapseTwo">
+        <span class="card-title">Customize a curated list</span>
+      </div>
+      <div id="collapseTwo" class="collapse">
+        <div class="card-body" style="border-top: 1px solid #ddd; padding: 1rem .75rem;">
+          <div class="row">
+            <div class="col-lg-6 order-lg-2">
+              <div class="video-container">
+                <video class="video-js vjs-default-skin vjs-flui" poster="https://muzit-trace-video-output.s3.amazonaws.com/curated-list/curated-list.png" controls preload data-setup='{"liveui": true, "fluid": true}'>
+                  <source src="https://muzit-trace-video-output.s3.amazonaws.com/curated-list/curated-list.m3u8" type="application/x-mpegurl" />
+                </video>
+              </div>
+            </div>
+            <div class="steps col-lg-6 order-lg-1">
+              <h3>
+                Steps
+              </h3>
+              <ol>
+                <li>Click the <span class="badge badge-light badge-curated" style="margin: 0 .25rem;">Curated</span> list name under IP Address Lists.</li>
+                <li>Click the Customize button at the bottom of the List Details.</li>
+                <li>Enter a list name.</li>
+                <li>Search for titles you'd like to add to the list (optional).</li>
+                <li>Select one or more countries.</li>
+                <li>Select country regions.</li>
+                <li>Limit IP addresses.</li>
+                <li>Review list criteria.</li>
+                <li>Click Save.</li>
+                <li>The list will be added to the IP Address Lists.</li>
+                <li>Click Generate.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="text-center my-5">
+  Follow Titles
+</h2>
+<section>
+  <div class="container">
+    <p>
+      Follow titles such as games, movies, musicians, tv shows or software applications and get real time, worldwide P2P traffic data to help you make hignly informed business and marketing decisions. Titles can also be added to a list to target an audience based on similar interests.
+    </p>
+    <dl>
+      <dt class="global-insights">Global Insights</dt>
+      <dd>Identify the origins of downloads from top countries around the world and drill down to analyze downloads specific to each countries region.</dd>
+      <dt class="recent-torrents">Most Recent Torrents</dt>
+      <dd>See the torrents that have been most recently downloaded, file size, percentage each torrent has changed in download activity and number of downloads.</dd>
+      <dt class="activity-timeline">Activity Timeline</dt>
+      <dd>Easily monitor the number of unique downloads and IP addresses that have downloaded files over the last 30 days.</dd>
+      <dt class="report">Report Download</dt>
+      <dd>You can view and download a pdf of the title stats that you can analyze when you're offline.</dd>
+    </dl>
+    <div class="card">
+      <div class="card-header collapsed" data-toggle="collapse" href="#collapseThree">
+        <span class="card-title">Follow a title</span>
+      </div>
+      <div id="collapseThree" class="collapse">
+        <div class="card-body" style="border-top: 1px solid #ddd; padding: 1rem .75rem;">
+          <div class="row">
+            <div class="col-lg-6 order-lg-2">
+              <div class="video-container">
+                <video class="video-js vjs-default-skin vjs-flui" poster="https://muzit-trace-video-output.s3.amazonaws.com/title-details/title-details.png" controls preload data-setup='{"liveui": true,"fluid": true}'>
+                  <source src="https://muzit-trace-video-output.s3.amazonaws.com/title-details/title-details.m3u8" type="application/x-mpegurl" />
+                </video>
+              </div>
+            </div>
+            <div class="steps col-lg-6 order-lg-1">
+              <h3>
+                Steps
+              </h3>
+              <ol>
+                <li>Enter the name of a game, music artist, movie, software, or TV show in the Search titles at the top of the page.</li>
+                <li>Click the name of the title, you want to follow, in the search results and you will be taken to the title details page.</li>
+                <li>
+                  On the title details page click the <i class="fas fa-heart"></i> Follow button. Titles you follow will be added to the dashboard page and available each time you sign in.
+                </li>
+                <li>
+                  If you no longer want to follow a title click the Following button and select Unfollow from the dropdown. You can always follow a title again if you change your mind.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // end container -->
+</section>
+<div class="callout">
+  <h2>
+    Can't find what you're looking for?
+  </h2>
+  <p>
+    If you need of further assistance please contact us and we'd be happy to help.
+  </p>
+  <div class="action">
+    <%= link_to "Contact Us", "../contact-us/index.html", class: "btn btn-primary" %>
+  </div>
+</div>
+<!-- // end callout -->
