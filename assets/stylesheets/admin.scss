@@ -146,21 +146,12 @@ table.users td span {
   .form-container {
     margin-bottom: 2rem;
   }
+
   .search-results {
     margin-top: 12px;
+
     &:before {
       border: none; // remove dafault search results arrow
     }
   }
-  table {
-    background: #fff;
-    border: 1px solid #ddd;
-    a {
-      margin-right: .5rem;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
 }
-
