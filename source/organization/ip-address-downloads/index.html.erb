@@ -1,6 +1,6 @@
 ---
 title: Download IP Address Lists - Muzit
-bodyClass: lists
+bodyClass:
 ---
 <div class="alert alert-success" id="alert-title-copied" role="alert" style="display: none">
   The title list has been copied.
@@ -12,60 +12,58 @@ bodyClass: lists
   <h1 class="text-center text-md-left my-4">
     Download Lists
   </h1>
-  <table class="table table-hover">
+  <table class="table download-lists">
     <thead>
       <tr>
         <th>Name</th>
         <th>Created</th>
-        <th>Status</th>
         <th class="text-truncate">IP Addresses</th>
         <th>&nbsp;</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="text-truncate"><a href="/organization/ip_address_reports/30">andrew</a></td>
-        <td class="text-truncate">Nov 25, 2020 12:21 PM UTC</td>
-        <td class="text-truncate">Ready for download</td>
-        <td>35</td>
-        <td class="action text-right text-nowrap">
-          <a href="/organization/ip_address_reports/30/download">Download</a>
+        <td class="text-truncate"><a href="/organization/ip_address_reports/27">Legal Help Center - 2020-08-25</a></td>
+        <td class="text-truncate">Aug 25, 2020 9:34 PM UTC</td>
+        <td class="text-truncate">82,680</td>
+        <td class="action">
+          <% link_to "../../index.html", class: 'spinner btn btn-outline-primary btn-sm', style: 'width: 66px' do %>
+              <span class="spinner-border spinner-border-sm text-primary"></span>
+            <% end %>
         </td>
       </tr>
       <tr>
-        <td class="text-truncate"><a href="/organization/ip_address_reports/27">Legal Help Center - 2020-08-25</a></td>
-        <td class="text-truncate">Aug 25, 2020 9:34 PM UTC</td>
-        <td class="text-truncate">Ready for download</td>
-        <td class="text-truncate">82,680</td>
-        <td class="action text-right text-nowrap">
-          <a href="/organization/ip_address_reports/27/download">Download</a>
+        <td class="text-truncate"><a href="/organization/ip_address_reports/30">andrew</a></td>
+        <td class="text-truncate">Nov 25, 2020 12:21 PM UTC</td>
+        <td>35</td>
+        <td class="action">
+          <% link_to '#', :class => 'btn btn-outline-primary btn-sm', style: 'width: 66px', :data => {toggle: 'modal', target: '#list-error'} do %>
+            <i class="fas fa-exclamation-circle"></i>
+          <% end %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate"><a href="/organization/ip_address_reports/26">Favre CBD (expanded list) - 2020-08-21</a></td>
         <td class="text-truncate">Aug 21, 2020 10:14 PM UTC</td>
-        <td class="text-truncate">Ready for download</td>
         <td class="text-truncate">396,456</td>
-        <td class="action text-right text-nowrap">
-          <a href="/organization/ip_address_reports/26/download">Download</a>
+        <td class="action">
+          <%= link_to 'Purchase', '../../purchase/index.html', class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate"><a href="/organization/ip_address_reports/15">CBD - May 7</a></td>
         <td class="text-truncate">May 7, 2020 9:05 PM UTC</td>
-        <td class="text-truncate">Ready for download</td>
         <td class="text-truncate">29,398</td>
-        <td class="action text-right text-nowrap">
-          <a href="/organization/ip_address_reports/15/download">Download</a>
+        <td class="action">
+          <%= link_to "Download", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate"><a href="/organization/ip_address_reports/11">Kula IPs</a></td>
         <td class="text-truncate">Mar 12, 2020 11:43 PM UTC</td>
-        <td class="text-truncate">Ready for download</td>
         <td class="text-truncate">38,923</td>
-        <td class="action text-right text-nowrap">
-          <a href="/organization/ip_address_reports/11/download">Download</a>
+        <td class="action">
+          <%= link_to "Download", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
     </tbody>
@@ -79,3 +77,31 @@ bodyClass: lists
     </ul>
   </nav>
 </div>
+
+<div class="modal fade list-error" id="list-error" tabindex="-1" role="dialog" aria-labelledby="listError" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="listError">List Error</h5>
+      </div>
+      <div class="modal-body">
+        <p>
+          We're sorry! Your list does not contain the minimum number of 1000 IP addresses. Update your list criteria to increase the number of IP addresses following the steps below.
+        </p>
+        <h6>
+          Add IP addresses
+        </h6>
+        <ol>
+          <li>Click the list name in the IP Addresses Lists section.</li>
+          <li>Click Edit at the bottom of the List Details page.</li>
+          <li>Click Next to add titles, countries and regions.</li>
+          <li>Click Save on the List Review page.</li>
+        </ol>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // end modal -->
