@@ -20,7 +20,6 @@
 }
 
 .purchase-details {
-  background-color: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 3px;
   margin-bottom: 1.25rem;
@@ -53,8 +52,8 @@
     }
   }
 
-  table {
-
+  .table {
+    background-color: #f8f9fa;
     table-layout: auto;
 
     tr {
