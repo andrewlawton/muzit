@@ -1,24 +1,40 @@
 ---
 title: IP Address Lists - Muzit
-bodyClass: lists
+bodyClass:
 ---
-<div class="alert alert-success" id="alert-title-copied" role="alert" style="display: none">
-  The title list has been copied.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+
 <div class="container-fluid">
   <h1 class="text-center text-md-left my-4">IP Address Lists</h1>
+
+  <form class="form" action="/admin/torrents" accept-charset="UTF-8" method="get">
+    <fieldset>
+      <div class="form-group mb-4">
+        <div class="input-group">
+          <input value="" class="form-control" placeholder="Search lists" type="text" name="q" id="q" style="width: 35%;">
+          <select class="form-control custom-select">
+            <option selected>Filter by...</option>
+            <option value="allLists">All Lists</option>
+            <option value="myLists">My Lists</option>
+            <option value="sharedLists">Curated Lists</option>
+          </select>
+          <div class="input-group-append">
+            <input type="submit" name="commit" value="Search" class="btn btn-primary" data-disable-with="Search">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
   <div class="nav-bar-icon">
     <i class="fas fa-plus-circle text-primary"></i>
     <%= link_to "Add List", "../../organization/ip-address-lists/add/index.html" %>
   </div>
-  <table class="table table-hover">
+
+  <table class="table ip-address-lists">
     <thead>
       <tr>
         <th>Name</th>
-        <th class="text-truncate">IP Addresses</th>
+        <th class="text-truncate">Created</th>
         <th></th>
       </tr>
     </thead>
@@ -26,131 +42,134 @@ bodyClass: lists
       <tr>
         <td class="text-truncate">
           <%= link_to "Auto Enthusiasts", "#" %>
+          <%= link_to 'Curated', 'javascript:void(0);', class: 'badge badge-light badge-curated', :data => {toggle: 'tooltip', placement: 'top'}, title: 'A curated list you can customize. This list is shared with all organizations' %>
         </td>
-        <td>35</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Customize", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link btn-sm" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Country Artists", "#" %>
+          <%= link_to 'Curated', 'javascript:void(0);', class: 'badge badge-light badge-curated', :data => {toggle: 'tooltip', placement: 'top'}, title: 'A curated list you can customize. This list is shared with all organizations' %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "CBD", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Gamers", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "New Mothers", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Rap Artists", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Reggae Artists", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Pop Music", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Home Improvement", "#" %>
+          <%= link_to 'Curated', 'javascript:void(0);', class: 'badge badge-light badge-curated', :data => {toggle: 'tooltip', placement: 'top'}, title: 'A curated list you can customize. This list is shared with all organizations' %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Travel", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Entrepreneur", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Conservatives", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
       <tr>
         <td class="text-truncate">
           <%= link_to "Pet Owners", "#" %>
         </td>
-        <td>246,340</td>
-        <td class="action text-right text-nowrap">
-          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html" %>
-          <%= link_to "Generate", "#" %>
+        <td>Mar 7, 2021 1:11 PM</td>
+        <td class="action">
+          <%= link_to "Edit", "../../organization/ip-address-reports/edit-list.html", class: "btn btn-link" %>
+          <%= link_to "Generate", "#", class: 'btn btn-outline-primary btn-sm' %>
         </td>
       </tr>
     </tbody>
