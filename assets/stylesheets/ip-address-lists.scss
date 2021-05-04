@@ -1,7 +1,42 @@
-// ip-address-lists
+// ==============================
+// ip address lists
+// ==============================
+
+body:not(.dashboard) {
+  .table {
+    &.ip-address-lists {
+      th,
+      td {
+        &:nth-child(2) {
+          text-align: right;
+
+          display: none; // hide ip created column on xs-devices
+          @include media-breakpoint-up(sm) {
+            display: table-cell;
+          }
+        }
+      }
+    }
+
+    &.download-lists {
+      th,
+      td {
+        &:nth-child(2) {
+          display: none; // hide ip address column on xs-devices
+          @include media-breakpoint-up(sm) {
+            display: table-cell;
+          }
+        }
+
+        &:nth-child(3) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
 
 .add-list {
-
   .card-header {
     font-weight: 600;
   }
