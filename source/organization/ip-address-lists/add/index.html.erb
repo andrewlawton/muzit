@@ -12,25 +12,23 @@ bodyClass: add-list
   Add List
 </h1>
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">
-          List Name
-        </div>
-        <div class="card-body">
-          <form action="step2.html" method="get">
-            <div class="form-group">
-              <label class="form-control-label required" for="ip_address_report_candidate_name">Enter a name for the list</label>
-              <input class="form-control string optional" type="text" value="" name="ip_address_report_candidate[name]" id="ip_address_report_candidate_name">
-            </div>
-            <!-- // end form-group -->
-            <div class="action steps text-right">
-              <%= link_to "Cancel", "../../../organization/ip-address-lists/index.html" %>
-              <%= submit_tag "Next", class: 'btn btn-primary' %>
-            </div>
-          </form>
-        </div>
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-header">
+        List Name
+      </div>
+      <div class="card-body">
+        <form action="step2.html" method="get">
+          <div class="form-group">
+            <label class="form-control-label required" for="ip_address_report_candidate_name">Enter a name for the list</label>
+            <input class="form-control string optional" type="text" value="" name="ip_address_report_candidate[name]" id="ip_address_report_candidate_name">
+          </div>
+          <!-- // end form-group -->
+          <div class="action steps text-right">
+            <%= link_to "Cancel", "../../../organization/ip-address-lists/index.html" %>
+            <%= submit_tag "Next", class: 'btn btn-primary' %>
+          </div>
+        </form>
       </div>
     </div>
   </div>

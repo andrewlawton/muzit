@@ -12,96 +12,94 @@ bodyClass: add-list
   Add List
 </h1>
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-9">
-      <div class="card">
-        <div class="card-header">
-          Add List Titles
-        </div>
-        <div class="card-body">
-          <p>
-            Add titles to the list by searching for the name of a title you want to add. Titles are associated with the names of games, movies, musicians, tv shows and software applications. This step is optional if you don't want to add any titles.
-          </p>
-          <form action="" method="" class="form">
-            <fieldset>
-              <div class="form-group">
-                <label for="search-titles">Search titles (optional)</label>
-                <div class="search" data-controller="search">
-                  <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Enter title name...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
-                  <div data-target="search.results">
-                    <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList" id="add-titles">
-                      <li class="scroll">
-                        <ul>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Phish<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Philly<span>Female Dancemania artist</span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Philth<span>Drum and Bass/Dubstep</span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Phil G<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Phi Phi<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Phixx<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Phil<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">So Phistry<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Philo<span></span></a>
-                          </li>
-                          <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
-                            <a href="#">Phil<span>Philipp Müller</span></a>
-                          </li>
-                        </ul>
-                      </li>
-                      <!-- // end scroll -->
-                    </ul>
-                  </div>
-                  <!-- // end search results -->
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-header">
+        Add List Titles
+      </div>
+      <div class="card-body">
+        <p>
+          Add titles to the list by searching for the name of a title you want to add. Titles are associated with the names of games, movies, musicians, tv shows and software applications. This step is optional if you don't want to add any titles.
+        </p>
+        <form action="" method="" class="form">
+          <fieldset>
+            <div class="form-group">
+              <label for="search-titles">Search titles (optional)</label>
+              <div class="search" data-controller="search">
+                <%= text_field_tag :query, value: "", class: "form-control", placeholder: "Enter title name...", "aria-label" => "Search", autocomplete: "off", data: { action: "keyup->search#fetchResults keydown->search#navigateResults focus->search#fetchResults", target: "search.query" } %>
+                <div data-target="search.results">
+                  <ul class="search-results hide-search-results" data-controller="search-results" data-target="search.resultsList" id="add-titles">
+                    <li class="scroll">
+                      <ul>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phish<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Philly<span>Female Dancemania artist</span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Philth<span>Drum and Bass/Dubstep</span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phil G<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phi Phi<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phixx<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phil<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">So Phistry<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Philo<span></span></a>
+                        </li>
+                        <li class="search-result" data-target="search-results.result" data-action="mouseover->search-results#setFocus">
+                          <a href="#">Phil<span>Philipp Müller</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- // end scroll -->
+                  </ul>
                 </div>
-                <!-- // end search -->
+                <!-- // end search results -->
               </div>
-              <!-- // end form-group -->
-            </fieldset>
-          </form>
-          <div class="border px-3 py-2" id="no-titles" style="display: none;">
-            <p class="p-0 m-0">
-              <small>No titles have been added.</small>
-            </p>
-          </div>
-          <table class="table border" id="list-title" style="display: none;">
-            <thead>
-              <tr>
-                <th>Title Name</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-truncate">
-                  Phish
-                </td>
-                <td class="action text-right text-nowrap">
-                  <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="action steps text-right">
-            <%= link_to 'Cancel', '../../../organization/ip-address-lists/index.html' %>
-            <%= link_to 'Back', 'index.html', class: 'btn btn-outline-primary' %>
-            <%= link_to 'Next', 'step3.html', class: 'btn btn-primary' %>
-          </div>
+              <!-- // end search -->
+            </div>
+            <!-- // end form-group -->
+          </fieldset>
+        </form>
+        <div class="border px-3 py-2" id="no-titles" style="display: none;">
+          <p class="p-0 m-0">
+            <small>No titles have been added.</small>
+          </p>
+        </div>
+        <table class="table border" id="list-title" style="display: none;">
+          <thead>
+            <tr>
+              <th>Title Name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-truncate">
+                Phish
+              </td>
+              <td class="action text-right text-nowrap">
+                <%= link_to "Remove", "#", 'onclick' => 'removeListItem1()' %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="action steps text-right">
+          <%= link_to 'Cancel', '../../../organization/ip-address-lists/index.html' %>
+          <%= link_to 'Back', 'index.html', class: 'btn btn-outline-primary' %>
+          <%= link_to 'Next', 'step3.html', class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
