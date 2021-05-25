@@ -65,13 +65,15 @@ nav .dropdown {
 //   float: none;
 // }
 
-nav .dropdown-menu {
+// need to adjust for mobile portrait and landscape
 
-  .dropdown-scroll {
-    max-height: 575px;
-    overflow-y: auto;
-  }
-}
+// nav .dropdown-menu {
+
+//   .dropdown-scroll {
+//     max-height: 575px;
+//     overflow-y: auto;
+//   }
+// }
 
 @include media-breakpoint-down(sm) {
   nav .dropdown-menu {
