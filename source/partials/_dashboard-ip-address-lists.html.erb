@@ -2,7 +2,7 @@
   <div class="card-header d-flex">
     <span>IP Address Lists</span>
     <div class="ml-auto">
-      <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Click generate for the list you want. You will then see the list generating in the Downloads. Once the list is generated you can purchase and download the list. If you don\'t see a list you want you can add your own IP address list.'}} do %>
+      <% link_to "javascript:void(0);", {:tabindex => "0", :class => "", :title => 'IP Address Lists', :data => {trigger: 'focus', container: 'body', toggle: 'popover', placement: 'bottom', content: 'Click the generate button for the list you want. The list will be added to the Downloads. Once it\'s generated you can purchase and download the list. If you don\'t see a list you want you can add your own. To learn more about lists please visit the <a href="../../help-center/index.html">Help Center</a>.'}} do %>
       <i class="fas fa-question-circle"></i>
       <% end %>
       <% link_to "../organization/ip-address-lists/add/index.html", title: 'Add List' do %>
@@ -65,7 +65,7 @@
         <tr>
           <td class="text-truncate">
             <%= link_to 'New Mothers', '../organization/ip-address-lists/details/index.html' %>
-            <%= link_to 'Curated', 'javascript:void(0);', class: 'badge badge-light badge-curated', :data => {toggle: 'tooltip', placement: 'top'}, title: 'A curated list you can customize. This list is shared with all organizations' %>
+            <%= link_to 'Curated', 'javascript:void(0);', class: 'badge badge-light badge-curated', :data => {toggle: 'tooltip', placement: 'top'}, title: 'A list added by the Muzit team that is customizable. Curated lists are made available to all Muzit users.' %>
           </td>
           <td>
             <%= link_to 'Generate', 'javascript:void(0);', class: 'btn btn-outline-primary btn-sm', :data => {name: 'generate'}, style: 'width: 66px' %>
