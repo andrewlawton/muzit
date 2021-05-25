@@ -44,12 +44,17 @@
 
       dt {
         font-size: inherit;
-        margin-bottom: .25rem;
+        margin: 0 .25rem .25rem 0;
+        display: inline;
 
         &::before {
           font-family: 'Font Awesome 5 Free';
           font-weight: 900;
           margin-right: .5rem;
+        }
+
+        &::after {
+          //content: ':'
         }
 
         &.generate {
@@ -96,9 +101,18 @@
       }
 
       dd {
-        margin-bottom: 1.5rem;
+        //margin-bottom: 1.5rem;
+        display: inline;
 
-        &:last-of-type {
+        &::after {
+          content: '';
+          margin-bottom: 1.5rem;
+          clear: left;
+          white-space: nowrap;
+          display: block;
+        }
+
+        &::last-of-type {
           margin-bottom: 2rem;
         }
       }
